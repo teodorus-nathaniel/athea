@@ -1,6 +1,7 @@
 import Logo from '#/assets/brand/logo.svg'
 import Menu from '#/assets/icons/menu.svg'
 import { NORMAL_TRANSITION } from '#/constants/transition'
+import { lockScroll, unlockScroll } from '#/helpers/lock-scroll'
 import clsx from 'clsx'
 import { AnimatePresence, motion } from 'framer-motion'
 import React, { useEffect, useState } from 'react'
@@ -9,6 +10,13 @@ import NavbarContent from './NavbarContent'
 export default function Navbar() {
   const [onTopPage, setOnTopPage] = useState(true)
   const [isOpenContent, setIsOpenContent] = useState(false)
+
+  useEffect(() => {
+    if (isOpenContent) lockScroll()
+    else unlockScroll()
+    return unlockScroll
+  }, [isOpenContent])
+
   useEffect(() => {
     const scrollListener = () => {
       setOnTopPage(window.scrollY === 0)
@@ -34,8 +42,8 @@ export default function Navbar() {
             <motion.div
               className='mr-auto'
               transition={NORMAL_TRANSITION}
-              initial={{ opacity: 0, y: -50 }}
-              exit={{ opacity: 0, y: -50 }}
+              initial={{ opacity: 0, y: -25 }}
+              exit={{ opacity: 0, y: -25 }}
               animate={{ opacity: 1, y: 0 }}>
               <Logo height='1.3rem' />
             </motion.div>
@@ -45,6 +53,7 @@ export default function Navbar() {
           onClick={() => setIsOpenContent((prev) => !prev)}
           className={clsx(
             'flex items-center justify-center',
+            'rounded-full',
             'w-10 h-10',
             'transition ease-out',
             'hover:scale-110'

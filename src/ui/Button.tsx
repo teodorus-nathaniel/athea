@@ -1,5 +1,5 @@
 import clsx from 'clsx'
-import React from 'react'
+import React, { HTMLProps } from 'react'
 
 const buttonTypes = {
   'solid-white': clsx(
@@ -13,7 +13,7 @@ const buttonTypes = {
   ),
 }
 
-type Props = {
+interface Props extends HTMLProps<HTMLButtonElement> {
   children: any
   className?: string
   type?: keyof typeof buttonTypes
@@ -23,6 +23,7 @@ export default function Button({
   children,
   className,
   type = 'outline',
+  ...buttonProps
 }: Props) {
   const classNames = clsx(
     'flex justify-center items-center',
@@ -35,5 +36,9 @@ export default function Button({
     className
   )
 
-  return <button className={classNames}>{children}</button>
+  return (
+    <button {...buttonProps} className={classNames}>
+      {children}
+    </button>
+  )
 }

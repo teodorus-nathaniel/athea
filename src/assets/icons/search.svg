@@ -1,10 +1,10 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="16.242" height="14.809" viewBox="0 0 16.242 14.809">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16.242 14.809">
   <g id="Group_234" data-name="Group 234" transform="translate(0.75 0.75)">
     <g id="Group_29" data-name="Group 29">
       <g id="Group_28" data-name="Group 28">
-        <circle id="Ellipse_32" data-name="Ellipse 32" cx="5.778" cy="5.778" r="5.778" fill="none" stroke="#434343" stroke-width="1.5"/>
+        <circle id="Ellipse_32" data-name="Ellipse 32" cx="5.778" cy="5.778" r="5.778" fill="none" stroke="currentColor" stroke-width="1.5"/>
       </g>
-      <line id="Line_18" data-name="Line 18" x2="4.817" y2="3.985" transform="translate(10.196 9.497)" fill="none" stroke="#434343" stroke-linejoin="round" stroke-width="1.5"/>
+      <line id="Line_18" data-name="Line 18" x2="4.817" y2="3.985" transform="translate(10.196 9.497)" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="1.5"/>
     </g>
   </g>
 </svg>
