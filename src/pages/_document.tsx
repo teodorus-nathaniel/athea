@@ -15,8 +15,10 @@ class MyDocument extends Document {
             href='https://fonts.googleapis.com/css2?family=Yantramanav:wght@300;500&display=swap'
             rel='stylesheet'
           />
+          <link href='https://use.typekit.net/bcd3grg.css' rel='stylesheet' />
+          <link rel='icon' href='/favicon.ico' />
         </Head>
-        <body>
+        <body className='bg-white'>
           <Main />
           <NextScript />
         </body>

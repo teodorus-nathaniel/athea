@@ -4,6 +4,7 @@ module.exports = {
     extend: {
       fontFamily: {
         sans: ['Yantramanav', 'sans-serif'],
+        serif: ['alverata', 'serif'],
       },
     },
   },
