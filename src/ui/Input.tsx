@@ -30,7 +30,7 @@ export default function Input({
       )}
       <div className='relative rounded-md'>
         {LeftIcon && (
-          <div className='absolute inset-y-0 -top-px left-0 pl-3 flex items-center pointer-events-none'>
+          <div className='absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none'>
             {<LeftIcon height='1em' />}
           </div>
         )}
@@ -44,7 +44,7 @@ export default function Input({
             'rounded-md',
             'transition ease-out',
             'block w-full',
-            `${LeftIcon ? 'pl-9' : 'pl-4'} pr-12 py-2`,
+            `${LeftIcon ? 'pl-9' : 'pl-4'} pr-12 pt-2.5 pb-2`,
             className
           )}
         />
