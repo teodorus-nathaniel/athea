@@ -6,6 +6,7 @@ import Input from '#/ui/Input'
 import Link from '#/ui/Link'
 import clsx from 'clsx'
 import { AnimatePresence, motion } from 'framer-motion'
+import RouterLink from 'next/link'
 import React from 'react'
 
 type Props = {
@@ -73,14 +74,15 @@ export default function NavbarContent({ isOpen }: Props) {
                 variants={contentVariants}
                 key={text}
                 className={clsx('mt-8')}>
-                <Link
-                  href={href}
-                  className={clsx(
-                    'text-xl uppercase text-white font-bold',
-                    'font-serif tracking-widest'
-                  )}>
-                  {text}
-                </Link>
+                <RouterLink href={href} passHref>
+                  <Link
+                    className={clsx(
+                      'text-xl uppercase text-white font-bold',
+                      'font-serif tracking-widest'
+                    )}>
+                    {text}
+                  </Link>
+                </RouterLink>
               </motion.div>
             ))}
             <motion.p

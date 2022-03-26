@@ -4,6 +4,7 @@ import Container from '#/components/Container'
 import Button from '#/ui/Button'
 import clsx from 'clsx'
 import Image from 'next/image'
+import Link from 'next/link'
 
 interface Props extends BrandHeadlineProps {
   subheading?: string
@@ -27,7 +28,11 @@ export default function HeadlineSection({
         layout='fill'
         className={clsx('object-cover', 'absolute top-0 left-0')}
       />
-      <Container className={clsx('flex-1 flex flex-col justify-center mb-12')}>
+      <Container
+        className={clsx(
+          'flex-1 flex flex-col justify-center mb-12',
+          'max-w-md'
+        )}>
         <BrandHeadline {...headlineProps} className={clsx('mx-auto w-full')} />
         <div className='flex flex-col items-center'>
           <p className='font-light text-center mt-8 text-lg'>{subheading}</p>
@@ -43,7 +48,7 @@ export default function HeadlineSection({
                 </Button>
               )
               if (ctaButton.href) {
-                return <a href={ctaButton.href}>{cta}</a>
+                return <Link href={ctaButton.href}>{cta}</Link>
               }
               return cta
             })()}
