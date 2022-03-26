@@ -1,13 +1,40 @@
+import PassionateProjects from '#/assets/ui/passionate-projects.svg'
 import PassionateSouls from '#/assets/ui/passionate-souls.svg'
 import clsx from 'clsx'
 import React, { HTMLProps } from 'react'
 
-interface Props extends HTMLProps<HTMLDivElement> {}
+export type HeadlineTypes = 'souls' | 'projects'
 
-export default function BrandHeadline({ className, ...divProps }: Props) {
+function getHeadlineType(type: HeadlineTypes) {
+  switch (type) {
+    case 'projects':
+      return PassionateProjects
+    case 'souls':
+      return PassionateSouls
+    default:
+      return null
+  }
+}
+
+export interface BrandHeadlineProps extends HTMLProps<HTMLDivElement> {
+  type: HeadlineTypes
+  leftImage?: string
+  rightImage?: string
+}
+
+export default function BrandHeadline({
+  type,
+  className,
+  leftImage,
+  rightImage,
+  ...divProps
+}: BrandHeadlineProps) {
+  const Headline = getHeadlineType(type)
+  if (!Headline) return null
+
   return (
     <div {...divProps} className={clsx('relative max-w-md', 'px-8', className)}>
-      <PassionateSouls />
+      <Headline />
     </div>
   )
 }
