@@ -17,17 +17,19 @@ interface Props extends HTMLProps<HTMLButtonElement> {
   children: any
   className?: string
   type?: keyof typeof buttonTypes
+  largeHorizontalPadding: boolean
 }
 
 export default function Button({
   children,
   className,
   type = 'outline',
+  largeHorizontalPadding = false,
   ...buttonProps
 }: Props) {
   const classNames = clsx(
     'flex justify-center items-center',
-    'py-2 px-4',
+    `py-2 ${largeHorizontalPadding ? 'px-12' : 'px-4'}`,
     'rounded-full',
     'cursor-pointer',
     'transition ease-out',

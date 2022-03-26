@@ -1,0 +1,14 @@
+import clsx from 'clsx'
+import React, { HTMLProps } from 'react'
+
+export default function Container({
+  className,
+  ...props
+}: HTMLProps<HTMLDivElement>) {
+  return (
+    <div
+      {...props}
+      className={clsx('container relative', 'mx-auto pt-20 px-4', className)}
+    />
+  )
+}
