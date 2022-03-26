@@ -7,6 +7,7 @@ import Link from '#/ui/Link'
 import clsx from 'clsx'
 import { AnimatePresence, motion } from 'framer-motion'
 import RouterLink from 'next/link'
+import { useRouter } from 'next/router'
 import React from 'react'
 
 type Props = {
@@ -40,6 +41,8 @@ const contactLinks = [
 ]
 
 export default function NavbarContent({ isOpen }: Props) {
+  const { pathname } = useRouter()
+
   return (
     <>
       <NavbarOverlay isOpen={isOpen} />
@@ -77,8 +80,9 @@ export default function NavbarContent({ isOpen }: Props) {
                 <RouterLink href={href} passHref>
                   <Link
                     className={clsx(
-                      'text-xl uppercase text-white font-bold',
-                      'font-serif tracking-widest'
+                      'text-xl uppercase font-bold',
+                      'font-serif tracking-widest',
+                      href === pathname ? 'text-white' : 'text-gray-500'
                     )}>
                     {text}
                   </Link>
