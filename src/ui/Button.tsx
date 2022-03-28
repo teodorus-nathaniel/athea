@@ -9,7 +9,8 @@ const buttonTypes = {
   ),
   outline: clsx(
     'border border-gray-500 text-black',
-    'hover:bg-gray-500 hover:text-white'
+    'hover:bg-gray-400 hover:text-white',
+    'active:bg-gray-500'
   ),
 }
 
@@ -17,7 +18,7 @@ interface Props extends HTMLProps<HTMLButtonElement> {
   children: any
   className?: string
   type?: keyof typeof buttonTypes
-  largeHorizontalPadding: boolean
+  largeHorizontalPadding?: boolean
 }
 
 const Button = forwardRef<HTMLButtonElement, Props>(function Button(
@@ -32,17 +33,18 @@ const Button = forwardRef<HTMLButtonElement, Props>(function Button(
 ) {
   const classNames = clsx(
     'flex justify-center items-center',
-    `py-2 ${largeHorizontalPadding ? 'px-12' : 'px-4'}`,
+    `py-2 ${largeHorizontalPadding ? 'px-12' : 'px-6'}`,
     'rounded-full',
     'cursor-pointer',
-    'transition ease-out',
+    'transition-colors ease-out',
     'active:translate-y-px',
+    'uppercase',
     buttonTypes[type],
     className
   )
 
   return (
-    <button {...buttonProps} className={classNames}>
+    <button {...buttonProps} ref={ref} className={classNames}>
       {children}
     </button>
   )

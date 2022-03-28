@@ -3,6 +3,8 @@ import ProjectOverviewList from '#/components/ProjectOverviewList'
 import HeadlineSection from '#/components/sections/HeadlineSection'
 import SectionWrapper from '#/components/sections/SectionWrapper'
 import recentWorks from '#/data/recent-works'
+import Button from '#/ui/Button'
+import clsx from 'clsx'
 import type { NextPage } from 'next'
 
 const Home: NextPage = () => {
@@ -15,6 +17,7 @@ const Home: NextPage = () => {
       />
       <SectionWrapper title='Recent Works'>
         <ProjectOverviewList projects={recentWorks} />
+        <Button className={clsx('mt-8')}>Discover More</Button>
       </SectionWrapper>
     </Layout>
   )
