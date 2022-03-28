@@ -21,7 +21,10 @@ const Home: NextPage = () => {
         <Button className={clsx('mt-8')}>Discover More</Button>
       </SectionWrapper>
       <SectionWrapper title='Contact Us'>
-        <Contact className='w-full' />
+        <Contact
+          displayedSections={['contact', 'address', 'socialMedia']}
+          className='w-full'
+        />
       </SectionWrapper>
     </Layout>
   )
