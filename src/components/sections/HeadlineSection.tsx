@@ -8,6 +8,7 @@ import Link from 'next/link'
 
 interface Props extends BrandHeadlineProps {
   subheading?: string
+  noBgImage?: boolean
   ctaButton?: {
     text: string
     href?: string
@@ -18,16 +19,24 @@ interface Props extends BrandHeadlineProps {
 export default function HeadlineSection({
   ctaButton,
   subheading,
+  noBgImage = false,
   ...headlineProps
 }: Props) {
   return (
-    <div className={clsx('w-full h-screen', 'text-white', 'flex flex-col')}>
-      <Image
-        src={Bg}
-        alt='background'
-        layout='fill'
-        className={clsx('object-cover', 'absolute top-0 left-0')}
-      />
+    <div
+      className={clsx(
+        'w-full h-screen',
+        'bg-black text-white',
+        'flex flex-col'
+      )}>
+      {!noBgImage && (
+        <Image
+          src={Bg}
+          alt='background'
+          layout='fill'
+          className={clsx('object-cover', 'absolute top-0 left-0')}
+        />
+      )}
       <Container
         className={clsx(
           'flex-1 flex flex-col justify-center mb-12',
