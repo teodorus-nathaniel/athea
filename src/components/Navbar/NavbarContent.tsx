@@ -72,6 +72,7 @@ export default function NavbarContent({ isOpen }: Props) {
                 key={text}
                 className={clsx('mt-8')}>
                 <Link
+                  href={href}
                   className={clsx(
                     'text-xl uppercase font-bold',
                     'font-serif tracking-widest',
