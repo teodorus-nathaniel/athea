@@ -4,8 +4,8 @@ import React, { forwardRef, HTMLProps } from 'react'
 const buttonTypes = {
   'solid-white': clsx(
     'bg-gray-100 text-black',
-    'hover:brightness-95',
-    'active:brightness-75'
+    'hover:bg-gray-300',
+    'active:bg-gray-400'
   ),
   outline: clsx(
     'border border-gray-500 text-black',
