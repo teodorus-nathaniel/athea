@@ -17,7 +17,7 @@ const Link = forwardRef<HTMLAnchorElement, Props>(function Link(
           'relative cursor-pointer',
           'after:transition after:ease-out after:origin-left',
           'after:absolute after:-bottom-1 after:left-0',
-          'after:h-0.5 after:w-full after:bg-white',
+          'after:h-0.5 after:w-full after:bg-current',
           'after:scale-x-0 after:opacity-0',
           'hover:after:scale-x-100 hover:after:opacity-100',
           'focus:after:scale-x-100 focus:after:opacity-100',

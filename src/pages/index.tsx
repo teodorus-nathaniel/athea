@@ -1,3 +1,4 @@
+import Contact from '#/components/Contact'
 import Layout from '#/components/layouts/Layout'
 import ProjectOverviewList from '#/components/ProjectOverviewList'
 import HeadlineSection from '#/components/sections/HeadlineSection'
@@ -18,6 +19,9 @@ const Home: NextPage = () => {
       <SectionWrapper title='Recent Works'>
         <ProjectOverviewList projects={recentWorks} />
         <Button className={clsx('mt-8')}>Discover More</Button>
+      </SectionWrapper>
+      <SectionWrapper title='Contact Us'>
+        <Contact className='w-full' />
       </SectionWrapper>
     </Layout>
   )

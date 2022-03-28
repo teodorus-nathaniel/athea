@@ -1,4 +1,3 @@
-import ArrowLinkIcon from '#/assets/icons/arrow-link.svg'
 import SearchIcon from '#/assets/icons/search.svg'
 import { FAST_TRANSITION, NORMAL_TRANSITION } from '#/constants/transition'
 import { TransitionVariants } from '#/helpers/types'
@@ -8,6 +7,7 @@ import clsx from 'clsx'
 import { AnimatePresence, motion } from 'framer-motion'
 import { useRouter } from 'next/router'
 import React from 'react'
+import Contact from '../Contact'
 
 type Props = {
   isOpen: boolean
@@ -32,11 +32,6 @@ const links = [
   { text: 'WORKS', href: '/works' },
   { text: 'SERVICES', href: '/services' },
   { text: 'CONTACT', href: '/contact' },
-]
-
-const contactLinks = [
-  { text: 'naphtali@atheavisuals.com', href: '/' },
-  { text: '+62 817 9222 220', href: '/' },
 ]
 
 export default function NavbarContent({ isOpen }: Props) {
@@ -86,29 +81,9 @@ export default function NavbarContent({ isOpen }: Props) {
                 </Link>
               </motion.div>
             ))}
-            <motion.p
-              variants={contentVariants}
-              className={clsx('font-serif text-sm', 'mb-2 mt-auto')}>
-              Let&apos;s have a good talk through
-            </motion.p>
-            {contactLinks.map(({ href, text }) => (
-              <motion.div
-                variants={contentVariants}
-                key={text}
-                className={clsx('mb-6')}>
-                <Link
-                  href={href}
-                  className={clsx(
-                    'flex justify-between items-center',
-                    'text-lg',
-                    'before:absolute before:bg-gray-600 before:-bottom-1 before:left-0',
-                    'before:h-0.5 before:w-full'
-                  )}>
-                  {text}
-                  <ArrowLinkIcon height='1rem' />
-                </Link>
-              </motion.div>
-            ))}
+            <motion.div variants={contentVariants} className={clsx('mt-auto')}>
+              <Contact theme='dark' />
+            </motion.div>
           </motion.div>
         )}
       </AnimatePresence>
