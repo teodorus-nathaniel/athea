@@ -1,5 +1,9 @@
+import Container from '#/components/Container'
 import Layout from '#/components/layouts/Layout'
+import ProjectOverviewList from '#/components/ProjectOverviewList'
 import HeadlineSection from '#/components/sections/HeadlineSection'
+import SectionWrapper from '#/components/sections/SectionWrapper'
+import recentWorks from '#/data/recent-works'
 import type { NextPage } from 'next'
 
 const Home: NextPage = () => {
@@ -10,6 +14,11 @@ const Home: NextPage = () => {
         type='souls'
         ctaButton={{ text: 'Read More' }}
       />
+      <Container>
+        <SectionWrapper title='Recent Works'>
+          <ProjectOverviewList projects={recentWorks} />
+        </SectionWrapper>
+      </Container>
     </Layout>
   )
 }
