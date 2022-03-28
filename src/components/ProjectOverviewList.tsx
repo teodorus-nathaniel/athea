@@ -16,7 +16,7 @@ export default function ProjectOverviewList({
       {...divProps}
       className={clsx(
         'w-full',
-        'grid gap-10 grid-cols-[repeat(auto-fill,_minmax(300px,_450px))] justify-center',
+        'grid gap-10 grid-cols-[repeat(auto-fit,_minmax(300px,_450px))] justify-center ',
         className
       )}>
       {projects.map((projectProps) => (
