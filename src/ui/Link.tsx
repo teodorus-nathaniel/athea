@@ -1,12 +1,16 @@
 import clsx from 'clsx'
-import React, { HTMLProps } from 'react'
+import React, { forwardRef, HTMLProps } from 'react'
 
 interface Props extends HTMLProps<HTMLAnchorElement> {}
 
-export default function Link({ className, ...anchorProps }: Props) {
+const Link = forwardRef<HTMLAnchorElement, Props>(function Link(
+  { className, ...anchorProps },
+  ref
+) {
   return (
     <a
       {...anchorProps}
+      ref={ref}
       className={clsx(
         'relative cursor-pointer',
         'after:transition after:ease-out after:origin-left',
@@ -20,4 +24,5 @@ export default function Link({ className, ...anchorProps }: Props) {
       )}
     />
   )
-}
+})
+export default Link

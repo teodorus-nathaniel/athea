@@ -1,5 +1,5 @@
 import clsx from 'clsx'
-import React, { HTMLProps } from 'react'
+import React, { forwardRef, HTMLProps } from 'react'
 
 const buttonTypes = {
   'solid-white': clsx(
@@ -20,13 +20,16 @@ interface Props extends HTMLProps<HTMLButtonElement> {
   largeHorizontalPadding: boolean
 }
 
-export default function Button({
-  children,
-  className,
-  type = 'outline',
-  largeHorizontalPadding = false,
-  ...buttonProps
-}: Props) {
+const Button = forwardRef<HTMLButtonElement, Props>(function Button(
+  {
+    children,
+    className,
+    type = 'outline',
+    largeHorizontalPadding = false,
+    ...buttonProps
+  },
+  ref
+) {
   const classNames = clsx(
     'flex justify-center items-center',
     `py-2 ${largeHorizontalPadding ? 'px-12' : 'px-4'}`,
@@ -43,4 +46,5 @@ export default function Button({
       {children}
     </button>
   )
-}
+})
+export default Button
