@@ -1,8 +1,10 @@
+import ClientList from '#/components/ClientList'
 import Contact from '#/components/Contact'
 import Layout from '#/components/layouts/Layout'
 import HeadlineSection from '#/components/sections/HeadlineSection'
 import SectionWrapper from '#/components/sections/SectionWrapper'
 import ServiceList from '#/components/ServiceList'
+import clients from '#/data/clients'
 import services from '#/data/services'
 import type { NextPage } from 'next'
 
@@ -17,6 +19,9 @@ const Services: NextPage = () => {
       />
       <SectionWrapper className='px-0' title='Our Services'>
         <ServiceList services={services} />
+      </SectionWrapper>
+      <SectionWrapper title='Our Clients'>
+        <ClientList clients={clients} />
       </SectionWrapper>
       <SectionWrapper title='Contact Us'>
         <Contact displayedSections={['contact']} className='w-full' />
