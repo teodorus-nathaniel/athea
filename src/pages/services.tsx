@@ -12,7 +12,7 @@ import type { NextPage } from 'next'
 
 const Services: NextPage = () => {
   return (
-    <Layout meta={{ title: 'Homepage' }}>
+    <Layout meta={{ title: 'Services' }}>
       <HeadlineSection
         theme='light'
         noBgImage

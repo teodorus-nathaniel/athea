@@ -40,7 +40,7 @@ const Works: NextPage = () => {
   }, [selectedWork, updateHeight])
 
   return (
-    <Layout meta={{ title: 'Homepage' }}>
+    <Layout meta={{ title: 'Works' }}>
       <HeadlineSection
         subheading='Every project is a chance to try something new. Look at something with a fresh perspective. Do something for the first time.'
         type='projects'
