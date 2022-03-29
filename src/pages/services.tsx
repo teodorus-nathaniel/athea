@@ -16,7 +16,7 @@ const Services: NextPage = () => {
       <HeadlineSection
         theme='light'
         noBgImage
-        subheading='Not your typical agency. We are your next set of creative innovation experts.\nAthea is a multidisciplinary creative company. We are based in Jakarta and founded in 2019 had 4 subsidiary based on functionality'
+        subheading={`Not your typical agency. We are your next set of creative innovation experts.\nAthea is a multidisciplinary creative company. We are based in Jakarta and founded in 2019 had 4 subsidiary based on functionality`}
         type='souls'
       />
       <SectionWrapper className='px-0' title='Our Services'>

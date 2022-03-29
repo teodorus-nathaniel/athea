@@ -9,9 +9,15 @@ export default function ProjectOverview({
   title,
   titleDesc,
   subtitle,
-}: ProjectOverviewData & HTMLProps<HTMLDivElement>) {
+  ref: _ref,
+  ...anchorProps
+}: ProjectOverviewData & HTMLProps<HTMLAnchorElement>) {
   return (
-    <Link noAnimation href='/detail' className={clsx('flex flex-col w-full')}>
+    <Link
+      noAnimation
+      href='/detail'
+      className={clsx('flex flex-col w-full')}
+      {...anchorProps}>
       <div className={clsx('w-full pt-[100%] relative')}>
         <Image
           src={thumbnail}

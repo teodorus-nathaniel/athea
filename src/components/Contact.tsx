@@ -31,7 +31,11 @@ export default function Contact({
 }: Props) {
   return (
     <div
-      className={clsx('flex flex-col', themeClassNames[theme], className)}
+      className={clsx(
+        'flex flex-col w-full',
+        themeClassNames[theme],
+        className
+      )}
       {...divProps}>
       {displayedSections.map((key) => {
         const Section = sections[key]
@@ -74,9 +78,7 @@ function ContactLinks({ theme }: { theme: ThemeTypes }) {
 function ContactAddress() {
   return (
     <div className='flex flex-col'>
-      <p className='font-light font-serif text-sm mb-2'>
-        Let{"'"}s have a good talk through
-      </p>
+      <p className='font-light font-serif text-sm mb-2'>Address</p>
       <p className='text-bold text-xl'>
         Sheffield B9/19, Greenwich Park, BSD City, Tangerang, 15331
       </p>
@@ -89,7 +91,7 @@ const socialMediaIcons = [
   { icon: LinkedinIcon, href: 'https://linkedin.com' },
   { icon: YoutubeIcon, href: 'https://youtube.com' },
 ]
-function ContactSocialMedia() {
+function ContactSocialMedia({ theme }: { theme: ThemeTypes }) {
   return (
     <div className='flex flex-col'>
       <p className='font-light font-serif text-sm mb-2'>Connect with us</p>
@@ -98,7 +100,7 @@ function ContactSocialMedia() {
           <Link
             noAnimation
             className={clsx(
-              'text-gray-800',
+              theme === 'light' ? 'text-gray-800' : '',
               'transition ease-out',
               'hover:scale-110 active:scale-105'
             )}
