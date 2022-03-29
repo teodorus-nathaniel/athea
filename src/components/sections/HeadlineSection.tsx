@@ -2,6 +2,7 @@ import Bg from '#/assets/bg/home-bg.jpeg'
 import BrandHeadline, { BrandHeadlineProps } from '#/components/BrandHeadline'
 import Container from '#/components/Container'
 import Button from '#/ui/Button'
+import TextWithNewLines from '#/ui/TextWithNewLines'
 import clsx from 'clsx'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -9,6 +10,7 @@ import Link from 'next/link'
 interface Props extends BrandHeadlineProps {
   subheading?: string
   noBgImage?: boolean
+  theme?: 'dark' | 'light'
   ctaButton?: {
     text: string
     href?: string
@@ -18,6 +20,7 @@ interface Props extends BrandHeadlineProps {
 
 export default function HeadlineSection({
   ctaButton,
+  theme = 'dark',
   subheading,
   noBgImage = false,
   ...headlineProps
@@ -26,7 +29,7 @@ export default function HeadlineSection({
     <div
       className={clsx(
         'w-full h-screen',
-        'bg-black text-white',
+        theme === 'dark' ? 'bg-black text-white' : 'bg-white text-black',
         'flex flex-col'
       )}>
       {!noBgImage && (
@@ -44,7 +47,9 @@ export default function HeadlineSection({
         )}>
         <BrandHeadline {...headlineProps} className={clsx('mx-auto w-full')} />
         <div className='flex flex-col items-center'>
-          <p className='font-light text-center mt-8 text-lg'>{subheading}</p>
+          <TextWithNewLines className='font-light text-center mt-8 text-lg'>
+            {subheading}
+          </TextWithNewLines>
           {ctaButton &&
             (() => {
               const cta = (
