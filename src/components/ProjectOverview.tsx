@@ -1,4 +1,5 @@
 import { ProjectOverviewData } from '#/data/types'
+import Link from '#/ui/Link'
 import clsx from 'clsx'
 import Image from 'next/image'
 import React, { HTMLProps } from 'react'
@@ -10,7 +11,7 @@ export default function ProjectOverview({
   subtitle,
 }: ProjectOverviewData & HTMLProps<HTMLDivElement>) {
   return (
-    <div className={clsx('flex flex-col w-full')}>
+    <Link noAnimation href='/detail' className={clsx('flex flex-col w-full')}>
       <div className={clsx('w-full pt-[100%] relative')}>
         <Image
           src={thumbnail}
@@ -27,6 +28,6 @@ export default function ProjectOverview({
         <span> {titleDesc}</span>
       </h2>
       <p className='font-light text-sm'>{subtitle}</p>
-    </div>
+    </Link>
   )
 }
