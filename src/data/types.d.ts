@@ -17,3 +17,9 @@ export interface ClientData {
   image: any
   alt?: string
 }
+
+export interface TeamMemberData {
+  image?: NextImageType
+  name: string
+  position: string
+}

@@ -4,8 +4,10 @@ import Layout from '#/components/layouts/Layout'
 import HeadlineSection from '#/components/sections/HeadlineSection'
 import SectionWrapper from '#/components/sections/SectionWrapper'
 import ServiceList from '#/components/ServiceList'
+import TeamMemberList from '#/components/TeamMemberList'
 import clients from '#/data/clients'
 import services from '#/data/services'
+import teamMembers from '#/data/team'
 import type { NextPage } from 'next'
 
 const Services: NextPage = () => {
@@ -22,6 +24,9 @@ const Services: NextPage = () => {
       </SectionWrapper>
       <SectionWrapper title='Our Clients'>
         <ClientList clients={clients} />
+      </SectionWrapper>
+      <SectionWrapper title='Meet Our Team'>
+        <TeamMemberList teamMembers={teamMembers} />
       </SectionWrapper>
       <SectionWrapper title='Contact Us'>
         <Contact displayedSections={['contact']} className='w-full' />

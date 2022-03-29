@@ -8,6 +8,4 @@ const clientImages = importAll<any>(
 const clients: ClientData[] = Array.from({ length: 15 }).map((_, idx) => ({
   image: clientImages[`client-${idx + 1}.svg`],
 }))
-console.log(clientImages)
-console.log('WOI', clients)
 export default clients
