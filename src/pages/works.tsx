@@ -20,7 +20,7 @@ works.forEach(({ title, projects, hash }) => {
   })
 })
 
-const Home: NextPage = () => {
+const Works: NextPage = () => {
   const [selectedTab, setSelectedTab] = useState(0)
   const selectedWork = works[selectedTab]
 
@@ -78,4 +78,4 @@ const Home: NextPage = () => {
   )
 }
 
-export default Home
+export default Works
