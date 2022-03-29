@@ -2,6 +2,7 @@ import ArrowLinkIcon from '#/assets/icons/arrow-link.svg'
 import InstagramIcon from '#/assets/social-media/instagram.svg'
 import LinkedinIcon from '#/assets/social-media/linkedin.svg'
 import YoutubeIcon from '#/assets/social-media/youtube.svg'
+import { themeClassNames, ThemeTypes } from '#/constants/theme'
 import Link from '#/ui/Link'
 import clsx from 'clsx'
 import React, { HTMLProps } from 'react'
@@ -17,7 +18,6 @@ const sections = {
   socialMedia: ContactSocialMedia,
 }
 
-type ThemeTypes = 'light' | 'dark'
 interface Props extends HTMLProps<HTMLDivElement> {
   theme?: ThemeTypes
   displayedSections?: (keyof typeof sections)[]
@@ -31,11 +31,7 @@ export default function Contact({
 }: Props) {
   return (
     <div
-      className={clsx(
-        'flex flex-col',
-        theme === 'light' ? 'text-black' : 'text-white',
-        className
-      )}
+      className={clsx('flex flex-col', themeClassNames[theme], className)}
       {...divProps}>
       {displayedSections.map((key) => {
         const Section = sections[key]
