@@ -1,7 +1,7 @@
 import Project1 from '#/assets/photos/project-1.png'
 import Project2 from '#/assets/photos/project-2.png'
 import Project3 from '#/assets/photos/project-3.png'
-import { ProjectOverviewData } from '#/components/ProjectOverview'
+import { ProjectOverviewData } from './types'
 
 const recentWorks: ProjectOverviewData[] = [
   {

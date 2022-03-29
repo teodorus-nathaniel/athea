@@ -1,6 +1,7 @@
+import { ProjectOverviewData } from '#/data/types'
 import clsx from 'clsx'
 import React, { HTMLProps } from 'react'
-import ProjectOverview, { ProjectOverviewData } from './ProjectOverview'
+import ProjectOverview from './ProjectOverview'
 
 interface Props extends HTMLProps<HTMLDivElement> {
   projects: ProjectOverviewData[]

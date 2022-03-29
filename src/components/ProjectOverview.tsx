@@ -1,13 +1,7 @@
+import { ProjectOverviewData } from '#/data/types'
 import clsx from 'clsx'
 import Image from 'next/image'
 import React, { HTMLProps } from 'react'
-
-export interface ProjectOverviewData {
-  thumbnail: string | StaticImageData
-  title: string
-  titleDesc: string
-  subtitle: string
-}
 
 export default function ProjectOverview({
   thumbnail,
