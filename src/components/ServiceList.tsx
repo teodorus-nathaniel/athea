@@ -3,11 +3,11 @@ import clsx from 'clsx'
 import React, { HTMLProps } from 'react'
 import Service from './Service'
 
-export interface ServicesListProps extends HTMLProps<HTMLDivElement> {
+export interface ServiceListProps extends HTMLProps<HTMLDivElement> {
   services: ServiceData[]
 }
 
-export default function ServicesList({ services }: ServicesListProps) {
+export default function ServiceList({ services }: ServiceListProps) {
   return (
     <div className={clsx('w-full flex justify-center')}>
       <div

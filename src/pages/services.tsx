@@ -2,7 +2,7 @@ import Contact from '#/components/Contact'
 import Layout from '#/components/layouts/Layout'
 import HeadlineSection from '#/components/sections/HeadlineSection'
 import SectionWrapper from '#/components/sections/SectionWrapper'
-import ServicesList from '#/components/ServicesList'
+import ServiceList from '#/components/ServiceList'
 import services from '#/data/services'
 import type { NextPage } from 'next'
 
@@ -16,7 +16,7 @@ const Services: NextPage = () => {
         type='souls'
       />
       <SectionWrapper className='px-0' title='Our Services'>
-        <ServicesList services={services} />
+        <ServiceList services={services} />
       </SectionWrapper>
       <SectionWrapper title='Contact Us'>
         <Contact displayedSections={['contact']} className='w-full' />

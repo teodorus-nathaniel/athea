@@ -3,7 +3,7 @@ import Layout from '#/components/layouts/Layout'
 import ProjectOverviewList from '#/components/ProjectOverviewList'
 import HeadlineSection from '#/components/sections/HeadlineSection'
 import SectionWrapper from '#/components/sections/SectionWrapper'
-import ServicesList from '#/components/ServicesList'
+import ServiceList from '#/components/ServiceList'
 import recentWorks from '#/data/recent-works'
 import services from '#/data/services'
 import Button from '#/ui/Button'
@@ -23,7 +23,7 @@ const Home: NextPage = () => {
         <Button className={clsx('mt-8')}>Discover More</Button>
       </SectionWrapper>
       <SectionWrapper className='px-0' title='Our Services'>
-        <ServicesList services={services} />
+        <ServiceList services={services} />
       </SectionWrapper>
       <SectionWrapper title='Contact Us'>
         <Contact
