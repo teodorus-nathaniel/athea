@@ -1,10 +1,11 @@
+import { themeClassNames, ThemeTypes } from '#/constants/theme'
 import clsx from 'clsx'
 import React, { HTMLProps } from 'react'
 import Container from '../Container'
 
 interface Props extends HTMLProps<HTMLDivElement> {
   title: string
-  theme?: 'light' | 'dark'
+  theme?: ThemeTypes
 }
 
 export default function SectionWrapper({
@@ -15,10 +16,7 @@ export default function SectionWrapper({
   ...divProps
 }: Props) {
   return (
-    <div
-      className={clsx(
-        theme === 'light' ? 'bg-white text-black' : 'bg-black text-white'
-      )}>
+    <div className={clsx(themeClassNames[theme], className)}>
       <Container
         {...divProps}
         className={clsx('flex flex-col items-center', 'pt-8 pb-16', className)}>
