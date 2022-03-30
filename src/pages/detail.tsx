@@ -12,7 +12,6 @@ import Link from '#/ui/Link'
 import TextWithNewLines from '#/ui/TextWithNewLines'
 import clsx from 'clsx'
 import type { NextPage } from 'next'
-import Image from 'next/image'
 import { HTMLProps } from 'react'
 
 const Detail: NextPage = () => {
@@ -36,7 +35,7 @@ const Detail: NextPage = () => {
             &middot; <span className={clsx('font-light')}>{titleDesc}</span>
           </h1>
           <div className={clsx('mb-4')}>
-            <Image src={image} alt={title} />
+            <img src={image} alt={title} />
           </div>
           <div
             className={clsx(

@@ -4,7 +4,6 @@ import Container from '#/components/Container'
 import Button from '#/ui/Button'
 import TextWithNewLines from '#/ui/TextWithNewLines'
 import clsx from 'clsx'
-import Image from 'next/image'
 import Link from 'next/link'
 
 interface Props extends BrandHeadlineProps {
@@ -33,11 +32,14 @@ export default function HeadlineSection({
         'flex flex-col'
       )}>
       {!noBgImage && (
-        <Image
+        <img
           src={Bg}
           alt='background'
-          layout='fill'
-          className={clsx('object-cover', 'absolute top-0 left-0')}
+          className={clsx(
+            'object-cover',
+            'absolute top-0 left-0',
+            'w-full h-full'
+          )}
         />
       )}
       <Container

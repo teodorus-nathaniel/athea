@@ -1,7 +1,6 @@
 import { ProjectOverviewData } from '#/data/types'
 import Link from '#/ui/Link'
 import clsx from 'clsx'
-import Image from 'next/image'
 import React, { HTMLProps } from 'react'
 
 export default function ProjectOverview({
@@ -19,10 +18,9 @@ export default function ProjectOverview({
       className={clsx('flex flex-col w-full')}
       {...anchorProps}>
       <div className={clsx('w-full pt-[100%] relative')}>
-        <Image
+        <img
           src={thumbnail}
           alt={title}
-          layout='fill'
           className={clsx(
             'object-center object-cover',
             'absolute top-0 left-0'

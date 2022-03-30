@@ -5,12 +5,24 @@ import HeadlineSection from '#/components/sections/HeadlineSection'
 import SectionWrapper from '#/components/sections/SectionWrapper'
 import ServiceList from '#/components/ServiceList'
 import TeamMemberList from '#/components/TeamMemberList'
-import clients from '#/data/clients'
 import services from '#/data/services'
 import teamMembers from '#/data/team'
+import { ClientData } from '#/data/types'
 import type { NextPage } from 'next'
+import { useEffect, useState } from 'react'
+
+const clientsPromise = import('#/data/clients')
 
 const Services: NextPage = () => {
+  const [clients, setClients] = useState<ClientData[]>([])
+  useEffect(() => {
+    async function awaitClients() {
+      const clientsData = (await clientsPromise).default
+      setClients(clientsData as unknown as ClientData[])
+    }
+    awaitClients()
+  }, [])
+
   return (
     <Layout meta={{ title: 'Services' }}>
       <HeadlineSection
