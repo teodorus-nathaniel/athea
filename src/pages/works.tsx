@@ -47,15 +47,17 @@ const Works: NextPage = () => {
         noBgImage
       />
       <SectionWrapper title='Our Works' theme='dark'>
-        <TabLayout
-          className={clsx('mb-4', 'justify-center')}
-          selectedTab={selectedTab}
-          onTabClick={(clickedIdx) =>
-            setSlideDir(clickedIdx > selectedTab ? 'right' : 'left')
-          }
-          setSelectedTab={setSelectedTab}
-          tabs={tabs}
-        />
+        <div className={clsx('flex justify-center w-full')}>
+          <TabLayout
+            className={clsx('mb-4', '!w-auto')}
+            selectedTab={selectedTab}
+            onTabClick={(clickedIdx) =>
+              setSlideDir(clickedIdx > selectedTab ? 'right' : 'left')
+            }
+            setSelectedTab={setSelectedTab}
+            tabs={tabs}
+          />
+        </div>
         <motion.div
           animate={{ height: contentHeight }}
           transition={SLOW_TRANSITION}

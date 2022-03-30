@@ -53,7 +53,7 @@ export default function TabLayout({
             <Link
               className={clsx(
                 'relative block',
-                `${idx < array.length - 1 ? 'mr-8' : ''} py-4`,
+                'mr-8 py-4',
                 'tracking-wider font-light',
                 'transition ease-out',
                 'before:transition-transform before:ease-out',
