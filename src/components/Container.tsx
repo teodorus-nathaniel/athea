@@ -8,7 +8,7 @@ export default function Container({
   return (
     <div
       {...props}
-      className={clsx('container relative', 'mx-auto px-4', className)}
+      className={clsx('container relative', 'mx-auto px-6', className)}
     />
   )
 }

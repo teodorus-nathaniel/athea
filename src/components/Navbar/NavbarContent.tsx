@@ -45,7 +45,7 @@ export default function NavbarContent({ isOpen }: Props) {
           <motion.div
             className={clsx(
               'fixed top-0 left-0',
-              'pt-24 pb-8 px-4 w-full min-h-screen',
+              'pt-24 pb-8 px-6 w-full min-h-screen',
               'overflow-auto',
               'z-20',
               'flex flex-col',

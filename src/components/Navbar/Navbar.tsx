@@ -33,7 +33,7 @@ export default function Navbar() {
         className={clsx(
           'fixed top-0 w-full',
           'flex justify-end items-center',
-          'px-4 py-6',
+          'px-6 py-6',
           'mix-blend-difference text-white',
           'z-30'
         )}>
