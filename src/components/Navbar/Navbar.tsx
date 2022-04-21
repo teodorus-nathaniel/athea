@@ -4,11 +4,12 @@ import { NORMAL_TRANSITION } from '#/constants/transition'
 import { lockScroll, unlockScroll } from '#/helpers/lock-scroll'
 import clsx from 'clsx'
 import { AnimatePresence, motion } from 'framer-motion'
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import NavbarContent from './NavbarContent'
 
 export default function Navbar() {
-  const [onTopPage, setOnTopPage] = useState(true)
+  const lastScrollUp = useRef(0)
+  const [isScrollingUp, setIsScrollingUp] = useState(true)
   const [isOpenContent, setIsOpenContent] = useState(false)
 
   useEffect(() => {
@@ -19,7 +20,8 @@ export default function Navbar() {
 
   useEffect(() => {
     const scrollListener = () => {
-      setOnTopPage(window.scrollY === 0)
+      setIsScrollingUp(window.scrollY < lastScrollUp.current)
+      lastScrollUp.current = window.scrollY
     }
     window.addEventListener('scroll', scrollListener)
     return () => {
@@ -38,28 +40,28 @@ export default function Navbar() {
           'z-30'
         )}>
         <AnimatePresence initial={false}>
-          {(onTopPage || isOpenContent) && (
+          {(isScrollingUp || isOpenContent) && (
             <motion.div
-              className='mr-auto'
+              className='mr-auto flex justify-between items-center w-full'
               transition={NORMAL_TRANSITION}
               initial={{ opacity: 0, y: -25 }}
               exit={{ opacity: 0, y: -25 }}
               animate={{ opacity: 1, y: 0 }}>
               <Logo height='1.3rem' />
+              <button
+                onClick={() => setIsOpenContent((prev) => !prev)}
+                className={clsx(
+                  'flex items-center justify-center',
+                  'rounded-full',
+                  'w-10 h-10',
+                  'transition ease-out',
+                  'hover:scale-110'
+                )}>
+                <Menu height='1.2rem' />
+              </button>
             </motion.div>
           )}
         </AnimatePresence>
-        <button
-          onClick={() => setIsOpenContent((prev) => !prev)}
-          className={clsx(
-            'flex items-center justify-center',
-            'rounded-full',
-            'w-10 h-10',
-            'transition ease-out',
-            'hover:scale-110'
-          )}>
-          <Menu height='1.2rem' />
-        </button>
       </nav>
       <NavbarContent isOpen={isOpenContent} />
     </>
