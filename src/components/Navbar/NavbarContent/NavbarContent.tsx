@@ -1,19 +1,46 @@
-import { FAST_TRANSITION } from '#/constants/transition'
+import { NORMAL_TRANSITION } from '#/constants/transition'
 import { TransitionVariants } from '#/helpers/types'
 import clsx from 'clsx'
 import { AnimatePresence, motion } from 'framer-motion'
 import React, { useMemo } from 'react'
+import NavbarContentDesktop from './NavbarContentDesktop'
 import NavbarContentMobile from './NavbarContentMobile'
 
 export interface NavbarContentProps {
   isOpen: boolean
+  type: 'desktop' | 'mobile'
+}
+export interface NavbarContentChildProps {
+  isOpen: boolean
+  links: { text: string; href: string }[]
 }
 
-export default function NavbarContent(props: NavbarContentProps) {
+const links = [
+  { text: 'HOME', href: '/' },
+  { text: 'WORKS', href: '/works' },
+  { text: 'SERVICES', href: '/services' },
+  { text: 'CONTACT', href: '/contact' },
+]
+
+export default function NavbarContent({ isOpen, type }: NavbarContentProps) {
+  const isDesktop = type === 'desktop'
+
+  let Component = null
+  switch (type) {
+    case 'desktop':
+      Component = NavbarContentDesktop
+      break
+    case 'mobile':
+      Component = NavbarContentMobile
+      break
+    default:
+      Component = NavbarContentMobile
+  }
+
   return (
     <>
-      <NavbarOverlay isOpen={props.isOpen} />
-      <NavbarContentMobile {...props} />
+      <NavbarOverlay isOpen={isOpen} opacity={isDesktop ? 0.5 : 1} />
+      <Component isOpen={isOpen} links={links} />
     </>
   )
 }
@@ -38,7 +65,7 @@ function NavbarOverlay({ isOpen, opacity = 1 }: NavbarOverlayProps) {
           exit='close'
           animate='open'
           initial='close'
-          transition={FAST_TRANSITION}
+          transition={NORMAL_TRANSITION}
           className={clsx(
             'fixed top-0 left-0',
             'w-full h-screen',

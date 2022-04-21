@@ -8,7 +8,7 @@ import clsx from 'clsx'
 import { AnimatePresence, motion } from 'framer-motion'
 import { useRouter } from 'next/router'
 import React from 'react'
-import { NavbarContentProps } from './NavbarContent'
+import { NavbarContentChildProps } from './NavbarContent'
 
 const containerVariants: TransitionVariants = {
   close: { opacity: 0 },
@@ -24,14 +24,10 @@ const contentVariants: TransitionVariants = {
   open: { opacity: 1, y: 0, transition: NORMAL_TRANSITION },
 }
 
-const links = [
-  { text: 'HOME', href: '/' },
-  { text: 'WORKS', href: '/works' },
-  { text: 'SERVICES', href: '/services' },
-  { text: 'CONTACT', href: '/contact' },
-]
-
-export default function NavbarContentMobile({ isOpen }: NavbarContentProps) {
+export default function NavbarContentMobile({
+  isOpen,
+  links,
+}: NavbarContentChildProps) {
   const { pathname } = useRouter()
 
   return (
