@@ -14,8 +14,8 @@ export default function ClientList({ clients }: ClientListProps) {
         'grid gap-8 grid-cols-[repeat(3,_minmax(0,_100px))]',
         'justify-items-center justify-center items-center'
       )}>
-      {clients.map(({ image: ImageELement, alt }, idx) => (
-        <ImageELement key={idx} />
+      {clients.map(({ image: ImageElement, alt }, idx) => (
+        <ImageElement key={idx} alt={alt} />
       ))}
     </div>
   )
