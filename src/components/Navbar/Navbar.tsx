@@ -41,7 +41,7 @@ export default function Navbar() {
           'fixed top-0 w-full',
           'flex justify-end items-center',
           'px-6 py-6',
-          'text-white',
+          'mix-blend-difference text-white',
           'z-30'
         )}>
         <AnimatePresence initial={false}>
@@ -55,13 +55,12 @@ export default function Navbar() {
               initial={{ opacity: 0, y: -25 }}
               exit={{ opacity: 0, y: -25 }}
               animate={{ opacity: 1, y: 0 }}>
-              <Logo height='1.3rem' className='mix-blend-difference' />
+              <Logo height='1.3rem' className='z-40 text-white' />
               <button
                 ref={menuButtonRef}
                 onClick={() => setIsOpenContent((prev) => !prev)}
                 className={clsx(
                   'flex items-center justify-center',
-                  'mix-blend-difference',
                   'rounded-full',
                   'w-10 h-10 z-40',
                   'transition ease-out',
@@ -69,12 +68,14 @@ export default function Navbar() {
                 )}>
                 <Menu height='1.2rem' />
               </button>
-              {mdUp && <NavbarContent type='desktop' isOpen={isOpenContent} />}
             </motion.div>
           )}
         </AnimatePresence>
       </nav>
-      {!mdUp && <NavbarContent type='mobile' isOpen={isOpenContent} />}
+      <NavbarContent
+        type={mdUp ? 'desktop' : 'mobile'}
+        isOpen={isOpenContent}
+      />
     </>
   )
 }

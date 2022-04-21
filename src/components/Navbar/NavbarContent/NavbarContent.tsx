@@ -39,7 +39,7 @@ export default function NavbarContent({ isOpen, type }: NavbarContentProps) {
 
   return (
     <>
-      <NavbarOverlay isOpen={isOpen} opacity={isDesktop ? 0.5 : 1} />
+      <NavbarOverlay isOpen={isOpen} opacity={isDesktop ? 0.85 : 1} />
       <Component isOpen={isOpen} links={links} />
     </>
   )

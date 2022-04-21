@@ -8,6 +8,7 @@ import React, { useCallback } from 'react'
 import { NavbarContentChildProps } from './NavbarContent'
 
 const containerVariants: TransitionVariants = {
+  init: { opacity: 0 },
   close: { opacity: 0 },
   open: {
     opacity: 1,
@@ -27,17 +28,17 @@ export default function NavbarContentDesktop({
   )
   const generateContentVariants = useCallback(
     (idx: number): TransitionVariants => ({
-      close: {
+      init: {
         opacity: 0,
         x: idx * -elementOffset,
-        y: '-50%',
-        transition: NORMAL_TRANSITION,
+      },
+      close: {
+        opacity: 0,
+        x: (idx + 1) * -elementOffset + elementOffset / 2,
       },
       open: {
         opacity: 1,
         x: (idx + 1) * -elementOffset,
-        y: '-50%',
-        transition: NORMAL_TRANSITION,
       },
     }),
     [elementOffset]
@@ -49,12 +50,12 @@ export default function NavbarContentDesktop({
       {isOpen && (
         <motion.div
           variants={containerVariants}
-          initial='close'
+          initial='init'
           animate='open'
           exit='close'
           className={clsx(
-            'h-full',
-            'absolute top-0 right-0 z-30',
+            'mr-6 mt-8',
+            'fixed top-0 right-0 z-30',
             'mix-blend-normal',
             'text-white',
             'flex items-center'
@@ -64,7 +65,8 @@ export default function NavbarContentDesktop({
               <motion.div
                 variants={generateContentVariants(idx)}
                 key={text}
-                className={clsx('absolute top-1/2')}>
+                className={clsx('absolute top-1/2')}
+                transition={NORMAL_TRANSITION}>
                 <Link
                   href={href}
                   className={clsx(
