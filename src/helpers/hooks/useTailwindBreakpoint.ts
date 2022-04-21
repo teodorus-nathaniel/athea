@@ -24,8 +24,5 @@ const screens = Object.entries(config.theme.screens).reduce<{
 )
 
 export default function useTailwindBreakpoint() {
-  console.log(screens)
-  const br = useBreakpoint(screens, 'sm').breakpoint
-  console.log(br)
-  return br
+  return useBreakpoint(screens, 'sm').breakpoint
 }
