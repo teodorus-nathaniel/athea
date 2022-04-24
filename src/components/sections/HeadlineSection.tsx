@@ -41,13 +41,10 @@ export default function HeadlineSection({
         />
       )}
       <Container
-        className={clsx(
-          'flex-1 flex flex-col justify-center mb-12',
-          'max-w-md'
-        )}>
+        className={clsx('flex-1 flex flex-col justify-center', 'max-w-md')}>
         <BrandHeadline {...headlineProps} className={clsx('mx-auto w-full')} />
         <div className='flex flex-col items-center'>
-          <TextWithNewLines className='font-light text-center mt-8 text-lg'>
+          <TextWithNewLines className='font-light text-center mt-16 text-lg'>
             {subheading}
           </TextWithNewLines>
           {ctaButton &&
