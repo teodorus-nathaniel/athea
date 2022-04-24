@@ -1,3 +1,4 @@
+import { ThemeTypes } from '#/constants/theme'
 import clsx from 'clsx'
 import { useRouter } from 'next/router'
 import React, { HTMLProps } from 'react'
@@ -6,9 +7,11 @@ import Container from './Container'
 import { links } from './Navbar/NavbarContent/NavbarContent'
 import NavbarLink from './Navbar/NavbarContent/NavbarLink'
 
-interface Props extends HTMLProps<HTMLDivElement> {}
+interface Props extends HTMLProps<HTMLDivElement> {
+  theme: ThemeTypes
+}
 
-export default function Footer({ className, ...props }: Props) {
+export default function Footer({ className, theme, ...props }: Props) {
   const { pathname } = useRouter()
   const offsetTop = clsx('pt-6')
 
@@ -20,13 +23,13 @@ export default function Footer({ className, ...props }: Props) {
         className
       )}
       {...props}>
-      <Contact theme='dark' displayedSections={['contact']} />
+      <Contact theme={theme} displayedSections={['contact']} />
       <div className={clsx(offsetTop)}>
-        <Contact theme='dark' displayedSections={['address']} />
+        <Contact theme={theme} displayedSections={['address']} />
       </div>
       <div className={clsx(offsetTop)}>
         <Contact
-          theme='dark'
+          theme={theme}
           displayedSections={['socialMedia']}
           config={{ socialMedia: { smaller: true } }}
         />
@@ -35,7 +38,11 @@ export default function Footer({ className, ...props }: Props) {
         <div className={clsx('flex flex-col')}>
           {links.map((link, idx) => (
             <div className={clsx('mb-4')} key={idx}>
-              <NavbarLink isActive={pathname === link.href} {...link} />
+              <NavbarLink
+                theme={theme}
+                isActive={pathname === link.href}
+                {...link}
+              />
             </div>
           ))}
         </div>

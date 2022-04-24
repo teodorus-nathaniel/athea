@@ -1,3 +1,4 @@
+import { ThemeTypes } from '#/constants/theme'
 import Link, { LinkProps } from '#/ui/Link'
 import clsx from 'clsx'
 import { BsFillCaretRightFill } from 'react-icons/bs'
@@ -6,6 +7,7 @@ interface Props extends LinkProps {
   href: string
   text: string | JSX.Element
   isActive: boolean
+  theme?: ThemeTypes
 }
 
 export default function NavbarLink({
@@ -13,15 +15,17 @@ export default function NavbarLink({
   text,
   isActive,
   className,
+  theme = 'dark',
   ...props
 }: Props) {
+  const activeFontColor = theme === 'dark' ? 'text-white' : 'text-black'
   return (
     <Link
       href={href}
       className={clsx(
         'text-xl uppercase tracking-widest',
         'ml-5 relative',
-        isActive ? 'text-white font-serif font-bold' : 'text-gray-500',
+        isActive ? `${activeFontColor} font-serif font-bold` : 'text-gray-500',
         className
       )}
       {...props}>
