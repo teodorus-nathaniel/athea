@@ -14,7 +14,7 @@ export default function ProjectOverview({
   ...anchorProps
 }: ProjectOverviewData & HTMLProps<HTMLAnchorElement>) {
   const mdUp = useBreakpointThreshold('md')
-  const desktopClassNames = clsx('pt-[75%]')
+  const desktopClassNames = clsx('pt-[56.25%]')
   const mobileClassNames = clsx('pt-[133%]')
 
   return (
@@ -38,7 +38,7 @@ export default function ProjectOverview({
           )}
         />
       </div>
-      <h2 className={clsx('text-xl tracking-wider leading-6', 'mt-4 mb-2')}>
+      <h2 className={clsx('text-xl tracking-wider leading-6', 'mt-6 mb-2')}>
         <span className='font-bold font-serif'>{title}</span> &middot;
         <span> {titleDesc}</span>
       </h2>
