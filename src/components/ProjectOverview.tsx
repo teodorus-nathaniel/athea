@@ -25,7 +25,7 @@ export default function ProjectOverview({
       {...anchorProps}>
       <div
         className={clsx(
-          'w-full relative',
+          'w-full relative overflow-hidden',
           mdUp ? desktopClassNames : mobileClassNames
         )}>
         <Image
@@ -34,7 +34,9 @@ export default function ProjectOverview({
           layout='fill'
           className={clsx(
             'object-center object-cover',
-            'absolute top-0 left-0'
+            'absolute top-0 left-0',
+            'transition-transform ease-out duration-500',
+            'hover:scale-105'
           )}
         />
       </div>
