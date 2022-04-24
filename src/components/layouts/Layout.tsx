@@ -14,6 +14,8 @@ type Props = {
     desc?: string
   }
   hasOffsetNavbar?: boolean
+  mobileFooter?: boolean
+  mobileFooterTitle?: string
 }
 
 export default function Layout({
@@ -21,6 +23,8 @@ export default function Layout({
   children,
   theme = 'light',
   hasOffsetNavbar = false,
+  mobileFooter = false,
+  mobileFooterTitle,
 }: Props) {
   const mdUp = useBreakpointThreshold('md')
 
@@ -39,9 +43,9 @@ export default function Layout({
         )}>
         {children}
       </div>
-      {mdUp && (
+      {(mobileFooter || mdUp) && (
         <div className={clsx(themeClassNames[theme])}>
-          <Footer theme={theme} />
+          <Footer theme={theme} title={mobileFooterTitle} />
         </div>
       )}
     </div>
