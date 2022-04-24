@@ -1,12 +1,11 @@
 import { NORMAL_TRANSITION } from '#/constants/transition'
-import useOnClickOutside from '#/helpers/hooks/useOnOutsideClick'
 import { TransitionVariants } from '#/helpers/types'
-import Link from '#/ui/Link'
 import clsx from 'clsx'
 import { AnimatePresence, motion } from 'framer-motion'
 import { useRouter } from 'next/router'
-import React, { useCallback, useMemo, useRef } from 'react'
+import React, { useCallback, useMemo } from 'react'
 import { NavbarContentChildProps } from './NavbarContent'
+import NavbarLink from './NavbarLink'
 
 const containerVariants: TransitionVariants = {
   init: { opacity: 0 },
@@ -21,12 +20,8 @@ const containerVariants: TransitionVariants = {
 
 export default function NavbarContentDesktop({
   isOpen,
-  closeContent,
   links,
 }: NavbarContentChildProps) {
-  const containerRef = useRef<HTMLDivElement | null>(null)
-  useOnClickOutside(containerRef, closeContent)
-
   const elementOffset = Math.min(
     Math.max(window.innerWidth / links.length / 2, 135),
     200
@@ -57,44 +52,36 @@ export default function NavbarContentDesktop({
   }, [links])
 
   return (
-    <div>
-      <AnimatePresence>
-        {isOpen && (
-          <motion.div
-            variants={containerVariants}
-            initial='init'
-            animate='open'
-            exit='close'
-            className={clsx(
-              'mr-6 mt-8',
-              'fixed top-0 right-0 z-30',
-              'text-white',
-              'flex items-center'
-            )}>
-            {reversedLinks.map(({ href, text }, idx) => {
-              return (
-                <motion.div
-                  variants={generateContentVariants(idx)}
-                  key={text}
-                  className={clsx('absolute top-1/2 right-0')}
-                  transition={NORMAL_TRANSITION}>
-                  <Link
-                    href={href}
-                    className={clsx(
-                      'text-xl uppercase',
-                      'tracking-widest',
-                      href === pathname
-                        ? 'text-white font-serif font-bold'
-                        : 'text-gray-500'
-                    )}>
-                    {text}
-                  </Link>
-                </motion.div>
-              )
-            })}
-          </motion.div>
-        )}
-      </AnimatePresence>
-    </div>
+    <AnimatePresence>
+      {isOpen && (
+        <motion.div
+          variants={containerVariants}
+          initial='init'
+          animate='open'
+          exit='close'
+          className={clsx(
+            'mr-6 mt-8',
+            'fixed top-0 right-0 z-30',
+            'text-white',
+            'flex items-center'
+          )}>
+          {reversedLinks.map(({ href, text }, idx) => {
+            return (
+              <motion.div
+                variants={generateContentVariants(idx)}
+                key={text}
+                className={clsx('absolute top-1/2 right-0')}
+                transition={NORMAL_TRANSITION}>
+                <NavbarLink
+                  href={href}
+                  isActive={href === pathname}
+                  text={text}
+                />
+              </motion.div>
+            )
+          })}
+        </motion.div>
+      )}
+    </AnimatePresence>
   )
 }

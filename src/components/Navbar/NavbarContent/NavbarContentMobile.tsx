@@ -3,12 +3,12 @@ import Contact from '#/components/Contact'
 import { NORMAL_TRANSITION } from '#/constants/transition'
 import { TransitionVariants } from '#/helpers/types'
 import Input from '#/ui/Input'
-import Link from '#/ui/Link'
 import clsx from 'clsx'
 import { AnimatePresence, motion } from 'framer-motion'
 import { useRouter } from 'next/router'
 import React from 'react'
 import { NavbarContentChildProps } from './NavbarContent'
+import NavbarLink from './NavbarLink'
 
 const containerVariants: TransitionVariants = {
   close: { opacity: 0 },
@@ -62,17 +62,11 @@ export default function NavbarContentMobile({
               variants={contentVariants}
               key={text}
               className={clsx('mt-8')}>
-              <Link
+              <NavbarLink
                 href={href}
-                className={clsx(
-                  'text-xl uppercase',
-                  'tracking-widest',
-                  href === pathname
-                    ? 'text-white font-serif font-bold'
-                    : 'text-gray-500'
-                )}>
-                {text}
-              </Link>
+                isActive={href === pathname}
+                text={text}
+              />
             </motion.div>
           ))}
           <motion.div variants={contentVariants} className={clsx('mt-auto')}>

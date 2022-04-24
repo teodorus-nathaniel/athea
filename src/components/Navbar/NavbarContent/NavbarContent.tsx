@@ -14,7 +14,6 @@ export interface NavbarContentProps {
 export interface NavbarContentChildProps {
   isOpen: boolean
   links: { text: string; href: string }[]
-  closeContent: () => void
 }
 
 const links = [
@@ -45,8 +44,12 @@ export default function NavbarContent({
 
   return (
     <>
-      <NavbarOverlay isOpen={isOpen} opacity={isDesktop ? 0.85 : 1} />
-      <Component isOpen={isOpen} links={links} closeContent={closeContent} />
+      <NavbarOverlay
+        closeContent={closeContent}
+        isOpen={isOpen}
+        opacity={isDesktop ? 0.85 : 1}
+      />
+      <Component isOpen={isOpen} links={links} />
     </>
   )
 }
@@ -54,8 +57,13 @@ export default function NavbarContent({
 interface NavbarOverlayProps {
   isOpen: boolean
   opacity?: number
+  closeContent: () => void
 }
-function NavbarOverlay({ isOpen, opacity = 1 }: NavbarOverlayProps) {
+function NavbarOverlay({
+  isOpen,
+  opacity = 1,
+  closeContent,
+}: NavbarOverlayProps) {
   const overlayVariants: TransitionVariants = useMemo(
     () => ({
       close: { opacity: 0 },
@@ -67,6 +75,7 @@ function NavbarOverlay({ isOpen, opacity = 1 }: NavbarOverlayProps) {
     <AnimatePresence>
       {isOpen && (
         <motion.div
+          onClick={closeContent}
           variants={overlayVariants}
           exit='close'
           animate='open'
