@@ -44,26 +44,26 @@ export default function TabLayout({
 
   return (
     <ul
-      className={clsx('flex items-end', 'overflow-auto w-full', className)}
+      className={clsx(
+        'flex items-end',
+        'overflow-auto w-full',
+        'pb-4',
+        className
+      )}
       {...ulProps}>
-      {tabs.map(({ title, additionalInfo, hash }, idx, array) => {
+      {tabs.map(({ title, additionalInfo, hash }, idx) => {
         const selected = idx === selectedTab
         return (
           <li key={title}>
             <Link
               className={clsx(
                 'relative block',
-                'mr-8 py-4',
+                'py-1.5 mr-0.5 pl-4 pr-6',
                 'tracking-wider font-light',
                 'transition ease-out',
-                'before:transition-transform before:ease-out',
                 'whitespace-nowrap',
-                'before:absolute before:bottom-2 before:left-0 before:bg-current',
-                'before:w-full before:h-0.5',
-                'hover:brightness-100',
-                !selected
-                  ? 'before:opacity-0 before:scale-x-0 brightness-50'
-                  : 'before:opacity-100 before:scale-x-100'
+                'border rounded-full',
+                !selected ? 'border-transparent' : 'border-white'
               )}
               noAnimation
               href={`#${encodeTab(hash ?? title)}`}
@@ -74,7 +74,7 @@ export default function TabLayout({
               {title}
               <span
                 className={clsx(
-                  'absolute top-4 -right-1',
+                  'absolute top-2 right-5',
                   'translate-x-full',
                   'text-xs'
                 )}>

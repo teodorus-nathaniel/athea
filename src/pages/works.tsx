@@ -49,7 +49,7 @@ const Works: NextPage = () => {
       <SectionWrapper title='Our Works' theme='dark'>
         <div className={clsx('flex justify-center w-full')}>
           <TabLayout
-            className={clsx('mb-4', '!w-auto')}
+            className={clsx('!w-auto')}
             selectedTab={selectedTab}
             onTabClick={(clickedIdx) =>
               setSlideDir(clickedIdx > selectedTab ? 'right' : 'left')
