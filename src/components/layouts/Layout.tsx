@@ -1,7 +1,9 @@
 import { themeClassNames, ThemeTypes } from '#/constants/theme'
+import { useBreakpointThreshold } from '#/helpers/hooks/useBreakpointThreshold'
 import clsx from 'clsx'
 import Head from 'next/head'
 import React from 'react'
+import Footer from '../Footer'
 import Navbar from '../Navbar'
 
 type Props = {
@@ -20,6 +22,8 @@ export default function Layout({
   theme = 'light',
   hasOffsetNavbar = false,
 }: Props) {
+  const mdUp = useBreakpointThreshold('md')
+
   return (
     <div>
       <Head>
@@ -35,6 +39,11 @@ export default function Layout({
         )}>
         {children}
       </div>
+      {mdUp && (
+        <div className={clsx(themeClassNames[theme])}>
+          <Footer />
+        </div>
+      )}
     </div>
   )
 }

@@ -21,12 +21,14 @@ const sections = {
 interface Props extends HTMLProps<HTMLDivElement> {
   theme?: ThemeTypes
   displayedSections?: (keyof typeof sections)[]
+  config?: { [key in keyof typeof sections]?: any }
 }
 
 export default function Contact({
   className,
   theme = 'light',
   displayedSections = ['contact'],
+  config = {},
   ...divProps
 }: Props) {
   return (
@@ -41,7 +43,7 @@ export default function Contact({
         const Section = sections[key]
         return (
           <div key={key} className='mb-8'>
-            <Section theme={theme} />
+            <Section theme={theme} {...config[key]} />
           </div>
         )
       })}
@@ -79,9 +81,7 @@ function ContactAddress() {
   return (
     <div className='flex flex-col'>
       <p className='font-light font-serif text-sm mb-2'>Address</p>
-      <p className='text-bold text-xl'>
-        Sheffield B9/19, Greenwich Park, BSD City, Tangerang, 15331
-      </p>
+      <p className='text-bold text-xl'>BSD City, Tangerang, 15331</p>
     </div>
   )
 }
@@ -91,7 +91,14 @@ const socialMediaIcons = [
   { icon: LinkedinIcon, href: 'https://linkedin.com' },
   { icon: YoutubeIcon, href: 'https://youtube.com' },
 ]
-function ContactSocialMedia({ theme }: { theme: ThemeTypes }) {
+function ContactSocialMedia({
+  theme,
+  smaller = false,
+}: {
+  theme: ThemeTypes
+  smaller?: boolean
+}) {
+  const size = smaller ? '1.5rem' : '2.1rem'
   return (
     <div className='flex flex-col'>
       <p className='font-light font-serif text-sm mb-2'>Connect with us</p>
@@ -106,7 +113,7 @@ function ContactSocialMedia({ theme }: { theme: ThemeTypes }) {
             )}
             href={href}
             key={idx}>
-            <Icon className={clsx('mr-4')} width='2.1rem' height='2.1rem' />
+            <Icon className={clsx('mr-4')} width={size} height={size} />
           </Link>
         ))}
       </div>

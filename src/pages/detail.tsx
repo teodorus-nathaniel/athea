@@ -1,11 +1,9 @@
 import AddStoryIcon from '#/assets/icons/add-story.svg'
 import CopyLinkIcon from '#/assets/icons/copy-link.svg'
 import WhatsappIcon from '#/assets/social-media/whatsapp.svg'
-import Contact from '#/components/Contact'
 import Container from '#/components/Container'
 import Layout from '#/components/layouts/Layout'
 import ProjectOverview from '#/components/ProjectOverview'
-import SectionWrapper from '#/components/sections/SectionWrapper'
 import detail from '#/data/detail'
 import Button from '#/ui/Button'
 import Link from '#/ui/Link'
@@ -103,12 +101,6 @@ const Detail: NextPage = () => {
           </div>
         </DetailSection>
       </Container>
-      <SectionWrapper theme='dark' title=''>
-        <Contact
-          displayedSections={['address', 'socialMedia', 'contact']}
-          theme='dark'
-        />
-      </SectionWrapper>
     </Layout>
   )
 }
@@ -118,10 +110,11 @@ export default Detail
 const DetailSection = ({
   title,
   children,
+  className,
   ...props
 }: { title?: string } & HTMLProps<HTMLDivElement>) => {
   return (
-    <section className={clsx('flex flex-col', 'mb-8')} {...props}>
+    <section className={clsx('flex flex-col', 'pb-8', className)} {...props}>
       <h2
         className={clsx(
           'text-2xl tracking-wider font-serif font-bold',

@@ -2,11 +2,12 @@ import clsx from 'clsx'
 import RouterLink from 'next/link'
 import React, { forwardRef, HTMLProps } from 'react'
 
-interface Props extends HTMLProps<HTMLAnchorElement> {
+export interface LinkProps extends HTMLProps<HTMLAnchorElement> {
   noAnimation?: boolean
+  ref?: any
 }
 
-const Link = forwardRef<HTMLAnchorElement, Props>(function Link(
+const Link = forwardRef<HTMLAnchorElement, LinkProps>(function Link(
   { className, href = '', noAnimation, ...anchorProps },
   ref
 ) {

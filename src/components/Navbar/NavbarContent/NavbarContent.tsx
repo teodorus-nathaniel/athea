@@ -16,7 +16,7 @@ export interface NavbarContentChildProps {
   links: { text: string; href: string }[]
 }
 
-const links = [
+export const links = [
   { text: 'HOME', href: '/' },
   { text: 'WORKS', href: '/works' },
   { text: 'SERVICES', href: '/services' },
