@@ -58,12 +58,13 @@ export default function TabLayout({
             <Link
               className={clsx(
                 'relative block',
-                'py-1.5 mr-0.5 pl-4 pr-6',
+                'py-1.5 mr-2 pl-4 pr-6',
                 'tracking-wider font-light',
                 'transition ease-out',
                 'whitespace-nowrap',
                 'border rounded-full',
-                !selected ? 'border-transparent' : 'border-white'
+                'hover:border-gray-600',
+                !selected ? 'border-transparent' : '!border-white'
               )}
               noAnimation
               href={`#${encodeTab(hash ?? title)}`}
