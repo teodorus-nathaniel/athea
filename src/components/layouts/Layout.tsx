@@ -41,7 +41,7 @@ export default function Layout({
       </div>
       {mdUp && (
         <div className={clsx(themeClassNames[theme])}>
-          <Footer />
+          <Footer theme={theme} />
         </div>
       )}
     </div>
