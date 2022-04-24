@@ -4,7 +4,7 @@ import Link from '#/ui/Link'
 import clsx from 'clsx'
 import { AnimatePresence, motion } from 'framer-motion'
 import { useRouter } from 'next/router'
-import React, { useCallback } from 'react'
+import React, { useCallback, useMemo } from 'react'
 import { NavbarContentChildProps } from './NavbarContent'
 
 const containerVariants: TransitionVariants = {
@@ -38,12 +38,18 @@ export default function NavbarContentDesktop({
       },
       open: {
         opacity: 1,
-        x: (idx + 1) * -elementOffset,
+        x: (idx + 1) * -elementOffset + 50,
       },
     }),
     [elementOffset]
   )
   const { pathname } = useRouter()
+
+  const reversedLinks = useMemo(() => {
+    const linksCopy = [...links]
+    linksCopy.reverse()
+    return linksCopy
+  }, [links])
 
   return (
     <AnimatePresence>
@@ -56,23 +62,24 @@ export default function NavbarContentDesktop({
           className={clsx(
             'mr-6 mt-8',
             'fixed top-0 right-0 z-30',
-            'mix-blend-normal',
             'text-white',
             'flex items-center'
           )}>
-          {links.map(({ href, text }, idx) => {
+          {reversedLinks.map(({ href, text }, idx) => {
             return (
               <motion.div
                 variants={generateContentVariants(idx)}
                 key={text}
-                className={clsx('absolute top-1/2')}
+                className={clsx('absolute top-1/2 right-0')}
                 transition={NORMAL_TRANSITION}>
                 <Link
                   href={href}
                   className={clsx(
-                    'text-xl uppercase font-bold',
-                    'font-serif tracking-widest',
-                    href === pathname ? 'text-white' : 'text-gray-500'
+                    'text-xl uppercase',
+                    'tracking-widest',
+                    href === pathname
+                      ? 'text-white font-serif font-bold'
+                      : 'text-gray-500'
                   )}>
                   {text}
                 </Link>

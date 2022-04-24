@@ -65,9 +65,11 @@ export default function NavbarContentMobile({
               <Link
                 href={href}
                 className={clsx(
-                  'text-xl uppercase font-bold',
-                  'font-serif tracking-widest',
-                  href === pathname ? 'text-white' : 'text-gray-500'
+                  'text-xl uppercase',
+                  'tracking-widest',
+                  href === pathname
+                    ? 'text-white font-serif font-bold'
+                    : 'text-gray-500'
                 )}>
                 {text}
               </Link>
