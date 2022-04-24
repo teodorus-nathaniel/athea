@@ -17,7 +17,7 @@ export default function ProjectOverviewList({
       {...divProps}
       className={clsx(
         'w-full max-w-screen-lg mx-auto',
-        'grid gap-12 grid-cols-2 justify-center',
+        'grid gap-12 grid-cols-[repeat(auto-fit,_minmax(300px,_450px))] justify-center',
         className
       )}>
       {projects.map((projectProps, idx) => (
