@@ -9,10 +9,12 @@ import NavbarContentMobile from './NavbarContentMobile'
 export interface NavbarContentProps {
   isOpen: boolean
   type: 'desktop' | 'mobile'
+  closeContent: () => void
 }
 export interface NavbarContentChildProps {
   isOpen: boolean
   links: { text: string; href: string }[]
+  closeContent: () => void
 }
 
 const links = [
@@ -22,7 +24,11 @@ const links = [
   { text: 'CONTACT', href: '/contact' },
 ]
 
-export default function NavbarContent({ isOpen, type }: NavbarContentProps) {
+export default function NavbarContent({
+  isOpen,
+  type,
+  closeContent,
+}: NavbarContentProps) {
   const isDesktop = type === 'desktop'
 
   let Component = null
@@ -40,7 +46,7 @@ export default function NavbarContent({ isOpen, type }: NavbarContentProps) {
   return (
     <>
       <NavbarOverlay isOpen={isOpen} opacity={isDesktop ? 0.85 : 1} />
-      <Component isOpen={isOpen} links={links} />
+      <Component isOpen={isOpen} links={links} closeContent={closeContent} />
     </>
   )
 }

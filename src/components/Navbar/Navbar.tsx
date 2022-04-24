@@ -73,6 +73,7 @@ export default function Navbar() {
         </AnimatePresence>
       </nav>
       <NavbarContent
+        closeContent={() => setIsOpenContent(false)}
         type={mdUp ? 'desktop' : 'mobile'}
         isOpen={isOpenContent}
       />
