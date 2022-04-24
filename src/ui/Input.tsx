@@ -31,7 +31,7 @@ export default function Input({
       <div className='relative rounded-md'>
         {LeftIcon && (
           <div className='absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none'>
-            {<LeftIcon height='1em' />}
+            <LeftIcon height='1em' />
           </div>
         )}
         <input
