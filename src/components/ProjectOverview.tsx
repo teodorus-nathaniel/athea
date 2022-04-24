@@ -1,4 +1,5 @@
 import { ProjectOverviewData } from '#/data/types'
+import { useBreakpointThreshold } from '#/helpers/hooks/useBreakpointThreshold'
 import Link from '#/ui/Link'
 import clsx from 'clsx'
 import Image from 'next/image'
@@ -12,13 +13,21 @@ export default function ProjectOverview({
   ref: _ref,
   ...anchorProps
 }: ProjectOverviewData & HTMLProps<HTMLAnchorElement>) {
+  const mdUp = useBreakpointThreshold('md')
+  const desktopClassNames = clsx('pt-[75%]')
+  const mobileClassNames = clsx('pt-[133%]')
+
   return (
     <Link
       noAnimation
       href='/detail'
       className={clsx('flex flex-col w-full')}
       {...anchorProps}>
-      <div className={clsx('w-full pt-[100%] relative')}>
+      <div
+        className={clsx(
+          'w-full relative',
+          mdUp ? desktopClassNames : mobileClassNames
+        )}>
         <Image
           src={thumbnail}
           alt={title}
