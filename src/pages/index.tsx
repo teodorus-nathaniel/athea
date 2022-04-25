@@ -23,6 +23,7 @@ const Home: NextPage = () => {
         <video
           autoPlay
           muted
+          loop
           src='/videos/home.mp4'
           className={clsx('absolute w-full h-full top-0 left-0')}
         />
