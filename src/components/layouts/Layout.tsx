@@ -29,7 +29,7 @@ export default function Layout({
   const mdUp = useBreakpointThreshold('md')
 
   return (
-    <div>
+    <div className='min-h-screen'>
       <Head>
         <title>{meta.title}</title>
         <meta name='description' content={meta.desc ?? 'Athea website page'} />
@@ -38,10 +38,9 @@ export default function Layout({
       <div
         className={clsx(
           themeClassNames[theme],
-          hasOffsetNavbar ? 'pt-20' : '',
-          'min-h-screen'
+          hasOffsetNavbar ? 'pt-20' : ''
         )}>
-        {children}
+        <div className={clsx(hasOffsetNavbar ? 'pt-2' : '')}>{children}</div>
       </div>
       {(mobileFooter || mdUp) && (
         <div className={clsx(themeClassNames[theme])}>
