@@ -13,6 +13,7 @@ type Props = {
     title: string
     desc?: string
   }
+  navbarNoMixBlend?: boolean
   hasOffsetNavbar?: boolean
   mobileFooter?: boolean
   mobileFooterTitle?: string
@@ -22,6 +23,7 @@ export default function Layout({
   meta,
   children,
   theme = 'light',
+  navbarNoMixBlend = false,
   hasOffsetNavbar = false,
   mobileFooter = false,
   mobileFooterTitle,
@@ -34,7 +36,7 @@ export default function Layout({
         <title>{meta.title}</title>
         <meta name='description' content={meta.desc ?? 'Athea website page'} />
       </Head>
-      <Navbar />
+      <Navbar noMixBlend={navbarNoMixBlend} />
       <div
         className={clsx(
           themeClassNames[theme],

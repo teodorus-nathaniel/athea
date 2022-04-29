@@ -4,21 +4,17 @@ import { useBreakpointThreshold } from '#/helpers/hooks/useBreakpointThreshold'
 import clsx from 'clsx'
 import type { NextPage } from 'next'
 import Image from 'next/image'
-import { useEffect, useState } from 'react'
 
 const Home: NextPage = () => {
   const mdUp = useBreakpointThreshold('md')
-  const [hash, setHash] = useState('')
-  useEffect(() => {
-    setHash(window.location.hash.substring(1))
-  }, [])
 
   return (
     <Layout
       meta={{ title: 'Homepage' }}
       theme='dark'
       mobileFooter
-      mobileFooterTitle='Contact Us'>
+      mobileFooterTitle='Contact Us'
+      navbarNoMixBlend>
       <div className={clsx('w-full h-screen relative')}>
         <video
           autoPlay
@@ -30,11 +26,9 @@ const Home: NextPage = () => {
             'object-cover'
           )}
         />
-        {hash === 'test' && (
-          <div
-            className={clsx('absolute w-full h-full', 'bg-black opacity-50')}
-          />
-        )}
+        <div
+          className={clsx('absolute w-full h-full', 'bg-black opacity-30')}
+        />
         <div
           className={clsx(
             'absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2',

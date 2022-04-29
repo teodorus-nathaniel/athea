@@ -8,7 +8,11 @@ import { AnimatePresence, motion } from 'framer-motion'
 import React, { useEffect, useRef, useState } from 'react'
 import NavbarContent from './NavbarContent'
 
-export default function Navbar() {
+interface NavbarProps {
+  noMixBlend: boolean
+}
+
+export default function Navbar({ noMixBlend = false }: NavbarProps) {
   const mdUp = useBreakpointThreshold('md')
 
   const lastScrollUp = useRef(0)
@@ -41,7 +45,8 @@ export default function Navbar() {
           'fixed top-0 w-full',
           'flex justify-end items-center',
           'px-6 py-6',
-          'mix-blend-difference text-white',
+          'text-white',
+          noMixBlend ? '' : 'mix-blend-difference',
           'z-30'
         )}>
         <AnimatePresence initial={false}>
