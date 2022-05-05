@@ -22,7 +22,11 @@ export default function SectionWrapper({
         className={clsx('flex flex-col items-center', 'pt-8 pb-16', className)}>
         {title && (
           <h1
-            className={clsx('text-2xl font-bold uppercase font-serif', 'pb-8')}>
+            className={clsx(
+              'text-2xl font-bold uppercase',
+              'font-serif tracking-widest',
+              'pb-8'
+            )}>
             {title}
           </h1>
         )}

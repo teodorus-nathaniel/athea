@@ -14,7 +14,7 @@ const works: {
     projects: [
       {
         title: "N'PURE X ISYANA",
-        titleDesc: "ISYANA'S SKIUN MELODY",
+        titleDesc: "ISYANA'S SKIN MELODY",
         subtitle: 'CAMPAIGN · DIGITAL · VIDEO · 2021',
         thumbnail: Project1,
       },
@@ -38,7 +38,7 @@ const works: {
     projects: [
       {
         title: 'RENDY PANDUGO',
-        titleDesc: 'MR SUN MUSIC VIDEO',
+        titleDesc: 'MR SUN',
         subtitle: 'DIGITAL · MUSIC VIDEO · 2021',
         thumbnail: Project3,
       },
@@ -50,7 +50,7 @@ const works: {
     projects: [
       {
         title: 'RENDY PANDUGOS',
-        titleDesc: 'MR SUN MUSICS VIDEO',
+        titleDesc: 'MR SUN',
         subtitle: 'DIGITAL · MUSIC VIDEO · 2021',
         thumbnail: Project3,
       },
@@ -61,5 +61,5 @@ let allProjects: ProjectOverviewData[] = []
 works.forEach(({ projects }) => {
   allProjects.push(...projects)
 })
-works.unshift({ title: 'View All', hash: 'all', projects: allProjects })
+works.unshift({ title: 'All Work', hash: 'all', projects: allProjects })
 export default works

@@ -46,7 +46,14 @@ const Works: NextPage = () => {
         type='projects'
         noBgImage
       />
-      <SectionWrapper title='Our Works' theme='dark'>
+      <SectionWrapper
+        title={
+          <>
+            <span>Our </span>
+            <span className='font-sans font-light'>Work</span>
+          </>
+        }
+        theme='dark'>
         <div className={clsx('flex justify-center w-full')}>
           <TabLayout
             className={clsx('!w-auto')}

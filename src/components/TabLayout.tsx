@@ -64,7 +64,7 @@ export default function TabLayout({
                 'whitespace-nowrap',
                 'border rounded-full',
                 'hover:border-gray-600',
-                !selected ? 'border-transparent' : '!border-white'
+                !selected ? 'border-transparent' : '!border-white font-normal'
               )}
               noAnimation
               href={`#${encodeTab(hash ?? title)}`}

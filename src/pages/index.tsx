@@ -14,10 +14,10 @@ const Home: NextPage = () => {
       theme='dark'
       mobileFooter
       mobileFooterTitle={
-        <span className='tracking-widest'>
+        <>
           <span className='font-serif'>Contact </span>
           <span className='font-sans font-light'>Us</span>
-        </span>
+        </>
       }
       navbarNoMixBlend>
       <div className={clsx('w-full h-screen relative')}>
