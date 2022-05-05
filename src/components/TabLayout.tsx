@@ -1,3 +1,4 @@
+import { useBreakpointThreshold } from '#/helpers/hooks/useBreakpointThreshold'
 import Link from '#/ui/Link'
 import Text from '#/ui/Text'
 import clsx from 'clsx'
@@ -33,6 +34,8 @@ export default function TabLayout({
   leftText,
   ...ulProps
 }: TabLayoutProps) {
+  const mdUp = useBreakpointThreshold('md')
+
   useEffect(() => {
     const currentHash = location.hash.substring(1)
     const decodedHash = decodeTab(currentHash)
@@ -55,7 +58,7 @@ export default function TabLayout({
       )}
       {...ulProps}>
       <li>
-        <Text className={clsx('px-8')} serif bold>
+        <Text className={clsx(mdUp ? 'px-8' : 'pr-4')} serif bold>
           {leftText}
         </Text>
       </li>
@@ -66,13 +69,14 @@ export default function TabLayout({
             <Link
               className={clsx(
                 'relative block',
-                'py-1.5 mr-2 pl-6 pr-8',
+                'py-1.5 mr-2',
+                mdUp ? 'pl-6 pr-8' : 'pl-4 pr-6',
                 'tracking-wider font-light',
                 'transition ease-out',
                 'whitespace-nowrap',
                 'border rounded-full',
                 'hover:border-gray-600',
-                !selected ? 'border-transparent text-gray-400' : '!border-white'
+                !selected ? 'border-transparent opacity-60' : '!border-white'
               )}
               noAnimation
               href={`#${encodeTab(hash ?? title)}`}
@@ -84,7 +88,8 @@ export default function TabLayout({
               <Text
                 bold={selected}
                 className={clsx(
-                  'absolute top-2 right-7',
+                  'absolute top-2',
+                  mdUp ? 'right-7' : 'right-5',
                   'translate-x-full',
                   'text-xs'
                 )}>

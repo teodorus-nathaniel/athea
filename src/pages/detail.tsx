@@ -41,7 +41,7 @@ const Detail: NextPage = () => {
             </Text>{' '}
             &middot; <Text>{titleDesc}</Text>
           </Text>
-          <Text className='text-sm mb-6 text-gray-400'>{subtitle}</Text>
+          <Text className='text-sm mb-6 opacity-75'>{subtitle}</Text>
           <div className={clsx('mb-4')}>
             <Image src={image} alt={title} />
           </div>
