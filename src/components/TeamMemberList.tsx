@@ -17,7 +17,7 @@ export default function TeamMemberList({
       className={clsx(
         'w-full',
         'grid grid-cols-[repeat(auto-fit,_minmax(125px,_1fr))]',
-        'gap-6',
+        'gap-x-4 gap-y-12',
         className
       )}
       {...props}>

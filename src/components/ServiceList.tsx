@@ -23,7 +23,7 @@ export default function ServiceList({ services }: ServiceListProps) {
             {...serviceProps}
             className={clsx(
               'flex-shrink-0 w-[calc(100vw_-_theme(spacing.6)_*_2)]',
-              `${idx === 0 ? 'ml-4' : ''} mr-4`
+              `${idx === 0 ? 'ml-6' : ''} mr-4`
             )}
           />
         ))}

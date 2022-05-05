@@ -11,11 +11,13 @@ export default function TeamMember({
 }: TeamMemberData & HTMLProps<HTMLDivElement>) {
   return (
     <div className={clsx('flex flex-col w-full', className)} {...divProps}>
-      <div className={clsx('border border-gray-600 w-full pt-[133%]')}></div>
-      <p className={clsx('font-serif font-bold text-lg', 'mb-1 mt-2')}>
-        {name}
-      </p>
-      <p className={clsx('font-light text-sm uppercase')}>{position}</p>
+      <div
+        className={clsx(
+          'border border-gray-600',
+          'w-full pt-[133%] bg-white'
+        )}></div>
+      <p className={clsx('font-serif font-bold', 'mb-1 mt-2')}>{name}</p>
+      <p className={clsx('font-light text-xs uppercase')}>{position}</p>
     </div>
   )
 }

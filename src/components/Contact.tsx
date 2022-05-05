@@ -26,7 +26,7 @@ interface Props extends HTMLProps<HTMLDivElement> {
 
 export default function Contact({
   className,
-  theme = 'light',
+  theme = 'dark',
   displayedSections = ['contact'],
   config = {},
   ...divProps

@@ -50,7 +50,7 @@ const Works: NextPage = () => {
         title={
           <>
             <span>Our </span>
-            <span className='font-sans font-light'>Work</span>
+            <span className='font-sans font-normal'>Work</span>
           </>
         }
         theme='dark'>

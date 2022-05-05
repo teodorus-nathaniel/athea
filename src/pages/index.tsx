@@ -16,7 +16,7 @@ const Home: NextPage = () => {
       mobileFooterTitle={
         <>
           <span className='font-serif'>Contact </span>
-          <span className='font-sans font-light'>Us</span>
+          <span className='font-sans font-normal'>Us</span>
         </>
       }
       navbarNoMixBlend>
