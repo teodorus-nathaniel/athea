@@ -39,7 +39,6 @@ function FooterMobile({ className, theme, title, ...props }: Props) {
 
 function FooterDesktop({ className, theme, title: _title, ...props }: Props) {
   const { pathname } = useRouter()
-  const offsetTop = clsx('pt-6')
   return (
     <Container
       className={clsx(
@@ -49,21 +48,22 @@ function FooterDesktop({ className, theme, title: _title, ...props }: Props) {
       )}
       {...props}>
       <Contact theme={theme} displayedSections={['contact']} />
-      <div className={clsx(offsetTop)}>
+      <div>
         <Contact theme={theme} displayedSections={['address']} />
       </div>
-      <div className={clsx(offsetTop)}>
+      <div>
         <Contact
           theme={theme}
           displayedSections={['socialMedia']}
           config={{ socialMedia: { smaller: true } }}
         />
       </div>
-      <div className={clsx(offsetTop)}>
-        <div className={clsx('flex flex-col')}>
+      <div>
+        <div className={clsx('flex flex-col relative -top-1')}>
           {links.map((link, idx) => (
             <div className={clsx('mb-4')} key={idx}>
               <NavbarLink
+                className='text-lg'
                 theme={theme}
                 isActive={pathname === link.href}
                 {...link}

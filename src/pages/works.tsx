@@ -6,6 +6,7 @@ import TabLayout, { TabData } from '#/components/TabLayout'
 import { SLOW_TRANSITION } from '#/constants/transition'
 import works from '#/data/works'
 import useSlideAnimation from '#/helpers/hooks/useSlideAnimation'
+import Text from '#/ui/Text'
 import clsx from 'clsx'
 import { AnimatePresence, motion } from 'framer-motion'
 import type { NextPage } from 'next'
@@ -49,8 +50,10 @@ const Works: NextPage = () => {
       <SectionWrapper
         title={
           <>
-            <span>Our </span>
-            <span className='font-sans font-normal'>Work</span>
+            <Text serif bold>
+              Our{' '}
+            </Text>
+            <Text>Work</Text>
           </>
         }
         theme='dark'>
