@@ -65,7 +65,7 @@ export default function TabLayout({
                 'whitespace-nowrap',
                 'border rounded-full',
                 'hover:border-gray-600',
-                !selected ? 'border-transparent' : '!border-white font-normal'
+                !selected ? 'border-transparent' : '!border-white'
               )}
               noAnimation
               href={`#${encodeTab(hash ?? title)}`}
@@ -73,8 +73,9 @@ export default function TabLayout({
                 setSelectedTab(idx)
                 onTabClick && onTabClick(idx)
               }}>
-              {title}
+              <Text bold={selected}>{title}</Text>
               <Text
+                bold={selected}
                 className={clsx(
                   'absolute top-2 right-5',
                   'translate-x-full',

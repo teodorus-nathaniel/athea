@@ -22,34 +22,51 @@ export default function NavbarContentDesktop({
   isOpen,
   links,
 }: NavbarContentChildProps) {
-  const elementOffset = Math.min(
-    Math.max(window.innerWidth / links.length / 2, 135),
-    200
-  )
-  const generateContentVariants = useCallback(
-    (idx: number): TransitionVariants => ({
-      init: {
-        opacity: 0,
-        x: idx * -elementOffset,
-      },
-      close: {
-        opacity: 0,
-        x: (idx + 1) * -elementOffset + elementOffset / 2,
-      },
-      open: {
-        opacity: 1,
-        x: (idx + 1) * -elementOffset + 50,
-      },
-    }),
-    [elementOffset]
-  )
-  const { pathname } = useRouter()
-
   const reversedLinks = useMemo(() => {
     const linksCopy = [...links]
     linksCopy.reverse()
     return linksCopy
   }, [links])
+
+  const charactersOffset = useMemo(() => {
+    const OFFSET_PER_CHARACTER = 8
+    const offsets: number[] = []
+    let sum = 25
+    reversedLinks.forEach(({ text }) => {
+      offsets.push(sum)
+      sum += text.length * OFFSET_PER_CHARACTER
+    })
+    return offsets
+  }, [reversedLinks])
+
+  const generateContentVariants = useCallback(
+    (idx: number): TransitionVariants => {
+      const maxCharOffset = charactersOffset[charactersOffset.length - 1]
+      const windowWidth = window.innerWidth - maxCharOffset - 50
+      const elementOffset = Math.min(
+        Math.max(windowWidth / links.length / 2, 80),
+        150
+      )
+      let offset = charactersOffset[idx]
+
+      return {
+        init: {
+          opacity: 0,
+          x: idx * -elementOffset,
+        },
+        close: {
+          opacity: 0,
+          x: (idx + 1) * -elementOffset + elementOffset / 2,
+        },
+        open: {
+          opacity: 1,
+          x: (idx + 1) * -elementOffset + 50 - offset,
+        },
+      }
+    },
+    [links, charactersOffset]
+  )
+  const { pathname } = useRouter()
 
   const toggleNavClick = (status: 'disable' | 'enable') => {
     const navLinks = document.getElementsByClassName('nav-link')
@@ -76,6 +93,7 @@ export default function NavbarContentDesktop({
             'flex items-center'
           )}>
           {reversedLinks.map(({ href, text }, idx) => {
+            const isActive = href === pathname
             return (
               <motion.div
                 variants={generateContentVariants(idx)}
@@ -83,8 +101,10 @@ export default function NavbarContentDesktop({
                 className={clsx('nav-link', 'absolute top-1/2 right-0')}
                 transition={NORMAL_TRANSITION}>
                 <NavbarLink
+                  className={clsx('text-lg')}
+                  style={{ top: isActive ? '-1px' : '' }}
                   href={href}
-                  isActive={href === pathname}
+                  isActive={isActive}
                   text={text}
                 />
               </motion.div>

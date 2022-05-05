@@ -43,7 +43,7 @@ export default function ProjectOverview({
       </div>
       <Text
         as='p'
-        className={clsx('text-xl tracking-wider leading-6', 'mt-6 mb-2')}>
+        className={clsx('text-2xl tracking-wider leading-tight', 'mt-6 mb-2')}>
         <Text serif bold>
           {title}
         </Text>{' '}
