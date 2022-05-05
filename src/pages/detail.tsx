@@ -7,7 +7,7 @@ import ProjectOverview from '#/components/ProjectOverview'
 import detail from '#/data/detail'
 import Button from '#/ui/Button'
 import Link from '#/ui/Link'
-import TextWithNewLines from '#/ui/TextWithNewLines'
+import Text from '#/ui/Text'
 import clsx from 'clsx'
 import type { NextPage } from 'next'
 import Image from 'next/image'
@@ -27,14 +27,21 @@ const Detail: NextPage = () => {
   } = detail
 
   return (
-    <Layout theme='dark' meta={{ title: 'Detail' }} hasOffsetNavbar>
+    <Layout
+      mobileFooter
+      mobileFooterTitle
+      theme='dark'
+      meta={{ title: 'Detail' }}
+      hasOffsetNavbar>
       <Container>
         <DetailSection>
-          <h1 className={clsx('text-2xl tracking-wider mb-2')}>
-            <span className={clsx('font-bold font-serif')}>{title}</span>{' '}
-            &middot; <span className={clsx('font-light')}>{titleDesc}</span>
-          </h1>
-          <span className='text-sm mb-6 text-gray-400'>{subtitle}</span>
+          <Text as='h1' className={clsx('text-2xl tracking-wider mb-2')}>
+            <Text bold serif>
+              {title}
+            </Text>{' '}
+            &middot; <Text>{titleDesc}</Text>
+          </Text>
+          <Text className='text-sm mb-6 text-gray-400'>{subtitle}</Text>
           <div className={clsx('mb-4')}>
             <Image src={image} alt={title} />
           </div>
@@ -46,36 +53,28 @@ const Detail: NextPage = () => {
             )}>
             {meta.map(({ label, value }) => (
               <div className={clsx('flex flex-col')} key={label + value}>
-                <span
-                  className={clsx(
-                    'font-serif tracking-wider text-xs',
-                    'mb-0.5'
-                  )}>
+                <Text
+                  serif
+                  className={clsx('tracking-wider text-sm', 'mb-0.5')}>
                   {label}
-                </span>
-                <TextWithNewLines className={clsx('font-light text-lg')}>
-                  {value}
-                </TextWithNewLines>
+                </Text>
+                <Text className={clsx('text-lg')}>{value}</Text>
               </div>
             ))}
           </div>
         </DetailSection>
 
         <DetailSection title='Overview'>
-          <TextWithNewLines className={clsx('font-light text-lg')}>
-            {overview}
-          </TextWithNewLines>
+          <Text className={clsx('text-lg')}>{overview}</Text>
         </DetailSection>
 
         <DetailSection title='Credits'>
-          <TextWithNewLines className={clsx('font-light text-lg')}>
-            {credits}
-          </TextWithNewLines>
+          <Text className={clsx('text-lg')}>{credits}</Text>
 
           <div className={clsx('flex items-center', 'mt-6')}>
-            <p className={clsx('font-normal text-xl tracking-wider')}>
+            <Text bold className={clsx('text-xl tracking-wider')}>
               Share this work
-            </p>
+            </Text>
             <Link
               noAnimation
               className={clsx('ml-4', 'hover:scale-110 active:scale-105')}>
@@ -97,17 +96,19 @@ const Detail: NextPage = () => {
         <DetailSection
           title={
             <>
-              <span>Related </span>
-              <span className='font-sans font-light'>Works</span>
+              <Text serif bold>
+                Related{' '}
+              </Text>
+              <Text>Works</Text>
             </>
           }>
           <div className={clsx('max-w-sm', 'mt-4 mb-8')}>
             <ProjectOverview {...relatedWorks} />
           </div>
-          <div className={clsx('flex justify-center')}>
-            <Button type='solid-white'>Back to work list</Button>
-          </div>
         </DetailSection>
+        <div className={clsx('flex justify-center mb-12')}>
+          <Button type='solid-white'>Back to work list</Button>
+        </div>
       </Container>
     </Layout>
   )
@@ -126,14 +127,28 @@ const DetailSection = ({
 >) => {
   return (
     <section className={clsx('flex flex-col', 'pb-16', className)} {...props}>
-      <h2
-        className={clsx(
-          'text-2xl text-center uppercase',
-          'font-serif font-bold tracking-wider',
-          'mb-6'
-        )}>
-        {title}
-      </h2>
+      {typeof title === 'string' ? (
+        <Text
+          as='h2'
+          bold
+          serif
+          className={clsx(
+            'text-2xl text-center uppercase',
+            'tracking-wider',
+            'mb-6'
+          )}>
+          {title}
+        </Text>
+      ) : (
+        <div
+          className={clsx(
+            'text-2xl text-center uppercase',
+            'tracking-wider',
+            'mb-6'
+          )}>
+          {title}
+        </div>
+      )}
       {children}
     </section>
   )

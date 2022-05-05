@@ -1,4 +1,5 @@
 import { ServiceData } from '#/data/types'
+import Text from '#/ui/Text'
 import clsx from 'clsx'
 import React, { HTMLProps } from 'react'
 
@@ -24,11 +25,13 @@ export default function Service({
           'w-full pt-[155.55%] bg-white'
         )}></div>
       <div className={clsx('relative pl-6 mt-4', 'flex flex-col')}>
-        <span className={clsx('absolute top-0 left-0')}>
+        <Text className={clsx('absolute top-0 left-0')}>
           {number.toString().padStart(2, '0')}
-        </span>
-        <p className={clsx('font-serif font-bold text-xl', 'mb-1')}>{title}</p>
-        <p className={clsx('font-light')}>{subtitle}</p>
+        </Text>
+        <Text bold serif className={clsx('text-xl', 'mb-1')}>
+          {title}
+        </Text>
+        <Text>{subtitle}</Text>
       </div>
     </div>
   )

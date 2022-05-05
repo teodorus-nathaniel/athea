@@ -1,4 +1,5 @@
 import { themeClassNames, ThemeTypes } from '#/constants/theme'
+import Text from '#/ui/Text'
 import clsx from 'clsx'
 import React, { HTMLProps } from 'react'
 import Container from '../Container'
@@ -20,15 +21,27 @@ export default function SectionWrapper({
       <Container
         {...divProps}
         className={clsx('flex flex-col items-center', 'pt-8 pb-16', className)}>
-        {title && (
-          <h1
+        {typeof title === 'string' ? (
+          <Text
+            as='h1'
+            serif
+            bold
             className={clsx(
-              'text-2xl font-bold uppercase',
-              'font-serif tracking-widest',
+              'text-2xl uppercase',
+              'tracking-widest',
               'pb-8 px-6 text-center'
             )}>
             {title}
-          </h1>
+          </Text>
+        ) : (
+          <div
+            className={clsx(
+              'text-2xl uppercase',
+              'tracking-widest',
+              'pb-8 px-6 text-center'
+            )}>
+            {title}
+          </div>
         )}
         {children}
       </Container>

@@ -1,4 +1,5 @@
 import { TeamMemberData } from '#/data/types'
+import Text from '#/ui/Text'
 import clsx from 'clsx'
 import React, { HTMLProps } from 'react'
 
@@ -16,8 +17,10 @@ export default function TeamMember({
           'border border-gray-600',
           'w-full pt-[133%] bg-white'
         )}></div>
-      <p className={clsx('font-serif font-bold', 'mb-1 mt-2')}>{name}</p>
-      <p className={clsx('font-light text-xs uppercase')}>{position}</p>
+      <Text serif bold className={clsx('mb-1 mt-2')}>
+        {name}
+      </Text>
+      <Text className={clsx('text-xs uppercase')}>{position}</Text>
     </div>
   )
 }

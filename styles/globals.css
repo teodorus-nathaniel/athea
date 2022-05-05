@@ -1,3 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer utilities {
+  .font-serif {
+    font-size: calc(100% - 2px);
+  }
+}

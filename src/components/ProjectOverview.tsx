@@ -1,6 +1,7 @@
 import { ProjectOverviewData } from '#/data/types'
 import { useBreakpointThreshold } from '#/helpers/hooks/useBreakpointThreshold'
 import Link from '#/ui/Link'
+import Text from '#/ui/Text'
 import clsx from 'clsx'
 import Image from 'next/image'
 import React, { HTMLProps } from 'react'
@@ -40,11 +41,18 @@ export default function ProjectOverview({
           )}
         />
       </div>
-      <h2 className={clsx('text-xl tracking-wider leading-6', 'mt-6 mb-2')}>
-        <span className='font-bold font-serif'>{title}</span> &middot;
-        <span> {titleDesc}</span>
-      </h2>
-      <p className='font-light text-sm'>{subtitle}</p>
+      <Text
+        as='p'
+        className={clsx('text-xl tracking-wider leading-6', 'mt-6 mb-2')}>
+        <Text serif bold>
+          {title}
+        </Text>{' '}
+        &middot;
+        <Text> {titleDesc}</Text>
+      </Text>
+      <Text as='p' className='text-sm'>
+        {subtitle}
+      </Text>
     </Link>
   )
 }

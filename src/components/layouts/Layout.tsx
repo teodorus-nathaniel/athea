@@ -1,5 +1,6 @@
 import { themeClassNames, ThemeTypes } from '#/constants/theme'
 import { useBreakpointThreshold } from '#/helpers/hooks/useBreakpointThreshold'
+import Text from '#/ui/Text'
 import clsx from 'clsx'
 import Head from 'next/head'
 import React from 'react'
@@ -16,7 +17,7 @@ type Props = {
   navbarNoMixBlend?: boolean
   hasOffsetNavbar?: boolean
   mobileFooter?: boolean
-  mobileFooterTitle?: string | JSX.Element
+  mobileFooterTitle?: string | JSX.Element | true
 }
 
 export default function Layout({
@@ -29,6 +30,14 @@ export default function Layout({
   mobileFooterTitle,
 }: Props) {
   const mdUp = useBreakpointThreshold('md')
+  const defaultTitle = (
+    <>
+      <Text serif bold>
+        Contact{' '}
+      </Text>
+      <Text>Us</Text>
+    </>
+  )
 
   return (
     <div className='min-h-screen'>
@@ -46,7 +55,12 @@ export default function Layout({
       </div>
       {(mobileFooter || mdUp) && (
         <div className={clsx(themeClassNames[theme])}>
-          <Footer theme={theme} title={mobileFooterTitle} />
+          <Footer
+            theme={theme}
+            title={
+              mobileFooterTitle === true ? defaultTitle : mobileFooterTitle
+            }
+          />
         </div>
       )}
     </div>

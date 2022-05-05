@@ -1,4 +1,5 @@
 import Link from '#/ui/Link'
+import Text from '#/ui/Text'
 import clsx from 'clsx'
 import React, { HTMLProps, useEffect } from 'react'
 
@@ -73,14 +74,14 @@ export default function TabLayout({
                 onTabClick && onTabClick(idx)
               }}>
               {title}
-              <span
+              <Text
                 className={clsx(
                   'absolute top-2 right-5',
                   'translate-x-full',
                   'text-xs'
                 )}>
                 {additionalInfo}
-              </span>
+              </Text>
             </Link>
           </li>
         )

@@ -3,7 +3,7 @@ import BrandHeadline, { BrandHeadlineProps } from '#/components/BrandHeadline'
 import Container from '#/components/Container'
 import { themeClassNames } from '#/constants/theme'
 import Button from '#/ui/Button'
-import TextWithNewLines from '#/ui/TextWithNewLines'
+import Text from '#/ui/Text'
 import clsx from 'clsx'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -45,9 +45,7 @@ export default function HeadlineSection({
         className={clsx('flex-1 flex flex-col justify-center', 'max-w-md')}>
         <BrandHeadline {...headlineProps} className={clsx('mx-auto w-full')} />
         <div className='flex flex-col items-center'>
-          <TextWithNewLines className='font-light text-center mt-16 text-lg'>
-            {subheading}
-          </TextWithNewLines>
+          <Text className='text-center mt-16 text-lg'>{subheading}</Text>
           {ctaButton &&
             (() => {
               const cta = (
