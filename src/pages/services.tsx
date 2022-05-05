@@ -7,6 +7,7 @@ import ServiceList from '#/components/ServiceList'
 import TeamMemberList from '#/components/TeamMemberList'
 import services from '#/data/services'
 import teamMembers from '#/data/team'
+import { useBreakpointThreshold } from '#/helpers/hooks/useBreakpointThreshold'
 import useHorizontalPadding from '#/helpers/hooks/useHorizontalPadding'
 import Text from '#/ui/Text'
 import clsx from 'clsx'
@@ -15,6 +16,8 @@ import Image from 'next/image'
 
 const Services: NextPage = () => {
   const horizontalPadding = useHorizontalPadding()
+  const mdUp = useBreakpointThreshold('md')
+
   return (
     <Layout meta={{ title: 'Services' }}>
       <HeadlineSection
@@ -57,9 +60,9 @@ const Services: NextPage = () => {
         title={
           <>
             <Text serif bold>
-              Our{' '}
+              {mdUp ? 'Meet ' : 'Our '}
             </Text>
-            <Text>Team</Text>
+            <Text bold>{mdUp ? 'Our Team' : 'Team'}</Text>
           </>
         }>
         <TeamMemberList teamMembers={teamMembers} />
