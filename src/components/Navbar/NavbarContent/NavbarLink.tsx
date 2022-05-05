@@ -1,5 +1,6 @@
 import { ThemeTypes } from '#/constants/theme'
 import Link, { LinkProps } from '#/ui/Link'
+import Text from '#/ui/Text'
 import clsx from 'clsx'
 import { BsFillCaretRightFill } from 'react-icons/bs'
 
@@ -23,15 +24,15 @@ export default function NavbarLink({
     <Link
       href={href}
       className={clsx(
-        'uppercase tracking-widest',
+        'uppercase tracking-widest text-2xl',
         'ml-5 relative',
-        isActive
-          ? `${activeFontColor} text-lg font-serif font-bold`
-          : 'text-xl text-gray-500 font-normal',
+        isActive ? `${activeFontColor}` : 'text-gray-500',
         className
       )}
       {...props}>
-      {text}
+      <Text serif={isActive} bold>
+        {text}
+      </Text>
       {isActive && (
         <BsFillCaretRightFill
           fontSize='0.8em'

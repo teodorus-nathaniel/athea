@@ -13,14 +13,9 @@ const Home: NextPage = () => {
       meta={{ title: 'Homepage' }}
       theme='dark'
       mobileFooter
-      mobileFooterTitle={
-        <>
-          <span className='font-serif'>Contact </span>
-          <span className='font-sans font-normal'>Us</span>
-        </>
-      }
+      mobileFooterTitle
       navbarNoMixBlend>
-      <div className={clsx('w-full h-screen relative')}>
+      <div className={clsx('w-full h-screen relative mb-8')}>
         <video
           autoPlay
           muted
