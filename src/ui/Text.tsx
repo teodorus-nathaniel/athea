@@ -25,6 +25,7 @@ export default function Text({
   bold = false,
   as: As = 'span',
   className,
+  style,
   ...props
 }: TextProps) {
   const isBoldString = bold ? 'yes' : 'no'
@@ -32,6 +33,7 @@ export default function Text({
   const serifClassName = serif ? clsx('font-serif') : clsx('font-sans')
   return (
     <As
+      style={{ maxWidth: '80ch', ...style }}
       className={clsx(boldMapper[isSerifString][isBoldString], className)}
       {...props}>
       {typeof children === 'string' ? (

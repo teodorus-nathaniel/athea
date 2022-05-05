@@ -1,4 +1,5 @@
 import { themeClassNames, ThemeTypes } from '#/constants/theme'
+import useHorizontalPadding from '#/helpers/hooks/useHorizontalPadding'
 import Text from '#/ui/Text'
 import clsx from 'clsx'
 import React, { HTMLProps } from 'react'
@@ -16,32 +17,25 @@ export default function SectionWrapper({
   theme = 'dark',
   ...divProps
 }: Props) {
+  const horizontalPadding = useHorizontalPadding()
+  const titleClassName = clsx(
+    'text-2xl uppercase',
+    'tracking-widest',
+    'pb-8 text-center',
+    horizontalPadding
+  )
+
   return (
     <div className={clsx(themeClassNames[theme])}>
       <Container
         {...divProps}
         className={clsx('flex flex-col items-center', 'pt-8 pb-16', className)}>
         {typeof title === 'string' ? (
-          <Text
-            as='h1'
-            serif
-            bold
-            className={clsx(
-              'text-2xl uppercase',
-              'tracking-widest',
-              'pb-8 px-6 text-center'
-            )}>
+          <Text as='h1' serif bold className={titleClassName}>
             {title}
           </Text>
         ) : (
-          <div
-            className={clsx(
-              'text-2xl uppercase',
-              'tracking-widest',
-              'pb-8 px-6 text-center'
-            )}>
-            {title}
-          </div>
+          <div className={titleClassName}>{title}</div>
         )}
         {children}
       </Container>

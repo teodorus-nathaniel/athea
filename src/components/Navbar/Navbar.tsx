@@ -2,7 +2,9 @@ import Logo from '#/assets/brand/logo.svg'
 import Menu from '#/assets/icons/menu.svg'
 import { NORMAL_TRANSITION } from '#/constants/transition'
 import { useBreakpointThreshold } from '#/helpers/hooks/useBreakpointThreshold'
+import useHorizontalPadding from '#/helpers/hooks/useHorizontalPadding'
 import { lockScroll, unlockScroll } from '#/helpers/lock-scroll'
+import Link from '#/ui/Link'
 import clsx from 'clsx'
 import { AnimatePresence, motion } from 'framer-motion'
 import React, { useEffect, useRef, useState } from 'react'
@@ -14,6 +16,7 @@ interface NavbarProps {
 
 export default function Navbar({ noMixBlend = false }: NavbarProps) {
   const mdUp = useBreakpointThreshold('md')
+  const horizontalPadding = useHorizontalPadding()
 
   const lastScrollUp = useRef(0)
   const [isScrollingUp, setIsScrollingUp] = useState(true)
@@ -38,13 +41,16 @@ export default function Navbar({ noMixBlend = false }: NavbarProps) {
     }
   }, [])
 
+  const logoSize = '1.5rem'
+
   return (
     <>
       <nav
         className={clsx(
           'fixed top-0 w-full',
           'flex justify-end items-center',
-          'px-6 py-6',
+          'py-6',
+          horizontalPadding,
           'text-white',
           noMixBlend ? '' : 'mix-blend-difference',
           'z-30'
@@ -60,7 +66,9 @@ export default function Navbar({ noMixBlend = false }: NavbarProps) {
               initial={{ opacity: 0, y: -25 }}
               exit={{ opacity: 0, y: -25 }}
               animate={{ opacity: 1, y: 0 }}>
-              <Logo height='1.3rem' className='z-40 text-white' />
+              <Link href='/' noAnimation>
+                <Logo height={logoSize} className='z-40 text-white' />
+              </Link>
               <button
                 ref={menuButtonRef}
                 onClick={() => setIsOpenContent((prev) => !prev)}
@@ -71,7 +79,7 @@ export default function Navbar({ noMixBlend = false }: NavbarProps) {
                   'transition ease-out',
                   'hover:scale-110'
                 )}>
-                <Menu height='1.2rem' />
+                <Menu height={logoSize} />
               </button>
             </motion.div>
           )}

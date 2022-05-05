@@ -1,6 +1,7 @@
 import SearchIcon from '#/assets/icons/search.svg'
 import Contact from '#/components/Contact'
 import { NORMAL_TRANSITION } from '#/constants/transition'
+import useHorizontalPadding from '#/helpers/hooks/useHorizontalPadding'
 import { TransitionVariants } from '#/helpers/types'
 import Input from '#/ui/Input'
 import clsx from 'clsx'
@@ -29,6 +30,7 @@ export default function NavbarContentMobile({
   links,
 }: NavbarContentChildProps) {
   const { pathname } = useRouter()
+  const horizontalPadding = useHorizontalPadding()
 
   return (
     <AnimatePresence>
@@ -36,7 +38,8 @@ export default function NavbarContentMobile({
         <motion.div
           className={clsx(
             'fixed top-0 left-0',
-            'pt-24 pb-8 px-6 w-full min-h-screen',
+            'pt-24 pb-8 w-full min-h-screen',
+            horizontalPadding,
             'overflow-auto',
             'z-20',
             'flex flex-col',

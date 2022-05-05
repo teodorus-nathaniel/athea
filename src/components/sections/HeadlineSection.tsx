@@ -45,7 +45,9 @@ export default function HeadlineSection({
         className={clsx('flex-1 flex flex-col justify-center', 'max-w-md')}>
         <BrandHeadline {...headlineProps} className={clsx('mx-auto w-full')} />
         <div className='flex flex-col items-center'>
-          <Text className='text-center mt-16 text-lg'>{subheading}</Text>
+          <Text as='p' className='text-center mt-16 text-lg'>
+            {subheading}
+          </Text>
           {ctaButton &&
             (() => {
               const cta = (

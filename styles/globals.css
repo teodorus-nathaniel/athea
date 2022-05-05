@@ -6,4 +6,9 @@
   .font-serif {
     font-size: calc(100% - 2px);
   }
+  @media screen and (max-width: 1024px) {
+    .container {
+      max-width: 1024px;
+    }
+  }
 }

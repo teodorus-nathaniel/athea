@@ -63,7 +63,7 @@ function FooterDesktop({ className, theme, title: _title, ...props }: Props) {
           {links.map((link, idx) => (
             <div className={clsx('mb-4')} key={idx}>
               <NavbarLink
-                className='text-lg'
+                className='!text-lg'
                 theme={theme}
                 isActive={pathname === link.href}
                 {...link}

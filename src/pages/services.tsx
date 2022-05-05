@@ -7,12 +7,14 @@ import ServiceList from '#/components/ServiceList'
 import TeamMemberList from '#/components/TeamMemberList'
 import services from '#/data/services'
 import teamMembers from '#/data/team'
+import useHorizontalPadding from '#/helpers/hooks/useHorizontalPadding'
 import Text from '#/ui/Text'
 import clsx from 'clsx'
 import type { NextPage } from 'next'
 import Image from 'next/image'
 
 const Services: NextPage = () => {
+  const horizontalPadding = useHorizontalPadding()
   return (
     <Layout meta={{ title: 'Services' }}>
       <HeadlineSection
@@ -27,7 +29,7 @@ const Services: NextPage = () => {
             {`We Integrate\nCollaborate\nChallenge`}
           </Text>
         }>
-        <div className='flex flex-col text-lg px-6'>
+        <div className={clsx('flex flex-col text-lg', horizontalPadding)}>
           <Text className='pb-4'>
             We are your next set of creative innovation experts. Athea is
             multidisciplinary creative company.
