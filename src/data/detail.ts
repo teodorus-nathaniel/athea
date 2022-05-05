@@ -4,6 +4,7 @@ import recentWorks from './recent-works'
 const detail = {
   title: "N'PURE X ISYANA",
   titleDesc: "ISYANA'S SKIN MELODY",
+  subtitle: 'MANIFESTO · DIGITAL · VIDEO · 2021',
 
   image: Project1,
   meta: [

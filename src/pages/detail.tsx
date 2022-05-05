@@ -23,16 +23,18 @@ const Detail: NextPage = () => {
     shareLinks: _shareLinks, // TODO: ini blom dipake
     title,
     titleDesc,
+    subtitle,
   } = detail
 
   return (
     <Layout theme='dark' meta={{ title: 'Detail' }} hasOffsetNavbar>
       <Container>
         <DetailSection>
-          <h1 className={clsx('text-2xl tracking-wider mt-8 mb-6')}>
+          <h1 className={clsx('text-2xl tracking-wider mb-2')}>
             <span className={clsx('font-bold font-serif')}>{title}</span>{' '}
             &middot; <span className={clsx('font-light')}>{titleDesc}</span>
           </h1>
+          <span className='text-sm mb-6 text-gray-400'>{subtitle}</span>
           <div className={clsx('mb-4')}>
             <Image src={image} alt={title} />
           </div>
@@ -40,13 +42,13 @@ const Detail: NextPage = () => {
             className={clsx(
               'w-full',
               'grid grid-cols-[repeat(auto-fit,_minmax(150px,_1fr))]',
-              'gap-4'
+              'gap-x-4 gap-y-8'
             )}>
             {meta.map(({ label, value }) => (
               <div className={clsx('flex flex-col')} key={label + value}>
                 <span
                   className={clsx(
-                    'font-serif tracking-wider text-sm',
+                    'font-serif tracking-wider text-xs',
                     'mb-0.5'
                   )}>
                   {label}
@@ -71,7 +73,7 @@ const Detail: NextPage = () => {
           </TextWithNewLines>
 
           <div className={clsx('flex items-center', 'mt-6')}>
-            <p className={clsx('font-bold text-lg tracking-wider')}>
+            <p className={clsx('font-normal text-xl tracking-wider')}>
               Share this work
             </p>
             <Link
@@ -92,7 +94,13 @@ const Detail: NextPage = () => {
           </div>
         </DetailSection>
 
-        <DetailSection title='Related Works'>
+        <DetailSection
+          title={
+            <>
+              <span>Related </span>
+              <span className='font-sans font-light'>Works</span>
+            </>
+          }>
           <div className={clsx('max-w-sm', 'mt-4 mb-8')}>
             <ProjectOverview {...relatedWorks} />
           </div>
@@ -112,13 +120,17 @@ const DetailSection = ({
   children,
   className,
   ...props
-}: { title?: string } & HTMLProps<HTMLDivElement>) => {
+}: { title?: string | JSX.Element } & Omit<
+  HTMLProps<HTMLDivElement>,
+  'title'
+>) => {
   return (
-    <section className={clsx('flex flex-col', 'pb-8', className)} {...props}>
+    <section className={clsx('flex flex-col', 'pb-16', className)} {...props}>
       <h2
         className={clsx(
-          'text-2xl tracking-wider font-serif font-bold',
-          'mb-2'
+          'text-2xl text-center uppercase',
+          'font-serif font-bold tracking-wider',
+          'mb-6'
         )}>
         {title}
       </h2>
