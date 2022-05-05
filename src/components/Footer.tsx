@@ -61,7 +61,7 @@ function FooterDesktop({ className, theme, title: _title, ...props }: Props) {
       <div>
         <div className={clsx('flex flex-col relative -top-1')}>
           {links.map((link, idx) => (
-            <div className={clsx('mb-4')} key={idx}>
+            <div className={clsx('mb-3')} key={idx}>
               <NavbarLink
                 className='!text-lg'
                 theme={theme}
