@@ -23,9 +23,11 @@ export default function NavbarLink({
     <Link
       href={href}
       className={clsx(
-        'text-xl uppercase tracking-widest',
+        'uppercase tracking-widest',
         'ml-5 relative',
-        isActive ? `${activeFontColor} font-serif font-bold` : 'text-gray-500',
+        isActive
+          ? `${activeFontColor} text-lg font-serif font-bold`
+          : 'text-xl text-gray-500',
         className
       )}
       {...props}>
