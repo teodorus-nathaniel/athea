@@ -17,10 +17,10 @@ export default function TeamMember({
           'border border-gray-600',
           'w-full pt-[133%] bg-white'
         )}></div>
-      <Text serif bold className={clsx('mb-1 mt-2')}>
+      <Text serif bold className={clsx('mb-0.5 mt-4 text-xl')}>
         {name}
       </Text>
-      <Text className={clsx('text-xs uppercase')}>{position}</Text>
+      <Text className={clsx('text-sm uppercase')}>{position}</Text>
     </div>
   )
 }

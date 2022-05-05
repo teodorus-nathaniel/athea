@@ -28,10 +28,10 @@ export default function Service({
         <Text className={clsx('absolute top-0 left-0')}>
           {number.toString().padStart(2, '0')}
         </Text>
-        <Text bold serif className={clsx('text-xl', 'mb-1')}>
+        <Text bold serif className={clsx('text-2xl mb-1')}>
           {title}
         </Text>
-        <Text>{subtitle}</Text>
+        <Text className='text-lg leading-tight'>{subtitle}</Text>
       </div>
     </div>
   )

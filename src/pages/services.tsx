@@ -7,7 +7,7 @@ import ServiceList from '#/components/ServiceList'
 import TeamMemberList from '#/components/TeamMemberList'
 import services from '#/data/services'
 import teamMembers from '#/data/team'
-import TextWithNewLines from '#/ui/TextWithNewLines'
+import Text from '#/ui/Text'
 import clsx from 'clsx'
 import type { NextPage } from 'next'
 import Image from 'next/image'
@@ -23,27 +23,29 @@ const Services: NextPage = () => {
       <SectionWrapper
         className='px-0'
         title={
-          <TextWithNewLines className='text-4xl capitalize leading-relaxed'>
+          <Text serif bold className='text-4xl capitalize leading-relaxed'>
             {`We Integrate\nCollaborate\nChallenge`}
-          </TextWithNewLines>
+          </Text>
         }>
         <div className='flex flex-col text-lg px-6'>
-          <p className='pb-4'>
+          <Text className='pb-4'>
             We are your next set of creative innovation experts. Athea is
             multidisciplinary creative company.
-          </p>
-          <p>
+          </Text>
+          <Text>
             We are based in Jakarta and founded in 2019 had 4 subsidiary based
             on functionality.
-          </p>
+          </Text>
         </div>
       </SectionWrapper>
       <SectionWrapper
         className='px-0'
         title={
           <>
-            <span>Our </span>
-            <span className='font-sans font-normal'>Services</span>
+            <Text serif bold>
+              Our{' '}
+            </Text>
+            <Text>Services</Text>
           </>
         }>
         <ServiceList services={services} />
@@ -52,8 +54,10 @@ const Services: NextPage = () => {
         className='!pb-8'
         title={
           <>
-            <span>Our </span>
-            <span className='font-sans font-normal'>Team</span>
+            <Text serif bold>
+              Our{' '}
+            </Text>
+            <Text>Team</Text>
           </>
         }>
         <TeamMemberList teamMembers={teamMembers} />

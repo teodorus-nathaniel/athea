@@ -32,7 +32,7 @@ export default function Text({
   const serifClassName = serif ? clsx('font-serif') : clsx('font-sans')
   return (
     <As
-      className={clsx(className, boldMapper[isSerifString][isBoldString])}
+      className={clsx(boldMapper[isSerifString][isBoldString], className)}
       {...props}>
       {typeof children === 'string' ? (
         children?.split('\n').map((text, idx, array) => (

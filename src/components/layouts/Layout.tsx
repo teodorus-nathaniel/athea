@@ -23,7 +23,7 @@ type Props = {
 export default function Layout({
   meta,
   children,
-  theme = 'light',
+  theme = 'dark',
   navbarNoMixBlend = false,
   hasOffsetNavbar = false,
   mobileFooter = false,
