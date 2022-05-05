@@ -27,7 +27,7 @@ export default function NavbarLink({
         'ml-5 relative',
         isActive
           ? `${activeFontColor} text-lg font-serif font-bold`
-          : 'text-xl text-gray-500',
+          : 'text-xl text-gray-500 font-normal',
         className
       )}
       {...props}>
