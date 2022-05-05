@@ -12,7 +12,7 @@ export default function SectionWrapper({
   title,
   className,
   children,
-  theme = 'light',
+  theme = 'dark',
   ...divProps
 }: Props) {
   return (

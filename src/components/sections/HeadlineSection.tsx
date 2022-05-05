@@ -1,6 +1,7 @@
 import Bg from '#/assets/bg/home-bg.jpeg'
 import BrandHeadline, { BrandHeadlineProps } from '#/components/BrandHeadline'
 import Container from '#/components/Container'
+import { themeClassNames } from '#/constants/theme'
 import Button from '#/ui/Button'
 import TextWithNewLines from '#/ui/TextWithNewLines'
 import clsx from 'clsx'
@@ -29,7 +30,7 @@ export default function HeadlineSection({
     <div
       className={clsx(
         'w-full h-screen',
-        theme === 'dark' ? 'bg-black text-white' : 'bg-white text-black',
+        themeClassNames[theme],
         'flex flex-col'
       )}>
       {!noBgImage && (

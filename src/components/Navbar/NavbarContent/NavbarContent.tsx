@@ -84,7 +84,7 @@ function NavbarOverlay({
           className={clsx(
             'fixed top-0 left-0',
             'w-full h-screen',
-            'bg-black text-white',
+            'bg-black text-gray-50',
             'z-20'
           )}
         />
