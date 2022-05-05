@@ -1,4 +1,5 @@
 import { themeClassNames, ThemeTypes } from '#/constants/theme'
+import { useBreakpointThreshold } from '#/helpers/hooks/useBreakpointThreshold'
 import useHorizontalPadding from '#/helpers/hooks/useHorizontalPadding'
 import Text from '#/ui/Text'
 import clsx from 'clsx'
@@ -17,9 +18,12 @@ export default function SectionWrapper({
   theme = 'dark',
   ...divProps
 }: Props) {
+  const mdUp = useBreakpointThreshold('md')
+
   const horizontalPadding = useHorizontalPadding()
   const titleClassName = clsx(
-    'text-2xl uppercase',
+    mdUp ? 'text-4xl' : 'text-2xl',
+    'uppercase',
     'tracking-widest',
     'pb-8 text-center',
     horizontalPadding
