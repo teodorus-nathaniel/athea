@@ -60,9 +60,14 @@ const Works: NextPage = () => {
           </>
         }
         theme='dark'>
-        <div className={clsx('flex justify-center w-full')}>
+        <div
+          className={clsx(
+            'flex justify-center items-center w-full',
+            mdUp ? 'text-xl mb-8' : 'text-lg'
+          )}>
           <TabLayout
-            className={clsx('!w-auto', mdUp ? 'text-xl mb-8' : 'text-lg')}
+            leftText='View'
+            className={clsx('!w-auto')}
             selectedTab={selectedTab}
             onTabClick={(clickedIdx) =>
               setSlideDir(clickedIdx > selectedTab ? 'right' : 'left')

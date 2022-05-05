@@ -12,6 +12,7 @@ export interface TabData {
 export interface TabLayoutProps extends HTMLProps<HTMLUListElement> {
   tabs: TabData[]
   selectedTab: number
+  leftText?: string
   setSelectedTab: React.Dispatch<React.SetStateAction<number>>
   onTabClick?: (clickedIdx: number) => void
 }
@@ -29,6 +30,7 @@ export default function TabLayout({
   onTabClick,
   tabs,
   className,
+  leftText,
   ...ulProps
 }: TabLayoutProps) {
   useEffect(() => {
@@ -46,12 +48,17 @@ export default function TabLayout({
   return (
     <ul
       className={clsx(
-        'flex items-end',
+        'flex items-center',
         'overflow-auto w-full',
         'pb-4',
         className
       )}
       {...ulProps}>
+      <li>
+        <Text className={clsx('px-8')} serif bold>
+          {leftText}
+        </Text>
+      </li>
       {tabs.map(({ title, additionalInfo, hash }, idx) => {
         const selected = idx === selectedTab
         return (
@@ -59,13 +66,13 @@ export default function TabLayout({
             <Link
               className={clsx(
                 'relative block',
-                'py-1.5 mr-2 pl-4 pr-6',
+                'py-1.5 mr-2 pl-6 pr-8',
                 'tracking-wider font-light',
                 'transition ease-out',
                 'whitespace-nowrap',
                 'border rounded-full',
                 'hover:border-gray-600',
-                !selected ? 'border-transparent' : '!border-white'
+                !selected ? 'border-transparent text-gray-400' : '!border-white'
               )}
               noAnimation
               href={`#${encodeTab(hash ?? title)}`}
@@ -77,7 +84,7 @@ export default function TabLayout({
               <Text
                 bold={selected}
                 className={clsx(
-                  'absolute top-2 right-5',
+                  'absolute top-2 right-7',
                   'translate-x-full',
                   'text-xs'
                 )}>
