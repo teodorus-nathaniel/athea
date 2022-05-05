@@ -16,7 +16,7 @@ type Props = {
   navbarNoMixBlend?: boolean
   hasOffsetNavbar?: boolean
   mobileFooter?: boolean
-  mobileFooterTitle?: string
+  mobileFooterTitle?: string | JSX.Element
 }
 
 export default function Layout({

@@ -3,8 +3,8 @@ import clsx from 'clsx'
 import React, { HTMLProps } from 'react'
 import Container from '../Container'
 
-interface Props extends HTMLProps<HTMLDivElement> {
-  title: string
+interface Props extends Omit<HTMLProps<HTMLDivElement>, 'title'> {
+  title: string | JSX.Element
   theme?: ThemeTypes
 }
 

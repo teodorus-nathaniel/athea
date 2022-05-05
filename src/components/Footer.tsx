@@ -9,9 +9,9 @@ import { links } from './Navbar/NavbarContent/NavbarContent'
 import NavbarLink from './Navbar/NavbarContent/NavbarLink'
 import SectionWrapper from './sections/SectionWrapper'
 
-interface Props extends HTMLProps<HTMLDivElement> {
+interface Props extends Omit<HTMLProps<HTMLDivElement>, 'title'> {
   theme: ThemeTypes
-  title?: string
+  title?: string | JSX.Element
 }
 
 export default function Footer(props: Props) {
@@ -37,7 +37,7 @@ function FooterMobile({ className, theme, title, ...props }: Props) {
   )
 }
 
-function FooterDesktop({ className, theme, ...props }: Props) {
+function FooterDesktop({ className, theme, title: _title, ...props }: Props) {
   const { pathname } = useRouter()
   const offsetTop = clsx('pt-6')
   return (

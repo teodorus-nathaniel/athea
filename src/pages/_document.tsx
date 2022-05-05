@@ -18,7 +18,7 @@ class MyDocument extends Document {
           <link href='https://use.typekit.net/bcd3grg.css' rel='stylesheet' />
           <link rel='icon' href='/favicon.ico' />
         </Head>
-        <body className='bg-white'>
+        <body className='bg-white font-light'>
           <Main />
           <NextScript />
         </body>

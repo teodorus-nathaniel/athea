@@ -54,7 +54,7 @@ export default function Contact({
 function ContactLinks({ theme }: { theme: ThemeTypes }) {
   return (
     <div className='flex flex-col'>
-      <p className='font-light font-serif text-sm mb-2'>
+      <p className='font-serif text-sm mb-2'>
         Let{"'"}s have a good talk through
       </p>
       {contactLinks.map(({ href, text }) => (
@@ -63,7 +63,7 @@ function ContactLinks({ theme }: { theme: ThemeTypes }) {
             href={href}
             className={clsx(
               'flex justify-between items-center',
-              'text-xl',
+              'text-xl font-normal',
               'before:absolute before:bg-gray-400 before:-bottom-1 before:left-0',
               theme === 'dark' ? 'before:bg-gray-600' : 'before:bg-gray-400',
               'before:h-0.5 before:w-full'
@@ -80,8 +80,8 @@ function ContactLinks({ theme }: { theme: ThemeTypes }) {
 function ContactAddress() {
   return (
     <div className='flex flex-col'>
-      <p className='font-light font-serif text-sm mb-2'>Address</p>
-      <p className='text-bold text-xl'>BSD City, Tangerang, 15331</p>
+      <p className='font-serif text-sm mb-2'>Address</p>
+      <p className='font-normal text-xl'>BSD City, Tangerang, 15331</p>
     </div>
   )
 }
@@ -101,7 +101,7 @@ function ContactSocialMedia({
   const size = smaller ? '1.5rem' : '2.1rem'
   return (
     <div className='flex flex-col'>
-      <p className='font-light font-serif text-sm mb-2'>Connect with us</p>
+      <p className='font-serif text-sm mb-2'>Connect with us</p>
       <div className={clsx('flex items-center')}>
         {socialMediaIcons.map(({ icon: Icon, href }, idx) => (
           <Link
