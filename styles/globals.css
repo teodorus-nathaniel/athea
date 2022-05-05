@@ -4,7 +4,7 @@
 
 @layer utilities {
   .font-serif {
-    font-size: calc(100% - 2px);
+    font-size: calc(100% - 0.075em);
   }
   @media screen and (max-width: 1024px) {
     .container {
