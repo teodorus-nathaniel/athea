@@ -44,7 +44,7 @@ const Services: NextPage = () => {
         </div>
       </SectionWrapper>
       <SectionWrapper
-        className='px-0'
+        className='!px-0'
         title={
           <>
             <Text serif bold>

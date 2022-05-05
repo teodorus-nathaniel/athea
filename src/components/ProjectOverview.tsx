@@ -50,7 +50,7 @@ export default function ProjectOverview({
         &middot;
         <Text> {titleDesc}</Text>
       </Text>
-      <Text as='p' className='text-sm'>
+      <Text as='p' className={clsx(mdUp ? 'text-lg' : 'text-sm')}>
         {subtitle}
       </Text>
     </Link>
