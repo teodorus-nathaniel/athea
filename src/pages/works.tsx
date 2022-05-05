@@ -5,6 +5,7 @@ import SectionWrapper from '#/components/sections/SectionWrapper'
 import TabLayout, { TabData } from '#/components/TabLayout'
 import { SLOW_TRANSITION } from '#/constants/transition'
 import works from '#/data/works'
+import { useBreakpointThreshold } from '#/helpers/hooks/useBreakpointThreshold'
 import useSlideAnimation from '#/helpers/hooks/useSlideAnimation'
 import Text from '#/ui/Text'
 import clsx from 'clsx'
@@ -22,6 +23,8 @@ works.forEach(({ title, projects, hash }) => {
 })
 
 const Works: NextPage = () => {
+  const mdUp = useBreakpointThreshold('md')
+
   const [selectedTab, setSelectedTab] = useState(0)
   const selectedWork = works[selectedTab]
 
@@ -59,7 +62,7 @@ const Works: NextPage = () => {
         theme='dark'>
         <div className={clsx('flex justify-center w-full')}>
           <TabLayout
-            className={clsx('!w-auto')}
+            className={clsx('!w-auto', mdUp ? 'text-xl mb-8' : 'text-lg')}
             selectedTab={selectedTab}
             onTabClick={(clickedIdx) =>
               setSlideDir(clickedIdx > selectedTab ? 'right' : 'left')
