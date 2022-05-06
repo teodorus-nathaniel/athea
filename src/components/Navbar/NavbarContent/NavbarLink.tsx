@@ -25,7 +25,7 @@ export default function NavbarLink({
       href={href}
       className={clsx(
         'uppercase tracking-widest text-2xl',
-        'ml-5 relative whitespace-nowrap',
+        'ml-4 relative whitespace-nowrap',
         isActive ? `${activeFontColor}` : 'text-gray-500',
         className
       )}
@@ -36,7 +36,10 @@ export default function NavbarLink({
       {isActive && (
         <BsFillCaretRightFill
           fontSize='0.8em'
-          className={clsx('absolute top-1/2 -translate-y-1/2', '-left-5')}
+          className={clsx(
+            'absolute top-[calc(50%_-_1px)] -translate-y-1/2',
+            '-left-5'
+          )}
         />
       )}
     </Link>
