@@ -2,9 +2,9 @@ import Container from '#/components/Container'
 import ProjectOverview from '#/components/ProjectOverview'
 import detail from '#/data/detail'
 import Button from '#/ui/Button'
+import ImageContainer from '#/ui/ImageContainer'
 import Text from '#/ui/Text'
 import clsx from 'clsx'
-import Image from 'next/image'
 import React from 'react'
 
 interface Props {
@@ -21,7 +21,6 @@ export default function DetailDesktop({ data }: Props) {
     shareLinks: _shareLinks, // TODO: ini blom dipake
     title,
     titleDesc,
-    subtitle,
   } = data
 
   return (
@@ -54,24 +53,10 @@ export default function DetailDesktop({ data }: Props) {
               </div>
             ))}
           </div>
-          <div className={clsx('w-full pt-[56.25%]', 'relative')}>
-            <Image
-              src={image}
-              layout='fill'
-              className={clsx('absolute', 'object-cover object-bottom')}
-              alt={title}
-            />
-          </div>
+          <ImageContainer src={image} aspectRatio='16:9' />
         </div>
       </Container>
-      <div className='w-full pt-[56.25%] relative'>
-        <Image
-          src={image}
-          layout='fill'
-          className={clsx('absolute', 'object-cover object-bottom')}
-          alt={title}
-        />
-      </div>
+      <ImageContainer aspectRatio='16:9' src={image} alt={title} />
       <Container>
         <div className={clsx('py-32', 'grid grid-cols-[4fr,_8fr]')}>
           <Text serif bold as='h2' className={clsx('uppercase', 'text-4xl')}>
@@ -82,48 +67,24 @@ export default function DetailDesktop({ data }: Props) {
           </Text>
         </div>
         <div className={clsx('flex flex-col')}>
-          <div
-            className={clsx(
-              'w-full pt-[56.25%]',
-              'bg-white',
-              'mb-12',
-              'relative'
-            )}>
-            <Image
-              className={clsx('object-cover')}
-              src={image}
-              alt={title}
-              layout='fill'
-            />
-          </div>
-          <div
-            className={clsx(
-              'w-full pt-[56.25%]',
-              'bg-white',
-              'mb-12',
-              'relative'
-            )}>
-            <Image
-              className={clsx('object-cover')}
-              src={image}
-              alt={title}
-              layout='fill'
-            />
-          </div>
-          <div
-            className={clsx(
-              'w-full pt-[56.25%]',
-              'bg-white',
-              'mb-12',
-              'relative'
-            )}>
-            <Image
-              className={clsx('object-cover')}
-              src={image}
-              alt={title}
-              layout='fill'
-            />
-          </div>
+          <ImageContainer
+            src={image}
+            alt={title}
+            aspectRatio='16:9'
+            containerClassName={clsx('mb-12')}
+          />
+          <ImageContainer
+            src={image}
+            alt={title}
+            aspectRatio='16:9'
+            containerClassName={clsx('mb-12')}
+          />
+          <ImageContainer
+            src={image}
+            alt={title}
+            aspectRatio='16:9'
+            containerClassName={clsx('mb-12')}
+          />
         </div>
         <div className={clsx('py-16', 'grid grid-cols-[4fr,_8fr]')}>
           <Text serif bold as='h2' className={clsx('uppercase', 'text-4xl')}>
@@ -148,8 +109,8 @@ export default function DetailDesktop({ data }: Props) {
           <div className={clsx('flex justify-center', 'pt-16')}>
             <Button
               type='solid-white'
-              className={clsx('text-lg', 'px-14 py-3')}>
-              BACK TO WORK LIST
+              className={clsx('!px-10 py-3', 'uppercase')}>
+              Back to work list
             </Button>
           </div>
         </div>

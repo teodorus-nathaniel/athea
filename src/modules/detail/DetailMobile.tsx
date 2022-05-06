@@ -5,6 +5,7 @@ import Container from '#/components/Container'
 import ProjectOverview from '#/components/ProjectOverview'
 import detail from '#/data/detail'
 import Button from '#/ui/Button'
+import ImageContainer from '#/ui/ImageContainer'
 import Link from '#/ui/Link'
 import Text from '#/ui/Text'
 import clsx from 'clsx'
@@ -56,9 +57,21 @@ export default function DetailMobile({ data }: Props) {
       <DetailSection title='Overview'>
         <Text className={clsx('text-lg')}>{overview}</Text>
         <div className={clsx('flex flex-col', 'items-stretch', 'mt-8')}>
-          <div className={clsx('w-full pt-[80%]', 'bg-white', 'mb-6')} />
-          <div className={clsx('w-full pt-[80%]', 'bg-white', 'mb-6')} />
-          <div className={clsx('w-full pt-[80%]', 'bg-white', 'mb-6')} />
+          <ImageContainer
+            aspectRatio='4:3'
+            src=''
+            containerClassName={clsx('mb-6')}
+          />
+          <ImageContainer
+            aspectRatio='4:3'
+            src=''
+            containerClassName={clsx('mb-6')}
+          />
+          <ImageContainer
+            aspectRatio='4:3'
+            src=''
+            containerClassName={clsx('mb-6')}
+          />
         </div>
       </DetailSection>
 
