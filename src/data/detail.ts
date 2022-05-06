@@ -1,4 +1,4 @@
-import Project1 from '#/assets/photos/project-1.png'
+import Project from '#/assets/photos/project-2.png'
 import recentWorks from './recent-works'
 
 const detail = {
@@ -6,7 +6,7 @@ const detail = {
   titleDesc: "ISYANA'S SKIN MELODY",
   subtitle: 'MANIFESTO · DIGITAL · VIDEO · 2021',
 
-  image: Project1,
+  image: Project,
   meta: [
     { label: 'Client', value: "N'pure" },
     { label: 'Deliverables', value: 'Manifesto Video' },
@@ -43,6 +43,6 @@ const detail = {
     whatsapp: 'https://google.com',
   },
 
-  relatedWorks: recentWorks[0],
+  relatedWorks: recentWorks[2],
 }
 export default detail
