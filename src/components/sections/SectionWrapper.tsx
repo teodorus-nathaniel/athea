@@ -22,7 +22,7 @@ export default function SectionWrapper({
 
   const horizontalPadding = useHorizontalPadding()
   const titleClassName = clsx(
-    mdUp ? 'text-4xl' : 'text-2xl',
+    mdUp ? 'text-4xl' : 'text-3xl',
     'uppercase',
     'tracking-widest',
     'pb-8 text-center',

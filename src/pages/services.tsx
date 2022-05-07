@@ -1,21 +1,11 @@
-import ServiceHeadline from '#/assets/ui/service-tagline.jpeg'
-import Contact from '#/components/Contact'
 import Layout from '#/components/layouts/Layout'
 import HeadlineSection from '#/components/sections/HeadlineSection'
-import SectionWrapper from '#/components/sections/SectionWrapper'
-import ServiceList from '#/components/ServiceList'
-import TeamMemberList from '#/components/TeamMemberList'
-import services from '#/data/services'
-import teamMembers from '#/data/team'
 import { useBreakpointThreshold } from '#/helpers/hooks/useBreakpointThreshold'
-import useHorizontalPadding from '#/helpers/hooks/useHorizontalPadding'
-import Text from '#/ui/Text'
-import clsx from 'clsx'
+import ServicesDesktop from '#/modules/services/ServicesDesktop'
+import ServicesMobile from '#/modules/services/ServicesMobile'
 import type { NextPage } from 'next'
-import Image from 'next/image'
 
 const Services: NextPage = () => {
-  const horizontalPadding = useHorizontalPadding()
   const mdUp = useBreakpointThreshold('md')
 
   return (
@@ -25,57 +15,7 @@ const Services: NextPage = () => {
         subheading='Every project is a chance to try something new. Look at something with a fresh perspective. Do something for the first time.'
         type='souls'
       />
-      <SectionWrapper
-        className='px-0'
-        title={
-          <Text serif bold className='text-4xl capitalize leading-relaxed'>
-            {`We Integrate\nCollaborate\nChallenge`}
-          </Text>
-        }>
-        <div className={clsx('flex flex-col text-lg', horizontalPadding)}>
-          <Text className='pb-4'>
-            We are your next set of creative innovation experts. Athea is
-            multidisciplinary creative company.
-          </Text>
-          <Text>
-            We are based in Jakarta and founded in 2019 had 4 subsidiary based
-            on functionality.
-          </Text>
-        </div>
-      </SectionWrapper>
-      <SectionWrapper
-        className='!px-0'
-        title={
-          <>
-            <Text serif bold>
-              Our{' '}
-            </Text>
-            <Text>Services</Text>
-          </>
-        }>
-        <ServiceList services={services} />
-      </SectionWrapper>
-      <SectionWrapper
-        className='!pb-8'
-        title={
-          <>
-            <Text serif bold>
-              {mdUp ? 'Meet ' : 'Our '}
-            </Text>
-            <Text bold>{mdUp ? 'Our Team' : 'Team'}</Text>
-          </>
-        }>
-        <TeamMemberList teamMembers={teamMembers} />
-      </SectionWrapper>
-      <SectionWrapper className={clsx('!px-0 !py-0', '!pb-12')}>
-        <Image src={ServiceHeadline} alt='tagline' />
-      </SectionWrapper>
-      <SectionWrapper>
-        <Contact
-          displayedSections={['contact', 'address', 'socialMedia']}
-          className='w-full'
-        />
-      </SectionWrapper>
+      {mdUp ? <ServicesDesktop /> : <ServicesMobile />}
     </Layout>
   )
 }
