@@ -35,6 +35,7 @@ const Home: NextPage = () => {
             'w-full max-w-screen-lg px-12'
           )}>
           <Image
+            priority
             layout='responsive'
             src={Headline}
             alt='A collective of passionate souls'
