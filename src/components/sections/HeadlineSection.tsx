@@ -41,11 +41,15 @@ export default function HeadlineSection({
           className={clsx('object-cover', 'absolute top-0 left-0')}
         />
       )}
-      <Container
-        className={clsx('flex-1 flex flex-col justify-center', 'max-w-md')}>
-        <BrandHeadline {...headlineProps} className={clsx('mx-auto w-full')} />
+      <Container className={clsx('flex-1 flex flex-col justify-center')}>
+        <BrandHeadline
+          {...headlineProps}
+          className={clsx('mx-auto w-full', 'xl:max-w-xl')}
+        />
         <div className='flex flex-col items-center'>
-          <Text as='p' className='text-center mt-16 text-lg'>
+          <Text
+            as='p'
+            className='text-center mt-16 text-base sm:text-xl xl:text-2xl'>
             {subheading}
           </Text>
           {ctaButton &&

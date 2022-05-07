@@ -32,7 +32,7 @@ const Home: NextPage = () => {
         <div
           className={clsx(
             'absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2',
-            'w-full max-w-screen-md px-12'
+            'w-full max-w-screen-lg px-12'
           )}>
           <Image
             layout='responsive'

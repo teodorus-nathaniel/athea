@@ -22,7 +22,7 @@ const Services: NextPage = () => {
     <Layout meta={{ title: 'Services' }}>
       <HeadlineSection
         noBgImage
-        subheading={`Athea is a multidisciplinary creative company. We are based in Jakarta and founded in 2019 had 4 subsidiary based on functionality`}
+        subheading='Every project is a chance to try something new. Look at something with a fresh perspective. Do something for the first time.'
         type='souls'
       />
       <SectionWrapper
