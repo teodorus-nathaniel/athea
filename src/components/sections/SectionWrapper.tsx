@@ -6,7 +6,8 @@ import clsx from 'clsx'
 import React, { HTMLProps } from 'react'
 import Container from '../Container'
 
-interface Props extends Omit<HTMLProps<HTMLDivElement>, 'title'> {
+export interface SectionWrapperProps
+  extends Omit<HTMLProps<HTMLDivElement>, 'title'> {
   title?: string | JSX.Element
   theme?: ThemeTypes
 }
@@ -17,7 +18,7 @@ export default function SectionWrapper({
   children,
   theme = 'dark',
   ...divProps
-}: Props) {
+}: SectionWrapperProps) {
   const mdUp = useBreakpointThreshold('md')
 
   const horizontalPadding = useHorizontalPadding()
