@@ -20,7 +20,7 @@ const Home: NextPage = () => {
           autoPlay
           muted
           loop
-          src={`/videos/teaser${mdUp ? '' : '-portrait'}.mp4`}
+          src={`/videos/teaser${mdUp ? '' : '-portrait'}.webm`}
           className={clsx(
             'absolute w-full h-full top-0 left-0',
             'object-cover'
