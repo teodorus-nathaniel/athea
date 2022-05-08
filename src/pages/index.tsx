@@ -7,6 +7,7 @@ import Image from 'next/image'
 
 const Home: NextPage = () => {
   const mdUp = useBreakpointThreshold('md')
+  const videoName = `/videos/teaser${mdUp ? '' : '-portrait'}`
 
   return (
     <Layout
@@ -20,12 +21,13 @@ const Home: NextPage = () => {
           autoPlay
           muted
           loop
-          src={`/videos/teaser${mdUp ? '' : '-portrait'}.webm`}
           className={clsx(
             'absolute w-full h-full top-0 left-0',
             'object-cover'
-          )}
-        />
+          )}>
+          <source src={`${videoName}.webm`} type='video/webm' />
+          <source src={`${videoName}.mp4`} type='video/mp4' />
+        </video>
         <div
           className={clsx('absolute w-full h-full', 'bg-black opacity-30')}
         />
