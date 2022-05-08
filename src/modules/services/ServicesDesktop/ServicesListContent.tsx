@@ -14,6 +14,8 @@ export default function ServicesListContent(props: SectionWrapperProps) {
   const dummyContentRef = useRef<HTMLDivElement | null>(null)
   const progress = useScrollTriggerContext()
   const rotate = useTransform(progress!, [0, 1], [0, 90])
+  const opacity1 = useTransform(progress!, [0, 1], [1, 0])
+  const opacity2 = useTransform(progress!, [0, 1], [0, 1])
   const service = services[0]
 
   const [contentRect, setContentRect] = useState({ width: 0, height: 0 })
@@ -27,7 +29,7 @@ export default function ServicesListContent(props: SectionWrapperProps) {
     }, 100)
   }, [])
 
-  const { width, height } = contentRect
+  const { height } = contentRect
 
   return (
     <SectionWrapper
@@ -44,7 +46,7 @@ export default function ServicesListContent(props: SectionWrapperProps) {
         <div className={clsx('w-8', 'bg-red-500')}></div>
         <div
           className={clsx('relative', 'ml-16', 'flex-1')}
-          style={{ perspective: '1500px' }}>
+          style={{ perspective: '2000px' }}>
           <div ref={dummyContentRef}>
             <Service
               className='opacity-0 pointer-events-none'
@@ -66,6 +68,7 @@ export default function ServicesListContent(props: SectionWrapperProps) {
               className={clsx('absolute w-full h-full')}
               style={{
                 transform: `rotateX(0deg) translateZ(${height / 2}px)`,
+                opacity: opacity1,
               }}>
               <Service {...service} image={Project} number={1} />
             </motion.div>
@@ -73,6 +76,7 @@ export default function ServicesListContent(props: SectionWrapperProps) {
               className={clsx('absolute w-full h-full')}
               style={{
                 transform: `rotateX(-90deg) translateZ(${height / 2}px)`,
+                opacity: opacity2,
               }}>
               <Service {...service} image={Project} number={1} />
             </motion.div>

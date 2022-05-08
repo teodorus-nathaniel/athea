@@ -1,15 +1,16 @@
 import { MotionValue, useMotionValue } from 'framer-motion'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger'
-import React, { useContext, useLayoutEffect, useRef } from 'react'
+import React, { useCallback, useContext, useLayoutEffect, useRef } from 'react'
 
 export const ScrollTriggerContext =
   React.createContext<MotionValue<number> | null>(null)
 
 export const useScrollTriggerContext = () => useContext(ScrollTriggerContext)
 
+const scrollDist = 1000
 const DEFAULT_OPTIONS = {
-  end: '+=100%',
+  end: `+=${scrollDist}px`,
   pin: true,
   scrub: true,
   start: 'top top',
@@ -34,19 +35,43 @@ export const ScrollTriggerProvider: React.FC<ScrollTriggerProviderProps> = ({
   const lastProgress = useRef(0)
   const timeout = useRef<number>(0)
 
-  // useEffect(() => {
-  //   const listener = () => {
-  //     clearTimeout(timeout.current)
-  //     timeout.current = window.setTimeout(() => {
-  //       progress.set(0)
-  //     }, 1000)
-  //   }
-  //   console.log('asdfasd')
-  //   window.addEventListener('scroll', listener, { passive: true })
-  //   return () => {
-  //     window.removeEventListener('scroll', listener)
-  //   }
-  // }, [progress])
+  const scrollListener = useCallback(() => {
+    clearTimeout(timeout.current)
+    timeout.current = window.setTimeout(() => {
+      console.log('HEY MASUK')
+      const currentProgress = refTimeline.current?.scrollTrigger?.progress
+      if ((currentProgress ?? 0) < 0.5) {
+        // TODO: MATIIN SENSOR INI (SUPAYA GA REKURSIF, MANGGIL SCROLL LIUSTENER LAGI) KALO LAGI SCROLLING
+        window.scrollTo({
+          top:
+            (refScrollTrigger.current?.getBoundingClientRect().top ?? 0) +
+            window.scrollY -
+            scrollDist * (refTimeline.current?.scrollTrigger?.progress ?? 0),
+          behavior: 'smooth',
+        })
+      } else {
+        window.scrollTo({
+          top:
+            (refScrollTrigger.current?.getBoundingClientRect().top ?? 0) +
+            window.scrollY -
+            scrollDist * (refTimeline.current?.scrollTrigger?.progress ?? 0) +
+            scrollDist,
+          behavior: 'smooth',
+        })
+      }
+    }, 10)
+  }, [])
+
+  const onToggle: ScrollTrigger.Callback = (scrollInstance) => {
+    clearTimeout(timeout.current)
+    if (scrollInstance.isActive) {
+      console.log('SETUP')
+      window.addEventListener('scroll', scrollListener, { passive: true })
+    } else {
+      console.log('REMOVE')
+      window.removeEventListener('scroll', scrollListener)
+    }
+  }
 
   useLayoutEffect(() => {
     gsap.registerPlugin(ScrollTrigger)
@@ -56,11 +81,8 @@ export const ScrollTriggerProvider: React.FC<ScrollTriggerProviderProps> = ({
         scrollTrigger: {
           ...DEFAULT_OPTIONS,
           ...options,
-          // snap: {
-          //   snapTo: [0, 1],
-          //   delay: 0,
-          // },
           markers: debug,
+          onToggle,
           trigger: refScrollTrigger.current,
           onUpdate: (instance) => {
             const clampedProgress = Math.min(Math.max(instance.progress, 0), 1)
