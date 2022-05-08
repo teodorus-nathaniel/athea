@@ -6,16 +6,21 @@ import Service from '#/components/Service'
 import services from '#/data/services'
 import { useScrollTriggerContext } from '#/helpers/contexts/ScrollTriggerProvider'
 import Text from '#/ui/Text'
+import { easeOut } from '@popmotion/easing'
 import clsx from 'clsx'
 import { motion, useTransform } from 'framer-motion'
+import { TransformOptions } from 'framer-motion/types/utils/transform'
 import React, { useLayoutEffect, useRef, useState } from 'react'
 
 export default function ServicesListContent(props: SectionWrapperProps) {
   const dummyContentRef = useRef<HTMLDivElement | null>(null)
   const progress = useScrollTriggerContext()
-  const rotate = useTransform(progress!, [0, 1], [0, 90])
-  const opacity1 = useTransform(progress!, [0, 1], [1, 0])
-  const opacity2 = useTransform(progress!, [0, 1], [0, 1])
+  const animationOptions: TransformOptions<number> = {
+    ease: easeOut,
+  }
+  const rotate = useTransform(progress!, [0, 1], [0, 90], animationOptions)
+  const opacity1 = useTransform(progress!, [0, 1], [1, 0], animationOptions)
+  const opacity2 = useTransform(progress!, [0, 1], [0, 1], animationOptions)
   const service = services[0]
 
   const [contentRect, setContentRect] = useState({ width: 0, height: 0 })
