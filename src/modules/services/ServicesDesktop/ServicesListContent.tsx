@@ -18,7 +18,6 @@ export default function ServicesListContent(props: SectionWrapperProps) {
   const animationOptions: TransformOptions<number> = {
     ease: easeOut,
   }
-  const rotate = useTransform(progress!, [0, 1], [0, 90], animationOptions)
   const opacity1 = useTransform(progress!, [0, 1], [1, 0], animationOptions)
   const opacity2 = useTransform(progress!, [0, 1], [0, 1], animationOptions)
   const service = services[0]
@@ -35,6 +34,9 @@ export default function ServicesListContent(props: SectionWrapperProps) {
   }, [])
 
   const { height } = contentRect
+  const heightAndOffset = height + 100
+  const position1 = useTransform(progress!, [0, 1], [0, -heightAndOffset], animationOptions)
+  const position2 = useTransform(progress!, [0, 1], [heightAndOffset, 0], animationOptions)
 
   return (
     <SectionWrapper
@@ -63,25 +65,20 @@ export default function ServicesListContent(props: SectionWrapperProps) {
           </div>
 
           <motion.div
-            style={{
-              translateZ: -height / 2,
-              rotateX: rotate,
-              transformStyle: 'preserve-3d',
-            }}
             className={clsx('absolute top-0 left-0', 'w-full h-full')}>
             <motion.div
               className={clsx('absolute w-full h-full')}
               style={{
-                transform: `rotateX(0deg) translateZ(${height / 2}px)`,
                 opacity: opacity1,
+                y: position1
               }}>
               <Service {...service} image={Project} number={1} />
             </motion.div>
             <motion.div
               className={clsx('absolute w-full h-full')}
               style={{
-                transform: `rotateX(-90deg) translateZ(${height / 2}px)`,
                 opacity: opacity2,
+                y: position2
               }}>
               <Service {...service} image={Project} number={1} />
             </motion.div>
