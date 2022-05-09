@@ -9,7 +9,7 @@ export default function ServicesMobile() {
   return (
     <>
       <ServicesHeadlineSection />
-      <ServicesDescriptionSection className='px-0' />
+      <ServicesDescriptionSection />
       <ServicesListSection className='!px-0' />
       <ServicesTeamSection className='!pb-8' />
       <ServicesTaglineSection className={clsx('!px-0 !py-0', '!pb-12')} />

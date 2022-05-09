@@ -20,7 +20,7 @@ export default function ServicesDescriptionSection() {
           )}
           serif
           bold>{`We Integrate\nCollaborate\nChallenge`}</Text>
-        <div className={clsx('flex flex-col', 'text-xl text-gray-400')}>
+        <div className={clsx('flex flex-col', 'text-xl')}>
           <Text className={clsx('pb-8')}>
             We are your next set of creative innovation experts. Athea is
             multidisciplinary creative company.

@@ -24,7 +24,7 @@ export default function Layout({
   meta,
   children,
   theme = 'dark',
-  navbarNoMixBlend = false,
+  navbarNoMixBlend = true,
   hasOffsetNavbar = false,
   mobileFooter = false,
   mobileFooterTitle,

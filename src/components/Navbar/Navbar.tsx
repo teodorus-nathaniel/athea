@@ -14,7 +14,7 @@ interface NavbarProps {
   noMixBlend: boolean
 }
 
-export default function Navbar({ noMixBlend = false }: NavbarProps) {
+export default function Navbar({ noMixBlend = true }: NavbarProps) {
   const mdUp = useBreakpointThreshold('md')
   const horizontalPadding = useHorizontalPadding()
 

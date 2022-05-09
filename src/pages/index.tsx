@@ -14,8 +14,7 @@ const Home: NextPage = () => {
       meta={{ title: 'Homepage' }}
       theme='dark'
       mobileFooter
-      mobileFooterTitle
-      navbarNoMixBlend>
+      mobileFooterTitle>
       <div className={clsx('w-full h-screen relative mb-8')}>
         <video
           autoPlay
