@@ -38,7 +38,7 @@ export default function DetailDesktop({ data }: Props) {
         </div>
         <div
           className={clsx(
-            'grid grid-cols-[5fr,_7fr]',
+            'grid grid-cols-[4fr,_8fr] gap-x-4',
             'items-end',
             'pt-6',
             'pb-16'
