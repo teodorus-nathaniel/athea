@@ -51,7 +51,7 @@ export default function Navbar({ noMixBlend = true }: NavbarProps) {
           'flex justify-end items-center',
           'py-6',
           horizontalPadding,
-          'text-white',
+          'text-gray-100',
           noMixBlend ? '' : 'mix-blend-difference',
           'z-30'
         )}>
@@ -67,7 +67,7 @@ export default function Navbar({ noMixBlend = true }: NavbarProps) {
               exit={{ opacity: 0, y: -25 }}
               animate={{ opacity: 1, y: 0 }}>
               <Link href='/' noAnimation>
-                <Logo height={logoSize} className='z-40 text-white' />
+                <Logo height={logoSize} className='z-40 text-gray-100' />
               </Link>
               <button
                 ref={menuButtonRef}

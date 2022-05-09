@@ -9,7 +9,7 @@ const buttonTypes = {
   ),
   outline: clsx(
     'border border-gray-500 text-black',
-    'hover:bg-gray-400 hover:text-white',
+    'hover:bg-gray-400 hover:text-gray-100',
     'active:bg-gray-500'
   ),
 }

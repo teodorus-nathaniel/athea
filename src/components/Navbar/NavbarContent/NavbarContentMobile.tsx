@@ -43,7 +43,7 @@ export default function NavbarContentMobile({
             'overflow-auto',
             'z-20',
             'flex flex-col',
-            'text-white'
+            'text-gray-100'
           )}
           transition={NORMAL_TRANSITION}
           variants={containerVariants}

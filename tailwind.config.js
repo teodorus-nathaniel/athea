@@ -6,6 +6,11 @@ module.exports = {
         sans: ['Yantramanav', 'sans-serif'],
         serif: ['alverata', 'serif'],
       },
+      colors: {
+        'gray': {
+          100: '#FAFAFA'
+        }
+      }
     },
   },
   plugins: [],

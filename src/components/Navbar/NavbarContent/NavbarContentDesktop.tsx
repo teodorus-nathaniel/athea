@@ -89,7 +89,7 @@ export default function NavbarContentDesktop({
           className={clsx(
             'mr-6 mt-8',
             'fixed top-0 right-0 z-30',
-            'text-white',
+            'text-gray-100',
             'flex items-center'
           )}>
           {reversedLinks.map(({ href, text }, idx) => {

@@ -19,7 +19,7 @@ export default function NavbarLink({
   theme = 'dark',
   ...props
 }: Props) {
-  const activeFontColor = theme === 'dark' ? 'text-white' : 'text-black'
+  const activeFontColor = theme === 'dark' ? 'text-gray-100' : 'text-black'
   return (
     <Link
       href={href}
