@@ -29,9 +29,9 @@ export default function NavbarContentDesktop({
   }, [links])
 
   const charactersOffset = useMemo(() => {
-    const OFFSET_PER_CHARACTER = 8
+    const OFFSET_PER_CHARACTER = 7
     const offsets: number[] = []
-    let sum = 25
+    let sum = 35
     reversedLinks.forEach(({ text }) => {
       offsets.push(sum)
       sum += text.length * OFFSET_PER_CHARACTER
@@ -44,9 +44,10 @@ export default function NavbarContentDesktop({
       const maxCharOffset = charactersOffset[charactersOffset.length - 1]
       const windowWidth = window.innerWidth - maxCharOffset - 50
       const elementOffset = Math.min(
-        Math.max(windowWidth / links.length / 2, 80),
-        150
+        Math.max(windowWidth / links.length / 2, 60),
+        125
       )
+      console.log(elementOffset)
       let offset = charactersOffset[idx]
 
       return {
