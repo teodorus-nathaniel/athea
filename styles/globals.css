@@ -7,6 +7,6 @@
     font-size: calc(100% - 0.075em);
   }
   .container {
-    max-width: 1150px !important;
+    max-width: 1050px !important;
   }
 }
