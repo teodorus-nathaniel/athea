@@ -30,7 +30,7 @@ export default function NavbarLink({
         className
       )}
       {...props}>
-      <Text serif={isActive} bold>
+      <Text serif={isActive} bold={isActive}>
         {text}
       </Text>
       {isActive && (
