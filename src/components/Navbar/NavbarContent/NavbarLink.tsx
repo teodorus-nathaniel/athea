@@ -26,9 +26,11 @@ export default function NavbarLink({
       className={clsx(
         'uppercase text-2xl',
         'ml-4 relative whitespace-nowrap',
+        'hover:text-gray-100 active:text-gray-300',
         isActive ? `${activeFontColor}` : 'text-gray-500',
         className
       )}
+      noAnimation
       {...props}>
       <Text serif={isActive} bold={isActive}>
         {text}
