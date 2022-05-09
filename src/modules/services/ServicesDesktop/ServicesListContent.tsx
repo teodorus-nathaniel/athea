@@ -65,7 +65,7 @@ export default function ServicesListContent(props: SectionWrapperProps) {
           </div>
 
           <motion.div
-            className={clsx('absolute top-0 left-0', 'w-full h-full')}>
+            className={clsx('absolute top-0 left-0', 'w-full h-full', 'overflow-hidden')}>
             <motion.div
               className={clsx('absolute w-full h-full')}
               style={{
