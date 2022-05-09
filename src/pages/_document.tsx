@@ -18,7 +18,7 @@ class MyDocument extends Document {
           <link href='https://use.typekit.net/bcd3grg.css' rel='stylesheet' />
           <link rel='icon' href='/favicon.ico' />
         </Head>
-        <body className='bg-black font-light pb-16 tracking-wide'>
+        <body className='bg-black font-light pb-16' style={{ letterSpacing: '0.035em' }}>
           <Main />
           <NextScript />
         </body>
