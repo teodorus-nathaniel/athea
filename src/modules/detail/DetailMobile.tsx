@@ -45,7 +45,7 @@ export default function DetailMobile({ data }: Props) {
         <div className={clsx('w-full', 'grid grid-cols-2', 'gap-x-4 gap-y-6')}>
           {meta.map(({ label, value }) => (
             <div className={clsx('flex flex-col')} key={label + value}>
-              <Text serif className={clsx('tracking-wider text-sm', 'mb-0.5')}>
+              <Text serif bold className={clsx('tracking-wider text-sm', 'mb-0.5')}>
                 {label}
               </Text>
               <Text className={clsx('text-lg')}>{value}</Text>

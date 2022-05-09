@@ -20,7 +20,6 @@ export const links = [
   { text: 'HOME', href: '/' },
   { text: 'WORKS', href: '/works' },
   { text: 'OUR SERVICES', href: '/services' },
-  { text: 'ABOUT US', href: '/contact' },
 ]
 
 export default function NavbarContent({
