@@ -62,8 +62,8 @@ const Works: NextPage = () => {
         theme='dark'>
         <div
           className={clsx(
-            'flex justify-center items-center w-full',
-            mdUp ? 'text-xl mb-8' : 'text-lg'
+            'flex justify-center items-center w-full text-lg',
+            mdUp ? 'mb-8' : ''
           )}>
           <TabLayout
             leftText='View'
