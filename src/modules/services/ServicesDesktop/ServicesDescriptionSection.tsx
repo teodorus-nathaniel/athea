@@ -16,7 +16,6 @@ export default function ServicesDescriptionSection() {
           className={clsx(
             'text-5xl',
             'text-right leading-snug',
-            'tracking-wide'
           )}
           serif
           bold>{`We Integrate\nCollaborate\nChallenge`}</Text>

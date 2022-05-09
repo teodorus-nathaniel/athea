@@ -25,7 +25,6 @@ export default function SectionWrapper({
   const titleClassName = clsx(
     mdUp ? 'text-4xl' : 'text-3xl',
     'uppercase',
-    'tracking-widest',
     'pb-8 text-center',
     horizontalPadding
   )

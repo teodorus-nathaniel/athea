@@ -71,7 +71,7 @@ export default function TabLayout({
                 'relative block',
                 'py-1.5 mr-2',
                 mdUp ? 'pl-6 pr-8' : 'pl-4 pr-6',
-                'tracking-wider font-light',
+                'font-light',
                 'transition ease-out',
                 'whitespace-nowrap',
                 'border rounded-full',

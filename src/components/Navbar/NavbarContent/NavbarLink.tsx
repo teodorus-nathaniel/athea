@@ -24,7 +24,7 @@ export default function NavbarLink({
     <Link
       href={href}
       className={clsx(
-        'uppercase tracking-widest text-2xl',
+        'uppercase text-2xl',
         'ml-4 relative whitespace-nowrap',
         isActive ? `${activeFontColor}` : 'text-gray-500',
         className

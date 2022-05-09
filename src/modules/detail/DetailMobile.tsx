@@ -32,7 +32,7 @@ export default function DetailMobile({ data }: Props) {
   return (
     <Container>
       <DetailSection>
-        <Text as='h1' className={clsx('text-2xl tracking-wider mb-2')}>
+        <Text as='h1' className={clsx('text-2xl mb-2')}>
           <Text bold serif>
             {title}
           </Text>{' '}
@@ -45,7 +45,7 @@ export default function DetailMobile({ data }: Props) {
         <div className={clsx('w-full', 'grid grid-cols-2', 'gap-x-4 gap-y-6')}>
           {meta.map(({ label, value }) => (
             <div className={clsx('flex flex-col')} key={label + value}>
-              <Text serif bold className={clsx('tracking-wider text-sm', 'mb-0.5')}>
+              <Text serif bold className={clsx('text-sm', 'mb-0.5')}>
                 {label}
               </Text>
               <Text className={clsx('text-lg')}>{value}</Text>
@@ -79,7 +79,7 @@ export default function DetailMobile({ data }: Props) {
         <Text className={clsx('text-lg')}>{credits}</Text>
 
         <div className={clsx('flex items-center', 'mt-6')}>
-          <Text bold className={clsx('text-xl tracking-wider')}>
+          <Text bold className={clsx('text-xl')}>
             Share this work
           </Text>
           <Link
@@ -138,7 +138,6 @@ const DetailSection = ({
           serif
           className={clsx(
             'text-2xl text-center uppercase',
-            'tracking-wider',
             'mb-6'
           )}>
           {title}
@@ -147,7 +146,6 @@ const DetailSection = ({
         <div
           className={clsx(
             'text-2xl text-center uppercase',
-            'tracking-wider',
             'mb-6'
           )}>
           {title}
