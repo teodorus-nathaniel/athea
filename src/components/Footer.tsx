@@ -42,7 +42,7 @@ function FooterDesktop({ className, theme, title: _title, ...props }: Props) {
   return (
     <Container
       className={clsx(
-        'grid grid-cols-[4fr,_3fr,_2fr,_1fr] gap-8',
+        'grid grid-cols-[4fr,_4fr,_3fr,_1fr] gap-8',
         'pt-24 pb-12',
         className
       )}
