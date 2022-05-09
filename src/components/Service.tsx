@@ -26,7 +26,7 @@ export default function Service({
         <Text className={clsx('absolute top-0 left-0')}>
           {number.toString().padStart(2, '0')}
         </Text>
-        <Text bold serif className={clsx('text-2xl mb-1', 'md:text-4xl')}>
+        <Text bold serif className={clsx('text-2xl mb-1', 'md:text-3xl')}>
           {title}
         </Text>
         <Text className={clsx('text-lg leading-tight', 'md:text-xl')}>
