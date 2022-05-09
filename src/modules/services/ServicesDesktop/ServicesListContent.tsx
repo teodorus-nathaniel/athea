@@ -18,8 +18,8 @@ export default function ServicesListContent(props: SectionWrapperProps) {
   const animationOptions: TransformOptions<number> = {
     ease: easeOut,
   }
-  const opacity1 = useTransform(progress!, [0, 1], [1, 0], animationOptions)
-  const opacity2 = useTransform(progress!, [0, 1], [0, 1], animationOptions)
+  const opacity1 = useTransform(progress!, [0, 1], [1, 1], animationOptions)
+  const opacity2 = useTransform(progress!, [0, 1], [1, 1], animationOptions)
   const service = services[0]
 
   const [contentRect, setContentRect] = useState({ width: 0, height: 0 })
