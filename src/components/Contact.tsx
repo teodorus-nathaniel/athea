@@ -69,7 +69,7 @@ function ContactLinks({ theme }: { theme: ThemeTypes }) {
               'before:h-0.5 before:w-full'
             )}>
             {text}
-            <ArrowLinkIcon height='1rem' className={clsx('ml-2')} />
+            <ArrowLinkIcon height='1rem' className={clsx('ml-2', 'shrink-0')} />
           </Link>
         </div>
       ))}

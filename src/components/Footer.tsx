@@ -39,26 +39,27 @@ function FooterMobile({ className, theme, title, ...props }: Props) {
 
 function FooterDesktop({ className, theme, title: _title, ...props }: Props) {
   const { pathname } = useRouter()
+  const lgUp = useBreakpointThreshold('lg')
   return (
     <Container
       className={clsx(
-        'grid grid-cols-[4fr,_4fr,_3fr,_1fr] gap-8',
+        'flex',
         'pt-24 pb-12',
         className
       )}
       {...props}>
-      <Contact theme={theme} displayedSections={['contact']} />
-      <div>
+      <Contact className={clsx('pr-8 lg:pr-16', 'max-w-xs lg:max-w-sm')} theme={theme} displayedSections={['contact']} />
+      <div className={clsx('pr-8 lg:pr-16')}>
         <Contact theme={theme} displayedSections={['address']} />
       </div>
-      <div>
+      <div className={clsx('pr-8 lg:pr-16')}>
         <Contact
           theme={theme}
           displayedSections={['socialMedia']}
           config={{ socialMedia: { smaller: true } }}
         />
       </div>
-      <div>
+      <div className={clsx('flex-1')}>
         <div className={clsx('flex flex-col relative -top-1')}>
           {links.map((link, idx) => (
             <div className={clsx('mb-3')} key={idx}>
@@ -67,6 +68,7 @@ function FooterDesktop({ className, theme, title: _title, ...props }: Props) {
                 theme={theme}
                 isActive={pathname === link.href}
                 {...link}
+                text={!lgUp && link.text === 'OUR SERVICES' ? 'SERVICES' : link.text}
               />
             </div>
           ))}
