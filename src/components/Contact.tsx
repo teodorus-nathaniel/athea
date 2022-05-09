@@ -101,7 +101,7 @@ function ContactSocialMedia({
   const size = smaller ? '1.5rem' : '2.1rem'
   return (
     <div className='flex flex-col'>
-      <p className='font-serif text-sm mb-2'>Connect with us</p>
+      <p className='font-serif text-sm mb-2 whitespace-nowrap'>Connect with us</p>
       <div className={clsx('flex items-center')}>
         {socialMediaIcons.map(({ icon: Icon, href }, idx) => (
           <Link
