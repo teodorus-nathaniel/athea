@@ -56,7 +56,7 @@ export default function Navbar({ noMixBlend = true }: NavbarProps) {
           'z-30'
         )}>
         <AnimatePresence initial={false}>
-          {(isScrollingUp || isOpenContent) && (
+          {(isScrollingUp || isOpenContent || window.scrollY === 0) && (
             <motion.div
               className={clsx(
                 'mr-auto flex justify-between items-center',
