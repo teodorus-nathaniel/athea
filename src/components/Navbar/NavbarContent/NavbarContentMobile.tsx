@@ -40,7 +40,7 @@ export default function NavbarContentMobile({
   const { pathname } = useRouter()
   const horizontalPadding = useHorizontalPadding()
 
-  const [search, setSearch] = useState('tes')
+  const [search, setSearch] = useState('')
 
   const handleSubmit = (e: any) => {
     e.preventDefault()
@@ -52,7 +52,7 @@ export default function NavbarContentMobile({
         <motion.div
           className={clsx(
             'fixed top-0 left-0',
-            'pt-24 pb-8 w-full min-h-screen',
+            'pt-24 pb-8 w-full h-screen',
             horizontalPadding,
             'overflow-auto',
             'z-20',
@@ -90,6 +90,16 @@ export default function NavbarContentMobile({
                 </Link>
               </motion.div>
               <motion.div variants={searchResultVariants} key={2}>
+                <Link noAnimation href='/detail'>
+                  <SearchResult result={works[0].projects[0]} />
+                </Link>
+              </motion.div>
+              <motion.div variants={searchResultVariants} key={3}>
+                <Link noAnimation href='/detail'>
+                  <SearchResult result={works[0].projects[0]} />
+                </Link>
+              </motion.div>
+              <motion.div variants={searchResultVariants} key={4}>
                 <Link noAnimation href='/detail'>
                   <SearchResult result={works[0].projects[0]} />
                 </Link>
