@@ -6,6 +6,7 @@ import { motion } from 'framer-motion'
 import React, { HTMLProps } from 'react'
 import { SizeMe } from 'react-sizeme'
 import ServiceAnimated from './ServiceAnimated'
+import ServicesListScrollIndicator from './ServicesListScrollIndicator'
 
 interface Props extends HTMLProps<HTMLDivElement> {
   services: ServiceData[]
@@ -21,7 +22,14 @@ const ServicesListContent = React.forwardRef<HTMLDivElement, Props>(
         ref={ref}
         className={clsx('flex items-stretch', 'w-full', className)}
         {...props}>
-        <div className={clsx('w-8', 'bg-red-500')}></div>
+        {scrollTriggerInstance && (
+          <div className={clsx('w-3')}>
+            <ServicesListScrollIndicator
+              dataCount={services.length}
+              progress={scrollTriggerInstance.progress}
+            />
+          </div>
+        )}
         <SizeMe monitorHeight monitorWidth={false}>
           {({ size: { height } }) => (
             <div
