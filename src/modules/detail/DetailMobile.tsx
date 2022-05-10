@@ -7,6 +7,7 @@ import detail from '#/data/detail'
 import Button from '#/ui/Button'
 import ImageContainer from '#/ui/ImageContainer'
 import Link from '#/ui/Link'
+import Popover from '#/ui/Popover'
 import Text from '#/ui/Text'
 import clsx from 'clsx'
 import Image from 'next/image'
@@ -82,17 +83,26 @@ export default function DetailMobile({ data }: Props) {
           <Text bold className={clsx('text-xl')}>
             Share this work
           </Text>
-          <Link
-            noAnimation
-            className={clsx('ml-4', 'hover:scale-110 active:scale-105')}>
-            <CopyLinkIcon width='1.6rem' />
-          </Link>
+          <Popover
+            containerClassName={clsx('ml-4')}
+            buttonContainerClassName={clsx('flex')}
+            button={
+              <Link
+                href=''
+                noAnimation
+                className={clsx('hover:scale-110 active:scale-105')}>
+                <CopyLinkIcon width='1.6rem' />
+              </Link>
+            }
+            panel={<Text bold>Link Copied!</Text>}
+          />
           <Link
             noAnimation
             className={clsx('ml-4', 'hover:scale-110 active:scale-105')}>
             <AddStoryIcon width='1.35rem' />
           </Link>
           <Link
+            href='whatsapp://send?text=Your message here'
             noAnimation
             className={clsx('ml-4', 'hover:scale-110 active:scale-105')}>
             <WhatsappIcon width='1.3rem' />
@@ -136,18 +146,11 @@ const DetailSection = ({
           as='h2'
           bold
           serif
-          className={clsx(
-            'text-2xl text-center uppercase',
-            'mb-6'
-          )}>
+          className={clsx('text-2xl text-center uppercase', 'mb-6')}>
           {title}
         </Text>
       ) : (
-        <div
-          className={clsx(
-            'text-2xl text-center uppercase',
-            'mb-6'
-          )}>
+        <div className={clsx('text-2xl text-center uppercase', 'mb-6')}>
           {title}
         </div>
       )}

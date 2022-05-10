@@ -10,3 +10,30 @@
     max-width: 1050px !important;
   }
 }
+
+#arrow {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  top: 0px;
+}
+#arrow:after {
+  content: '';
+  box-shadow: -1px -1px 1px rgba(0, 0, 0, 0.1);
+  position: absolute;
+  top: -5px;
+  left: 0;
+  transform: rotate(45deg);
+  width: 10px;
+  height: 10px;
+}
+
+[data-popper-placement^='top'] > #arrow {
+  top: auto;
+  bottom: 0px;
+}
+[data-popper-placement^='top'] > #arrow:after {
+  top: auto;
+  bottom: -5px;
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
+}
