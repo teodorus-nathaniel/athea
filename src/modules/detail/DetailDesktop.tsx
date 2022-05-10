@@ -1,17 +1,24 @@
 import Container from '#/components/Container'
 import ProjectOverview from '#/components/ProjectOverview'
 import detail from '#/data/detail'
+import AspectRatioContainer from '#/ui/AspectRatioContainer'
 import Button from '#/ui/Button'
 import ImageContainer from '#/ui/ImageContainer'
 import Text from '#/ui/Text'
 import clsx from 'clsx'
+import dynamic from 'next/dynamic'
 import React from 'react'
+import { useInView } from 'react-intersection-observer'
+
+const ReactPlayer = dynamic(() => import('react-player/youtube'))
 
 interface Props {
   data: typeof detail
 }
 
 export default function DetailDesktop({ data }: Props) {
+  const { ref, inView } = useInView({ threshold: 0.2 })
+
   const {
     credits,
     image,
@@ -27,9 +34,7 @@ export default function DetailDesktop({ data }: Props) {
     <>
       <Container>
         <div className={clsx('w-1/2', 'pt-8')}>
-          <Text
-            as='h1'
-            className={clsx('text-4xl mb-2', 'leading-snug')}>
+          <Text as='h1' className={clsx('text-4xl mb-2', 'leading-snug')}>
             <Text bold serif>
               {title}
             </Text>{' '}
@@ -56,7 +61,16 @@ export default function DetailDesktop({ data }: Props) {
           <ImageContainer src={image} aspectRatio='16:9' />
         </div>
       </Container>
-      <ImageContainer aspectRatio='16:9' src={image} alt={title} />
+      <AspectRatioContainer aspectRatio='16:9' ref={ref}>
+        <ReactPlayer
+          playing={inView}
+          muted
+          controls
+          url='https://www.youtube.com/watch?v=-wtWbajnxD8'
+          width='100%'
+          height='100%'
+        />
+      </AspectRatioContainer>
       <Container>
         <div className={clsx('py-32', 'grid grid-cols-[4fr,_8fr]')}>
           <Text serif bold as='h2' className={clsx('uppercase', 'text-4xl')}>

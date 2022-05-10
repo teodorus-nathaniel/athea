@@ -7,11 +7,13 @@ import detail from '#/data/detail'
 import Button from '#/ui/Button'
 import ImageContainer from '#/ui/ImageContainer'
 import Link from '#/ui/Link'
-import Popover from '#/ui/Popover'
 import Text from '#/ui/Text'
 import clsx from 'clsx'
+import dynamic from 'next/dynamic'
 import Image from 'next/image'
 import { HTMLProps } from 'react'
+
+const Popover = dynamic(() => import('#/ui/Popover'))
 
 interface Props {
   data: typeof detail
