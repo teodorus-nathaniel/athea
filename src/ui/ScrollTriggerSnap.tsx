@@ -59,7 +59,6 @@ export default function ScrollTriggerSnap({
       let offset
       const toSmallDist = currentProgress - snapProgresses[nearestSmallIdx]
       const toBigDist = snapProgresses[nearestBigIdx] - currentProgress
-      let dist
       if (toSmallDist > toBigDist) {
         offset =
           containerTop + scrollDist * (snapProgresses[nearestBigIdx] ?? 0)
