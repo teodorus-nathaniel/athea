@@ -47,6 +47,7 @@ export default function Navbar({ noMixBlend = true }: NavbarProps) {
     <>
       <nav
         className={clsx(
+          isOpenContent ? 'bg-black' : '',
           'fixed top-0 w-full',
           'flex justify-end items-center',
           'py-6',
