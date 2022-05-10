@@ -32,9 +32,7 @@ const ServicesListContent = React.forwardRef<HTMLDivElement, Props>(
         )}
         <SizeMe monitorHeight monitorWidth={false}>
           {({ size: { height } }) => (
-            <div
-              className={clsx('relative', 'ml-16', 'flex-1')}
-              style={{ perspective: '2000px' }}>
+            <div className={clsx('relative', 'ml-16', 'flex-1')}>
               <div>
                 <Service
                   className='opacity-0 pointer-events-none'
