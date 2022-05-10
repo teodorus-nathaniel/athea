@@ -91,12 +91,13 @@ const ServicesListContent = React.forwardRef<HTMLDivElement, Props>(
                     services.map((service, idx) => (
                       <ServiceAnimated
                         {...service}
+                        animateOpacity
                         textOnly
                         idx={idx}
                         length={services.length}
                         progress={scrollTriggerInstance.progress}
                         key={idx}
-                        offset={(height ?? 0) + 20}
+                        offset={(height ?? 0) + 15}
                       />
                     ))}
                 </motion.div>

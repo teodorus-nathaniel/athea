@@ -9,6 +9,7 @@ interface Props extends Omit<ServiceProps, 'number'> {
   progress: MotionValue<number>
   offset: number
   length: number
+  animateOpacity?: boolean
 }
 
 export default function ServiceAnimated({
@@ -16,6 +17,7 @@ export default function ServiceAnimated({
   idx,
   offset,
   length,
+  animateOpacity = false,
   ...props
 }: Props) {
   const getOffset = useCallback(
@@ -28,12 +30,18 @@ export default function ServiceAnimated({
   )
 
   const y = useTransform(progress, getOffset)
+  const opacity = useTransform(progress, (latest) => {
+    if (!animateOpacity) return 1
+    const currentOffset = getOffset(latest)
+    if (currentOffset > offset || currentOffset < -offset) return 0
+    return 1 - Math.abs(currentOffset / offset)
+  })
 
   return (
     <motion.div
       key={idx}
       className={clsx('absolute w-full h-full')}
-      style={{ y }}>
+      style={{ y, opacity }}>
       <Service {...props} image={Project} number={idx + 1} />
     </motion.div>
   )
