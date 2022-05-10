@@ -31,7 +31,7 @@ export default function ServicesListSection(props: SectionWrapperProps) {
         className={clsx(
           'min-h-screen',
           'flex items-center',
-          '!py-8',
+          '!py-8 !px-24',
           'justify-center'
         )}
         title={
