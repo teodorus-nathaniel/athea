@@ -1,6 +1,7 @@
 import clsx from 'clsx'
 import Image, { ImageProps } from 'next/image'
 import React from 'react'
+import AspectRatioContainer from './AspectRatioContainer'
 
 const aspectRatios = {
   '16:9': clsx('pt-[56.25%]'),
@@ -26,13 +27,9 @@ export default function ImageContainer({
   )
 
   return (
-    <div
-      className={clsx(
-        'w-full relative overflow-hidden',
-        'bg-gray-500',
-        aspectRatios[aspectRatio],
-        containerClassName
-      )}>
+    <AspectRatioContainer
+      aspectRatio={aspectRatio}
+      className={containerClassName}>
       {imageProps.src && (
         <Image
           layout='fill'
@@ -45,6 +42,6 @@ export default function ImageContainer({
           alt={imageProps.alt ?? ''}
         />
       )}
-    </div>
+    </AspectRatioContainer>
   )
 }
