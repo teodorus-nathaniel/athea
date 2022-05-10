@@ -98,7 +98,8 @@ export default function DetailMobile({ data }: Props) {
           />
           <Link
             noAnimation
-            className={clsx('ml-4', 'hover:scale-110 active:scale-105')}>
+            className={clsx('ml-4', 'hover:scale-110 active:scale-105')}
+            href='instagram://story-camera'>
             <AddStoryIcon width='1.35rem' />
           </Link>
           <Link
