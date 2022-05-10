@@ -87,9 +87,12 @@ function ContactAddress() {
 }
 
 const socialMediaIcons = [
-  { icon: InstagramIcon, href: 'https://instagram.com' },
-  { icon: LinkedinIcon, href: 'https://linkedin.com' },
-  { icon: YoutubeIcon, href: 'https://youtube.com' },
+  { icon: InstagramIcon, href: 'https://www.instagram.com/atheavisuals/' },
+  {
+    icon: LinkedinIcon,
+    href: 'https://www.linkedin.com/company/athea-visuals',
+  },
+  { icon: YoutubeIcon, href: 'https://www.youtube.com/c/AtheaVisuals' },
 ]
 function ContactSocialMedia({
   theme,
@@ -101,7 +104,9 @@ function ContactSocialMedia({
   const size = smaller ? '1.5rem' : '2.1rem'
   return (
     <div className='flex flex-col'>
-      <p className='font-serif text-sm mb-2 whitespace-nowrap'>Connect with us</p>
+      <p className='font-serif text-sm mb-2 whitespace-nowrap'>
+        Connect with us
+      </p>
       <div className={clsx('flex items-center')}>
         {socialMediaIcons.map(({ icon: Icon, href }, idx) => (
           <Link
