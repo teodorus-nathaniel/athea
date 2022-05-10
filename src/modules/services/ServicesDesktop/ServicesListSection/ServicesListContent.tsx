@@ -1,32 +1,26 @@
-import SectionWrapper, {
-  SectionWrapperProps,
-} from '#/components/sections/SectionWrapper'
 import Service from '#/components/Service'
-import services from '#/data/services'
+import { ServiceData } from '#/data/types'
 import { useScrollTriggerContext } from '#/helpers/contexts/ScrollTriggerProvider'
-import Text from '#/ui/Text'
 import clsx from 'clsx'
 import { motion } from 'framer-motion'
-import React from 'react'
+import React, { HTMLProps } from 'react'
 import { SizeMe } from 'react-sizeme'
 import ServiceAnimated from './ServiceAnimated'
 
-const OFFSET = 100
-export default function ServicesListContent(props: SectionWrapperProps) {
-  const scrollTriggerInstance = useScrollTriggerContext()
+interface Props extends HTMLProps<HTMLDivElement> {
+  services: ServiceData[]
+}
 
-  return (
-    <SectionWrapper
-      title={
-        <>
-          <Text serif bold>
-            Our
-          </Text>
-          <Text> Services</Text>
-        </>
-      }
-      {...props}>
-      <div className={clsx('flex items-stretch', 'w-full')}>
+const OFFSET = 100
+const ServicesListContent = React.forwardRef<HTMLDivElement, Props>(
+  function ServicesListContent({ services, className, ...props }, ref) {
+    const scrollTriggerInstance = useScrollTriggerContext()
+
+    return (
+      <div
+        ref={ref}
+        className={clsx('flex items-stretch', 'w-full', className)}
+        {...props}>
         <div className={clsx('w-8', 'bg-red-500')}></div>
         <SizeMe monitorHeight monitorWidth={false}>
           {({ size: { height } }) => (
@@ -65,6 +59,8 @@ export default function ServicesListContent(props: SectionWrapperProps) {
           )}
         </SizeMe>
       </div>
-    </SectionWrapper>
-  )
-}
+    )
+  }
+)
+
+export default ServicesListContent

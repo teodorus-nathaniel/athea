@@ -2,6 +2,7 @@ import { MotionValue, useMotionValue } from 'framer-motion'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger'
 import React, {
+  HTMLProps,
   MutableRefObject,
   RefObject,
   useContext,
@@ -26,7 +27,7 @@ const DEFAULT_OPTIONS = {
   start: 'top top',
 }
 
-export type ScrollTriggerProviderProps = {
+export interface ScrollTriggerProviderProps extends HTMLProps<HTMLDivElement> {
   debug?: boolean
   options?: Omit<
     gsap.DOMTarget | ScrollTrigger.Vars | undefined,
@@ -42,6 +43,7 @@ export const ScrollTriggerProvider: React.FC<ScrollTriggerProviderProps> = ({
   timelineRef,
   containerRef,
   options = {},
+  ...props
 }) => {
   const internalContainerRef = useRef<HTMLDivElement | null>(null)
   const internalTimelineRef = useRef<gsap.core.Timeline | null>(null)
@@ -87,7 +89,7 @@ export const ScrollTriggerProvider: React.FC<ScrollTriggerProviderProps> = ({
   )
 
   return (
-    <div ref={usedContainerRef}>
+    <div ref={usedContainerRef} {...props}>
       <ScrollTriggerContext.Provider value={data}>
         {children}
       </ScrollTriggerContext.Provider>
