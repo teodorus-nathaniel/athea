@@ -1,13 +1,11 @@
 import Project from '#/assets/photos/project-1.png'
-import Service from '#/components/Service'
-import { ServiceData } from '#/data/types'
+import Service, { ServiceProps } from '#/components/Service'
 import clsx from 'clsx'
 import { motion, MotionValue, useTransform } from 'framer-motion'
 import React, { useCallback } from 'react'
 
-interface Props {
+interface Props extends Omit<ServiceProps, 'number'> {
   idx: number
-  service: ServiceData
   progress: MotionValue<number>
   offset: number
   length: number
@@ -16,9 +14,9 @@ interface Props {
 export default function ServiceAnimated({
   progress,
   idx,
-  service,
   offset,
   length,
+  ...props
 }: Props) {
   const getOffset = useCallback(
     (latest: number) => {
@@ -30,18 +28,13 @@ export default function ServiceAnimated({
   )
 
   const y = useTransform(progress, getOffset)
-  const opacity = useTransform(progress, (latest) => {
-    const currentOffset = getOffset(latest)
-    if (currentOffset > offset || currentOffset < -offset) return 0
-    return 1 - Math.abs(currentOffset / offset)
-  })
 
   return (
     <motion.div
       key={idx}
       className={clsx('absolute w-full h-full')}
-      style={{ y, opacity }}>
-      <Service {...service} image={Project} number={idx + 1} />
+      style={{ y }}>
+      <Service {...props} image={Project} number={idx + 1} />
     </motion.div>
   )
 }
