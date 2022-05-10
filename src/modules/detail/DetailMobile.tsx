@@ -10,7 +10,6 @@ import Link from '#/ui/Link'
 import Text from '#/ui/Text'
 import clsx from 'clsx'
 import dynamic from 'next/dynamic'
-import Image from 'next/image'
 import { HTMLProps } from 'react'
 
 const Popover = dynamic(() => import('#/ui/Popover'))
@@ -43,7 +42,7 @@ export default function DetailMobile({ data }: Props) {
         </Text>
         <Text className='text-sm mb-6 opacity-75'>{subtitle}</Text>
         <div className={clsx('mb-6')}>
-          <Image layout='responsive' src={image} alt={title} />
+          <ImageContainer aspectRatio='3:4' src={image} alt={title} />
         </div>
         <div className={clsx('w-full', 'grid grid-cols-2', 'gap-x-4 gap-y-6')}>
           {meta.map(({ label, value }) => (
