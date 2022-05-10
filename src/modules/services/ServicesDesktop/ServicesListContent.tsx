@@ -13,7 +13,7 @@ import ServiceAnimated from './ServiceAnimated'
 
 const OFFSET = 100
 export default function ServicesListContent(props: SectionWrapperProps) {
-  const progress = useScrollTriggerContext()
+  const scrollTriggerInstance = useScrollTriggerContext()
 
   return (
     <SectionWrapper
@@ -49,13 +49,13 @@ export default function ServicesListContent(props: SectionWrapperProps) {
                   'w-full h-full',
                   'overflow-hidden'
                 )}>
-                {progress &&
+                {scrollTriggerInstance &&
                   services.map((service, idx) => (
                     <ServiceAnimated
                       idx={idx}
                       length={services.length}
                       service={service}
-                      progress={progress}
+                      progress={scrollTriggerInstance.progress}
                       key={idx}
                       offset={(height ?? 0) + OFFSET}
                     />
