@@ -100,7 +100,14 @@ export default function DetailMobile({ data }: Props) {
           <Link
             noAnimation
             className={clsx('ml-4', 'hover:scale-110 active:scale-105')}
-            href='instagram://story-camera'>
+            onClick={(e) => {
+              e.preventDefault()
+              navigator?.share && navigator.share({
+                url: 'https://athea.vercel.app/detail',
+                title: 'Detail page',
+                text: 'Detail page of ...'
+              });
+            }}>
             <AddStoryIcon width='1.35rem' />
           </Link>
           <Link
