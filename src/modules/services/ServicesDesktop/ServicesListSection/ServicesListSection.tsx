@@ -16,6 +16,7 @@ export default function ServicesListSection(props: SectionWrapperProps) {
     )
 
     return {
+      end: `+=${services.length * 500}px`,
       snap: {
         delay: 0,
         snapTo,
