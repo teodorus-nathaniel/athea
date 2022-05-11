@@ -17,6 +17,7 @@ const Home: NextPage = () => {
       mobileFooterTitle>
       <div className={clsx('w-full h-screen relative mb-8')}>
         <video
+          playsInline
           autoPlay
           muted
           loop

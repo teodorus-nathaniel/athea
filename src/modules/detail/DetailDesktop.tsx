@@ -64,6 +64,7 @@ export default function DetailDesktop({ data }: Props) {
       <AspectRatioContainer aspectRatio='16:9' ref={ref}>
         <ReactPlayer
           playing={inView}
+          playsinline
           muted
           controls
           url='https://www.youtube.com/watch?v=-wtWbajnxD8'
