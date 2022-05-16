@@ -1,4 +1,7 @@
-import Project from '#/assets/photos/project-2.png'
+import Thumbnail from '#/assets/photos/npure/thumbnail.jpg'
+import Image1 from '#/assets/photos/npure/1.jpg'
+import Image2 from '#/assets/photos/npure/2.jpg'
+import Image3 from '#/assets/photos/npure/3.jpg'
 import recentWorks from './recent-works'
 
 const detail = {
@@ -6,7 +9,8 @@ const detail = {
   titleDesc: "ISYANA'S SKIN MELODY",
   subtitle: 'MANIFESTO · DIGITAL · VIDEO · 2021',
 
-  image: Project,
+  thumbnail: Thumbnail,
+  images: [Image1, Image2, Image3],
   meta: [
     { label: 'Client', value: "N'pure" },
     { label: 'Deliverables', value: 'Manifesto Video' },

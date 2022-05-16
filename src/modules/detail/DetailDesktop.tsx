@@ -21,7 +21,8 @@ export default function DetailDesktop({ data }: Props) {
 
   const {
     credits,
-    image,
+    thumbnail,
+    images,
     meta,
     overview,
     relatedWorks,
@@ -58,7 +59,7 @@ export default function DetailDesktop({ data }: Props) {
               </div>
             ))}
           </div>
-          <ImageContainer src={image} aspectRatio='16:9' />
+          <ImageContainer src={thumbnail} aspectRatio='16:9' />
         </div>
       </Container>
       <AspectRatioContainer aspectRatio='16:9' ref={ref}>
@@ -82,24 +83,15 @@ export default function DetailDesktop({ data }: Props) {
           </Text>
         </div>
         <div className={clsx('flex flex-col')}>
-          <ImageContainer
-            src={image}
-            alt={title}
-            aspectRatio='16:9'
-            containerClassName={clsx('mb-12')}
-          />
-          <ImageContainer
-            src={image}
-            alt={title}
-            aspectRatio='16:9'
-            containerClassName={clsx('mb-12')}
-          />
-          <ImageContainer
-            src={image}
-            alt={title}
-            aspectRatio='16:9'
-            containerClassName={clsx('mb-12')}
-          />
+          {images.map((image, idx) => (
+            <ImageContainer
+              key={idx}
+              src={image}
+              alt={title}
+              aspectRatio='16:9'
+              containerClassName={clsx('mb-12')}
+            />
+          ))}
         </div>
         <div className={clsx('py-16', 'grid grid-cols-[4fr,_8fr]')}>
           <Text serif bold as='h2' className={clsx('uppercase', 'text-4xl')}>

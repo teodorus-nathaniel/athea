@@ -21,7 +21,8 @@ interface Props {
 export default function DetailMobile({ data }: Props) {
   const {
     credits,
-    image,
+    thumbnail,
+    images,
     meta,
     overview,
     relatedWorks,
@@ -42,7 +43,7 @@ export default function DetailMobile({ data }: Props) {
         </Text>
         <Text className='text-sm mb-6 opacity-75'>{subtitle}</Text>
         <div className={clsx('mb-6')}>
-          <ImageContainer aspectRatio='3:4' src={image} alt={title} />
+          <ImageContainer aspectRatio='3:4' src={thumbnail} alt={title} />
         </div>
         <div className={clsx('w-full', 'grid grid-cols-2', 'gap-x-4 gap-y-6')}>
           {meta.map(({ label, value }) => (
@@ -59,21 +60,14 @@ export default function DetailMobile({ data }: Props) {
       <DetailSection title='Overview'>
         <Text className={clsx('text-lg')}>{overview}</Text>
         <div className={clsx('flex flex-col', 'items-stretch', 'mt-8')}>
-          <ImageContainer
-            aspectRatio='4:3'
-            src=''
-            containerClassName={clsx('mb-6')}
-          />
-          <ImageContainer
-            aspectRatio='4:3'
-            src=''
-            containerClassName={clsx('mb-6')}
-          />
-          <ImageContainer
-            aspectRatio='4:3'
-            src=''
-            containerClassName={clsx('mb-6')}
-          />
+          {images.map((image, idx) => (
+            <ImageContainer
+              key={idx}
+              aspectRatio='4:3'
+              src={image}
+              containerClassName={clsx('mb-6')}
+            />
+          ))}
         </div>
       </DetailSection>
 
@@ -102,11 +96,12 @@ export default function DetailMobile({ data }: Props) {
             className={clsx('ml-4', 'hover:scale-110 active:scale-105')}
             onClick={(e) => {
               e.preventDefault()
-              navigator?.share && navigator.share({
-                url: 'https://athea.vercel.app/detail',
-                title: 'Detail page',
-                text: 'Detail page of ...'
-              });
+              navigator?.share &&
+                navigator.share({
+                  url: 'https://athea.vercel.app/detail',
+                  title: 'Detail page',
+                  text: 'Detail page of ...',
+                })
             }}>
             <AddStoryIcon width='1.35rem' />
           </Link>
@@ -128,7 +123,13 @@ export default function DetailMobile({ data }: Props) {
             <Text>Works</Text>
           </>
         }>
-        <div className={clsx('max-w-sm', 'mt-4 mb-8')}>
+        <div
+          className={clsx(
+            'max-w-sm',
+            'mt-4 mb-8',
+            'mx-auto',
+            'flex justify-center'
+          )}>
           <ProjectOverview {...relatedWorks} />
         </div>
       </DetailSection>
