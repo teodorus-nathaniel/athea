@@ -1,4 +1,4 @@
-import Project1 from '#/assets/photos/project-1.png'
+import Project1 from '#/assets/photos/npure/thumbnail.jpg'
 import Project2 from '#/assets/photos/project-2.png'
 import Project3 from '#/assets/photos/project-3.png'
 import { ProjectOverviewData } from './types'
