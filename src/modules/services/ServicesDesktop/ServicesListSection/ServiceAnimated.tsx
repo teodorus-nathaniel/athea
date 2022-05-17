@@ -1,4 +1,4 @@
-import Project from '#/assets/photos/npure/thumbnail.jpg'
+import Project from '#/assets/projects/npure/thumbnail.jpg'
 import Service, { ServiceProps } from '#/components/Service'
 import clsx from 'clsx'
 import { motion, MotionValue, useTransform } from 'framer-motion'
