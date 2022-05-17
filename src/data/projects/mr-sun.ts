@@ -1,10 +1,10 @@
-import Image1 from '#/assets/projects/glowgene/1.png'
-import Thumbnail from '#/assets/projects/glowgene/thumbnail.png'
+import Image1 from '#/assets/projects/mr-sun/1.png'
+import Thumbnail from '#/assets/projects/mr-sun/thumbnail.png'
 import { ProjectData } from '../types'
 
-export const glowgene: ProjectData = {
-  title: 'GLOWGENE',
-  titleDesc: 'GLOWGENE',
+export const mrSun: ProjectData = {
+  title: 'MR SUN',
+  titleDesc: 'MR SUN',
   subtitle: 'MANIFESTO · DIGITAL · VIDEO · 2021',
 
   thumbnail: Thumbnail,

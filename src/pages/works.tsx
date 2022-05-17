@@ -4,7 +4,8 @@ import HeadlineSection from '#/components/sections/HeadlineSection'
 import SectionWrapper from '#/components/sections/SectionWrapper'
 import TabLayout, { TabData } from '#/components/TabLayout'
 import { SLOW_TRANSITION } from '#/constants/transition'
-import works from '#/data/works'
+import { projectGroups } from '#/data/projects/projects'
+import { ProjectData } from '#/data/types'
 import { useBreakpointThreshold } from '#/helpers/hooks/useBreakpointThreshold'
 import useSlideAnimation from '#/helpers/hooks/useSlideAnimation'
 import Text from '#/ui/Text'
@@ -14,11 +15,17 @@ import type { NextPage } from 'next'
 import { useCallback, useEffect, useState } from 'react'
 
 const tabs: TabData[] = []
-works.forEach(({ title, projects, hash }) => {
+let allProjects: ProjectData[] = []
+const groups = [...projectGroups]
+groups.forEach(({ projects }) => {
+  allProjects.push(...projects)
+})
+groups.unshift({ group: 'All Work', projects: allProjects })
+
+groups.forEach(({ group, projects }) => {
   tabs.push({
-    title,
+    title: group,
     additionalInfo: projects.length,
-    hash,
   })
 })
 
@@ -26,7 +33,7 @@ const Works: NextPage = () => {
   const mdUp = useBreakpointThreshold('md')
 
   const [selectedTab, setSelectedTab] = useState(0)
-  const selectedWork = works[selectedTab]
+  const selectedWork = groups[selectedTab]
 
   const [contentHeight, setContentHeight] = useState(0)
   const { setSlideDir, ...slideAnimation } = useSlideAnimation()
@@ -87,7 +94,7 @@ const Works: NextPage = () => {
               transition={SLOW_TRANSITION}
               onUnmount={updateHeight}
               onAnimationStart={updateHeight}
-              key={selectedWork.title}
+              key={selectedWork.group}
               id='works-content'>
               <ProjectOverviewList projects={selectedWork?.projects ?? []} />
             </motion.div>

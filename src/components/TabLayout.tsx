@@ -19,10 +19,10 @@ export interface TabLayoutProps extends HTMLProps<HTMLUListElement> {
 }
 
 function encodeTab(tab: string) {
-  return encodeURI(tab.toLowerCase())
+  return encodeURI(tab.replace(/ /g, '-').toLowerCase())
 }
 function decodeTab(encoded: string) {
-  return decodeURI(encoded)
+  return decodeURI(encoded.replace(/-/g, ' '))
 }
 
 export default function TabLayout({

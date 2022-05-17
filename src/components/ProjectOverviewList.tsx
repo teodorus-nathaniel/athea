@@ -6,11 +6,13 @@ import ProjectOverview from './ProjectOverview'
 
 interface Props extends HTMLProps<HTMLDivElement> {
   projects: ProjectOverviewData[]
+  largeFirstProject?: boolean
 }
 
 export default function ProjectOverviewList({
   className,
   projects,
+  largeFirstProject = false,
   ...divProps
 }: Props) {
   const mdUp = useBreakpointThreshold('md')
@@ -20,15 +22,17 @@ export default function ProjectOverviewList({
       {...divProps}
       className={clsx(
         'w-full mx-auto',
-        'grid gap-x-12 gap-y-16 justify-center',
-        mdUp ? 'grid-cols-2' : '',
+        'grid gap-x-12 gap-y-16',
+        mdUp ? 'grid-cols-2 justify-center' : '',
         className
       )}>
-      {projects.map((projectProps, idx) => (
+      {projects.map((project, idx) => (
         <ProjectOverview
-          style={{ gridColumn: idx === 0 ? '1/-1' : '' }}
-          key={projectProps.title}
-          {...projectProps}
+          style={{
+            gridColumn: mdUp && largeFirstProject && idx === 0 ? '1/-1' : '',
+          }}
+          key={project.title}
+          projectOverview={project}
         />
       ))}
     </div>

@@ -24,12 +24,7 @@ export interface TeamMemberData {
   position: string
 }
 
-export interface Project {
-  title: string
-  titleDesc: string
-  subtitle: string
-
-  thumbnail: StaticImageData
+export interface ProjectData extends ProjectOverviewData {
   images: StaticImageData[]
   meta: { label: string; value: string }[]
 
@@ -41,5 +36,5 @@ export interface Project {
     others: string
   }
 
-  relatedWorks: Project[]
+  relatedWorks: ProjectOverviewData[]
 }

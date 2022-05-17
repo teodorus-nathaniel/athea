@@ -2,10 +2,10 @@ import Image1 from '#/assets/projects/npure/1.jpg'
 import Image2 from '#/assets/projects/npure/2.jpg'
 import Image3 from '#/assets/projects/npure/3.jpg'
 import Thumbnail from '#/assets/projects/npure/thumbnail.jpg'
-import { Project } from '../types'
+import { ProjectData } from '../types'
 import { glowgene } from './glowgene'
 
-export const npure: Project = {
+export const npure: ProjectData = {
   title: "N'PURE X ISYANA",
   titleDesc: "ISYANA'S SKIN MELODY",
   subtitle: 'MANIFESTO · DIGITAL · VIDEO · 2021',

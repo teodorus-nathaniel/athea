@@ -3,7 +3,7 @@ import CopyLinkIcon from '#/assets/icons/copy-link.svg'
 import WhatsappIcon from '#/assets/social-media/whatsapp.svg'
 import Container from '#/components/Container'
 import ProjectOverview from '#/components/ProjectOverview'
-import { Project } from '#/data/types'
+import { ProjectData } from '#/data/types'
 import Button from '#/ui/Button'
 import ImageContainer from '#/ui/ImageContainer'
 import Link from '#/ui/Link'
@@ -15,7 +15,7 @@ import { HTMLProps } from 'react'
 const Popover = dynamic(() => import('#/ui/Popover'))
 
 interface Props {
-  data: Project
+  data: ProjectData
 }
 
 export default function DetailMobile({ data }: Props) {
@@ -137,10 +137,7 @@ export default function DetailMobile({ data }: Props) {
                 'w-[calc(100vw_-_theme(spacing.6)_*_2)]',
                 `${idx === 0 ? 'ml-6' : ''} mr-4`
               )}
-              title={project.title}
-              subtitle={project.subtitle}
-              thumbnail={project.thumbnail}
-              titleDesc={project.titleDesc}
+              projectOverview={project}
               key={idx}
             />
           ))}

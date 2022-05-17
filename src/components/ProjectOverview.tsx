@@ -6,15 +6,18 @@ import Text from '#/ui/Text'
 import clsx from 'clsx'
 import React, { HTMLProps } from 'react'
 
+interface ProjectOverviewProps extends HTMLProps<HTMLAnchorElement> {
+  projectOverview: ProjectOverviewData
+}
+
 export default function ProjectOverview({
-  thumbnail,
-  title,
-  titleDesc,
-  subtitle,
+  projectOverview,
   ref: _ref,
   ...anchorProps
-}: ProjectOverviewData & HTMLProps<HTMLAnchorElement>) {
+}: ProjectOverviewProps) {
   const mdUp = useBreakpointThreshold('md')
+
+  const { subtitle, thumbnail, title, titleDesc } = projectOverview
 
   return (
     <Link
@@ -28,9 +31,7 @@ export default function ProjectOverview({
         aspectRatio={mdUp ? '16:9' : '3:4'}
         withAnimation
       />
-      <Text
-        as='p'
-        className={clsx('text-2xl leading-tight', 'mt-6 mb-2')}>
+      <Text as='p' className={clsx('text-2xl leading-tight', 'mt-6 mb-2')}>
         <Text serif bold>
           {title}
         </Text>{' '}

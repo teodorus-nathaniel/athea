@@ -1,6 +1,6 @@
 import Container from '#/components/Container'
 import ProjectOverview from '#/components/ProjectOverview'
-import { Project } from '#/data/types'
+import { ProjectData } from '#/data/types'
 import AspectRatioContainer from '#/ui/AspectRatioContainer'
 import Button from '#/ui/Button'
 import ImageContainer from '#/ui/ImageContainer'
@@ -13,7 +13,7 @@ import { useInView } from 'react-intersection-observer'
 const ReactPlayer = dynamic(() => import('react-player/youtube'))
 
 interface Props {
-  data: Project
+  data: ProjectData
 }
 
 export default function DetailDesktop({ data }: Props) {
@@ -112,7 +112,7 @@ export default function DetailDesktop({ data }: Props) {
           </Text>
           <div className={clsx('grid grid-cols-2', 'gap-12')}>
             {relatedWorks.map((project, idx) => (
-              <ProjectOverview {...project} key={idx} />
+              <ProjectOverview projectOverview={project} key={idx} />
             ))}
           </div>
           <div className={clsx('flex justify-center', 'pt-16')}>
