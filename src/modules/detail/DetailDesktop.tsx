@@ -35,8 +35,8 @@ export default function DetailDesktop({ data }: Props) {
   return (
     <>
       <Container>
-        <div className={clsx('w-1/2', 'pt-8')}>
-          <Text as='h1' className={clsx('text-4xl mb-2', 'leading-snug')}>
+        <div className={clsx('w-3/4', 'pt-8')}>
+          <Text as='h1' className={clsx('text-5xl mb-2', 'leading-snug')}>
             <Text bold serif>
               {title}
             </Text>{' '}
@@ -45,12 +45,12 @@ export default function DetailDesktop({ data }: Props) {
         </div>
         <div
           className={clsx(
-            'grid grid-cols-[4fr,_8fr] gap-x-4',
-            'items-end',
+            'grid grid-cols-[5fr,_7fr] gap-x-8',
             'pt-6',
             'pb-16'
           )}>
-          <div className={clsx('grid grid-cols-2', 'gap-x-4 gap-y-6')}>
+          <div
+            className={clsx('grid grid-cols-2', 'gap-x-4 gap-y-6', 'self-end')}>
             {meta.map(({ label, value }) => (
               <div className={clsx('flex flex-col')} key={label + value}>
                 <Text serif className={clsx('mb-0.5', 'text-lg')}>
