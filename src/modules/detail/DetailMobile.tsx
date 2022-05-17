@@ -1,5 +1,5 @@
-import AddStoryIcon from '#/assets/icons/add-story.svg'
 import CopyLinkIcon from '#/assets/icons/copy-link.svg'
+import InstagramIcon from '#/assets/social-media/instagram.svg'
 import WhatsappIcon from '#/assets/social-media/whatsapp.svg'
 import Container from '#/components/Container'
 import ProjectOverview from '#/components/ProjectOverview'
@@ -50,7 +50,7 @@ export default function DetailMobile({ data }: Props) {
         <div className={clsx('w-full', 'grid grid-cols-2', 'gap-x-4 gap-y-6')}>
           {meta.map(({ label, value }) => (
             <div className={clsx('flex flex-col')} key={label + value}>
-              <Text serif bold className={clsx('text-sm', 'mb-0.5')}>
+              <Text serif bold className={clsx('text-base', 'mb-0.5')}>
                 {label}
               </Text>
               <Text className={clsx('text-lg')}>{value}</Text>
@@ -110,10 +110,10 @@ export default function DetailMobile({ data }: Props) {
                   text: 'Detail page of ...',
                 })
             }}>
-            <AddStoryIcon width='1.35rem' />
+            <InstagramIcon width='1.35rem' />
           </Link>
           <Link
-            href='whatsapp://send?text=Your message here'
+            href='https://wa.me/628179222220?text=Hi Athea, I would like to talk about something exciting. Can we arrange a meeting?'
             noAnimation
             className={clsx('ml-4', 'hover:scale-110 active:scale-105')}>
             <WhatsappIcon width='1.3rem' />
