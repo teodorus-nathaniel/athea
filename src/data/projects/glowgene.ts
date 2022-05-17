@@ -3,6 +3,8 @@ import Thumbnail from '#/assets/projects/glowgene/thumbnail.png'
 import { ProjectData } from '../types'
 
 export const glowgene: ProjectData = {
+  key: 'glowgene',
+
   title: 'GLOWGENE',
   titleDesc: 'GLOWGENE',
   subtitle: 'MANIFESTO · DIGITAL · VIDEO · 2021',

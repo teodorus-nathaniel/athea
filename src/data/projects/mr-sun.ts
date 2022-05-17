@@ -3,6 +3,8 @@ import Thumbnail from '#/assets/projects/mr-sun/thumbnail.png'
 import { ProjectData } from '../types'
 
 export const mrSun: ProjectData = {
+  key: 'mr-sun',
+
   title: 'MR SUN',
   titleDesc: 'MR SUN',
   subtitle: 'MANIFESTO · DIGITAL · VIDEO · 2021',

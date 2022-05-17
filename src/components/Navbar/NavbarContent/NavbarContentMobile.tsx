@@ -3,6 +3,7 @@ import Contact from '#/components/Contact'
 import { NORMAL_TRANSITION } from '#/constants/transition'
 import { projects } from '#/data/projects'
 import useHorizontalPadding from '#/helpers/hooks/useHorizontalPadding'
+import useOnClickOutside from '#/helpers/hooks/useOnOutsideClick'
 import { TransitionVariants } from '#/helpers/types'
 import Input from '#/ui/Input'
 import Link from '#/ui/Link'
@@ -11,7 +12,7 @@ import clsx from 'clsx'
 import { AnimatePresence, motion } from 'framer-motion'
 import { matchSorter } from 'match-sorter'
 import { useRouter } from 'next/router'
-import React, { useMemo, useState } from 'react'
+import React, { useMemo, useRef, useState } from 'react'
 import { useDebounce } from 'use-hooks'
 import { NavbarContentChildProps } from './NavbarContent'
 import NavbarLink from './NavbarLink'
@@ -43,6 +44,9 @@ export default function NavbarContentMobile({
   const { pathname } = useRouter()
   const horizontalPadding = useHorizontalPadding()
   const [isSearchFocus, setIsSearchFocus] = useState(false)
+
+  const containerRef = useRef<HTMLDivElement | null>(null)
+  useOnClickOutside(containerRef, () => setIsSearchFocus(false))
 
   const [search, setSearch] = useState('')
   const debouncedSearch = useDebounce(search, 300)
@@ -77,7 +81,8 @@ export default function NavbarContentMobile({
           variants={containerVariants}
           initial='close'
           animate='open'
-          exit='close'>
+          exit='close'
+          ref={containerRef}>
           <motion.form
             onSubmit={handleSubmit}
             variants={contentVariants}
@@ -85,7 +90,6 @@ export default function NavbarContentMobile({
             <Input
               value={search}
               onFocus={() => setIsSearchFocus(true)}
-              onBlur={() => setIsSearchFocus(false)}
               onChange={(e: any) => setSearch(e.target.value)}
               leftIcon={SearchIcon}
               containerClassName={clsx('text-lg')}

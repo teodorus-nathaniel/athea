@@ -1,6 +1,7 @@
 type NextImageType = string | StaticImageData
 
 export interface ProjectOverviewData {
+  key: string
   thumbnail: NextImageType
   title: string
   titleDesc: string

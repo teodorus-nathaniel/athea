@@ -3,12 +3,13 @@ import { glowgene } from './glowgene'
 import { mrSun } from './mr-sun'
 import { npure } from './npure'
 
-export const projectKeys: { [key: string]: ProjectData } = {
-  npure,
-  glowgene,
-  'mr-sun': mrSun,
-}
-export const projects: ProjectData[] = Object.values(projectKeys)
+export const projects: ProjectData[] = [npure, glowgene, mrSun]
+export const projectKeys: { [key: string]: ProjectData } = projects.reduce<{
+  [key: string]: ProjectData
+}>((acc, project) => {
+  acc[project.key] = project
+  return acc
+}, {})
 
 export const projectGroups: {
   group: string

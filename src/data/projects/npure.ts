@@ -6,6 +6,8 @@ import { ProjectData } from '../types'
 import { glowgene } from './glowgene'
 
 export const npure: ProjectData = {
+  key: 'npure',
+
   title: "N'PURE X ISYANA",
   titleDesc: "ISYANA'S SKIN MELODY",
   subtitle: 'MANIFESTO · DIGITAL · VIDEO · 2021',

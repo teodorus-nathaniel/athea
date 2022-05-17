@@ -17,12 +17,12 @@ export default function ProjectOverview({
 }: ProjectOverviewProps) {
   const mdUp = useBreakpointThreshold('md')
 
-  const { subtitle, thumbnail, title, titleDesc } = projectOverview
+  const { subtitle, thumbnail, title, titleDesc, key } = projectOverview
 
   return (
     <Link
       noAnimation
-      href='/detail'
+      href={key}
       className={clsx('flex flex-col w-full')}
       {...anchorProps}>
       <ImageContainer
