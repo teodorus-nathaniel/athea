@@ -144,7 +144,9 @@ export default function DetailMobile({ data }: Props) {
         </div>
       </DetailSection>
       <div className={clsx('flex justify-center mb-12')}>
-        <Button type='solid-white'>Back to work list</Button>
+        <Link href='/works' noAnimation>
+          <Button type='solid-white'>Back to work list</Button>
+        </Link>
       </div>
     </Container>
   )

@@ -4,6 +4,7 @@ import { ProjectData } from '#/data/types'
 import AspectRatioContainer from '#/ui/AspectRatioContainer'
 import Button from '#/ui/Button'
 import ImageContainer from '#/ui/ImageContainer'
+import Link from '#/ui/Link'
 import Text from '#/ui/Text'
 import clsx from 'clsx'
 import dynamic from 'next/dynamic'
@@ -116,11 +117,13 @@ export default function DetailDesktop({ data }: Props) {
             ))}
           </div>
           <div className={clsx('flex justify-center', 'pt-16')}>
-            <Button
-              type='solid-white'
-              className={clsx('!px-10 py-3', 'uppercase')}>
-              Back to work list
-            </Button>
+            <Link noAnimation href='/works'>
+              <Button
+                type='solid-white'
+                className={clsx('!px-10 py-3', 'uppercase')}>
+                Back to work list
+              </Button>
+            </Link>
           </div>
         </div>
       </Container>
