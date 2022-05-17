@@ -1,0 +1,69 @@
+import CopyLinkIcon from '#/assets/icons/copy-link.svg'
+import InstagramIcon from '#/assets/social-media/instagram.svg'
+import WhatsappIcon from '#/assets/social-media/whatsapp.svg'
+import { useBreakpointThreshold } from '#/helpers/hooks/useBreakpointThreshold'
+import { generateWebsiteUrl } from '#/helpers/url'
+import Link from '#/ui/Link'
+import Text from '#/ui/Text'
+import clsx from 'clsx'
+import dynamic from 'next/dynamic'
+import { HTMLProps } from 'react'
+
+const Popover = dynamic(() => import('#/ui/Popover'))
+
+interface ShareContainerProps extends HTMLProps<HTMLDivElement> {
+  projectKey: string
+}
+
+export default function ShareContainer({
+  projectKey,
+  className,
+  ...props
+}: ShareContainerProps) {
+  const mdUp = useBreakpointThreshold('md')
+
+  return (
+    <div className={clsx('flex', 'space-x-6', className)} {...props}>
+      <Text bold>Share this work</Text>
+      <Popover
+        buttonContainerClassName={clsx('flex')}
+        button={
+          <Link
+            href=''
+            onClick={() =>
+              navigator.clipboard.writeText(
+                generateWebsiteUrl(`projects/${projectKey}`)
+              )
+            }
+            noAnimation
+            className={clsx('hover:scale-110 active:scale-105')}>
+            <CopyLinkIcon width={mdUp ? '1.3em' : '1.6em'} />
+          </Link>
+        }
+        panel={<Text bold>Link Copied!</Text>}
+      />
+      {!mdUp && (
+        <Link
+          noAnimation
+          className={clsx('hover:scale-110 active:scale-105')}
+          onClick={(e) => {
+            e.preventDefault()
+            navigator?.share &&
+              navigator.share({
+                url: 'https://athea.vercel.app/detail',
+                title: 'Detail page',
+                text: 'Detail page of ...',
+              })
+          }}>
+          <InstagramIcon width={mdUp ? '1em' : '1.3em'} />
+        </Link>
+      )}
+      <Link
+        href='https://wa.me/628179222220?text=Hi Athea, I would like to talk about something exciting. Can we arrange a meeting?'
+        noAnimation
+        className={clsx('hover:scale-110 active:scale-105')}>
+        <WhatsappIcon width={mdUp ? '1em' : '1.3em'} />
+      </Link>
+    </div>
+  )
+}

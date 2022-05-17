@@ -1,19 +1,13 @@
-import CopyLinkIcon from '#/assets/icons/copy-link.svg'
-import InstagramIcon from '#/assets/social-media/instagram.svg'
-import WhatsappIcon from '#/assets/social-media/whatsapp.svg'
 import Container from '#/components/Container'
 import ProjectOverview from '#/components/ProjectOverview'
 import { ProjectData } from '#/data/types'
-import { generateWebsiteUrl } from '#/helpers/url'
 import Button from '#/ui/Button'
 import ImageContainer from '#/ui/ImageContainer'
 import Link from '#/ui/Link'
 import Text from '#/ui/Text'
 import clsx from 'clsx'
-import dynamic from 'next/dynamic'
 import { HTMLProps } from 'react'
-
-const Popover = dynamic(() => import('#/ui/Popover'))
+import ShareContainer from './common/ShareContainer'
 
 interface Props {
   data: ProjectData
@@ -75,50 +69,7 @@ export default function DetailMobile({ data }: Props) {
 
       <DetailSection title='Credits'>
         <Text className={clsx('text-lg')}>{credits}</Text>
-
-        <div className={clsx('flex items-center', 'mt-6')}>
-          <Text bold className={clsx('text-xl')}>
-            Share this work
-          </Text>
-          <Popover
-            containerClassName={clsx('ml-4')}
-            buttonContainerClassName={clsx('flex')}
-            button={
-              <Link
-                href=''
-                onClick={() =>
-                  navigator.clipboard.writeText(
-                    generateWebsiteUrl(`projects/${key}`)
-                  )
-                }
-                noAnimation
-                className={clsx('hover:scale-110 active:scale-105')}>
-                <CopyLinkIcon width='1.6rem' />
-              </Link>
-            }
-            panel={<Text bold>Link Copied!</Text>}
-          />
-          <Link
-            noAnimation
-            className={clsx('ml-4', 'hover:scale-110 active:scale-105')}
-            onClick={(e) => {
-              e.preventDefault()
-              navigator?.share &&
-                navigator.share({
-                  url: 'https://athea.vercel.app/detail',
-                  title: 'Detail page',
-                  text: 'Detail page of ...',
-                })
-            }}>
-            <InstagramIcon width='1.35rem' />
-          </Link>
-          <Link
-            href='https://wa.me/628179222220?text=Hi Athea, I would like to talk about something exciting. Can we arrange a meeting?'
-            noAnimation
-            className={clsx('ml-4', 'hover:scale-110 active:scale-105')}>
-            <WhatsappIcon width='1.3rem' />
-          </Link>
-        </div>
+        <ShareContainer projectKey={key} className={clsx('mt-6')} />
       </DetailSection>
 
       <DetailSection

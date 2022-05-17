@@ -10,6 +10,7 @@ import clsx from 'clsx'
 import dynamic from 'next/dynamic'
 import React from 'react'
 import { useInView } from 'react-intersection-observer'
+import ShareContainer from './common/ShareContainer'
 
 const ReactPlayer = dynamic(() => import('react-player/youtube'))
 
@@ -27,6 +28,7 @@ export default function DetailDesktop({ data }: Props) {
     meta,
     overview,
     relatedWorks,
+    key,
     shareLinks: _shareLinks, // TODO: ini blom dipake
     title,
     titleDesc,
@@ -98,9 +100,15 @@ export default function DetailDesktop({ data }: Props) {
           <Text serif bold as='h2' className={clsx('uppercase', 'text-4xl')}>
             Credits
           </Text>
-          <Text as='p' className={clsx('text-xl')}>
-            {credits}
-          </Text>
+          <div className={clsx('flex flex-col')}>
+            <Text as='p' className={clsx('text-xl')}>
+              {credits}
+            </Text>
+            <ShareContainer
+              className={clsx('mt-12', 'text-2xl')}
+              projectKey={key}
+            />
+          </div>
         </div>
         <div className={clsx('py-16')}>
           <Text
