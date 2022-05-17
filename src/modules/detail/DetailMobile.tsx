@@ -125,13 +125,24 @@ export default function DetailMobile({ data }: Props) {
         }>
         <div
           className={clsx(
-            'max-w-sm',
             'mt-4 mb-8',
-            'mx-auto',
-            'flex justify-center'
+            '-mx-6 pb-4',
+            'flex items-stretch',
+            'w-[100%_+_theme(spacing.6)_*_2] overflow-auto'
           )}>
           {relatedWorks.map((project, idx) => (
-            <ProjectOverview {...project} key={idx} />
+            <ProjectOverview
+              className={clsx(
+                'flex-shrink-0',
+                'w-[calc(100vw_-_theme(spacing.6)_*_2)]',
+                `${idx === 0 ? 'ml-6' : ''} mr-4`
+              )}
+              title={project.title}
+              subtitle={project.subtitle}
+              thumbnail={project.thumbnail}
+              titleDesc={project.titleDesc}
+              key={idx}
+            />
           ))}
         </div>
       </DetailSection>

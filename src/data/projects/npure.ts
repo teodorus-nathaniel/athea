@@ -48,5 +48,5 @@ export const npure: Project = {
     others: 'https://google.com',
   },
 
-  relatedWorks: [glowgene],
+  relatedWorks: [glowgene, glowgene, glowgene, glowgene],
 }
