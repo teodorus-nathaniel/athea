@@ -9,8 +9,10 @@ import Link from '#/ui/Link'
 import Text from '#/ui/Text'
 import clsx from 'clsx'
 import { AnimatePresence, motion } from 'framer-motion'
+import { matchSorter } from 'match-sorter'
 import { useRouter } from 'next/router'
-import React, { useState } from 'react'
+import React, { useMemo, useState } from 'react'
+import { useDebounce } from 'use-hooks'
 import { NavbarContentChildProps } from './NavbarContent'
 import NavbarLink from './NavbarLink'
 import SearchResult from './SearchResult'
@@ -43,12 +45,20 @@ export default function NavbarContentMobile({
   const [isSearchFocus, setIsSearchFocus] = useState(false)
 
   const [search, setSearch] = useState('')
+  const debouncedSearch = useDebounce(search, 300)
 
   const handleSubmit = (e: any) => {
     e.preventDefault()
   }
 
-  const recentProjects = projects.slice(0, 3)
+  const searchResults = useMemo(() => {
+    if (!debouncedSearch) {
+      return projects.slice(0, 3)
+    }
+    return matchSorter(projects, debouncedSearch, {
+      keys: ['title', 'subtitle', 'titleDesc'],
+    })
+  }, [debouncedSearch])
 
   return (
     <AnimatePresence>
@@ -96,8 +106,8 @@ export default function NavbarContentMobile({
                   Recent Update
                 </Text>
               )}
-              {recentProjects.map((project, idx) => (
-                <motion.div variants={searchResultVariants} key={idx}>
+              {searchResults.map((project) => (
+                <motion.div variants={searchResultVariants} key={project.title}>
                   <Link noAnimation href='/detail'>
                     <SearchResult result={project} />
                   </Link>
