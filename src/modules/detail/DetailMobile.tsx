@@ -3,7 +3,7 @@ import CopyLinkIcon from '#/assets/icons/copy-link.svg'
 import WhatsappIcon from '#/assets/social-media/whatsapp.svg'
 import Container from '#/components/Container'
 import ProjectOverview from '#/components/ProjectOverview'
-import detail from '#/data/detail'
+import { Project } from '#/data/types'
 import Button from '#/ui/Button'
 import ImageContainer from '#/ui/ImageContainer'
 import Link from '#/ui/Link'
@@ -15,7 +15,7 @@ import { HTMLProps } from 'react'
 const Popover = dynamic(() => import('#/ui/Popover'))
 
 interface Props {
-  data: typeof detail
+  data: Project
 }
 
 export default function DetailMobile({ data }: Props) {
@@ -130,7 +130,9 @@ export default function DetailMobile({ data }: Props) {
             'mx-auto',
             'flex justify-center'
           )}>
-          <ProjectOverview {...relatedWorks} />
+          {relatedWorks.map((project, idx) => (
+            <ProjectOverview {...project} key={idx} />
+          ))}
         </div>
       </DetailSection>
       <div className={clsx('flex justify-center mb-12')}>

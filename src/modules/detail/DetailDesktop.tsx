@@ -1,6 +1,6 @@
 import Container from '#/components/Container'
 import ProjectOverview from '#/components/ProjectOverview'
-import detail from '#/data/detail'
+import { Project } from '#/data/types'
 import AspectRatioContainer from '#/ui/AspectRatioContainer'
 import Button from '#/ui/Button'
 import ImageContainer from '#/ui/ImageContainer'
@@ -13,7 +13,7 @@ import { useInView } from 'react-intersection-observer'
 const ReactPlayer = dynamic(() => import('react-player/youtube'))
 
 interface Props {
-  data: typeof detail
+  data: Project
 }
 
 export default function DetailDesktop({ data }: Props) {
@@ -103,15 +103,17 @@ export default function DetailDesktop({ data }: Props) {
         </div>
         <div className={clsx('py-16')}>
           <Text
-            serif
-            bold
             as='h2'
             className={clsx('uppercase', 'text-4xl', 'pb-16', 'text-center')}>
-            Related Works
+            <Text serif bold>
+              Related
+            </Text>
+            <Text> Works</Text>
           </Text>
           <div className={clsx('grid grid-cols-2', 'gap-12')}>
-            <ProjectOverview {...relatedWorks} />
-            <ProjectOverview {...relatedWorks} />
+            {relatedWorks.map((project, idx) => (
+              <ProjectOverview {...project} key={idx} />
+            ))}
           </div>
           <div className={clsx('flex justify-center', 'pt-16')}>
             <Button

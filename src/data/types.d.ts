@@ -23,3 +23,23 @@ export interface TeamMemberData {
   name: string
   position: string
 }
+
+export interface Project {
+  title: string
+  titleDesc: string
+  subtitle: string
+
+  thumbnail: StaticImageData
+  images: StaticImageData[]
+  meta: { label: string; value: string }[]
+
+  overview: string
+  credits: string
+  shareLinks: {
+    link: string
+    whatsapp: string
+    others: string
+  }
+
+  relatedWorks: Project[]
+}
