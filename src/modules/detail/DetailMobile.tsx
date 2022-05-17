@@ -4,6 +4,7 @@ import WhatsappIcon from '#/assets/social-media/whatsapp.svg'
 import Container from '#/components/Container'
 import ProjectOverview from '#/components/ProjectOverview'
 import { ProjectData } from '#/data/types'
+import { generateWebsiteUrl } from '#/helpers/url'
 import Button from '#/ui/Button'
 import ImageContainer from '#/ui/ImageContainer'
 import Link from '#/ui/Link'
@@ -30,6 +31,7 @@ export default function DetailMobile({ data }: Props) {
     title,
     titleDesc,
     subtitle,
+    key,
   } = data
 
   return (
@@ -84,6 +86,11 @@ export default function DetailMobile({ data }: Props) {
             button={
               <Link
                 href=''
+                onClick={() =>
+                  navigator.clipboard.writeText(
+                    generateWebsiteUrl(`projects/${key}`)
+                  )
+                }
                 noAnimation
                 className={clsx('hover:scale-110 active:scale-105')}>
                 <CopyLinkIcon width='1.6rem' />
