@@ -53,7 +53,7 @@ export default function DetailDesktop({ data }: Props) {
           <div className={clsx('grid grid-cols-2', 'gap-x-4 gap-y-6')}>
             {meta.map(({ label, value }) => (
               <div className={clsx('flex flex-col')} key={label + value}>
-                <Text serif className={clsx('mb-0.5')}>
+                <Text serif className={clsx('mb-0.5', 'text-lg')}>
                   {label}
                 </Text>
                 <Text className={clsx('text-xl')}>{value}</Text>
