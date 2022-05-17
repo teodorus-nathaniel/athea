@@ -69,7 +69,12 @@ export default function DetailMobile({ data }: Props) {
 
       <DetailSection title='Credits'>
         <Text className={clsx('text-lg')}>{credits}</Text>
-        <ShareContainer projectKey={key} className={clsx('mt-6')} />
+        <ShareContainer
+          projectTitle={title}
+          projectTitleDesc={titleDesc}
+          projectKey={key}
+          className={clsx('mt-6')}
+        />
       </DetailSection>
 
       <DetailSection

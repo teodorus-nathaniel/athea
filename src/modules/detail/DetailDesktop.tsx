@@ -105,6 +105,8 @@ export default function DetailDesktop({ data }: Props) {
               {credits}
             </Text>
             <ShareContainer
+              projectTitle={title}
+              projectTitleDesc={titleDesc}
               className={clsx('mt-12', 'text-2xl')}
               projectKey={key}
             />

@@ -13,14 +13,21 @@ const Popover = dynamic(() => import('#/ui/Popover'))
 
 interface ShareContainerProps extends HTMLProps<HTMLDivElement> {
   projectKey: string
+  projectTitle: string
+  projectTitleDesc: string
 }
 
 export default function ShareContainer({
   projectKey,
+  projectTitle,
+  projectTitleDesc,
   className,
   ...props
 }: ShareContainerProps) {
   const mdUp = useBreakpointThreshold('md')
+
+  const currentLink = generateWebsiteUrl(`projects/${projectKey}`)
+  const linkTitle = `${projectTitle} · ${projectTitleDesc}`
 
   return (
     <div className={clsx('flex', 'space-x-6', className)} {...props}>
@@ -30,11 +37,7 @@ export default function ShareContainer({
         button={
           <Link
             href=''
-            onClick={() =>
-              navigator.clipboard.writeText(
-                generateWebsiteUrl(`projects/${projectKey}`)
-              )
-            }
+            onClick={() => navigator.clipboard.writeText(currentLink)}
             noAnimation
             className={clsx('hover:scale-110 active:scale-105')}>
             <CopyLinkIcon width={mdUp ? '1.3em' : '1.6em'} />
@@ -50,9 +53,9 @@ export default function ShareContainer({
             e.preventDefault()
             navigator?.share &&
               navigator.share({
-                url: 'https://athea.vercel.app/detail',
-                title: 'Detail page',
-                text: 'Detail page of ...',
+                url: currentLink,
+                title: projectTitle,
+                text: `Please check this out! ${linkTitle}`,
               })
           }}>
           <InstagramIcon width={mdUp ? '1em' : '1.3em'} />
