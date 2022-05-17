@@ -1,11 +1,12 @@
 import SearchIcon from '#/assets/icons/search.svg'
 import Contact from '#/components/Contact'
 import { NORMAL_TRANSITION } from '#/constants/transition'
-import projects from '#/data/projects'
+import { projects } from '#/data/projects'
 import useHorizontalPadding from '#/helpers/hooks/useHorizontalPadding'
 import { TransitionVariants } from '#/helpers/types'
 import Input from '#/ui/Input'
 import Link from '#/ui/Link'
+import Text from '#/ui/Text'
 import clsx from 'clsx'
 import { AnimatePresence, motion } from 'framer-motion'
 import { useRouter } from 'next/router'
@@ -39,12 +40,15 @@ export default function NavbarContentMobile({
 }: NavbarContentChildProps) {
   const { pathname } = useRouter()
   const horizontalPadding = useHorizontalPadding()
+  const [isSearchFocus, setIsSearchFocus] = useState(false)
 
   const [search, setSearch] = useState('')
 
   const handleSubmit = (e: any) => {
     e.preventDefault()
   }
+
+  const recentProjects = projects.slice(0, 3)
 
   return (
     <AnimatePresence>
@@ -70,6 +74,8 @@ export default function NavbarContentMobile({
             className={clsx('text-black', 'mb-4')}>
             <Input
               value={search}
+              onFocus={() => setIsSearchFocus(true)}
+              onBlur={() => setIsSearchFocus(false)}
               onChange={(e: any) => setSearch(e.target.value)}
               leftIcon={SearchIcon}
               containerClassName={clsx('text-lg')}
@@ -77,33 +83,26 @@ export default function NavbarContentMobile({
               placeholder='Search here'
             />
           </motion.form>
-          {search ? (
+          {search || isSearchFocus ? (
             <>
-              <motion.div variants={searchResultVariants} key={0}>
-                <Link noAnimation href='/detail'>
-                  <SearchResult result={projects[0].projects[0]} />
-                </Link>
-              </motion.div>
-              <motion.div variants={searchResultVariants} key={1}>
-                <Link noAnimation href='/detail'>
-                  <SearchResult result={projects[0].projects[0]} />
-                </Link>
-              </motion.div>
-              <motion.div variants={searchResultVariants} key={2}>
-                <Link noAnimation href='/detail'>
-                  <SearchResult result={projects[0].projects[0]} />
-                </Link>
-              </motion.div>
-              <motion.div variants={searchResultVariants} key={3}>
-                <Link noAnimation href='/detail'>
-                  <SearchResult result={projects[0].projects[0]} />
-                </Link>
-              </motion.div>
-              <motion.div variants={searchResultVariants} key={4}>
-                <Link noAnimation href='/detail'>
-                  <SearchResult result={projects[0].projects[0]} />
-                </Link>
-              </motion.div>
+              {!search && (
+                <Text
+                  className={clsx(
+                    'text-sm',
+                    'uppercase',
+                    'text-gray-400',
+                    'mt-2'
+                  )}>
+                  Recent Update
+                </Text>
+              )}
+              {recentProjects.map((project, idx) => (
+                <motion.div variants={searchResultVariants} key={idx}>
+                  <Link noAnimation href='/detail'>
+                    <SearchResult result={project} />
+                  </Link>
+                </motion.div>
+              ))}
             </>
           ) : (
             <>

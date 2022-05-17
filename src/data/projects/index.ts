@@ -1,3 +1,1 @@
-import projects from './projects'
-
-export default projects
+export * from './projects'

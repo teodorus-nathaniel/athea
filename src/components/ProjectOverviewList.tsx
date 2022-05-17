@@ -31,7 +31,7 @@ export default function ProjectOverviewList({
           style={{
             gridColumn: mdUp && largeFirstProject && idx === 0 ? '1/-1' : '',
           }}
-          key={project.title}
+          key={idx}
           projectOverview={project}
         />
       ))}
