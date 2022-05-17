@@ -2,7 +2,7 @@ import SectionWrapper, {
   SectionWrapperProps,
 } from '#/components/sections/SectionWrapper'
 import TeamMemberList from '#/components/TeamMemberList'
-import teamMembers from '#/data/team'
+import teamMembers from '#/data/team-members'
 import { useBreakpointThreshold } from '#/helpers/hooks/useBreakpointThreshold'
 import Text from '#/ui/Text'
 import React from 'react'

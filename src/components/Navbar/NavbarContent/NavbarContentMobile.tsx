@@ -1,7 +1,7 @@
 import SearchIcon from '#/assets/icons/search.svg'
 import Contact from '#/components/Contact'
 import { NORMAL_TRANSITION } from '#/constants/transition'
-import works from '#/data/works'
+import projects from '#/data/projects'
 import useHorizontalPadding from '#/helpers/hooks/useHorizontalPadding'
 import { TransitionVariants } from '#/helpers/types'
 import Input from '#/ui/Input'
@@ -81,27 +81,27 @@ export default function NavbarContentMobile({
             <>
               <motion.div variants={searchResultVariants} key={0}>
                 <Link noAnimation href='/detail'>
-                  <SearchResult result={works[0].projects[0]} />
+                  <SearchResult result={projects[0].projects[0]} />
                 </Link>
               </motion.div>
               <motion.div variants={searchResultVariants} key={1}>
                 <Link noAnimation href='/detail'>
-                  <SearchResult result={works[0].projects[0]} />
+                  <SearchResult result={projects[0].projects[0]} />
                 </Link>
               </motion.div>
               <motion.div variants={searchResultVariants} key={2}>
                 <Link noAnimation href='/detail'>
-                  <SearchResult result={works[0].projects[0]} />
+                  <SearchResult result={projects[0].projects[0]} />
                 </Link>
               </motion.div>
               <motion.div variants={searchResultVariants} key={3}>
                 <Link noAnimation href='/detail'>
-                  <SearchResult result={works[0].projects[0]} />
+                  <SearchResult result={projects[0].projects[0]} />
                 </Link>
               </motion.div>
               <motion.div variants={searchResultVariants} key={4}>
                 <Link noAnimation href='/detail'>
-                  <SearchResult result={works[0].projects[0]} />
+                  <SearchResult result={projects[0].projects[0]} />
                 </Link>
               </motion.div>
             </>
