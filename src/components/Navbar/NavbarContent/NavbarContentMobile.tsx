@@ -112,7 +112,7 @@ export default function NavbarContentMobile({
               )}
               {searchResults.map((project) => (
                 <motion.div variants={searchResultVariants} key={project.title}>
-                  <Link noAnimation href='/detail'>
+                  <Link noAnimation href={`/projects/${project.key}`}>
                     <SearchResult result={project} />
                   </Link>
                 </motion.div>

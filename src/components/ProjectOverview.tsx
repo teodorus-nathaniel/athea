@@ -22,7 +22,7 @@ export default function ProjectOverview({
   return (
     <Link
       noAnimation
-      href={key}
+      href={`/projects/${key}`}
       className={clsx('flex flex-col w-full')}
       {...anchorProps}>
       <ImageContainer
