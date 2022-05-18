@@ -8,8 +8,14 @@ import clsx from 'clsx'
 import React, { HTMLProps } from 'react'
 
 const contactLinks = [
-  { text: 'naphtali@atheavisuals.com', href: '/' },
-  { text: '+62 817 9222 220', href: '/' },
+  {
+    text: 'naphtali@atheavisuals.com',
+    href: 'mailto:naphtali@atheavisuals.com',
+  },
+  {
+    text: '+62 817 9222 220',
+    href: 'https://wa.me/628179222220?text=Hi Athea, I would like to talk about something exciting. Can we arrange a meeting?',
+  },
 ]
 
 const sections = {
