@@ -10,7 +10,7 @@ export const mrSun: ProjectData = {
   subtitle: 'MANIFESTO · DIGITAL · VIDEO · 2021',
 
   thumbnail: Thumbnail,
-  images: [Image1],
+  images: [Image1, Image1, Image1, Image1],
   meta: [
     { label: 'Client', value: "N'pure" },
     { label: 'Deliverables', value: 'Manifesto Video' },
@@ -40,12 +40,6 @@ export const mrSun: ProjectData = {
     Colorist - Riz Catleya
     Music Composer - Abel Huray
     Sound Designer - Lionel Judy`,
-
-  shareLinks: {
-    link: 'https://google.com',
-    whatsapp: 'https://google.com',
-    others: 'https://google.com',
-  },
 
   relatedWorks: [],
 }

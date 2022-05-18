@@ -31,11 +31,6 @@ export interface ProjectData extends ProjectOverviewData {
 
   overview: string
   credits: string
-  shareLinks: {
-    link: string
-    whatsapp: string
-    others: string
-  }
 
   relatedWorks: ProjectOverviewData[]
 }

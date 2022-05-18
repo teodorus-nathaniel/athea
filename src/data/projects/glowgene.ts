@@ -41,11 +41,5 @@ export const glowgene: ProjectData = {
     Music Composer - Abel Huray
     Sound Designer - Lionel Judy`,
 
-  shareLinks: {
-    link: 'https://google.com',
-    whatsapp: 'https://google.com',
-    others: 'https://google.com',
-  },
-
   relatedWorks: [],
 }

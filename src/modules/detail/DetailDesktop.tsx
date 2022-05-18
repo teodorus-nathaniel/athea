@@ -29,7 +29,6 @@ export default function DetailDesktop({ data }: Props) {
     overview,
     relatedWorks,
     key,
-    shareLinks: _shareLinks, // TODO: ini blom dipake
     title,
     titleDesc,
   } = data
@@ -85,14 +84,13 @@ export default function DetailDesktop({ data }: Props) {
             {overview}
           </Text>
         </div>
-        <div className={clsx('flex flex-col')}>
+        <div className={clsx('grid grid-cols-2 gap-8', 'mb-8')}>
           {images.map((image, idx) => (
             <ImageContainer
               key={idx}
               src={image}
               alt={title}
               aspectRatio='16:9'
-              containerClassName={clsx('mb-12')}
             />
           ))}
         </div>

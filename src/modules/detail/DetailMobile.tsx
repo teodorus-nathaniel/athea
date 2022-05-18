@@ -21,7 +21,6 @@ export default function DetailMobile({ data }: Props) {
     meta,
     overview,
     relatedWorks,
-    shareLinks: _shareLinks, // TODO: ini blom dipake
     title,
     titleDesc,
     subtitle,
