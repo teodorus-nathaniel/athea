@@ -110,20 +110,24 @@ export default function DetailDesktop({ data }: Props) {
             />
           </div>
         </div>
-        <div className={clsx('py-16')}>
-          <Text
-            as='h2'
-            className={clsx('uppercase', 'text-4xl', 'pb-16', 'text-center')}>
-            <Text serif bold>
-              Related
+        {relatedWorks.length > 0 && (
+          <>
+            <Text
+              as='h2'
+              className={clsx('uppercase', 'text-4xl', 'pb-16', 'text-center')}>
+              <Text serif bold>
+                Related
+              </Text>
+              <Text> Works</Text>
             </Text>
-            <Text> Works</Text>
-          </Text>
-          <div className={clsx('grid grid-cols-2', 'gap-12')}>
-            {relatedWorks.map((project, idx) => (
-              <ProjectOverview projectOverview={project} key={idx} />
-            ))}
-          </div>
+            <div className={clsx('grid grid-cols-2', 'gap-12')}>
+              {relatedWorks.map((project, idx) => (
+                <ProjectOverview projectOverview={project} key={idx} />
+              ))}
+            </div>
+          </>
+        )}
+        <div className={clsx('py-16')}>
           <div className={clsx('flex justify-center', 'pt-16')}>
             <Link noAnimation href='/works'>
               <Button
