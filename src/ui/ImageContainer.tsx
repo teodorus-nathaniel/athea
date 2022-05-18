@@ -1,6 +1,6 @@
 import clsx from 'clsx'
-import Image, { ImageProps } from 'next/image'
-import React from 'react'
+import { ImageProps } from 'next/image'
+import React, { HTMLProps } from 'react'
 import AspectRatioContainer from './AspectRatioContainer'
 
 const aspectRatios = {
@@ -9,10 +9,12 @@ const aspectRatios = {
   '4:3': clsx('pt-[80%]'),
 }
 
-export interface ImageContainerProps extends ImageProps {
+export interface ImageContainerProps
+  extends Omit<Omit<HTMLProps<HTMLImageElement>, 'crossOrigin'>, 'src'> {
   aspectRatio: keyof typeof aspectRatios
   containerClassName?: string
   withAnimation?: boolean
+  src: ImageProps['src']
 }
 
 export default function ImageContainer({
@@ -31,14 +33,14 @@ export default function ImageContainer({
       aspectRatio={aspectRatio}
       className={containerClassName}>
       {imageProps.src && (
-        <Image
-          layout='fill'
+        <img
           className={clsx(
             'object-center object-cover',
-            'absolute top-0 left-0',
+            'absolute top-0 left-0 w-full h-full',
             withAnimation ? imageAnimation : ''
           )}
           {...imageProps}
+          src={imageProps.src && (imageProps.src as any).src}
           alt={imageProps.alt ?? ''}
         />
       )}

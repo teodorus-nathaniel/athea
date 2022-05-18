@@ -5,7 +5,6 @@ import { themeClassNames } from '#/constants/theme'
 import Button from '#/ui/Button'
 import Text from '#/ui/Text'
 import clsx from 'clsx'
-import Image from 'next/image'
 import Link from 'next/link'
 
 interface Props extends BrandHeadlineProps {
@@ -34,11 +33,14 @@ export default function HeadlineSection({
         'flex flex-col'
       )}>
       {!noBgImage && (
-        <Image
-          src={Bg}
+        <img
+          src={(Bg as any).src}
           alt='background'
-          layout='fill'
-          className={clsx('object-cover', 'absolute top-0 left-0')}
+          className={clsx(
+            'object-cover',
+            'absolute top-0 left-0',
+            'w-full h-full'
+          )}
         />
       )}
       <Container className={clsx('flex-1 flex flex-col justify-center')}>
