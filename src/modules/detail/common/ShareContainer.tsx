@@ -63,6 +63,7 @@ export default function ShareContainer({
         </Link>
       )}
       <Link
+        target='_blank'
         href={`https://wa.me?text=${shareDescription} ${currentLink}`}
         noAnimation
         className={clsx('hover:scale-110 active:scale-105')}>
