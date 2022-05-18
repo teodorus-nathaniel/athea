@@ -14,7 +14,7 @@ const contactLinks = [
   },
   {
     text: '+62 811 1998 091',
-    href: 'https://wa.me/628111998091?text=Hi Athea, I would like to talk about something exciting. Can we arrange a meeting?',
+    href: 'https://wa.me/628111998091?text=Hi Ivan, I would like to discuss something exciting. Can we arrange a meeting?',
   },
 ]
 
