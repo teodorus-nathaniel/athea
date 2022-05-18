@@ -96,7 +96,7 @@ const Works: NextPage = () => {
               onAnimationStart={updateHeight}
               key={selectedWork.group}
               id='works-content'>
-              <ProjectOverviewList projects={selectedWork?.projects ?? []} />
+              <ProjectOverviewList largeFirstProject projects={selectedWork?.projects ?? []} />
             </motion.div>
           </AnimatePresence>
         </motion.div>
