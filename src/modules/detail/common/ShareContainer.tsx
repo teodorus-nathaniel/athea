@@ -28,6 +28,7 @@ export default function ShareContainer({
 
   const currentLink = generateWebsiteUrl(`projects/${projectKey}`)
   const linkTitle = `${projectTitle} · ${projectTitleDesc}`
+  const shareDescription = `Please check this out! ${linkTitle}`
 
   return (
     <div className={clsx('flex', 'space-x-6', className)} {...props}>
@@ -55,14 +56,14 @@ export default function ShareContainer({
               navigator.share({
                 url: currentLink,
                 title: projectTitle,
-                text: `Please check this out! ${linkTitle}`,
+                text: shareDescription,
               })
           }}>
           <InstagramIcon width={mdUp ? '1em' : '1.3em'} />
         </Link>
       )}
       <Link
-        href='https://wa.me/628179222220?text=Hi Athea, I would like to talk about something exciting. Can we arrange a meeting?'
+        href={`https://wa.me?text=${shareDescription}`}
         noAnimation
         className={clsx('hover:scale-110 active:scale-105')}>
         <WhatsappIcon width={mdUp ? '1em' : '1.3em'} />
