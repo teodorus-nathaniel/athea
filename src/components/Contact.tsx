@@ -109,10 +109,10 @@ function ContactSocialMedia({
   theme: ThemeTypes
   smaller?: boolean
 }) {
-  const size = smaller ? '1.5rem' : '2.1rem'
+  const size = smaller ? '1.3rem' : '2.1rem'
   return (
     <div className='flex flex-col'>
-      <p className='font-serif text-sm mb-2 whitespace-nowrap'>
+      <p className='font-serif text-sm mb-3 whitespace-nowrap'>
         Connect with us
       </p>
       <div className={clsx('flex items-center')}>
@@ -127,7 +127,7 @@ function ContactSocialMedia({
             )}
             href={href}
             key={idx}>
-            <Icon className={clsx('mr-4')} width={size} height={size} />
+            <Icon className={clsx('mr-4')} height={size} />
           </Link>
         ))}
       </div>
