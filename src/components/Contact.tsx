@@ -13,8 +13,8 @@ const contactLinks = [
     href: 'mailto:naphtali@atheavisuals.com',
   },
   {
-    text: '+62 817 9222 220',
-    href: 'https://wa.me/628179222220?text=Hi Athea, I would like to talk about something exciting. Can we arrange a meeting?',
+    text: '+62 811 1998 091',
+    href: 'https://wa.me/628111998091?text=Hi Athea, I would like to talk about something exciting. Can we arrange a meeting?',
   },
 ]
 
