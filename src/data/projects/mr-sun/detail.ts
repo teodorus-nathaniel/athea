@@ -1,18 +1,10 @@
-import Image1 from '#/assets/projects/glowgene/1.png'
-import Thumbnail from '#/assets/projects/glowgene/thumbnail.png'
-import { ProjectData } from '../types'
-import { mrSun } from './mr-sun'
-import { npure } from './npure'
+import Image1 from '#/assets/projects/mr-sun/1.png'
+import { ProjectData } from '#/data/types'
+import { mrSunOverview } from './overview'
 
-export const glowgene: ProjectData = {
-  key: 'glowgene',
-
-  title: 'GLOWGENE',
-  titleDesc: 'GLOWGENE',
-  subtitle: 'MANIFESTO · DIGITAL · VIDEO · 2021',
-
-  thumbnail: Thumbnail,
-  images: [Image1],
+export const mrSun: ProjectData = {
+  ...mrSunOverview,
+  images: [Image1, Image1, Image1, Image1],
   meta: [
     { label: 'Client', value: "N'pure" },
     { label: 'Deliverables', value: 'Manifesto Video' },
@@ -43,5 +35,5 @@ export const glowgene: ProjectData = {
     Music Composer - Abel Huray
     Sound Designer - Lionel Judy`,
 
-  relatedWorks: [mrSun, mrSun, npure],
+  relatedWorks: [],
 }

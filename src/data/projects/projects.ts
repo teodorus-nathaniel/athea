@@ -1,7 +1,7 @@
 import { ProjectData } from '../types'
-import { glowgene } from './glowgene'
-import { mrSun } from './mr-sun'
-import { npure } from './npure'
+import { glowgene } from './glowgene/detail'
+import { mrSun } from './mr-sun/detail'
+import { npure } from './npure/detail'
 
 export const projects: ProjectData[] = [npure, glowgene, mrSun]
 export const projectKeys: { [key: string]: ProjectData } = projects.reduce<{
