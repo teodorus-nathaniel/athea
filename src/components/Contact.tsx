@@ -15,6 +15,7 @@ const contactLinks = [
   {
     text: '+62 811 1998 091',
     href: 'https://wa.me/628111998091?text=Hi Ivan, I would like to discuss something exciting. Can we arrange a meeting?',
+    target: '_blank',
   },
 ]
 
@@ -63,9 +64,10 @@ function ContactLinks({ theme }: { theme: ThemeTypes }) {
       <p className='font-serif text-sm mb-2'>
         Let{"'"}s have a good talk through
       </p>
-      {contactLinks.map(({ href, text }) => (
+      {contactLinks.map(({ href, text, target }) => (
         <div key={text} className={clsx('mb-6')}>
           <Link
+            target={target}
             href={href}
             className={clsx(
               'flex justify-between items-center',
