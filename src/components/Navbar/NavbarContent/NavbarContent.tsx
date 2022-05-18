@@ -18,7 +18,7 @@ export interface NavbarContentChildProps {
 
 export const links = [
   { text: 'HOME', href: '/' },
-  { text: 'WORKS', href: '/works' },
+  { text: 'OUR WORKS', href: '/works' },
   { text: 'OUR SERVICES', href: '/services' },
 ]
 

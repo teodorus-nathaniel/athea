@@ -63,7 +63,7 @@ const Works: NextPage = () => {
             <Text serif bold>
               Our{' '}
             </Text>
-            <Text>Work</Text>
+            <Text>Works</Text>
           </>
         }
         theme='dark'>
