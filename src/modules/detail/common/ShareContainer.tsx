@@ -63,7 +63,7 @@ export default function ShareContainer({
         </Link>
       )}
       <Link
-        href={`https://wa.me?text=${shareDescription}`}
+        href={`https://wa.me?text=${shareDescription} ${currentLink}`}
         noAnimation
         className={clsx('hover:scale-110 active:scale-105')}>
         <WhatsappIcon width={mdUp ? '1em' : '1.3em'} />
