@@ -118,6 +118,7 @@ function ContactSocialMedia({
       <div className={clsx('flex items-center')}>
         {socialMediaIcons.map(({ icon: Icon, href }, idx) => (
           <Link
+            target='_blank'
             noAnimation
             className={clsx(
               theme === 'light' ? 'text-gray-800' : '',
