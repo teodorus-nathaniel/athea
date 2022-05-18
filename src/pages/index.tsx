@@ -3,7 +3,6 @@ import Layout from '#/components/layouts/Layout'
 import { useBreakpointThreshold } from '#/helpers/hooks/useBreakpointThreshold'
 import clsx from 'clsx'
 import type { NextPage } from 'next'
-import Image from 'next/image'
 
 const Home: NextPage = () => {
   const mdUp = useBreakpointThreshold('md')
@@ -36,10 +35,9 @@ const Home: NextPage = () => {
             'absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2',
             'w-full max-w-screen-lg px-12'
           )}>
-          <Image
-            priority
-            layout='responsive'
-            src={Headline}
+          <img
+            className='w-full'
+            src={(Headline as any).src}
             alt='A collective of passionate souls'
           />
         </div>

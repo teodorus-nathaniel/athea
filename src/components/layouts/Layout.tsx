@@ -40,7 +40,7 @@ export default function Layout({
   )
 
   return (
-    <div className='min-h-screen'>
+    <div className='min-h-screen flex flex-col'>
       <Head>
         <title>{meta.title}</title>
         <meta name='description' content={meta.desc ?? 'Athea website page'} />
@@ -54,7 +54,7 @@ export default function Layout({
         <div className={clsx(hasOffsetNavbar ? 'pt-2' : '')}>{children}</div>
       </div>
       {(mobileFooter || mdUp) && (
-        <div className={clsx(themeClassNames[theme])}>
+        <div className={clsx(themeClassNames[theme], 'mt-auto')}>
           <Footer
             theme={theme}
             title={

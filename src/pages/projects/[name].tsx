@@ -24,8 +24,10 @@ const Detail: NextPage = () => {
       {(() => {
         if (!currentProject) {
           return (
-            <div>
-              <Text as='h1'>No Project Found</Text>
+            <div className='w-full flex justify-center flex-1 py-20'>
+              <Text as='h1' className='text-2xl text-center'>
+                {name} Project Not Found
+              </Text>
             </div>
           )
         }
