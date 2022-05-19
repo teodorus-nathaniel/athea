@@ -47,7 +47,7 @@ const Home: NextPage = () => {
       setTimeout(updateCanvas, 20)
     }
 
-    videoRef.current.addEventListener('play', updateCanvas, false)
+    videoRef.current.addEventListener('play', updateCanvas, { passive: true })
   }, [])
 
   useEffect(() => {
