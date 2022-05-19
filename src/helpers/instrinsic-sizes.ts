@@ -104,7 +104,6 @@ export function calculateObjectFitElement(
     coordinates.destinationYPercentage = 0
   }
 
-  console.log(coordinates)
   coordinates.width =
     coordinates.destinationWidthPercentage * coordinates.sourceWidth
   coordinates.height =
