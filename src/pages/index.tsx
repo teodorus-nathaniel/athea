@@ -4,6 +4,7 @@ import { useBreakpointThreshold } from '#/helpers/hooks/useBreakpointThreshold'
 import { calculateObjectFitElement } from '#/helpers/instrinsic-sizes'
 import clsx from 'clsx'
 import type { NextPage } from 'next'
+import Image from 'next/image'
 import { useCallback, useEffect, useRef, useState } from 'react'
 
 const Home: NextPage = () => {
@@ -97,9 +98,9 @@ const Home: NextPage = () => {
             'absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2',
             'w-full max-w-screen-lg px-12 z-10'
           )}>
-          <img
+          <Image
             className='w-full'
-            src={(Headline as any).src}
+            src={Headline}
             alt='A collective of passionate souls'
           />
         </div>
