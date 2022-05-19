@@ -40,7 +40,7 @@ export default function TabLayout({
     const currentHash = location.hash.substring(1)
     const decodedHash = decodeTab(currentHash)
     const currentTab = tabs.findIndex(
-      ({ title, hash }) => encodeTab(hash ?? title) === decodedHash
+      ({ title, hash }) => (hash ?? title).toLowerCase() === decodedHash
     )
     if (currentTab !== -1) {
       setSelectedTab(currentTab)
