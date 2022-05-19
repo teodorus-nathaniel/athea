@@ -65,7 +65,7 @@ const Home: NextPage = () => {
       theme='dark'
       mobileFooter
       mobileFooterTitle>
-      <div className={clsx('w-full h-screen relative mb-8')}>
+      <div className={clsx('w-full h-screen relative', mdUp ? '' : 'mb-8')}>
         {videoName && (
           <video
             ref={videoRef}
@@ -83,7 +83,7 @@ const Home: NextPage = () => {
         )}
         <div
           className={clsx(
-            'absolute top-8',
+            'absolute top-4',
             'w-full h-full',
             'blur-xl opacity-80 z-0'
           )}>
