@@ -7,7 +7,7 @@ import React from 'react'
 export default function ServicesTaglineSection(props: SectionWrapperProps) {
   return (
     <SectionWrapper {...props}>
-      <img src={(ServiceHeadline as any).src} alt='tagline' />
+      <img src={ServiceHeadline.src} alt='tagline' />
     </SectionWrapper>
   )
 }

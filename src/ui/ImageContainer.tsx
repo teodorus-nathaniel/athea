@@ -40,7 +40,11 @@ export default function ImageContainer({
             withAnimation ? imageAnimation : ''
           )}
           {...imageProps}
-          src={imageProps.src && (imageProps.src as any).src}
+          src={
+            imageProps.src && typeof imageProps.src !== 'string'
+              ? (imageProps.src as any).src
+              : imageProps.src
+          }
           alt={imageProps.alt ?? ''}
         />
       )}

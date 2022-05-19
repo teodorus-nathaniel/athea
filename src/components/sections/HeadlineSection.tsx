@@ -34,7 +34,7 @@ export default function HeadlineSection({
       )}>
       {!noBgImage && (
         <img
-          src={(Bg as any).src}
+          src={Bg.src}
           alt='background'
           className={clsx(
             'object-cover',
