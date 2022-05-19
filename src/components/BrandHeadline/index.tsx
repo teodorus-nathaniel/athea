@@ -1,3 +1,4 @@
-import BrandHeadline from "./BrandHeadline";
+import BrandHeadline from './BrandHeadline'
 
+export * from './BrandHeadline'
 export default BrandHeadline
