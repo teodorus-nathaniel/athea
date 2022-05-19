@@ -5,6 +5,7 @@ const aspectRatios = {
   '16:9': clsx('pt-[56.25%]'),
   '3:4': clsx('pt-[133.33%]'),
   '4:3': clsx('pt-[80%]'),
+  '5:3': clsx('pt-[60%]'),
 }
 
 export interface AspectRatioContainerProps extends HTMLProps<HTMLDivElement> {

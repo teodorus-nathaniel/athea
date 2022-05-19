@@ -1,16 +1,16 @@
-import PassionateProjects from '#/assets/ui/passionate-projects.svg'
-import PassionateSouls from '#/assets/ui/passionate-souls.svg'
 import clsx from 'clsx'
 import React, { HTMLProps } from 'react'
+import PassionateProjectsHeadline from './PassionateProjectsHeadline'
+import PassionateSoulsHeadline from './PassionateSoulsHeadline'
 
 export type HeadlineTypes = 'souls' | 'projects'
 
 function getHeadlineType(type: HeadlineTypes) {
   switch (type) {
     case 'projects':
-      return PassionateProjects
+      return PassionateProjectsHeadline
     case 'souls':
-      return PassionateSouls
+      return PassionateSoulsHeadline
     default:
       return null
   }
