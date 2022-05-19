@@ -42,6 +42,7 @@ export default function Navbar({ noMixBlend = true }: NavbarProps) {
   }, [])
 
   const logoSize = '1.5rem'
+  const isShowingNav = isScrollingUp || isOpenContent || window.scrollY === 0
 
   return (
     <>
@@ -50,14 +51,15 @@ export default function Navbar({ noMixBlend = true }: NavbarProps) {
           isOpenContent && !mdUp ? 'bg-black' : '',
           'fixed top-0 w-full',
           'flex justify-end items-center',
-          'py-6',
+          !isOpenContent ? 'pointer-events-none' : '',
+          isShowingNav ? 'py-6' : '',
           horizontalPadding,
           'text-gray-100',
           noMixBlend ? '' : 'mix-blend-difference',
           'z-30'
         )}>
         <AnimatePresence initial={false}>
-          {(isScrollingUp || isOpenContent || window.scrollY === 0) && (
+          {isShowingNav && (
             <motion.div
               className={clsx(
                 'mr-auto flex justify-between items-center',
@@ -67,13 +69,14 @@ export default function Navbar({ noMixBlend = true }: NavbarProps) {
               initial={{ opacity: 0, y: -25 }}
               exit={{ opacity: 0, y: -25 }}
               animate={{ opacity: 1, y: 0 }}>
-              <Link href='/' noAnimation>
+              <Link href='/' noAnimation className='pointer-events-auto'>
                 <Logo height={logoSize} className='z-40 text-gray-100' />
               </Link>
               <button
                 ref={menuButtonRef}
                 onClick={() => setIsOpenContent((prev) => !prev)}
                 className={clsx(
+                  'pointer-events-auto',
                   'flex items-center justify-center',
                   'rounded-full',
                   'w-10 h-10 z-40',
