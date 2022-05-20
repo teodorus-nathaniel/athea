@@ -69,7 +69,7 @@ export default function DetailDesktop({ data }: Props) {
                   <Text serif className={clsx('mb-0.5', 'text-lg')}>
                     {label}
                   </Text>
-                  <Text className={clsx('text-base')}>{value}</Text>
+                  <Text className={clsx('text-xl')}>{value}</Text>
                 </div>
               ))}
             </div>
