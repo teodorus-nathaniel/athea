@@ -25,11 +25,11 @@ export default function PassionateSoulsHeadline({
         )}>
         <PassionateSouls className={clsx('w-full')} />
       </div>
-      <div className={clsx('absolute', 'w-[33%]', 'left-[43%] top-[3%]')}>
-        <ImageContainer aspectRatio='4:3' src={leftImage ?? Larasatie} />
+      <div className={clsx('absolute', 'w-[30%]', 'left-[43%] top-[10%]')}>
+        <ImageContainer aspectRatio='3:2' src={leftImage ?? Larasatie} />
       </div>
-      <div className={clsx('absolute', 'w-[33%]', 'left-0 bottom-[7%]')}>
-        <ImageContainer aspectRatio='4:3' src={rightImage ?? Larasatie} />
+      <div className={clsx('absolute', 'w-[33%]', 'left-0 bottom-[12%]')}>
+        <ImageContainer aspectRatio='3:2' src={rightImage ?? Larasatie} />
       </div>
     </AspectRatioContainer>
   )

@@ -1,16 +1,12 @@
 import clsx from 'clsx'
 import Image, { ImageProps } from 'next/image'
 import React from 'react'
-import AspectRatioContainer from './AspectRatioContainer'
-
-const aspectRatios = {
-  '16:9': clsx('pt-[56.25%]'),
-  '3:4': clsx('pt-[133.33%]'),
-  '4:3': clsx('pt-[80%]'),
-}
+import AspectRatioContainer, {
+  AspectRatioContainerProps,
+} from './AspectRatioContainer'
 
 export interface ImageContainerProps extends ImageProps {
-  aspectRatio: keyof typeof aspectRatios
+  aspectRatio: AspectRatioContainerProps['aspectRatio']
   containerClassName?: string
   withAnimation?: boolean
 }
