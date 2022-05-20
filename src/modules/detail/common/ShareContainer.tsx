@@ -30,7 +30,7 @@ export default function ShareContainer({
   const linkTitle = `${projectTitle} · ${projectTitleDesc}`
   const shareDescription = `Please check this out! ${linkTitle}`
 
-  const iconHeight = '0.9em'
+  const iconHeight = '1em'
 
   return (
     <div
