@@ -35,33 +35,44 @@ export default function DetailDesktop({ data }: Props) {
 
   return (
     <>
-      <Container>
-        <div className={clsx('w-3/4', 'pt-8')}>
-          <Text as='h1' className={clsx('text-5xl mb-2', 'leading-snug')}>
-            <Text bold serif>
-              {title}
-            </Text>{' '}
-            &middot; <Text>{titleDesc}</Text>
-          </Text>
-        </div>
-        <div
-          className={clsx(
-            'grid grid-cols-[5fr,_7fr] gap-x-8',
-            'pt-8',
-            'pb-16'
-          )}>
-          <div
-            className={clsx('grid grid-cols-2', 'gap-x-4 gap-y-6', 'self-end')}>
-            {meta.map(({ label, value }) => (
-              <div className={clsx('flex flex-col')} key={label + value}>
-                <Text serif className={clsx('mb-0.5', 'text-lg')}>
-                  {label}
-                </Text>
-                <Text className={clsx('text-xl')}>{value}</Text>
-              </div>
-            ))}
+      <Container
+        className={clsx(
+          'min-h-[calc(100vh_-_theme(spacing.20))]',
+          'pb-24',
+          'flex items-center'
+        )}>
+        <div>
+          <div className={clsx('w-3/4', 'pt-8')}>
+            <Text as='h1' className={clsx('text-5xl mb-2', 'leading-snug')}>
+              <Text bold serif>
+                {title}
+              </Text>{' '}
+              &middot; <Text>{titleDesc}</Text>
+            </Text>
           </div>
-          <ImageContainer src={thumbnail} aspectRatio='16:9' />
+          <div
+            className={clsx(
+              'grid grid-cols-[5fr,_7fr] gap-x-8',
+              'pt-8',
+              'pb-16'
+            )}>
+            <div
+              className={clsx(
+                'grid grid-cols-2',
+                'gap-x-4 gap-y-6',
+                'self-end'
+              )}>
+              {meta.map(({ label, value }) => (
+                <div className={clsx('flex flex-col')} key={label + value}>
+                  <Text serif className={clsx('mb-0.5', 'text-lg')}>
+                    {label}
+                  </Text>
+                  <Text className={clsx('text-xl')}>{value}</Text>
+                </div>
+              ))}
+            </div>
+            <ImageContainer src={thumbnail} aspectRatio='16:9' />
+          </div>
         </div>
       </Container>
       <AspectRatioContainer aspectRatio='16:9' ref={ref}>
