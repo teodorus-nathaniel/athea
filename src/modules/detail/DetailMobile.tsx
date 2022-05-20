@@ -72,7 +72,7 @@ export default function DetailMobile({ data }: Props) {
           projectTitle={title}
           projectTitleDesc={titleDesc}
           projectKey={key}
-          className={clsx('mt-6', 'text-lg')}
+          className={clsx('mt-6', 'text-xl')}
         />
       </DetailSection>
 
