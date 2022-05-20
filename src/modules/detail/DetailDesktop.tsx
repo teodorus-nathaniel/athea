@@ -43,7 +43,9 @@ export default function DetailDesktop({ data }: Props) {
         )}>
         <div className='w-full'>
           <div className={clsx('w-3/4', 'pt-8')}>
-            <Text as='h1' className={clsx('text-5xl mb-2', 'leading-snug')}>
+            <Text
+              as='h1'
+              className={clsx('text-[2.75rem] mb-2', 'leading-snug')}>
               <Text bold serif>
                 {title}
               </Text>{' '}
@@ -52,7 +54,7 @@ export default function DetailDesktop({ data }: Props) {
           </div>
           <div
             className={clsx(
-              'grid grid-cols-[5fr,_7fr] gap-x-8',
+              'grid grid-cols-[4fr,_8fr] gap-x-8',
               'pt-8',
               'pb-16'
             )}>
@@ -67,7 +69,7 @@ export default function DetailDesktop({ data }: Props) {
                   <Text serif className={clsx('mb-0.5', 'text-lg')}>
                     {label}
                   </Text>
-                  <Text className={clsx('text-xl')}>{value}</Text>
+                  <Text className={clsx('text-base')}>{value}</Text>
                 </div>
               ))}
             </div>
@@ -125,7 +127,13 @@ export default function DetailDesktop({ data }: Props) {
           <>
             <Text
               as='h2'
-              className={clsx('uppercase', 'text-4xl', 'pb-16', 'text-center')}>
+              className={clsx(
+                'uppercase',
+                'text-4xl',
+                'pb-16',
+                'pt-16',
+                'text-center'
+              )}>
               <Text serif bold>
                 Related
               </Text>
