@@ -41,7 +41,7 @@ export default function DetailDesktop({ data }: Props) {
           'pb-24',
           'flex items-center'
         )}>
-        <div>
+        <div className='w-full'>
           <div className={clsx('w-3/4', 'pt-8')}>
             <Text as='h1' className={clsx('text-5xl mb-2', 'leading-snug')}>
               <Text bold serif>
