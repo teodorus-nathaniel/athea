@@ -25,10 +25,10 @@ export default function PassionateProjectsHeadline({
         )}>
         <PassionateProjects className={clsx('w-full')} />
       </div>
-      <div className={clsx('absolute', 'w-[30%]', 'left-[43%] top-[9%]')}>
+      <div className={clsx('absolute', 'w-[30%]', 'left-[45%] top-[12%]')}>
         <ImageContainer aspectRatio='3:2' src={leftImage ?? Larasatie} />
       </div>
-      <div className={clsx('absolute', 'w-[33%]', 'left-0 bottom-[12%]')}>
+      <div className={clsx('absolute', 'w-[33%]', '-left-[2%] bottom-[12%]')}>
         <ImageContainer aspectRatio='3:2' src={rightImage ?? Larasatie} />
       </div>
     </AspectRatioContainer>
