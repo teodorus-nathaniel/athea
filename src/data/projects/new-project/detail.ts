@@ -11,6 +11,8 @@ export const newProject: ProjectData = {
     '/projects/mr-sun/1.png',
     '/projects/mr-sun/1.png',
   ],
+  video: 'https://www.youtube.com/watch?v=-wtWbajnxD8',
+
   meta: [
     { label: 'Client', value: "N'pure" },
     {

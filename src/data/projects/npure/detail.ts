@@ -10,6 +10,8 @@ export const npure: ProjectData = {
     '/projects/npure/2.jpg',
     '/projects/npure/3.jpg',
   ],
+  video: 'https://www.youtube.com/watch?v=-wtWbajnxD8',
+
   meta: [
     { label: 'Client', value: "N'pure" },
     {

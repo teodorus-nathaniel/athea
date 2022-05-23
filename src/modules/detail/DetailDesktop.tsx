@@ -29,6 +29,7 @@ export default function DetailDesktop({ data }: Props) {
     overview,
     relatedWorks,
     key,
+    video,
     subtitle,
     title,
     titleDesc,
@@ -80,7 +81,7 @@ export default function DetailDesktop({ data }: Props) {
           playsinline
           muted
           controls
-          url='https://www.youtube.com/watch?v=-wtWbajnxD8'
+          url={video}
           width='100%'
           height='100%'
         />
