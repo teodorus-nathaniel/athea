@@ -54,16 +54,11 @@ export default function DetailDesktop({ data }: Props) {
           </div>
           <div
             className={clsx(
-              'grid grid-cols-[4fr,_8fr] gap-x-8',
-              'pt-8',
+              'grid grid-cols-[4.3fr,_7.7fr] gap-x-8',
+              'pt-4',
               'pb-16'
             )}>
-            <div
-              className={clsx(
-                'grid grid-cols-2',
-                'gap-x-4 gap-y-6',
-                'self-end'
-              )}>
+            <div className={clsx('grid grid-cols-2', 'gap-6', 'self-end')}>
               {meta.map(({ label, value }) => (
                 <div className={clsx('flex flex-col')} key={label + value}>
                   <Text serif className={clsx('mb-0.5', 'text-base')}>
@@ -89,7 +84,7 @@ export default function DetailDesktop({ data }: Props) {
         />
       </AspectRatioContainer>
       <Container>
-        <div className={clsx('py-32', 'grid grid-cols-[4fr,_8fr]')}>
+        <div className={clsx('py-32', 'grid grid-cols-[4.3fr,_7.7fr]')}>
           <Text serif bold as='h2' className={clsx('uppercase', 'text-4xl')}>
             Overview
           </Text>
@@ -107,7 +102,7 @@ export default function DetailDesktop({ data }: Props) {
             />
           ))}
         </div>
-        <div className={clsx('py-16', 'grid grid-cols-[4fr,_8fr]')}>
+        <div className={clsx('py-16', 'grid grid-cols-[4.3fr,_7.7fr]')}>
           <Text serif bold as='h2' className={clsx('uppercase', 'text-4xl')}>
             Credits
           </Text>
