@@ -7,6 +7,19 @@ import Text from '#/ui/Text'
 import type { NextPage } from 'next'
 import { useRouter } from 'next/router'
 
+export async function getStaticPaths() {
+  return {
+    paths: Object.keys(projectKeys).map((projectKey) => ({
+      params: { name: projectKey },
+    })),
+    fallback: false,
+  }
+}
+
+export function getStaticProps() {
+  return { props: {} }
+}
+
 const Detail: NextPage = () => {
   const mdUp = useBreakpointThreshold('md')
   const { query } = useRouter()

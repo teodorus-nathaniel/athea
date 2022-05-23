@@ -1,7 +1,10 @@
 import urlJoin from 'url-join'
 
 export function getCurrentWebsiteUrl() {
-  return window.location.origin
+  if (typeof window === 'object') {
+    return window.location.origin
+  }
+  return ''
 }
 
 export function generateWebsiteUrl(pathname: string) {
