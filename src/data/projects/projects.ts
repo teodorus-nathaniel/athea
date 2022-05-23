@@ -17,11 +17,11 @@ export const projectGroups: {
   projects: ProjectData[]
 }[] = [
   {
-    group: 'Music Video',
+    group: 'Music Videos',
     projects: [npure, npure],
   },
   {
-    group: 'Digital Commerce',
+    group: 'Digital Commercial',
     projects: [npure],
   },
   {
@@ -29,19 +29,15 @@ export const projectGroups: {
     projects: [mrSun, newProject],
   },
   {
-    group: 'Corporate Video',
+    group: 'Corporate Videos',
     projects: [glowgene],
   },
   {
-    group: 'Corporate Video1',
+    group: 'Motion Graphics & Animation',
     projects: [glowgene],
   },
   {
-    group: 'Corporate Video2',
-    projects: [glowgene],
-  },
-  {
-    group: 'Corporate Video3',
+    group: 'Events',
     projects: [glowgene],
   },
 ]
