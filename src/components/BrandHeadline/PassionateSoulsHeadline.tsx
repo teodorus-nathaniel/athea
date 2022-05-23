@@ -21,14 +21,14 @@ export default function PassionateSoulsHeadline({
           'absolute',
           'top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2',
           'w-full',
-          'pl-[12%] pt-[10%]'
+          'pl-[17%] pt-[12%]'
         )}>
         <PassionateSouls className={clsx('w-full')} />
       </div>
-      <div className={clsx('absolute', 'w-[30%]', 'left-[45%] top-[12%]')}>
+      <div className={clsx('absolute', 'w-[30%]', 'left-[48%] top-[14%]')}>
         <ImageContainer aspectRatio='3:2' src={leftImage ?? Larasatie} />
       </div>
-      <div className={clsx('absolute', 'w-[33%]', '-left-[2%] bottom-[11%]')}>
+      <div className={clsx('absolute', 'w-[35%]', 'left-0 bottom-[8%]')}>
         <ImageContainer aspectRatio='3:2' src={rightImage ?? Larasatie} />
       </div>
     </AspectRatioContainer>
