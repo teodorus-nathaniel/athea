@@ -1,9 +1,10 @@
 import { ProjectData } from '../types'
 import { glowgene } from './glowgene/detail'
 import { mrSun } from './mr-sun/detail'
+import { newProject } from './new-project/detail'
 import { npure } from './npure/detail'
 
-export const projects: ProjectData[] = [npure, glowgene, mrSun]
+export const projects: ProjectData[] = [npure, glowgene, mrSun, newProject]
 export const projectKeys: { [key: string]: ProjectData } = projects.reduce<{
   [key: string]: ProjectData
 }>((acc, project) => {
@@ -25,7 +26,7 @@ export const projectGroups: {
   },
   {
     group: 'Branding',
-    projects: [mrSun],
+    projects: [mrSun, newProject],
   },
   {
     group: 'Corporate Video',
