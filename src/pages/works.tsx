@@ -74,7 +74,6 @@ const Works: NextPage = () => {
           )}>
           <TabLayout
             leftText='View'
-            className={clsx('!w-auto')}
             selectedTab={selectedTab}
             onTabClick={(clickedIdx) =>
               setSlideDir(clickedIdx > selectedTab ? 'right' : 'left')
@@ -96,7 +95,10 @@ const Works: NextPage = () => {
               onAnimationStart={updateHeight}
               key={selectedWork.group}
               id='works-content'>
-              <ProjectOverviewList largeFirstProject projects={selectedWork?.projects ?? []} />
+              <ProjectOverviewList
+                largeFirstProject
+                projects={selectedWork?.projects ?? []}
+              />
             </motion.div>
           </AnimatePresence>
         </motion.div>

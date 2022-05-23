@@ -32,4 +32,16 @@ export const projectGroups: {
     group: 'Corporate Video',
     projects: [glowgene],
   },
+  {
+    group: 'Corporate Video1',
+    projects: [glowgene],
+  },
+  {
+    group: 'Corporate Video2',
+    projects: [glowgene],
+  },
+  {
+    group: 'Corporate Video3',
+    projects: [glowgene],
+  },
 ]
