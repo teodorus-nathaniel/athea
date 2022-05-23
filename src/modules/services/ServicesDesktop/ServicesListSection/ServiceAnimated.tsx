@@ -41,7 +41,7 @@ export default function ServiceAnimated({
       key={idx}
       className={clsx('absolute w-full h-full')}
       style={{ y, opacity }}>
-      <Service {...props} image='' number={idx + 1} />
+      <Service {...props} number={idx + 1} />
     </motion.div>
   )
 }

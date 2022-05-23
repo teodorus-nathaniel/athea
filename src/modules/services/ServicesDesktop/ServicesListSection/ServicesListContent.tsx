@@ -39,7 +39,7 @@ const ServicesListContent = React.forwardRef<HTMLDivElement, Props>(
                     className='opacity-0 pointer-events-none'
                     subtitle='dummy'
                     title='dummy'
-                    image=''
+                    video=''
                     number={1}
                   />
                 </div>
@@ -76,7 +76,7 @@ const ServicesListContent = React.forwardRef<HTMLDivElement, Props>(
                     className='opacity-0 pointer-events-none'
                     subtitle='dummy'
                     title='dummy'
-                    image=''
+                    video=''
                     number={1}
                   />
                 </div>

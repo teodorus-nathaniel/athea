@@ -1,20 +1,23 @@
 import { ServiceData } from '#/data/types'
 import { useBreakpointThreshold } from '#/helpers/hooks/useBreakpointThreshold'
-import ImageContainer from '#/ui/ImageContainer'
+import AspectRatioContainer from '#/ui/AspectRatioContainer'
 import Text from '#/ui/Text'
 import clsx from 'clsx'
-import React, { HTMLProps } from 'react'
+import React, { HTMLProps, useEffect } from 'react'
+import { useInView } from 'react-intersection-observer'
 
 export interface ServiceProps extends ServiceData {
   number: number
+  videoProps?: HTMLProps<HTMLVideoElement>
   imageOnly?: boolean
   textOnly?: boolean
 }
 
 export default function Service({
-  image,
+  video,
   number,
   title,
+  videoProps,
   subtitle,
   className,
   imageOnly = false,
@@ -23,10 +26,29 @@ export default function Service({
 }: ServiceProps & HTMLProps<HTMLDivElement>) {
   const mdUp = useBreakpointThreshold('md')
 
+  const { inView, ref, entry } = useInView({ threshold: 0.5 })
+  useEffect(() => {
+    const videoElement = entry?.target as HTMLVideoElement
+    if (!videoElement) return
+    if (inView && videoElement.paused) {
+      videoElement.play()
+    } else {
+      videoElement.pause()
+    }
+  }, [inView, entry])
+
   return (
     <div className={clsx('flex flex-col w-full', className)} {...divProps}>
       {!textOnly && (
-        <ImageContainer src={image ?? ''} aspectRatio={mdUp ? '16:9' : '3:4'} />
+        <AspectRatioContainer aspectRatio={mdUp ? '16:9' : '3:4'}>
+          <video
+            ref={ref}
+            src={video}
+            muted
+            className={clsx('object-cover', 'w-full h-full')}
+            {...videoProps}
+          />
+        </AspectRatioContainer>
       )}
       {!imageOnly && (
         <div

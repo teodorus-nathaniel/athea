@@ -9,7 +9,7 @@ export interface ProjectOverviewData {
 }
 
 export interface ServiceData {
-  image?: NextImageType
+  video: string
   title: string
   subtitle: string
 }
