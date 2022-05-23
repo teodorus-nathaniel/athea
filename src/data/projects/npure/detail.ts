@@ -39,10 +39,5 @@ export const npure: ProjectData = {
     Music Composer - Abel Huray
     Sound Designer - Lionel Judy`,
 
-  relatedWorks: [
-    glowgeneOverview,
-    glowgeneOverview,
-    glowgeneOverview,
-    mrSunOverview,
-  ],
+  relatedWorks: [glowgeneOverview, mrSunOverview],
 }

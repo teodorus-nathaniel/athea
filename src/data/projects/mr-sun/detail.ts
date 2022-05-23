@@ -1,5 +1,7 @@
 import Image1 from '#/assets/projects/mr-sun/1.png'
 import { ProjectData } from '#/data/types'
+import { glowgeneOverview } from '../glowgene/overview'
+import { npureOverview } from '../npure/overview'
 import { mrSunOverview } from './overview'
 
 export const mrSun: ProjectData = {
@@ -35,5 +37,5 @@ export const mrSun: ProjectData = {
     Music Composer - Abel Huray
     Sound Designer - Lionel Judy`,
 
-  relatedWorks: [],
+  relatedWorks: [npureOverview, glowgeneOverview],
 }
