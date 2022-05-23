@@ -1,4 +1,3 @@
-import Thumbnail from '#/assets/projects/glowgene/thumbnail.png'
 import { ProjectOverviewData } from '../../types'
 
 export const glowgeneOverview: ProjectOverviewData = {
@@ -8,5 +7,5 @@ export const glowgeneOverview: ProjectOverviewData = {
   titleDesc: 'GLOWGENE',
   subtitle: 'MANIFESTO · DIGITAL · VIDEO · 2021',
 
-  thumbnail: Thumbnail,
+  thumbnail: '/projects/glowgene/thumbnail.png',
 }

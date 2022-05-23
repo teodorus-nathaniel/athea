@@ -1,4 +1,3 @@
-import Thumbnail from '#/assets/projects/mr-sun/thumbnail.png'
 import { ProjectOverviewData } from '../../types'
 
 export const mrSunOverview: ProjectOverviewData = {
@@ -8,5 +7,5 @@ export const mrSunOverview: ProjectOverviewData = {
   titleDesc: 'MR SUN',
   subtitle: 'MANIFESTO · DIGITAL · VIDEO · 2021',
 
-  thumbnail: Thumbnail,
+  thumbnail: '/projects/mr-sun/thumbnail.png',
 }

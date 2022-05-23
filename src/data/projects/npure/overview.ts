@@ -1,4 +1,3 @@
-import Thumbnail from '#/assets/projects/npure/thumbnail.jpg'
 import { ProjectOverviewData } from '../../types'
 
 export const npureOverview: ProjectOverviewData = {
@@ -8,5 +7,5 @@ export const npureOverview: ProjectOverviewData = {
   titleDesc: "ISYANA'S SKIN MELODY",
   subtitle: 'MANIFESTO · DIGITAL · VIDEO · 2021',
 
-  thumbnail: Thumbnail,
+  thumbnail: '/projects/npure/thumbnail.jpg',
 }
