@@ -144,7 +144,7 @@ export default function DetailDesktop({ data }: Props) {
           </>
         )}
         <div className={clsx('py-16')}>
-          <div className={clsx('flex justify-center', 'pt-16')}>
+          <div className={clsx('flex justify-center')}>
             <Link noAnimation href='/works'>
               <Button
                 type='solid-white'
