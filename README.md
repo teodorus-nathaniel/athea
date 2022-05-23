@@ -1,3 +1,26 @@
+# Setups
+
+## First Setup
+
+Make sure node.js is installed and the version is > 14
+
+1. npm i -g yarn
+2. yarn
+
+## Run in Local PC
+
+1. yarn dev
+2. open localhost:3000 or the link that's appearing in your terminal.
+
+## Build
+
+1. yarn build
+2. copy all file inside `out` folder to your hosting services.
+
+---
+
+---
+
 # Content Management
 
 Note: To use image or video, make sure the image is in `public` folder and set the path to that image with root from public folder.
