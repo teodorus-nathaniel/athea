@@ -13,7 +13,7 @@ export default function TeamMember({
 }: TeamMemberData & HTMLProps<HTMLDivElement>) {
   return (
     <div className={clsx('flex flex-col w-full', className)} {...divProps}>
-      <ImageContainer src='' aspectRatio='3:4' />
+      <ImageContainer src={image ?? ''} aspectRatio='3:4' />
       <Text serif bold className={clsx('mb-0.5 mt-4 text-xl')}>
         {name}
       </Text>

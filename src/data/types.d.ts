@@ -20,7 +20,7 @@ export interface ClientData {
 }
 
 export interface TeamMemberData {
-  image?: string
+  image: string
   name: string
   position: string
 }
