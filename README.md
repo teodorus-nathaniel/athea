@@ -1,7 +1,25 @@
-# Project Management
+# Content Management
+
+Note: To use image or video, make sure the image is in `public` folder and set the path to that image with root from public folder.
+e.g. to use image in `public/projects/npure/thumbnail.jpg`, set the image string to `/projects/npure/thumbnail.jpg`
+
+## Home Video
+
+To change video in home page, go to `public/videos` and change the video with the same name (`teaser.webm` and `teaser-portrait.webm`).
+If there is no `.webm` extension, remove the `.webm` variant of the video, and just have `.mp4`, because the priority is to use `.webm`,
+only if that's not available, it will use `.mp4`.
+
+## Services
+
+Go to `src/data/service.ts` and change the data or order of the services there.
+
+## Team Members
+
+Go to `src/data/team-members.ts` and change the data or order of the members there.
+
+## Project Data
 
 To add/change projects shown in `detail page` & `works page`, go to `src/data/projects`
-Note: To add/change image, use `import` on top of page and route it to the image path. `#` is the root of the folder.
 To see what each attribute does, read about it [here](./src/data/projects/README.md)
 
 To _change_ project data:
@@ -18,6 +36,10 @@ To add/change a project category inside `works page`, or add/change category nam
 
 1. Open file `src/data/projects/projects.ts`
 2. Inside `projectGroups`, you can add, manage the groups to be displayed inside works page along with their respective projects.
+
+---
+
+---
 
 # Next JS template README
 
