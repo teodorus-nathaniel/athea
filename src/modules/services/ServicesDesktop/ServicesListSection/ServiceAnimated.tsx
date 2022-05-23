@@ -1,4 +1,3 @@
-import Project from '#/assets/projects/npure/thumbnail.jpg'
 import Service, { ServiceProps } from '#/components/Service'
 import clsx from 'clsx'
 import { motion, MotionValue, useTransform } from 'framer-motion'
@@ -42,7 +41,7 @@ export default function ServiceAnimated({
       key={idx}
       className={clsx('absolute w-full h-full')}
       style={{ y, opacity }}>
-      <Service {...props} image={Project} number={idx + 1} />
+      <Service {...props} image='' number={idx + 1} />
     </motion.div>
   )
 }

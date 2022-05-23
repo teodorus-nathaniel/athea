@@ -1,4 +1,3 @@
-import Image1 from '#/assets/projects/mr-sun/1.png'
 import { ProjectData } from '#/data/types'
 import { glowgeneOverview } from '../glowgene/overview'
 import { npureOverview } from '../npure/overview'
@@ -6,7 +5,12 @@ import { mrSunOverview } from './overview'
 
 export const mrSun: ProjectData = {
   ...mrSunOverview,
-  images: [Image1, Image1, Image1, Image1],
+  images: [
+    '/projects/mr-sun/1.png',
+    '/projects/mr-sun/1.png',
+    '/projects/mr-sun/1.png',
+    '/projects/mr-sun/1.png',
+  ],
   meta: [
     { label: 'Client', value: "N'pure" },
     {

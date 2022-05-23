@@ -20,13 +20,13 @@ export interface ClientData {
 }
 
 export interface TeamMemberData {
-  image?: NextImageType
+  image?: string
   name: string
   position: string
 }
 
 export interface ProjectData extends ProjectOverviewData {
-  images: StaticImageData[]
+  images: string[]
   meta: { label: string; value: string }[]
 
   overview: string
