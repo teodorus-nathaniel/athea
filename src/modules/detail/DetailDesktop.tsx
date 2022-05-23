@@ -29,6 +29,7 @@ export default function DetailDesktop({ data }: Props) {
     overview,
     relatedWorks,
     key,
+    subtitle,
     title,
     titleDesc,
   } = data
@@ -45,12 +46,13 @@ export default function DetailDesktop({ data }: Props) {
           <div className={clsx('w-3/4', 'pt-8')}>
             <Text
               as='h1'
-              className={clsx('text-[2.75rem] mb-2', 'leading-snug')}>
+              className={clsx('text-[2.75rem]', 'leading-tight', 'mb-1')}>
               <Text bold serif>
                 {title}
               </Text>{' '}
               &middot; <Text>{titleDesc}</Text>
             </Text>
+            <Text className={clsx('text-xl', 'opacity-75')}>{subtitle}</Text>
           </div>
           <div
             className={clsx(
@@ -64,7 +66,7 @@ export default function DetailDesktop({ data }: Props) {
                   <Text serif className={clsx('mb-0.5', 'text-base')}>
                     {label}
                   </Text>
-                  <Text className={clsx('text-xl')}>{value}</Text>
+                  <Text className={clsx('text-xl', 'opacity-75')}>{value}</Text>
                 </div>
               ))}
             </div>
