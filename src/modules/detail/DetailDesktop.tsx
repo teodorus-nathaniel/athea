@@ -29,39 +29,49 @@ export default function DetailDesktop({ data }: Props) {
     overview,
     relatedWorks,
     key,
+    subtitle,
     title,
     titleDesc,
   } = data
 
   return (
     <>
-      <Container>
-        <div className={clsx('w-3/4', 'pt-8')}>
-          <Text as='h1' className={clsx('text-5xl mb-2', 'leading-snug')}>
-            <Text bold serif>
-              {title}
-            </Text>{' '}
-            &middot; <Text>{titleDesc}</Text>
-          </Text>
-        </div>
-        <div
-          className={clsx(
-            'grid grid-cols-[5fr,_7fr] gap-x-8',
-            'pt-8',
-            'pb-16'
-          )}>
-          <div
-            className={clsx('grid grid-cols-2', 'gap-x-4 gap-y-6', 'self-end')}>
-            {meta.map(({ label, value }) => (
-              <div className={clsx('flex flex-col')} key={label + value}>
-                <Text serif className={clsx('mb-0.5', 'text-lg')}>
-                  {label}
-                </Text>
-                <Text className={clsx('text-xl')}>{value}</Text>
-              </div>
-            ))}
+      <Container
+        className={clsx(
+          'min-h-[calc(100vh_-_theme(spacing.20))]',
+          'pb-24',
+          'flex items-center'
+        )}>
+        <div className='w-full'>
+          <div className={clsx('w-3/4', 'pt-8')}>
+            <Text
+              as='h1'
+              className={clsx('text-[2.75rem]', 'leading-tight', 'mb-1')}>
+              <Text bold serif>
+                {title}
+              </Text>{' '}
+              &middot; <Text>{titleDesc}</Text>
+            </Text>
+            <Text className={clsx('text-xl', 'opacity-75')}>{subtitle}</Text>
           </div>
-          <ImageContainer src={thumbnail} aspectRatio='16:9' />
+          <div
+            className={clsx(
+              'grid grid-cols-[4.3fr,_7.7fr] gap-x-8',
+              'pt-8',
+              'pb-16'
+            )}>
+            <div className={clsx('grid grid-cols-2', 'gap-6', 'self-end')}>
+              {meta.map(({ label, value }) => (
+                <div className={clsx('flex flex-col')} key={label + value}>
+                  <Text serif className={clsx('mb-0.5', 'text-base')}>
+                    {label}
+                  </Text>
+                  <Text className={clsx('text-xl', 'opacity-75')}>{value}</Text>
+                </div>
+              ))}
+            </div>
+            <ImageContainer src={thumbnail} aspectRatio='16:9' />
+          </div>
         </div>
       </Container>
       <AspectRatioContainer aspectRatio='16:9' ref={ref}>
@@ -76,7 +86,7 @@ export default function DetailDesktop({ data }: Props) {
         />
       </AspectRatioContainer>
       <Container>
-        <div className={clsx('py-32', 'grid grid-cols-[4fr,_8fr]')}>
+        <div className={clsx('py-32', 'grid grid-cols-[4.3fr,_7.7fr]')}>
           <Text serif bold as='h2' className={clsx('uppercase', 'text-4xl')}>
             Overview
           </Text>
@@ -94,7 +104,7 @@ export default function DetailDesktop({ data }: Props) {
             />
           ))}
         </div>
-        <div className={clsx('py-16', 'grid grid-cols-[4fr,_8fr]')}>
+        <div className={clsx('py-16', 'grid grid-cols-[4.3fr,_7.7fr]')}>
           <Text serif bold as='h2' className={clsx('uppercase', 'text-4xl')}>
             Credits
           </Text>
@@ -114,7 +124,13 @@ export default function DetailDesktop({ data }: Props) {
           <>
             <Text
               as='h2'
-              className={clsx('uppercase', 'text-4xl', 'pb-16', 'text-center')}>
+              className={clsx(
+                'uppercase',
+                'text-4xl',
+                'pb-16',
+                'pt-16',
+                'text-center'
+              )}>
               <Text serif bold>
                 Related
               </Text>
@@ -128,7 +144,7 @@ export default function DetailDesktop({ data }: Props) {
           </>
         )}
         <div className={clsx('py-16')}>
-          <div className={clsx('flex justify-center', 'pt-16')}>
+          <div className={clsx('flex justify-center')}>
             <Link noAnimation href='/works'>
               <Button
                 type='solid-white'

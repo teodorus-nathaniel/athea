@@ -11,12 +11,12 @@ export const npure: ProjectData = {
   images: [Image1, Image2, Image3],
   meta: [
     { label: 'Client', value: "N'pure" },
-    { label: 'Deliverables', value: 'Manifesto Video' },
     {
       label: 'Role',
       value: `Concept
         Video Production`,
     },
+    { label: 'Deliverables', value: 'Manifesto Video' },
     { label: 'Date', value: '13 May 2021' },
   ],
 
@@ -39,10 +39,5 @@ export const npure: ProjectData = {
     Music Composer - Abel Huray
     Sound Designer - Lionel Judy`,
 
-  relatedWorks: [
-    glowgeneOverview,
-    glowgeneOverview,
-    glowgeneOverview,
-    mrSunOverview,
-  ],
+  relatedWorks: [glowgeneOverview, mrSunOverview],
 }

@@ -1,17 +1,13 @@
 import clsx from 'clsx'
 import { ImageProps } from 'next/image'
 import React, { HTMLProps } from 'react'
-import AspectRatioContainer from './AspectRatioContainer'
-
-const aspectRatios = {
-  '16:9': clsx('pt-[56.25%]'),
-  '3:4': clsx('pt-[133.33%]'),
-  '4:3': clsx('pt-[80%]'),
-}
+import AspectRatioContainer, {
+  AspectRatioContainerProps,
+} from './AspectRatioContainer'
 
 export interface ImageContainerProps
   extends Omit<Omit<HTMLProps<HTMLImageElement>, 'crossOrigin'>, 'src'> {
-  aspectRatio: keyof typeof aspectRatios
+  aspectRatio: AspectRatioContainerProps['aspectRatio']
   containerClassName?: string
   withAnimation?: boolean
   src: ImageProps['src']

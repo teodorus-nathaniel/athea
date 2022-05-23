@@ -30,8 +30,12 @@ export default function ShareContainer({
   const linkTitle = `${projectTitle} · ${projectTitleDesc}`
   const shareDescription = `Please check this out! ${linkTitle}`
 
+  const iconHeight = '1em'
+
   return (
-    <div className={clsx('flex', 'space-x-6', className)} {...props}>
+    <div
+      className={clsx('flex', 'space-x-6', 'items-center', className)}
+      {...props}>
       <Text bold>Share this work</Text>
       <Popover
         buttonContainerClassName={clsx('flex')}
@@ -41,10 +45,14 @@ export default function ShareContainer({
             onClick={() => navigator.clipboard.writeText(currentLink)}
             noAnimation
             className={clsx('hover:scale-110 active:scale-105')}>
-            <CopyLinkIcon width={mdUp ? '1.3em' : '1.6em'} />
+            <CopyLinkIcon height={iconHeight} />
           </Link>
         }
-        panel={<Text bold>Link Copied!</Text>}
+        panel={
+          <Text bold className='text-sm' as='p'>
+            Link Copied!
+          </Text>
+        }
       />
       {!mdUp && (
         <Link
@@ -59,7 +67,7 @@ export default function ShareContainer({
                 text: shareDescription,
               })
           }}>
-          <InstagramIcon width={mdUp ? '1em' : '1.3em'} />
+          <InstagramIcon height={iconHeight} />
         </Link>
       )}
       <Link
@@ -67,7 +75,7 @@ export default function ShareContainer({
         href={`https://wa.me?text=${shareDescription} ${currentLink}`}
         noAnimation
         className={clsx('hover:scale-110 active:scale-105')}>
-        <WhatsappIcon width={mdUp ? '1em' : '1.3em'} />
+        <WhatsappIcon height={iconHeight} />
       </Link>
     </div>
   )

@@ -21,15 +21,15 @@ export default function PassionateProjectsHeadline({
           'absolute',
           'top-[52%] left-[49%] -translate-x-1/2 -translate-y-1/2',
           'w-full',
-          'pl-[12%] pt-[10%]'
+          'pl-[16%] pt-[10%]'
         )}>
         <PassionateProjects className={clsx('w-full')} />
       </div>
-      <div className={clsx('absolute', 'w-[33%]', 'left-[43%] top-[3%]')}>
-        <ImageContainer aspectRatio='4:3' src={leftImage ?? Larasatie} />
+      <div className={clsx('absolute', 'w-[30%]', 'left-[48%] top-[12%]')}>
+        <ImageContainer aspectRatio='3:2' src={leftImage ?? Larasatie} />
       </div>
-      <div className={clsx('absolute', 'w-[33%]', 'left-0 bottom-[7%]')}>
-        <ImageContainer aspectRatio='4:3' src={rightImage ?? Larasatie} />
+      <div className={clsx('absolute', 'w-[35%]', 'left-0 bottom-[10%]')}>
+        <ImageContainer aspectRatio='3:2' src={rightImage ?? Larasatie} />
       </div>
     </AspectRatioContainer>
   )

@@ -10,12 +10,12 @@ export const glowgene: ProjectData = {
   images: [Image1],
   meta: [
     { label: 'Client', value: "N'pure" },
-    { label: 'Deliverables', value: 'Manifesto Video' },
     {
       label: 'Role',
       value: `Concept
         Video Production`,
     },
+    { label: 'Deliverables', value: 'Manifesto Video' },
     { label: 'Date', value: '13 May 2021' },
   ],
 
@@ -38,5 +38,5 @@ export const glowgene: ProjectData = {
     Music Composer - Abel Huray
     Sound Designer - Lionel Judy`,
 
-  relatedWorks: [mrSunOverview, mrSunOverview, npureOverview],
+  relatedWorks: [mrSunOverview, npureOverview],
 }
