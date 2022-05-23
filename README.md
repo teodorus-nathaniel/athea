@@ -19,8 +19,6 @@ Make sure node.js is installed and the version is > 14
 
 ---
 
----
-
 # Content Management
 
 Note: To use image or video, make sure the image is in `public` folder and set the path to that image with root from public folder.
@@ -59,8 +57,6 @@ To add/change a project category inside `works page`, or add/change category nam
 
 1. Open file `src/data/projects/projects.ts`
 2. Inside `projectGroups`, you can add, manage the groups to be displayed inside works page along with their respective projects.
-
----
 
 ---
 
