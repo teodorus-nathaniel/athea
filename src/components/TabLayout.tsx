@@ -1,3 +1,4 @@
+import AngleLeftIcon from '#/assets/icons/angle-left.svg'
 import { useBreakpointThreshold } from '#/helpers/hooks/useBreakpointThreshold'
 import Link from '#/ui/Link'
 import Text from '#/ui/Text'
@@ -10,7 +11,6 @@ import React, {
   useRef,
   useState,
 } from 'react'
-import { FaAngleRight } from 'react-icons/fa'
 
 export interface TabData {
   title: string
@@ -250,9 +250,10 @@ function ArrowButton({
       )}
       style={{ userSelect: 'none' }}
       {...props}>
-      <FaAngleRight
+      <AngleLeftIcon
+        width='1.2em'
         className={clsx(
-          dir === 'left' ? 'rotate-180' : '',
+          dir === 'right' ? 'rotate-180' : '',
           'transition ease-out'
         )}
       />
