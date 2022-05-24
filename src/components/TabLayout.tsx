@@ -21,6 +21,7 @@ export interface TabData {
 export interface TabLayoutProps extends HTMLProps<HTMLDivElement> {
   tabs: TabData[]
   selectedTab: number
+  withHashSave?: boolean
   leftText?: string
   setSelectedTab: React.Dispatch<React.SetStateAction<number>>
   onTabClick?: (clickedIdx: number) => void
@@ -42,6 +43,7 @@ export default function TabLayout({
   selectedTab,
   setSelectedTab,
   onTabClick,
+  withHashSave,
   tabs,
   className,
   leftText,
@@ -58,7 +60,6 @@ export default function TabLayout({
     (scrollContainer: HTMLUListElement, deferredOffset?: number) => {
       const leftScrollOffset =
         scrollContainer.scrollLeft + (deferredOffset ?? 0)
-      console.log(leftScrollOffset)
       if (leftScrollOffset <= 0) {
         setScrollPosition('start')
       } else if (
@@ -89,6 +90,7 @@ export default function TabLayout({
   }, [updateScrollPosition, mdUp])
 
   useEffect(() => {
+    if (!withHashSave) return
     const currentHash = location.hash.substring(1)
     const decodedHash = decodeTab(currentHash)
     const currentTab = tabs.findIndex(
@@ -98,7 +100,7 @@ export default function TabLayout({
       setSelectedTab(currentTab)
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [])
+  }, [withHashSave])
 
   const arrowBtnClickListener = (dir: 'left' | 'right') => () => {
     const scrollContainer = scrollContainerRef.current
@@ -181,7 +183,7 @@ export default function TabLayout({
                       : '!border-white'
                   )}
                   noAnimation
-                  href={`#${encodeTab(hash ?? title)}`}
+                  href={withHashSave ? `#${encodeTab(hash ?? title)}` : ''}
                   onClick={() => {
                     setSelectedTab(idx)
                     onTabClick && onTabClick(idx)
