@@ -53,14 +53,16 @@ export default function TabLayout({
   const scrollContainerRef = useRef<HTMLUListElement | null>(null)
 
   const [scrollPosition, setScrollPosition] = useState<
-    'start' | 'middle' | 'end'
-  >('start')
+    'start' | 'middle' | 'end' | ''
+  >('')
 
   const updateScrollPosition = useCallback(
     (scrollContainer: HTMLUListElement, deferredOffset?: number) => {
       const leftScrollOffset =
         scrollContainer.scrollLeft + (deferredOffset ?? 0)
-      if (leftScrollOffset <= 0) {
+      if (scrollContainer.clientWidth === scrollContainer.scrollWidth) {
+        setScrollPosition('')
+      } else if (leftScrollOffset <= 0) {
         setScrollPosition('start')
       } else if (
         leftScrollOffset + scrollContainer.clientWidth >=
@@ -73,6 +75,11 @@ export default function TabLayout({
     },
     []
   )
+
+  useEffect(() => {
+    if (!scrollContainerRef.current) return
+    updateScrollPosition(scrollContainerRef.current)
+  }, [updateScrollPosition])
 
   useEffect(() => {
     const scrollContainer = scrollContainerRef.current
@@ -121,11 +128,7 @@ export default function TabLayout({
       )}
       {...ulProps}>
       <div
-        className={clsx(
-          mdUp ? 'pl-8 pr-4' : 'pr-4',
-          'py-1.5',
-          'flex items-center'
-        )}
+        className={clsx('pr-4', 'py-1.5', 'flex items-center')}
         style={{
           background: 'linear-gradient(to right, black, transparent)',
         }}>
@@ -135,7 +138,7 @@ export default function TabLayout({
       </div>
       <div className={clsx('flex-1', 'relative')}>
         <AnimatePresence>
-          {scrollPosition !== 'start' && mdUp && (
+          {scrollPosition !== 'start' && scrollPosition !== '' && mdUp && (
             <motion.div
               variants={arrowButtonAnimVariant}
               initial='hide'
@@ -205,7 +208,7 @@ export default function TabLayout({
           })}
         </ul>
         <AnimatePresence>
-          {scrollPosition !== 'end' && mdUp && (
+          {scrollPosition !== 'end' && scrollPosition !== '' && mdUp && (
             <motion.div
               variants={arrowButtonAnimVariant}
               initial='hide'
