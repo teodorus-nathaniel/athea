@@ -86,8 +86,10 @@ export default function DetailDesktop({ data }: Props) {
           height='100%'
         />
       </AspectRatioContainer>
+      
+      {/* atur jarak antara overview dan foto */}
       <Container>
-        <div className={clsx('py-32', 'grid grid-cols-[4.3fr,_7.7fr]')}>
+        <div className={clsx('pt-24 pb-12' , 'grid grid-cols-[4.3fr,_7.7fr]')}>
           <Text serif bold as='h2' className={clsx('uppercase', 'text-4xl')}>
             Overview
           </Text>

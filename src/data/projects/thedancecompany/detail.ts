@@ -1,10 +1,10 @@
 import { ProjectData } from '../../types'
 import { mrSunOverview } from '../mr-sun/overview'
 import { npureOverview } from '../npure/overview'
-import { glowgeneOverview } from './overview'
+import { thedancecompanyOverview } from './overview'
 
-export const glowgene: ProjectData = {
-  ...glowgeneOverview,
+export const thedancecompany: ProjectData = {
+  ...thedancecompanyOverview,
 
   images: ['/projects/glowgene/1.png'],
   video: 'https://www.youtube.com/watch?v=-wtWbajnxD8',
@@ -16,7 +16,7 @@ export const glowgene: ProjectData = {
       value: `Concept
         Video Production`,
     },
-    { label: 'Deliverables', value: 'Manifesto Video' },
+    { label: 'Deliverables', value: 'Music Video' },
     { label: 'Date', value: '13 May 2021' },
   ],
 
