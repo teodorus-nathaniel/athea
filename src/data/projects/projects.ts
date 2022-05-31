@@ -7,7 +7,15 @@ import { npure } from './npure/detail'
 import { theovertunes } from './the-overtunes/detail'
 import { thedancecompany } from './thedancecompany/detail'
 
-export const projects: ProjectData[] = [npure, glowgene, mrSun, newProject, theovertunes, bmhs, thedancecompany]
+export const projects: ProjectData[] = [
+  npure,
+  glowgene,
+  mrSun,
+  newProject,
+  theovertunes,
+  bmhs,
+  thedancecompany,
+]
 export const projectKeys: { [key: string]: ProjectData } = projects.reduce<{
   [key: string]: ProjectData
 }>((acc, project) => {

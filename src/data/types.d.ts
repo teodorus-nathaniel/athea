@@ -1,8 +1,8 @@
-type NextImageType = string | StaticImageData
+type ImageType = string | undefined
 
 export interface ProjectOverviewData {
   key: string
-  thumbnail: NextImageType
+  thumbnail: ImageType
   title: string
   titleDesc: string
   subtitle: string
