@@ -13,10 +13,10 @@ export const bmhs: ProjectData = {
   video: 'https://www.youtube.com/watch?v=-wtWbajnxD8',
 
   meta: [
-    { label: 'Client', value: "Bundamedik Healthcare System" },
+    { label: 'Client', value: 'Bundamedik Healthcare System' },
     {
       label: 'Role',
-      value: 'Video Production'
+      value: 'Video Production',
     },
     { label: 'Deliverables', value: 'Manifesto Video' },
     { label: 'Date', value: '10 May 2021' },
@@ -37,5 +37,5 @@ export const bmhs: ProjectData = {
     Online Editor - Michelle Amadea
     Colorist - Ivan Saputra Alam`,
 
-    relatedWorks: [mrSunOverview, npureOverview],
+  relatedWorks: [mrSunOverview, npureOverview],
 }

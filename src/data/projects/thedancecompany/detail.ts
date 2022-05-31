@@ -10,7 +10,7 @@ export const thedancecompany: ProjectData = {
   video: 'https://www.youtube.com/watch?v=-wtWbajnxD8',
 
   meta: [
-    { label: 'Client', value: "Glowgene" },
+    { label: 'Client', value: 'Glowgene' },
     {
       label: 'Role',
       value: `Concept
