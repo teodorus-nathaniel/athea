@@ -36,7 +36,7 @@ export default function ImageContainer({
       ? (imageProps.src as any).src
       : imageProps.src
 
-  const srcTokens = _src.split('.')
+  const srcTokens = (_src ?? '').split('.')
   const ext = srcTokens[srcTokens.length - 1]
   const fileName = srcTokens.slice(0, srcTokens.length - 1).join('.')
   const getSrc = (appendModifier: boolean) => {
