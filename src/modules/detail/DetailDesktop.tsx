@@ -12,7 +12,7 @@ import React from 'react'
 import { useInView } from 'react-intersection-observer'
 import ShareContainer from './common/ShareContainer'
 
-const ReactPlayer = dynamic(() => import('react-player/youtube'))
+const ReactPlayer = dynamic(() => import('react-player'))
 
 interface Props {
   data: ProjectData
