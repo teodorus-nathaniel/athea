@@ -6,10 +6,11 @@ import AspectRatioContainer, {
 } from './AspectRatioContainer'
 
 export interface ImageContainerProps
-  extends Omit<HTMLProps<HTMLImageElement>, 'crossOrigin'> {
+  extends Omit<Omit<HTMLProps<HTMLImageElement>, 'crossOrigin'>, 'src'> {
   aspectRatio: AspectRatioContainerProps['aspectRatio']
   containerClassName?: string
   withAnimation?: boolean
+  src: HTMLProps<HTMLImageElement>['src'] | StaticImageData
 }
 
 export default function ImageContainer({
