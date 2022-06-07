@@ -19,7 +19,7 @@ export default function DetailMobile({ data }: Props) {
     thumbnail,
     images,
     meta,
-    overview,
+    overview: _overview,
     relatedWorks,
     title,
     titleDesc,

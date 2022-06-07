@@ -26,7 +26,7 @@ export default function DetailDesktop({ data }: Props) {
     thumbnail,
     images,
     meta,
-    overview,
+    overview: _overview,
     relatedWorks,
     key,
     video,
