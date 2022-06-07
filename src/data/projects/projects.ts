@@ -33,7 +33,8 @@ export const projects: ProjectData[] = [
   plazaavenue,
   somethinc,
   herewegoagain,
-  happy
+  happy,
+  tooandmore,
 ]
 export const projectKeys: { [key: string]: ProjectData } = projects.reduce<{
   [key: string]: ProjectData
@@ -46,38 +47,40 @@ export const projectGroups: {
   group: string
   projects: ProjectData[]
 }[] = [
-    {
-      group: 'Music Videos',
-      projects: [npure,
-        theovertunes,
-        thedancecompany,
-        ninetofive,
-        shush,
-        trashtalkin,
-        run,
-        herewegoagain,
-        plazaavenue,
-        tooandmore,
-        happy],
-    },
-    {
-      group: 'Digital Commercial',
-      projects: [npure, bmhs, somethinc],
-    },
-    {
-      group: 'Branding',
-      projects: [mrSun, newProject],
-    },
-    {
-      group: 'Corporate Videos',
-      projects: [glowgene],
-    },
-    {
-      group: 'Motion Graphics & Animation',
-      projects: [glowgene],
-    },
-    {
-      group: 'Events',
-      projects: [wowacc],
-    },
-  ]
+  {
+    group: 'Music Videos',
+    projects: [
+      npure,
+      theovertunes,
+      thedancecompany,
+      ninetofive,
+      shush,
+      trashtalkin,
+      run,
+      herewegoagain,
+      plazaavenue,
+      tooandmore,
+      happy,
+    ],
+  },
+  {
+    group: 'Digital Commercial',
+    projects: [npure, bmhs, somethinc],
+  },
+  {
+    group: 'Branding',
+    projects: [mrSun, newProject],
+  },
+  {
+    group: 'Corporate Videos',
+    projects: [glowgene],
+  },
+  {
+    group: 'Motion Graphics & Animation',
+    projects: [glowgene],
+  },
+  {
+    group: 'Events',
+    projects: [wowacc],
+  },
+]
