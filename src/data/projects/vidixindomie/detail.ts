@@ -1,28 +1,28 @@
 import { ProjectData } from '../../types'
 import { mrSunOverview } from '../mr-sun/overview'
 import { npureOverview } from '../npure/overview'
-import { glowgeneOverview } from './overview'
+import { vidixindomieOverview } from './overview'
 
-export const glowgene: ProjectData = {
-  ...glowgeneOverview,
+export const vidixindomie: ProjectData = {
+  ...vidixindomieOverview,
 
   images: [
-    '/projects/glowgene/1.jpg',
-    '/projects/glowgene/2.jpg',
-    '/projects/glowgene/3.jpg',
-    '/projects/glowgene/4.jpg',
+    '/projects/vidixindomie/1.jpg',
+    '/projects/vidixindomie/2.jpg',
+    '/projects/vidixindomie/3.jpg',
+    '/projects/vidixindomie/4.jpg',
   ],
-  video: 'https://www.instagram.com/p/CZjK6Y6l4_V/',
+  video: 'https://youtu.be/OTBpQUEWY50',
 
   meta: [
-    { label: 'Client', value: "Glowgene" },
+    { label: 'Singer', value: "Vidi Aldiano" },
     {
       label: 'Role',
       value: `Concept
         Video Production`,
     },
     { label: 'Deliverables', value: 'Manifesto Video' },
-    { label: 'Date', value: '4 February 2021' },
+    { label: 'Date', value: '8 August 2021' },
   ],
 
   overview: `Glowgene is go to collagen jelly that always use natural and local ingredients for their products. They launch a new set skincare for body and face treatment, team up with Isyana Sarasvati.`,
@@ -31,13 +31,13 @@ export const glowgene: ProjectData = {
     
     Director - Ivan Saputra Alam
     Producer - Naphtali Ivan
-    Production Designer - Michelle Amadea
+    Art Director - Michelle Amadea
     
-    Starring - Nadya & Braxton
+    Traditional Dancer - Puspita Sari Dewi
+    Dance Group - One Box
     Director of Photography - Ivan Saputra Alam
-    Offline Editor - Joseline Clarinda
-    Online Editor, 3D Artist - Michelle Amadea
-    Colorist - Ivan Saputra Alam`,
+    Editor & Colorist - Ivan Saputra Alam
+    Online Editor - Michelle Amadea`,
 
   relatedWorks: [mrSunOverview, npureOverview],
 }

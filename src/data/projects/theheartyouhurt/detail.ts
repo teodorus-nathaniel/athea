@@ -1,43 +1,44 @@
 import { ProjectData } from '../../types'
 import { mrSunOverview } from '../mr-sun/overview'
 import { npureOverview } from '../npure/overview'
-import { glowgeneOverview } from './overview'
+import { theheartyouhurtOverview } from './overview'
 
-export const glowgene: ProjectData = {
-  ...glowgeneOverview,
-
+export const theheartyouhurt: ProjectData = {
+  ...theheartyouhurtOverview,
   images: [
-    '/projects/glowgene/1.jpg',
-    '/projects/glowgene/2.jpg',
-    '/projects/glowgene/3.jpg',
-    '/projects/glowgene/4.jpg',
+    '/projects/theheartyouhurt/1.jpg',
+    '/projects/theheartyouhurt/2.jpg',
+    '/projects/theheartyouhurt/3.jpg',
+    '/projects/theheartyouhurt/4.jpg',
   ],
-  video: 'https://www.instagram.com/p/CZjK6Y6l4_V/',
+  video: 'https://youtu.be/kAGIwuA1Hvs',
+
 
   meta: [
-    { label: 'Client', value: "Glowgene" },
+    { label: 'Artist', value: "Rossa" },
     {
       label: 'Role',
       value: `Concept
         Video Production`,
     },
-    { label: 'Deliverables', value: 'Manifesto Video' },
-    { label: 'Date', value: '4 February 2021' },
+    { label: 'Deliverables', value: 'Video' },
+    { label: 'Date', value: '31 March 2020' },
   ],
 
   overview: `Glowgene is go to collagen jelly that always use natural and local ingredients for their products. They launch a new set skincare for body and face treatment, team up with Isyana Sarasvati.`,
 
-  credits: `Production of Athea Collective
+  credits: `Production of Athea Visuals
     
     Director - Ivan Saputra Alam
     Producer - Naphtali Ivan
     Production Designer - Michelle Amadea
     
-    Starring - Nadya & Braxton
+    Starring - Lee Min Ho, Dion Wiyoko
     Director of Photography - Ivan Saputra Alam
-    Offline Editor - Joseline Clarinda
-    Online Editor, 3D Artist - Michelle Amadea
-    Colorist - Ivan Saputra Alam`,
+    Offline Editor & Colorist - Ivan Saputra Alam
+    Online Editor - Michelle Amadea
+    Sound Designer - Ivan Saputra Alam`,
 
   relatedWorks: [mrSunOverview, npureOverview],
 }
+

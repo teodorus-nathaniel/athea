@@ -1,43 +1,41 @@
 import { ProjectData } from '../../types'
 import { mrSunOverview } from '../mr-sun/overview'
 import { npureOverview } from '../npure/overview'
-import { glowgeneOverview } from './overview'
+import { bertahanlewatisenjaOverview } from './overview'
 
-export const glowgene: ProjectData = {
-  ...glowgeneOverview,
-
+export const bertahanlewatisenja: ProjectData = {
+  ...bertahanlewatisenjaOverview,
   images: [
-    '/projects/glowgene/1.jpg',
-    '/projects/glowgene/2.jpg',
-    '/projects/glowgene/3.jpg',
-    '/projects/glowgene/4.jpg',
+    '/projects/bertahanlewatisenja/1.jpg',
+    '/projects/bertahanlewatisenja/2.jpg',
+    '/projects/bertahanlewatisenja/3.jpg',
+    '/projects/bertahanlewatisenja/4.jpg',
   ],
-  video: 'https://www.instagram.com/p/CZjK6Y6l4_V/',
+  video: 'https://youtu.be/VJtxlayl3WA',
+
 
   meta: [
-    { label: 'Client', value: "Glowgene" },
+    { label: 'Artist', value: "Vidi Aldiano" },
     {
       label: 'Role',
       value: `Concept
         Video Production`,
     },
-    { label: 'Deliverables', value: 'Manifesto Video' },
-    { label: 'Date', value: '4 February 2021' },
+    { label: 'Deliverables', value: 'Music Video' },
+    { label: 'Date', value: '17 April 2020' },
   ],
 
   overview: `Glowgene is go to collagen jelly that always use natural and local ingredients for their products. They launch a new set skincare for body and face treatment, team up with Isyana Sarasvati.`,
 
-  credits: `Production of Athea Collective
+  credits: `Production of Athea Moments
     
     Director - Ivan Saputra Alam
     Producer - Naphtali Ivan
     Production Designer - Michelle Amadea
     
-    Starring - Nadya & Braxton
     Director of Photography - Ivan Saputra Alam
-    Offline Editor - Joseline Clarinda
-    Online Editor, 3D Artist - Michelle Amadea
-    Colorist - Ivan Saputra Alam`,
+    Offline Editor & Colorist - Ivan Saputra Alam
+    Online Editor - Michelle Amadea`,
 
   relatedWorks: [mrSunOverview, npureOverview],
 }

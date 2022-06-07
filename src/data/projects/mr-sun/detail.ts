@@ -14,14 +14,14 @@ export const mrSun: ProjectData = {
   video: 'https://www.youtube.com/watch?v=-wtWbajnxD8',
 
   meta: [
-    { label: 'Client', value: "N'pure" },
+    { label: 'Artist', value: "Rendy Pandugo" },
     {
       label: 'Role',
       value: `Concept
         Video Production`,
     },
-    { label: 'Deliverables', value: 'Manifesto Video' },
-    { label: 'Date', value: '13 May 2021' },
+    { label: 'Deliverables', value: 'Music Video' },
+    { label: 'Date', value: '17 December 2020' },
   ],
 
   overview: `N'pure is a local skincare and beauty brand that always use natural and local ingredients for their products. They launch a new set skincare for body and face treatment, team up with Isyana Sarasvati.`,
@@ -31,17 +31,10 @@ export const mrSun: ProjectData = {
     Director - Ivan Saputra Alam
     Producer - Naphtali Ivan
     Production Designer - Michelle Amadea
-    Scriptwriter - Aaron Timothy Soeharto
-    
-    Starring - Abigail Gusmawan, Rayn Wijaya, Sebastian Teti, Latifah
-    Supporting Talent - Odan, Holly Feristo, Yogie
-    
-    Director of Photography - Christopher Kuntjoro
-    Offline Editor - Ida Bagus Gede Darma Putra
-    Online Editor - Michelle Amadea
-    Colorist - Riz Catleya
-    Music Composer - Abel Huray
-    Sound Designer - Lionel Judy`,
+   
+    Director of Photography - Ivan Saputra Alam
+    Offline Editor & Colorist - Ivan Saputra Alam
+    Online Editor & Graphic Designer - Michelle Amadea`,
 
   relatedWorks: [npureOverview, glowgeneOverview],
 }

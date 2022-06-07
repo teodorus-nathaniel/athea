@@ -15,13 +15,13 @@ export const herewegoagain: ProjectData = {
 
 
   meta: [
-    { label: 'Singer', value: "Ardhito Pramono" },
+    { label: 'Artist', value: "Ardhito Pramono" },
     {
       label: 'Role',
       value: `Concept
         Video Production`,
     },
-    { label: 'Deliverables', value: 'Video' },
+    { label: 'Deliverables', value: 'Music Video' },
     { label: 'Date', value: '20 March 2020' },
   ],
 
