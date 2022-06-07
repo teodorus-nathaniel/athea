@@ -52,7 +52,8 @@ export default function DetailMobile({ data }: Props) {
         </div>
       </DetailSection>
 
-      <DetailSection title='Overview'>
+      {/* bawah ini yg ada overview */}
+      {/* <DetailSection title='Overview'>
         <Text className={clsx('text-lg')}>{overview}</Text>
         <div className={clsx('flex flex-col', 'items-stretch', 'mt-8')}>
           {images.map((image, idx) => (
@@ -64,7 +65,18 @@ export default function DetailMobile({ data }: Props) {
             />
           ))}
         </div>
-      </DetailSection>
+      </DetailSection> */}
+      {/* bawah ini yg gada overview, kalo mau pake yg overview, yg ini buang aja */}
+      <div className={clsx('flex flex-col', 'items-stretch', 'mt-8 pb-16')}>
+        {images.map((image, idx) => (
+          <ImageContainer
+            key={idx}
+            aspectRatio='4:3'
+            src={image}
+            containerClassName={clsx('mb-6')}
+          />
+        ))}
+      </div>
 
       <DetailSection title='Credits'>
         <Text className={clsx('text-lg')}>{credits}</Text>
