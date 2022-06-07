@@ -9,6 +9,7 @@ export const npure: ProjectData = {
     '/projects/npure/1.jpg',
     '/projects/npure/2.jpg',
     '/projects/npure/3.jpg',
+    '/projects/npure/4.jpg',
   ],
   video: 'https://www.youtube.com/watch?v=-wtWbajnxD8',
 

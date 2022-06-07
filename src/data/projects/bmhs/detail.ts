@@ -6,9 +6,10 @@ import { bmhsOverview } from './overview'
 export const bmhs: ProjectData = {
   ...bmhsOverview,
   images: [
-    '/projects/the-overtunes/1.jpg',
-    '/projects/the-overtunes/2.jpg',
-    '/projects/the-overtunes/3.jpg',
+    '/projects/bmhs/1.jpg',
+    '/projects/bmhs/2.jpg',
+    '/projects/bmhs/3.jpg',
+    '/projects/bmhs/4.jpg',
   ],
   video: 'https://www.youtube.com/watch?v=-wtWbajnxD8',
 

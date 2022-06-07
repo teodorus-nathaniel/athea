@@ -7,5 +7,5 @@ export const bmhsOverview: ProjectOverviewData = {
   titleDesc: 'FROM EMBRYO, THROUGHOUT LIFE',
   subtitle: 'MANIFESTO · DIGITAL · VIDEO · 2022',
 
-  thumbnail: '/projects/bmhs/thumbnail.png',
+  thumbnail: '/projects/bmhs/thumbnail.jpg',
 }

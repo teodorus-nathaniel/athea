@@ -9,8 +9,9 @@ export const theovertunes: ProjectData = {
     '/projects/the-overtunes/1.jpg',
     '/projects/the-overtunes/2.jpg',
     '/projects/the-overtunes/3.jpg',
+    '/projects/the-overtunes/4.jpg',
   ],
-  video: 'https://www.youtube.com/watch?v=-wtWbajnxD8',
+  video: 'https://youtu.be/cyHWmReNdCY',
 
   meta: [
     { label: 'Client', value: 'The Overtunes' },
