@@ -1,12 +1,15 @@
 import Container from '#/components/Container'
 import ProjectOverview from '#/components/ProjectOverview'
 import { ProjectData } from '#/data/types'
+import AspectRatioContainer from '#/ui/AspectRatioContainer'
 import Button from '#/ui/Button'
 import ImageContainer from '#/ui/ImageContainer'
 import Link from '#/ui/Link'
 import Text from '#/ui/Text'
 import clsx from 'clsx'
 import { HTMLProps } from 'react'
+import { useInView } from 'react-intersection-observer'
+import ReactPlayer from 'react-player'
 import ShareContainer from './common/ShareContainer'
 
 interface Props {
@@ -14,6 +17,8 @@ interface Props {
 }
 
 export default function DetailMobile({ data }: Props) {
+  const { ref, inView } = useInView({ threshold: 0.2 })
+
   const {
     credits,
     thumbnail,
@@ -23,6 +28,7 @@ export default function DetailMobile({ data }: Props) {
     relatedWorks,
     title,
     titleDesc,
+    video,
     subtitle,
     key,
   } = data
@@ -52,6 +58,17 @@ export default function DetailMobile({ data }: Props) {
         </div>
       </DetailSection>
 
+      <AspectRatioContainer aspectRatio='16:9' ref={ref}>
+        <ReactPlayer
+          playing={inView}
+          playsinline
+          muted
+          controls
+          url={video}
+          width='100%'
+          height='100%'
+        />
+      </AspectRatioContainer>
       {/* bawah ini yg ada overview */}
       {/* <DetailSection title='Overview'>
         <Text className={clsx('text-lg')}>{overview}</Text>
@@ -71,7 +88,7 @@ export default function DetailMobile({ data }: Props) {
         {images.map((image, idx) => (
           <ImageContainer
             key={idx}
-            aspectRatio='4:3'
+            aspectRatio='16:9'
             src={image}
             containerClassName={clsx('mb-6')}
           />
