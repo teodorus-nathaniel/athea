@@ -6,6 +6,7 @@ import { glowgene } from './glowgene/detail'
 import { happy } from './happy/detail'
 import { herewegoagain } from './herewegoagain/detail'
 import { home } from './home/detail'
+import { jaz } from './jaz/detail'
 import { masih } from './masih/detail'
 import { midground } from './midground/detail'
 import { mrSun } from './mr-sun/detail'
@@ -54,6 +55,7 @@ export const projects: ProjectData[] = [
   home,
   bertahanlewatisenja,
   caliente,
+  jaz,
   vidixindomie,
 ]
 
@@ -90,6 +92,7 @@ export const projectGroups: {
         theheartyouhurt,
         bertahanlewatisenja,
         caliente,
+        jaz,
         midground,
       ],
     },
