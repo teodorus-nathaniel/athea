@@ -7,12 +7,11 @@ import { SLOW_TRANSITION } from '#/constants/transition'
 import { projectGroups } from '#/data/projects/projects'
 import { ProjectData } from '#/data/types'
 import { useBreakpointThreshold } from '#/helpers/hooks/useBreakpointThreshold'
-import useSlideAnimation from '#/helpers/hooks/useSlideAnimation'
 import Text from '#/ui/Text'
 import clsx from 'clsx'
 import { AnimatePresence, motion } from 'framer-motion'
 import type { NextPage } from 'next'
-import { useCallback, useEffect, useState } from 'react'
+import { useState } from 'react'
 
 const tabs: TabData[] = []
 let allProjects: ProjectData[] = []
@@ -34,21 +33,6 @@ const Works: NextPage = () => {
 
   const [selectedTab, setSelectedTab] = useState(0)
   const selectedWork = groups[selectedTab]
-
-  const [contentHeight, setContentHeight] = useState(0)
-  const { setSlideDir, ...slideAnimation } = useSlideAnimation()
-
-  const updateHeight = useCallback(() => {
-    setTimeout(() => {
-      const content = document.getElementById('works-content')
-      setContentHeight((prev) => content?.offsetHeight || prev)
-    })
-  }, [])
-  useEffect(() => {
-    if (selectedWork) {
-      updateHeight()
-    }
-  }, [selectedWork, updateHeight])
 
   return (
     <Layout meta={{ title: 'Works' }}>
@@ -75,24 +59,18 @@ const Works: NextPage = () => {
           <TabLayout
             leftText='View'
             selectedTab={selectedTab}
-            onTabClick={(clickedIdx) =>
-              setSlideDir(clickedIdx > selectedTab ? 'right' : 'left')
-            }
             setSelectedTab={setSelectedTab}
             tabs={tabs}
           />
         </div>
-        <motion.div
-          animate={{ height: contentHeight }}
-          transition={SLOW_TRANSITION}
-          className={clsx('overflow-hidden relative w-full')}>
-          <AnimatePresence>
+        <div className={clsx('w-full')}>
+          <AnimatePresence exitBeforeEnter>
             <motion.div
-              {...slideAnimation}
-              className={clsx('absolute top-0 w-full z-0')}
+              className={clsx('w-full')}
               transition={SLOW_TRANSITION}
-              onUnmount={updateHeight}
-              onAnimationStart={updateHeight}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
               key={selectedWork.group}
               id='works-content'>
               <ProjectOverviewList
@@ -101,7 +79,7 @@ const Works: NextPage = () => {
               />
             </motion.div>
           </AnimatePresence>
-        </motion.div>
+        </div>
       </SectionWrapper>
     </Layout>
   )
