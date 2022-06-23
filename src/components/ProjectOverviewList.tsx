@@ -29,7 +29,8 @@ export default function ProjectOverviewList({
       {projects.map((project, idx) => (
         <ProjectOverview
           style={{
-            gridColumn: mdUp && largeFirstProject && idx === 0 ? '1/-1' : '',
+            gridColumn:
+              mdUp && largeFirstProject && idx % 7 === 0 ? '1/-1' : '',
           }}
           key={idx}
           projectOverview={project}
