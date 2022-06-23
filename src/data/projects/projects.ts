@@ -12,7 +12,6 @@ import { jaz } from './jaz/detail'
 import { masih } from './masih/detail'
 import { midground } from './midground/detail'
 import { mrSun } from './mr-sun/detail'
-import { newProject } from './new-project/detail'
 import { ninetofive } from './ninetofive/detail'
 import { npure } from './npure/detail'
 import { omo } from './omo/detail'
@@ -78,50 +77,51 @@ export const projectGroups: {
   group: string
   projects: ProjectData[]
 }[] = [
-    {
-      group: 'Music Videos',
-      projects: [npure,
-        theovertunes,
-        thedancecompany,
-        ninetofive,
-        shush,
-        trashtalkin,
-        run,
-        vidixindomie,
-        herewegoagain,
-        plazaavenue,
-        tooandmore,
-        happy,
-        takkankemana,
-        wadoow,
-        masih,
-        home,
-        readyforlove,
-        theheartyouhurt,
-        bertahanlewatisenja,
-        caliente,
-        jaz,
-        midground,
-      ],
-    },
-    {
-      group: 'Digital Commercial',
-      projects: [npure, bmhs, innisfree, instapeach, somethinc, pedro, omo],
-    },
-    {
-      group: 'Branding',
-      projects: [mrSun],
-    },
-    {
-      group: 'Corporate Videos',
-      projects: [glowgene, rainbowsprings],
-    },
-    {
-      group: 'Motion Graphics & Animation',
-      projects: [glowgene],
-    },
-    {
-      group: 'Events',
-      projects: [wowacc],
-    },
-  ]
+  {
+    group: 'Music Videos',
+    projects: [
+      npure,
+      theovertunes,
+      thedancecompany,
+      ninetofive,
+      shush,
+      trashtalkin,
+      run,
+      vidixindomie,
+      herewegoagain,
+      plazaavenue,
+      tooandmore,
+      happy,
+      takkankemana,
+      wadoow,
+      masih,
+      home,
+      readyforlove,
+      theheartyouhurt,
+      bertahanlewatisenja,
+      caliente,
+      jaz,
+      midground,
+    ],
+  },
+  {
+    group: 'Digital Commercial',
+    projects: [npure, bmhs, innisfree, instapeach, somethinc, pedro, omo],
+  },
+  {
+    group: 'Branding',
+    projects: [mrSun],
+  },
+  {
+    group: 'Corporate Videos',
+    projects: [glowgene, rainbowsprings],
+  },
+  {
+    group: 'Motion Graphics & Animation',
+    projects: [glowgene],
+  },
+  {
+    group: 'Events',
+    projects: [wowacc],
+  },
+]
