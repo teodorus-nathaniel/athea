@@ -5,7 +5,7 @@ export const shushOverview: ProjectOverviewData = {
 
   title: 'RAHMANIA ASTRINI',
   titleDesc: 'SHUSH',
-  subtitle: 'MUSIC VIDEO · DIGITAL · 2020',
+  subtitle: 'MUSIC VIDEO · DIGITAL · 2021',
 
   thumbnail: '/projects/shush/thumbnail.jpg',
 }

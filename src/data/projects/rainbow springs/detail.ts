@@ -6,10 +6,10 @@ import { rainbowspringsOverview } from './overview'
 export const rainbowsprings: ProjectData = {
   ...rainbowspringsOverview,
   images: [
-    '/projects/innisfree/1.jpg',
-    '/projects/innisfree/2.jpg',
-    '/projects/innisfree/3.jpg',
-    '/projects/innisfree/4.jpg',
+    '/projects/rainbowspring/1.jpg',
+    '/projects/rainbowspring/2.jpg',
+    '/projects/rainbowspring/3.jpg',
+    '/projects/rainbowspring/4.jpg',
   ],
   video: 'https://www.youtube.com/watch?v=TSdMJrNOMA4',
 

@@ -15,7 +15,7 @@ export const ninetofive: ProjectData = {
 
 
   meta: [
-    { label: 'Singer', value: "Ardhito Pramono" },
+    { label: 'Artist', value: "Ardhito Pramono" },
     {
       label: 'Role',
       value: `Concept

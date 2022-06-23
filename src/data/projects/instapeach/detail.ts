@@ -11,7 +11,7 @@ export const instapeach: ProjectData = {
     '/projects/instapeach/3.jpg',
     '/projects/instapeach/4.jpg',
   ],
-  video: '-',
+  video: '/projects/instapeach/video.mp4',
 
   meta: [
     { label: 'Client', value: "Second Date" },

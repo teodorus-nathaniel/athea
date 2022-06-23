@@ -22,7 +22,7 @@ export const home: ProjectData = {
         Video Production`,
     },
     { label: 'Deliverables', value: 'Music Video' },
-    { label: 'Date', value: '16 October 2021' },
+    { label: 'Date', value: '16 October 2020' },
   ],
 
   overview: `Glowgene is go to collagen jelly that always use natural and local ingredients for their products. They launch a new set skincare for body and face treatment, team up with Isyana Sarasvati.`,
@@ -32,9 +32,9 @@ export const home: ProjectData = {
     Director - Ivan Saputra Alam
     Producer - Naphtali Ivan
     Production Designer - Michelle Amadea
-    
+    Supporting Talents - Joab Nehemiah, Gus Darma, Reksy Bahrein, Arief Budiman, Austin Rifaldo Hitipeuw & Kevin Maulany  
     Director of Photography - Ivan Saputra Alam
-    Offline Editor, Colorist, Sound Designer - Ivan Saputra Alam
+    Offline Editor & Colorist - Ivan Saputra Alam
     Online Editor - Michelle Amadea
     Sound Designer - Ivan Saputra Alam`,
 

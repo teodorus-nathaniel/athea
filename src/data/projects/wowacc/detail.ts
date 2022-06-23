@@ -26,7 +26,7 @@ export const wowacc: ProjectData = {
 
   overview: `Glowgene is go to collagen jelly that always use natural and local ingredients for their products. They launch a new set skincare for body and face treatment, team up with Isyana Sarasvati.`,
 
-  credits: `Production of Athea Moments
+  credits: `Production of Athea Collective
     
     Director - Ivan Saputra Alam
     Producer - Naphtali Ivan

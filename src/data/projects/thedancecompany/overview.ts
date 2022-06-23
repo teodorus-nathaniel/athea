@@ -5,7 +5,7 @@ export const thedancecompanyOverview: ProjectOverviewData = {
 
   title: 'THE DANCE COMPANY',
   titleDesc: 'AYO KAWIN!',
-  subtitle: 'MUSIC VIDEO · 2022',
+  subtitle: 'MUSIC VIDEO · DIGITAL · 2022',
 
-  thumbnail: '/projects/glowgene/thumbnail.png',
+  thumbnail: '/projects/tdc/thumbnail.jpg',
 }

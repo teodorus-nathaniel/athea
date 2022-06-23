@@ -6,38 +6,39 @@ import { thedancecompanyOverview } from './overview'
 export const thedancecompany: ProjectData = {
   ...thedancecompanyOverview,
 
-  images: ['/projects/glowgene/1.png'],
-  video: 'https://www.youtube.com/watch?v=-wtWbajnxD8',
+  images: [
+    '/projects/tdc/1.jpg',
+    '/projects/tdc/2.jpg',
+    '/projects/tdc/3.jpg',
+    '/projects/tdc/4.jpg',
+  ],
+  video: 'https://www.youtube.com/watch?v=zKI6YJ6tV9Q',
+
 
   meta: [
-    { label: 'Client', value: 'Glowgene' },
+    { label: 'Artist', value: 'The Dance Company' },
     {
       label: 'Role',
       value: `Concept
         Video Production`,
     },
     { label: 'Deliverables', value: 'Music Video' },
-    { label: 'Date', value: '13 May 2021' },
+    { label: 'Date', value: '25 November 2021' },
   ],
 
   overview: `Glowgene is go to collagen jelly that always use natural and local ingredients for their products. They launch a new set skincare for body and face treatment, team up with Isyana Sarasvati.`,
 
-  credits: `Production of Athea Collective
+  credits: `Production of Athea Visuals
     
     Director - Ivan Saputra Alam
     Producer - Naphtali Ivan
     Production Designer - Michelle Amadea
-    Scriptwriter - Aaron Timothy Soeharto
     
-    Starring - Abigail Gusmawan, Rayn Wijaya, Sebastian Teti, Latifah
-    Supporting Talent - Odan, Holly Feristo, Yogie
-    
-    Director of Photography - Christopher Kuntjoro
-    Offline Editor - Ida Bagus Gede Darma Putra
-    Online Editor - Michelle Amadea
-    Colorist - Riz Catleya
-    Music Composer - Abel Huray
-    Sound Designer - Lionel Judy`,
+    Starring - Ibrahim Risyad, Naomi, Jihane Almira
+    Supporting Talent - Hidayati, Alsantyya, Annisa
+    Director of Photography - Ivan Saputra Alam
+    Offline Editor & Colorist - Ivan Saputra Alam
+    Online Editor & Graphic - Michelle Amadea`,
 
   relatedWorks: [mrSunOverview, npureOverview],
 }

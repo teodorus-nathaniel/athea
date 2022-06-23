@@ -31,17 +31,13 @@ export const npure: ProjectData = {
     Director - Ivan Saputra Alam
     Producer - Naphtali Ivan
     Production Designer - Michelle Amadea
-    Scriptwriter - Aaron Timothy Soeharto
-    
-    Starring - Abigail Gusmawan, Rayn Wijaya, Sebastian Teti, Latifah
-    Supporting Talent - Odan, Holly Feristo, Yogie
-    
-    Director of Photography - Christopher Kuntjoro
-    Offline Editor - Ida Bagus Gede Darma Putra
-    Online Editor - Michelle Amadea
-    Colorist - Riz Catleya
-    Music Composer - Abel Huray
-    Sound Designer - Lionel Judy`,
+    Starring - Isyana Sarasvati
+    Supporting Talent - Java Stunt Team
+    Director of Photography - Ivan Saputra Alam
+    Offline Editor - Ivan Saputra Alam
+    Online Editor & Roto Artist - Michelle Amadea
+    Colorist - Ivan Saputra Alam
+    Music Composer - Isyana Sarasvati`,
 
   relatedWorks: [glowgeneOverview, mrSunOverview],
 }

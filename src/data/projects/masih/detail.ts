@@ -11,7 +11,7 @@ export const masih: ProjectData = {
     '/projects/masih/3.jpg',
     '/projects/masih/4.jpg',
   ],
-  video: 'https://www.youtube.com/watch?v=PPp-lcEXR7c',
+  video: 'https://youtu.be/c0PwH-NNbx8',
 
 
   meta: [
