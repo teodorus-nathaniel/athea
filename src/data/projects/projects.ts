@@ -6,13 +6,19 @@ import { glowgene } from './glowgene/detail'
 import { happy } from './happy/detail'
 import { herewegoagain } from './herewegoagain/detail'
 import { home } from './home/detail'
+import { innisfree } from './innisfree/detail'
+import { instapeach } from './instapeach/detail'
+import { jaz } from './jaz/detail'
 import { masih } from './masih/detail'
 import { midground } from './midground/detail'
 import { mrSun } from './mr-sun/detail'
 import { newProject } from './new-project/detail'
 import { ninetofive } from './ninetofive/detail'
 import { npure } from './npure/detail'
+import { omo } from './omo/detail'
+import { pedro } from './pedro/detail'
 import { plazaavenue } from './plazaavenue/detail'
+import { rainbowsprings } from './rainbow springs/detail'
 import { readyforlove } from './readyforlove/detail'
 import { run } from './run/detail'
 import { shush } from './shush/detail'
@@ -31,7 +37,6 @@ export const projects: ProjectData[] = [
   npure,
   glowgene,
   mrSun,
-  newProject,
   theovertunes,
   bmhs,
   wowacc,
@@ -54,6 +59,11 @@ export const projects: ProjectData[] = [
   home,
   bertahanlewatisenja,
   caliente,
+  jaz,
+  pedro,
+  omo,
+  rainbowsprings,
+  innisfree,
   vidixindomie,
 ]
 
@@ -90,20 +100,21 @@ export const projectGroups: {
         theheartyouhurt,
         bertahanlewatisenja,
         caliente,
+        jaz,
         midground,
       ],
     },
     {
       group: 'Digital Commercial',
-      projects: [npure, bmhs, somethinc],
+      projects: [npure, bmhs, innisfree, instapeach, somethinc, pedro, omo],
     },
     {
       group: 'Branding',
-      projects: [mrSun, newProject],
+      projects: [mrSun],
     },
     {
       group: 'Corporate Videos',
-      projects: [glowgene],
+      projects: [glowgene, rainbowsprings],
     },
     {
       group: 'Motion Graphics & Animation',
