@@ -12,12 +12,10 @@ export const amateur: ProjectData = {
     '/projects/amateur/4.jpg',
   ],
 
-
-
   video: 'https://youtu.be/65SK9jFi_tw',
 
   meta: [
-    { label: 'Artist', value: "Mikha Angelo" },
+    { label: 'Artist', value: 'Mikha Angelo' },
     {
       label: 'Role',
       value: `Concept

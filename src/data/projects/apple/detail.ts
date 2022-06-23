@@ -15,7 +15,7 @@ export const apple: ProjectData = {
   video: 'https://youtu.be/1RsUDNtkwfk',
 
   meta: [
-    { label: 'Client', value: "Apple Developer Academy BINUS" },
+    { label: 'Client', value: 'Apple Developer Academy BINUS' },
     {
       label: 'Role',
       value: `Concept

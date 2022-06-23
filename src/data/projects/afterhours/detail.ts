@@ -14,7 +14,7 @@ export const afterhours: ProjectData = {
   video: 'https://www.youtube.com/watch?v=9WaV4S2_BfQ',
 
   meta: [
-    { label: 'Client', value: "Afterhours Books" },
+    { label: 'Client', value: 'Afterhours Books' },
     {
       label: 'Role',
       value: `Concept

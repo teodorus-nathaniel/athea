@@ -15,7 +15,7 @@ export const middlegroundlv: ProjectData = {
   video: 'https://youtu.be/iKCvjnYClEo',
 
   meta: [
-    { label: 'Client', value: "Kopi Chuseyo" },
+    { label: 'Client', value: 'Kopi Chuseyo' },
     {
       label: 'Role',
       value: `Concept

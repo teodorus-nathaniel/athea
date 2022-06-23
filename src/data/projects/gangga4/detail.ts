@@ -14,7 +14,7 @@ export const gangga4: ProjectData = {
   video: 'https://youtu.be/uF6EoF05AjY',
 
   meta: [
-    { label: 'Artist', value: "Gangga" },
+    { label: 'Artist', value: 'Gangga' },
     {
       label: 'Role',
       value: `Concept

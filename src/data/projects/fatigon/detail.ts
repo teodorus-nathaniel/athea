@@ -13,9 +13,8 @@ export const fatigon: ProjectData = {
   ],
   video: '/project/fatigon/video',
 
-
   meta: [
-    { label: 'Client', value: "Fatigon Promuno" },
+    { label: 'Client', value: 'Fatigon Promuno' },
     {
       label: 'Role',
       value: 'Video Production',

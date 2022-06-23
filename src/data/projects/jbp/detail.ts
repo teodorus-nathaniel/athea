@@ -15,7 +15,7 @@ export const jbp: ProjectData = {
   video: '/projects/jbp/video.mp4',
 
   meta: [
-    { label: 'Event', value: "Jakarta Block Party" },
+    { label: 'Event', value: 'Jakarta Block Party' },
     {
       label: 'Role',
       value: `Concept

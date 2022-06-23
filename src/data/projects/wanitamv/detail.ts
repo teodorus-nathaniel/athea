@@ -13,9 +13,8 @@ export const wanitamv: ProjectData = {
   ],
   video: 'https://youtu.be/VrMrvR_Hv1g',
 
-
   meta: [
-    { label: 'Artist', value: "Rossa" },
+    { label: 'Artist', value: 'Rossa' },
     {
       label: 'Role',
       value: `Concept
@@ -39,4 +38,3 @@ export const wanitamv: ProjectData = {
 
   relatedWorks: [mrSunOverview, npureOverview],
 }
-

@@ -15,7 +15,7 @@ export const omo: ProjectData = {
   video: ['/projects/omo/omo!.mp4'],
 
   meta: [
-    { label: 'Client', value: "Omo Cosmestics" },
+    { label: 'Client', value: 'Omo Cosmestics' },
     {
       label: 'Role',
       value: `Concept

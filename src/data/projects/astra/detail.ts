@@ -15,7 +15,7 @@ export const astra: ProjectData = {
   video: 'https://youtu.be/SLxjNZpxGQk',
 
   meta: [
-    { label: 'Client', value: "Astra Property" },
+    { label: 'Client', value: 'Astra Property' },
     {
       label: 'Role',
       value: `Concept

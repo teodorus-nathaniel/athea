@@ -15,7 +15,7 @@ export const azarine: ProjectData = {
   video: '/projects/azarine/video.mp4',
 
   meta: [
-    { label: 'Client', value: "Azarine" },
+    { label: 'Client', value: 'Azarine' },
     {
       label: 'Role',
       value: `Concept

@@ -15,7 +15,7 @@ export const eastventure: ProjectData = {
   video: 'https://youtu.be/Vl1YJbCzcCM',
 
   meta: [
-    { label: 'Client', value: "East Venture" },
+    { label: 'Client', value: 'East Venture' },
     {
       label: 'Role',
       value: `Concept

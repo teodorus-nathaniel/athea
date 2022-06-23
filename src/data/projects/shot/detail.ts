@@ -15,7 +15,7 @@ export const shot: ProjectData = {
   video: 'https://youtu.be/I99g5PYuBps',
 
   meta: [
-    { label: 'Artist', value: "Mikha Angelo" },
+    { label: 'Artist', value: 'Mikha Angelo' },
     {
       label: 'Role',
       value: `Concept

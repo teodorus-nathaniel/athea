@@ -8,4 +8,5 @@ export const theovertunesOverview: ProjectOverviewData = {
   subtitle: 'MUSIC VIDEO · VIDEO · 2022',
 
   thumbnail: '/projects/the-overtunes/thumbnail.jpg',
+  date: '2022-02-22',
 }

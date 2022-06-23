@@ -12,10 +12,10 @@ export const orori: ProjectData = {
     '/projects/orori/4.jpg',
   ],
 
-  video: ['https://www.youtube.com/watch?v=I3_sfYY9p1w'],
+  video: 'https://www.youtube.com/watch?v=I3_sfYY9p1w',
 
   meta: [
-    { label: 'Client', value: "Orori" },
+    { label: 'Client', value: 'Orori' },
     {
       label: 'Role',
       value: `Concept

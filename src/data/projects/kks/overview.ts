@@ -8,4 +8,5 @@ export const kksOverview: ProjectOverviewData = {
   subtitle: 'MUSIC VIDEO · DIGITAL · 2021',
 
   thumbnail: '/projects/kks/thumbnail.jpg',
+  date: '2021-03-19',
 }

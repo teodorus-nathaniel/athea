@@ -12,10 +12,10 @@ export const vicari2: ProjectData = {
     '/projects/vicari2/4.jpg',
   ],
 
-  video: ['https://youtu.be/jxVc6d4vhp4'],
+  video: 'https://youtu.be/jxVc6d4vhp4',
 
   meta: [
-    { label: 'Client', value: "Vicari Shoes" },
+    { label: 'Client', value: 'Vicari Shoes' },
     {
       label: 'Role',
       value: `Concept

@@ -8,4 +8,5 @@ export const takbisaOverview: ProjectOverviewData = {
   subtitle: 'MUSIC VIDEO · DIGITAL · 2020',
 
   thumbnail: '/projects/takbisa/thumbnail.jpg',
+  date: '2020-05-01',
 }

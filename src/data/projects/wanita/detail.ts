@@ -15,7 +15,7 @@ export const wanita: ProjectData = {
   video: 'https://youtu.be/NpECdhlBCxc',
 
   meta: [
-    { label: 'Artist', value: "Rossa" },
+    { label: 'Artist', value: 'Rossa' },
     {
       label: 'Role',
       value: `Concept

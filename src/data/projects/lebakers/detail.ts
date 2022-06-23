@@ -12,7 +12,7 @@ export const lebakers: ProjectData = {
     '/projects/lebakers/4.jpg',
   ],
 
-  video: ['https://www.youtube.com/watch?v=rzCGBSoS5c4'],
+  video: 'https://www.youtube.com/watch?v=rzCGBSoS5c4',
 
   meta: [
     { label: 'Client', value: 'Le Bakers' },

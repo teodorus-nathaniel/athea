@@ -8,4 +8,5 @@ export const premierebeauteOverview: ProjectOverviewData = {
   subtitle: 'MANIFESTO · DIGITAL · VIDEO · 2021',
 
   thumbnail: '/projects/premierbeaute/thumbnail.jpg',
+  date: '2021-09-26',
 }

@@ -12,10 +12,10 @@ export const buccheri: ProjectData = {
     '/projects/buccheri/4.jpg',
   ],
 
-  video: ['https://youtu.be/knhUseRhwHw'],
+  video: 'https://youtu.be/knhUseRhwHw',
 
   meta: [
-    { label: 'Client', value: "Buccheri" },
+    { label: 'Client', value: 'Buccheri' },
     {
       label: 'Role',
       value: `Concept

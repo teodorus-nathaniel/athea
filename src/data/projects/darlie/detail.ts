@@ -15,7 +15,7 @@ export const darlie: ProjectData = {
   video: 'https://youtu.be/XMc12TL_x8M',
 
   meta: [
-    { label: 'Client', value: "Darlie Indonesia" },
+    { label: 'Client', value: 'Darlie Indonesia' },
     {
       label: 'Role',
       value: `Concept

@@ -8,4 +8,5 @@ export const readyforloveOverview: ProjectOverviewData = {
   subtitle: 'MUSIC VIDEO · DIGITAL · 2020',
 
   thumbnail: '/projects/readyforlove/thumbnail.jpg',
+  date: '2020-09-13',
 }

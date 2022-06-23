@@ -8,5 +8,5 @@ export const lavishbrowOverview: ProjectOverviewData = {
   subtitle: 'MANIFESTO VIDEO · DIGITAL · 2020',
 
   thumbnail: '/projects/lavishbrow/thumbnail.jpg',
+  date: '2021-10-29',
 }
-

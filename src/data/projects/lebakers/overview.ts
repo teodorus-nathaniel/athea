@@ -8,5 +8,5 @@ export const lebakersOverview: ProjectOverviewData = {
   subtitle: 'MANIFESTO · DIGITAL · 2021',
 
   thumbnail: '/projects/lebakers/thumbnail.jpg',
+  date: '2021-03-16',
 }
-

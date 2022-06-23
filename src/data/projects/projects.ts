@@ -159,7 +159,7 @@ export const projects: ProjectData[] = [
   darlie,
   azarine,
   premierebeaute,
-  wanitamv
+  wanitamv,
 ]
 
 export const projectKeys: { [key: string]: ProjectData } = projects.reduce<{
@@ -207,8 +207,8 @@ export const projectGroups: {
       midground,
       takbisa,
       wanitamv,
-      mrSun
-    ]
+      mrSun,
+    ],
   },
   {
     group: 'Digital Commercial',
@@ -240,16 +240,16 @@ export const projectGroups: {
       omo,
       charlesnkeith,
       azarine,
-      premierebeaute
-    ]
+      premierebeaute,
+    ],
   },
   {
     group: 'Branding',
-    projects: []
+    projects: [],
   },
   {
     group: 'Corporate Videos',
-    projects: [orori, eastventure, meratus, afterhours, apple, astra]
+    projects: [orori, eastventure, meratus, afterhours, apple, astra],
   },
   {
     group: 'Motion Graphics & Animation',
@@ -264,11 +264,32 @@ export const projectGroups: {
       amateur,
       middlegroundlv,
       wanita,
-      darlie
-    ]
+      darlie,
+    ],
   },
   {
     group: 'Events',
-    projects: [ifw, seconddate, jbp]
-  }
+    projects: [ifw, seconddate, jbp],
+  },
 ]
+
+const sortLogic = (a: ProjectData, b: ProjectData) =>
+  new Date(a.date) < new Date(b.date) ? 1 : -1
+
+export const sortedProjectGroups: {
+  group: string
+  projects: ProjectData[]
+}[] = projectGroups.map((group) => {
+  const sortedProjects = [...group.projects]
+  sortedProjects.sort(sortLogic)
+  return {
+    ...group,
+    projects: sortedProjects,
+  }
+})
+
+export let allProjects: ProjectData[] = []
+projectGroups.forEach(({ projects: projectDatas }) => {
+  allProjects.push(...projectDatas)
+})
+allProjects.sort(sortLogic)

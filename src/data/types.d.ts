@@ -6,6 +6,7 @@ export interface ProjectOverviewData {
   title: string
   titleDesc: string
   subtitle: string
+  date: string
 }
 
 export interface ServiceData {

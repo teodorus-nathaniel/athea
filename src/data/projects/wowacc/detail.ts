@@ -13,9 +13,8 @@ export const wowacc: ProjectData = {
   ],
   video: 'https://www.youtube.com/watch?v=-wtWbajnxD8',
 
-
   meta: [
-    { label: 'Client', value: "WOWACC" },
+    { label: 'Client', value: 'WOWACC' },
     {
       label: 'Role',
       value: 'Video Production',

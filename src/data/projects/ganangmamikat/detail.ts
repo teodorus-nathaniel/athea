@@ -13,9 +13,8 @@ export const ganangmamikat: ProjectData = {
   ],
   video: 'https://www.youtube.com/watch?v=ZXmOUvUnPCI',
 
-
   meta: [
-    { label: 'Client', value: "Ganang Mamikat" },
+    { label: 'Client', value: 'Ganang Mamikat' },
     {
       label: 'Role',
       value: `Concept
@@ -39,4 +38,3 @@ export const ganangmamikat: ProjectData = {
 
   relatedWorks: [mrSunOverview, npureOverview],
 }
-

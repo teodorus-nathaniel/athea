@@ -8,4 +8,5 @@ export const thedancecompanyOverview: ProjectOverviewData = {
   subtitle: 'MUSIC VIDEO · DIGITAL · 2022',
 
   thumbnail: '/projects/tdc/thumbnail.jpg',
+  date: '2021-05-13',
 }

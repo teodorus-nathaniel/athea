@@ -13,9 +13,8 @@ export const happy: ProjectData = {
   ],
   video: 'https://youtu.be/k9couTf-HPc',
 
-
   meta: [
-    { label: 'Artist', value: "Ardhito Pramono" },
+    { label: 'Artist', value: 'Ardhito Pramono' },
     {
       label: 'Role',
       value: `Concept

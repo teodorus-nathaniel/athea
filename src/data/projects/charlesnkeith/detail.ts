@@ -13,9 +13,8 @@ export const charlesnkeith: ProjectData = {
   ],
   video: '/projects/ck/video.mp4',
 
-
   meta: [
-    { label: 'Client', value: "Charles & Keith Indonesia" },
+    { label: 'Client', value: 'Charles & Keith Indonesia' },
     {
       label: 'Role',
       value: 'Video Production',
@@ -35,4 +34,3 @@ export const charlesnkeith: ProjectData = {
 
   relatedWorks: [mrSunOverview, npureOverview],
 }
-

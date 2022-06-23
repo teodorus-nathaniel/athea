@@ -14,7 +14,6 @@ export const kks: ProjectData = {
   ],
   video: 'https://youtu.be/eXnuPX7CQNI',
 
-
   meta: [
     { label: 'Artist', value: 'Naura Ayu' },
     {

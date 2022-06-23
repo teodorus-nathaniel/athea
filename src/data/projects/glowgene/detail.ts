@@ -15,7 +15,7 @@ export const glowgene: ProjectData = {
   video: '/projects/glowgene/video.mp4',
 
   meta: [
-    { label: 'Client', value: "Glowgene" },
+    { label: 'Client', value: 'Glowgene' },
     {
       label: 'Role',
       value: `Concept

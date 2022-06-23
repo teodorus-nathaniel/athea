@@ -8,5 +8,5 @@ export const remingtonOverview: ProjectOverviewData = {
   subtitle: 'MANIFESTO · DIGITAL · 2019',
 
   thumbnail: '/projects/remington/thumbnail.jpg',
+  date: '2019-05-15',
 }
-

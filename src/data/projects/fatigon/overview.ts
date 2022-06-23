@@ -8,4 +8,5 @@ export const fatigonOverview: ProjectOverviewData = {
   subtitle: 'MANIFESTO VIDEO · DIGITAL · 2021',
 
   thumbnail: '/projects/fatigon/thumbnail.jpg',
+  date: '2021-03-11',
 }

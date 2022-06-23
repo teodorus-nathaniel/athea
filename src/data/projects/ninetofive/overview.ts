@@ -8,4 +8,5 @@ export const ninetofiveOverview: ProjectOverviewData = {
   subtitle: 'MUSIC VIDEO · DIGITAL · 2020',
 
   thumbnail: '/projects/ninetofive/thumbnail.jpg',
+  date: '2021-03-09',
 }

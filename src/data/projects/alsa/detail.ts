@@ -14,7 +14,6 @@ export const alsa: ProjectData = {
   ],
   video: 'https://www.youtube.com/watch?v=4cVf7DigatU',
 
-
   meta: [
     { label: 'Artist', value: 'Alsa' },
     {

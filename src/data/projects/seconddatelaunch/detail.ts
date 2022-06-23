@@ -15,7 +15,7 @@ export const seconddate: ProjectData = {
   video: 'https://youtu.be/gTaH9B0Nu9M',
 
   meta: [
-    { label: 'Event', value: "Second Date" },
+    { label: 'Event', value: 'Second Date' },
     {
       label: 'Role',
       value: 'Video Production',

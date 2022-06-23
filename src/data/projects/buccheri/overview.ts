@@ -8,4 +8,5 @@ export const buccheriOverview: ProjectOverviewData = {
   subtitle: 'MANIFESTO VIDEO · DIGITAL · 2019',
 
   thumbnail: '/projects/buccheri/thumbnail.jpg',
+  date: '2019-09-20',
 }

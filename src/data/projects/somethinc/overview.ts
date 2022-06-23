@@ -8,5 +8,5 @@ export const somethincOverview: ProjectOverviewData = {
   subtitle: 'MANIFESTO · DIGITAL · 2021',
 
   thumbnail: '/projects/somethinc/thumbnail.jpg',
+  date: '2021-05-10',
 }
-

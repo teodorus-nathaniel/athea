@@ -15,7 +15,7 @@ export const vicari1: ProjectData = {
   video: 'https://youtu.be/7X5eT1wagcg',
 
   meta: [
-    { label: 'Client', value: "Vicari Shoes" },
+    { label: 'Client', value: 'Vicari Shoes' },
     {
       label: 'Role',
       value: `Concept

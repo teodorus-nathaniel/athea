@@ -13,9 +13,8 @@ export const home: ProjectData = {
   ],
   video: 'https://youtu.be/YC52UOiKN3o',
 
-
   meta: [
-    { label: 'Artist', value: "Rendy Pandugo" },
+    { label: 'Artist', value: 'Rendy Pandugo' },
     {
       label: 'Role',
       value: `Concept
@@ -40,4 +39,3 @@ export const home: ProjectData = {
 
   relatedWorks: [mrSunOverview, npureOverview],
 }
-

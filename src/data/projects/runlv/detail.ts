@@ -15,7 +15,7 @@ export const runlv: ProjectData = {
   video: 'https://youtu.be/bcWg40HrPPY',
 
   meta: [
-    { label: 'Artist', value: "Mikha Angelo" },
+    { label: 'Artist', value: 'Mikha Angelo' },
     {
       label: 'Role',
       value: `Concept

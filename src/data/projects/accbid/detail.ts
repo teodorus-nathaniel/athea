@@ -15,7 +15,7 @@ export const accbid: ProjectData = {
   video: 'https://www.youtube.com/watch?v=SDEJs06Hs1w',
 
   meta: [
-    { label: 'Client', value: "Astra Credit Company" },
+    { label: 'Client', value: 'Astra Credit Company' },
     {
       label: 'Role',
       value: `Concept

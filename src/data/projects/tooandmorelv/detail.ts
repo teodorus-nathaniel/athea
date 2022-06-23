@@ -15,7 +15,7 @@ export const tooandmorelv: ProjectData = {
   video: 'https://youtu.be/uXyb6vtfsfs',
 
   meta: [
-    { label: 'Artist', value: "Mikha Angelo" },
+    { label: 'Artist', value: 'Mikha Angelo' },
     {
       label: 'Role',
       value: `Concept

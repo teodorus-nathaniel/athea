@@ -8,5 +8,5 @@ export const innisfreeOverview: ProjectOverviewData = {
   subtitle: 'MANIFESTO · DIGITAL · 2020',
 
   thumbnail: '/projects/innisfree/thumbnail.jpg',
+  date: '2021-03-29',
 }
-

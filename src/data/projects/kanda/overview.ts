@@ -8,4 +8,5 @@ export const kandaOverview: ProjectOverviewData = {
   subtitle: 'MUSIC VIDEO · DIGITAL · 2021',
 
   thumbnail: '/projects/kanda/thumbnail.jpg',
+  date: '2021-11-22',
 }

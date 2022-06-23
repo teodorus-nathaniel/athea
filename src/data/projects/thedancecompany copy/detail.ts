@@ -14,7 +14,6 @@ export const thedancecompany: ProjectData = {
   ],
   video: 'https://www.youtube.com/watch?v=zKI6YJ6tV9Q',
 
-
   meta: [
     { label: 'Artist', value: 'The Dance Company' },
     {

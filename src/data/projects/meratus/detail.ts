@@ -13,9 +13,8 @@ export const meratus: ProjectData = {
   ],
   video: '/projects/meratus/video.mp4',
 
-
   meta: [
-    { label: 'Client', value: "Meratus" },
+    { label: 'Client', value: 'Meratus' },
     {
       label: 'Role',
       value: 'Video Production',

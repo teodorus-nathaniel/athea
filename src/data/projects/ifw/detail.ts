@@ -15,7 +15,7 @@ export const ifw: ProjectData = {
   video: 'https://youtu.be/Exn5BlubYIw',
 
   meta: [
-    { label: 'Event', value: "Jakarta Fashion Week" },
+    { label: 'Event', value: 'Jakarta Fashion Week' },
     {
       label: 'Role',
       value: 'Video Production',

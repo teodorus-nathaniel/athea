@@ -13,9 +13,8 @@ export const ninetofive: ProjectData = {
   ],
   video: 'https://youtu.be/wCiUm5XJ_LY',
 
-
   meta: [
-    { label: 'Artist', value: "Ardhito Pramono" },
+    { label: 'Artist', value: 'Ardhito Pramono' },
     {
       label: 'Role',
       value: `Concept

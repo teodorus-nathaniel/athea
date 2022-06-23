@@ -15,7 +15,7 @@ export const premierebeaute: ProjectData = {
   video: 'https://youtu.be/0Hy2Z1OO6PM',
 
   meta: [
-    { label: 'Client', value: "Premiere Beaute" },
+    { label: 'Client', value: 'Premiere Beaute' },
     {
       label: 'Role',
       value: `Concept

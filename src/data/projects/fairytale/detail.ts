@@ -15,7 +15,7 @@ export const fairytale: ProjectData = {
   video: 'https://www.youtube.com/watch?v=yEwv_FKFGRE',
 
   meta: [
-    { label: 'Artist', value: "Mikha Angelo" },
+    { label: 'Artist', value: 'Mikha Angelo' },
     {
       label: 'Role',
       value: `Concept

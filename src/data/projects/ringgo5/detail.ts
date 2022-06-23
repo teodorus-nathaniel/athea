@@ -14,7 +14,6 @@ export const ringgo5: ProjectData = {
   ],
   video: 'https://youtu.be/24AjDoVJZg8',
 
-
   meta: [
     { label: 'Artist', value: 'Ringgo 5' },
     {

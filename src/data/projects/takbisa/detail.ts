@@ -13,9 +13,8 @@ export const takbisa: ProjectData = {
   ],
   video: 'https://youtu.be/yU_KFpk3Sqk',
 
-
   meta: [
-    { label: 'Singer', value: "Rahmania Astrini & Nino" },
+    { label: 'Singer', value: 'Rahmania Astrini & Nino' },
     {
       label: 'Role',
       value: `Concept

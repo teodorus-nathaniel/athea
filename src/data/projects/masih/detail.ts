@@ -13,9 +13,8 @@ export const masih: ProjectData = {
   ],
   video: 'https://youtu.be/c0PwH-NNbx8',
 
-
   meta: [
-    { label: 'Artist', value: "Rossa" },
+    { label: 'Artist', value: 'Rossa' },
     {
       label: 'Role',
       value: `Concept
@@ -41,4 +40,3 @@ export const masih: ProjectData = {
 
   relatedWorks: [mrSunOverview, npureOverview],
 }
-

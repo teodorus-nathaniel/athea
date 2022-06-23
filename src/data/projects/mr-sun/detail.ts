@@ -14,7 +14,7 @@ export const mrSun: ProjectData = {
   video: 'https://youtu.be/MgxJukpTjIg',
 
   meta: [
-    { label: 'Artist', value: "Rendy Pandugo" },
+    { label: 'Artist', value: 'Rendy Pandugo' },
     {
       label: 'Role',
       value: `Concept

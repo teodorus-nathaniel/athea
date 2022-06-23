@@ -15,7 +15,7 @@ export const stayawhile: ProjectData = {
   video: 'https://www.youtube.com/watch?v=pukCSAOOnyg',
 
   meta: [
-    { label: 'Artist', value: "Mikha Angelo" },
+    { label: 'Artist', value: 'Mikha Angelo' },
     {
       label: 'Role',
       value: `Concept

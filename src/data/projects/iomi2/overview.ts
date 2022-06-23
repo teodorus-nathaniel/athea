@@ -8,5 +8,5 @@ export const iomi2Overview: ProjectOverviewData = {
   subtitle: 'MANIFESTO · DIGITAL · 2019',
 
   thumbnail: '/projects/iomi2/thumbnail.jpg',
+  date: '2019-06-14',
 }
-

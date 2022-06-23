@@ -13,9 +13,8 @@ export const kanda: ProjectData = {
   ],
   video: 'https://www.youtube.com/watch?v=XbwZHXZb4pI',
 
-
   meta: [
-    { label: 'Artist', value: "Kanda" },
+    { label: 'Artist', value: 'Kanda' },
     {
       label: 'Role',
       value: `Concept
@@ -39,4 +38,3 @@ export const kanda: ProjectData = {
 
   relatedWorks: [mrSunOverview, npureOverview],
 }
-

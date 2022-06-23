@@ -8,4 +8,5 @@ export const ganangmamikatOverview: ProjectOverviewData = {
   subtitle: 'FASHION FILM · DIGITAL · 2019',
 
   thumbnail: '/projects/ganang/thumbnail.jpg',
+  date: '2019-06-24',
 }

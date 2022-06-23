@@ -15,7 +15,7 @@ export const sig: ProjectData = {
   video: '/projects/sig/video.mp4',
 
   meta: [
-    { label: 'Client', value: "Semen Group Indonesia" },
+    { label: 'Client', value: 'Semen Group Indonesia' },
     {
       label: 'Role',
       value: `Concept

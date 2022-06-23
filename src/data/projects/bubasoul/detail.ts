@@ -13,14 +13,12 @@ export const bubasoul: ProjectData = {
   ],
   video: 'https://www.youtube.com/watch?v=a5TKP3h_erk',
 
-
   meta: [
-    { label: 'Client', value: "Buba Soul" },
+    { label: 'Client', value: 'Buba Soul' },
     {
       label: 'Role',
       value: `Concept
-      Video Production`
-      ,
+      Video Production`,
     },
     { label: 'Deliverables', value: 'Video' },
     { label: 'Date', value: '21 February 2020' },
