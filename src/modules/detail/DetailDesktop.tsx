@@ -1,5 +1,6 @@
 import Container from '#/components/Container'
 import ProjectOverview from '#/components/ProjectOverview'
+import { PREV_PATH_STORAGE_KEY } from '#/constants/storage'
 import { ProjectData } from '#/data/types'
 import AspectRatioContainer from '#/ui/AspectRatioContainer'
 import Button from '#/ui/Button'
@@ -8,6 +9,7 @@ import Link from '#/ui/Link'
 import Text from '#/ui/Text'
 import clsx from 'clsx'
 import dynamic from 'next/dynamic'
+import { useRouter } from 'next/router'
 import React from 'react'
 import { useInView } from 'react-intersection-observer'
 import ShareContainer from './common/ShareContainer'
@@ -20,6 +22,7 @@ interface Props {
 
 export default function DetailDesktop({ data }: Props) {
   const { ref, inView } = useInView({ threshold: 0.2 })
+  const router = useRouter()
 
   const {
     credits,
@@ -148,7 +151,17 @@ export default function DetailDesktop({ data }: Props) {
         )}
         <div className={clsx('py-16')}>
           <div className={clsx('flex justify-center')}>
-            <Link noAnimation href='/works'>
+            <Link
+              noAnimation
+              href='/works'
+              onClick={(e) => {
+                if (
+                  sessionStorage.getItem(PREV_PATH_STORAGE_KEY) === '/works'
+                ) {
+                  e.preventDefault()
+                  router.back()
+                }
+              }}>
               <Button
                 type='solid-white'
                 className={clsx('!px-10 py-3', 'uppercase')}>
