@@ -12,10 +12,10 @@ export const omo: ProjectData = {
     '/projects/omo/4.jpg',
   ],
 
-  video: ['/projects/omo/omo!.mp4'],
+  video: '/projects/omo/omo!.mp4',
 
   meta: [
-    { label: 'Client', value: "Omo Cosmestics" },
+    { label: 'Client', value: 'Omo Cosmestics' },
     {
       label: 'Role',
       value: `Concept

@@ -8,4 +8,5 @@ export const newProjectOverview: ProjectOverviewData = {
   subtitle: 'MANIFESTO · DIGITAL · VIDEO · 2021',
 
   thumbnail: '/projects/mr-sun/thumbnail.png',
+  date: '2021-05-13',
 }

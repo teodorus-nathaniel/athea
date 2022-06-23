@@ -12,7 +12,7 @@ export const pedro: ProjectData = {
     '/projects/pedro/4.jpg',
   ],
 
-  video: ['/projects/pedro/video.mp4'],
+  video: '/projects/pedro/video.mp4',
 
   meta: [
     { label: 'Client', value: 'Pedro' },

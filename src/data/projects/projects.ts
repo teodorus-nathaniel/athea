@@ -125,3 +125,24 @@ export const projectGroups: {
     projects: [wowacc],
   },
 ]
+
+const sortLogic = (a: ProjectData, b: ProjectData) =>
+  new Date(a.date) < new Date(b.date) ? 1 : -1
+
+export const sortedProjectGroups: {
+  group: string
+  projects: ProjectData[]
+}[] = projectGroups.map((group) => {
+  const sortedProjects = [...group.projects]
+  sortedProjects.sort(sortLogic)
+  return {
+    ...group,
+    projects: sortedProjects,
+  }
+})
+
+export let allProjects: ProjectData[] = []
+projectGroups.forEach(({ projects: projectDatas }) => {
+  allProjects.push(...projectDatas)
+})
+allProjects.sort(sortLogic)

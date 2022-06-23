@@ -4,8 +4,7 @@ import HeadlineSection from '#/components/sections/HeadlineSection'
 import SectionWrapper from '#/components/sections/SectionWrapper'
 import TabLayout, { TabData } from '#/components/TabLayout'
 import { SLOW_TRANSITION } from '#/constants/transition'
-import { projectGroups } from '#/data/projects/projects'
-import { ProjectData } from '#/data/types'
+import { allProjects, projectGroups } from '#/data/projects/projects'
 import { useBreakpointThreshold } from '#/helpers/hooks/useBreakpointThreshold'
 import Text from '#/ui/Text'
 import clsx from 'clsx'
@@ -14,13 +13,8 @@ import type { NextPage } from 'next'
 import { useState } from 'react'
 
 const tabs: TabData[] = []
-let allProjects: ProjectData[] = []
 const groups = [...projectGroups]
-groups.forEach(({ projects }) => {
-  allProjects.push(...projects)
-})
 groups.unshift({ group: 'All Work', projects: allProjects })
-
 groups.forEach(({ group, projects }) => {
   tabs.push({
     title: group,
@@ -50,12 +44,14 @@ const Works: NextPage = () => {
             <Text>Works</Text>
           </>
         }
-        theme='dark'>
+        theme='dark'
+      >
         <div
           className={clsx(
             'flex justify-center items-center w-full text-lg',
             mdUp ? 'mb-8' : ''
-          )}>
+          )}
+        >
           <TabLayout
             leftText='View'
             selectedTab={selectedTab}
@@ -72,7 +68,8 @@ const Works: NextPage = () => {
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               key={selectedWork.group}
-              id='works-content'>
+              id='works-content'
+            >
               <ProjectOverviewList
                 largeFirstProject
                 projects={selectedWork?.projects ?? []}

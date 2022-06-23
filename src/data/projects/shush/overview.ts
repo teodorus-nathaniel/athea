@@ -8,4 +8,5 @@ export const shushOverview: ProjectOverviewData = {
   subtitle: 'MUSIC VIDEO · DIGITAL · 2020',
 
   thumbnail: '/projects/shush/thumbnail.jpg',
+  date: '2021-01-20',
 }

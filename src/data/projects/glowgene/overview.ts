@@ -8,4 +8,5 @@ export const glowgeneOverview: ProjectOverviewData = {
   subtitle: 'MANIFESTO · DIGITAL · VIDEO · 2021',
 
   thumbnail: '/projects/glowgene/thumbnail.jpg',
+  date: '2021-02-04',
 }

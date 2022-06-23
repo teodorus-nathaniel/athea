@@ -8,4 +8,5 @@ export const wowaccOverview: ProjectOverviewData = {
   subtitle: 'EVENT · DIGITAL · 2021',
 
   thumbnail: '/projects/wowacc/thumbnail.jpg',
+  date: '2021-05-13',
 }
