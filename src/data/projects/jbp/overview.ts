@@ -8,4 +8,5 @@ export const jbpOverview: ProjectOverviewData = {
   subtitle: 'EVENT VIDEO · DIGITAL · VIDEO · 2020',
 
   thumbnail: '/projects/jbp/thumbnail.jpg',
+  date: '2020-02-01',
 }

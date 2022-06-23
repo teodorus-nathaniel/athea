@@ -8,4 +8,5 @@ export const appleOverview: ProjectOverviewData = {
   subtitle: 'CORPORATE VIDEO · DIGITAL · VIDEO · 2019',
 
   thumbnail: '/projects/apple/thumbnail.jpg',
+  date: '2018-12-11',
 }

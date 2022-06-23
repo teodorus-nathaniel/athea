@@ -8,4 +8,5 @@ export const ifwOverview: ProjectOverviewData = {
   subtitle: 'EVENT VIDEO · DIGITAL · VIDEO · 2019',
 
   thumbnail: '/projects/ifw/thumbnail.jpg',
+  date: '2019-06-24',
 }

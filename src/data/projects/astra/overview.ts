@@ -8,4 +8,5 @@ export const astraOverview: ProjectOverviewData = {
   subtitle: 'CORPORATE VIDEO · DIGITAL · VIDEO · 2019',
 
   thumbnail: '/projects/astra/thumbnail.jpg',
+  date: '2018-12-15',
 }

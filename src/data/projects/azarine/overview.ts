@@ -8,4 +8,5 @@ export const azarineOverview: ProjectOverviewData = {
   subtitle: 'WEB SERIES · DIGITAL · VIDEO · 2021',
 
   thumbnail: '/projects/azarine/thumbnail.jpg',
+  date: '2021-11-23',
 }

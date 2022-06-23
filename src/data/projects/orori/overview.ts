@@ -8,4 +8,5 @@ export const ororiOverview: ProjectOverviewData = {
   subtitle: 'CORPORATE VIDEO · DIGITAL · VIDEO · 2020',
 
   thumbnail: '/projects/orori/thumbnail.jpg',
+  date: '2020-01-10',
 }

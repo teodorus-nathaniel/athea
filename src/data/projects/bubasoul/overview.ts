@@ -8,4 +8,5 @@ export const bubasoulOverview: ProjectOverviewData = {
   subtitle: 'MANIFESTO VIDEO · DIGITAL · 2020',
 
   thumbnail: '/projects/bubasoul/thumbnail.jpg',
+  date: '2020-02-21',
 }

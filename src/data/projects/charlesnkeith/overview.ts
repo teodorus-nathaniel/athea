@@ -8,4 +8,5 @@ export const charlesnkeithOverview: ProjectOverviewData = {
   subtitle: 'MANIFESTO VIDEO · DIGITAL · 2021',
 
   thumbnail: '/projects/ck/thumbnail.jpg',
+  date: '2019-12-21',
 }

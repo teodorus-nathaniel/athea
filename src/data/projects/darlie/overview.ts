@@ -8,4 +8,5 @@ export const darlieOverview: ProjectOverviewData = {
   subtitle: '3D CAMPAIGN · DIGITAL · VIDEO · 2022',
 
   thumbnail: '/projects/darlie/thumbnail.jpg',
+  date: '2022-03-23',
 }

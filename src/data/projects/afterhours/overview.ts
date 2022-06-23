@@ -8,4 +8,5 @@ export const afterhoursOverview: ProjectOverviewData = {
   subtitle: 'MANIFESTO · DIGITAL · VIDEO · 2021',
 
   thumbnail: '/projects/afterhours/thumbnail.jpg',
+  date: '2021-07-31',
 }

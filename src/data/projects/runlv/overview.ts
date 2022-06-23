@@ -8,4 +8,5 @@ export const runlvOverview: ProjectOverviewData = {
   subtitle: 'LYRIC VIDEO · DIGITAL · VIDEO · 2020',
 
   thumbnail: '/projects/run(lv)/thumbnail.jpg',
+  date: '2020-10-09',
 }

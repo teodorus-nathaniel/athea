@@ -8,4 +8,5 @@ export const gangga2Overview: ProjectOverviewData = {
   subtitle: 'MUSIC VIDEO · DIGITAL · VIDEO · 2021',
 
   thumbnail: '/projects/gangga2/thumbnail.jpg',
+  date: '2021-11-05',
 }

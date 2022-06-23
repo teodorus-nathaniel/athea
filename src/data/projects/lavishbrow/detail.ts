@@ -12,7 +12,7 @@ export const lavishbrow: ProjectData = {
     '/projects/lavishbrow/4.jpg',
   ],
 
-  video: ['https://www.youtube.com/watch?v=B6b5VVcgTH0'],
+  video: 'https://www.youtube.com/watch?v=B6b5VVcgTH0',
 
   meta: [
     { label: 'Client', value: 'Lavish Brow' },

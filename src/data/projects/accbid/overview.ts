@@ -8,4 +8,5 @@ export const accbidOverview: ProjectOverviewData = {
   subtitle: 'CORPORATE VIDEO · DIGITAL · VIDEO · 2019',
 
   thumbnail: '/projects/accbid/thumbnail.jpg',
+  date: '2019-02-19',
 }

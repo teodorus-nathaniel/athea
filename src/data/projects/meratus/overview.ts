@@ -8,4 +8,5 @@ export const meratusOverview: ProjectOverviewData = {
   subtitle: 'CORPORATE VIDEO · DIGITAL · 2020',
 
   thumbnail: '/projects/meratus/thumbnail.jpg',
+  date: '2020-11-03',
 }

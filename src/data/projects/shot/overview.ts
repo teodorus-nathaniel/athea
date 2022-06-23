@@ -8,4 +8,5 @@ export const shotOverview: ProjectOverviewData = {
   subtitle: 'LYRIC VIDEO · DIGITAL · VIDEO · 2020',
 
   thumbnail: '/projects/shot/thumbnail.jpg',
+  date: '2020-09-25',
 }

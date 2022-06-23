@@ -8,4 +8,5 @@ export const fairytaleOverview: ProjectOverviewData = {
   subtitle: 'LYRIC VIDEO · DIGITAL · VIDEO · 2020',
 
   thumbnail: '/projects/fairytale/thumbnail.jpg',
+  date: '2020-10-30',
 }

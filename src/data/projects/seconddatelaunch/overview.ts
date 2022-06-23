@@ -8,4 +8,5 @@ export const seconddateOverview: ProjectOverviewData = {
   subtitle: 'EVENT VIDEO · DIGITAL · VIDEO · 2020',
 
   thumbnail: '/projects/seconddate/thumbnail.jpg',
+  date: '2020-03-18',
 }

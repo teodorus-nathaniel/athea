@@ -8,4 +8,5 @@ export const ringgo5Overview: ProjectOverviewData = {
   subtitle: 'MUSIC VIDEO · DIGITAL · 2019',
 
   thumbnail: '/projects/ringgo5/thumbnail.jpg',
+  date: '2019-01-25',
 }

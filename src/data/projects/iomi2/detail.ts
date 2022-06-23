@@ -12,7 +12,7 @@ export const iomi2: ProjectData = {
     '/projects/iomi2/4.jpg',
   ],
 
-  video: ['https://www.youtube.com/watch?v=XsUn0kyOeyc'],
+  video: 'https://www.youtube.com/watch?v=XsUn0kyOeyc',
 
   meta: [
     { label: 'Client', value: 'Iomi' },

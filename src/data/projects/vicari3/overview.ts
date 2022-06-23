@@ -8,4 +8,5 @@ export const vicari3Overview: ProjectOverviewData = {
   subtitle: 'MANIFESTO VIDEO · DIGITAL · 2019',
 
   thumbnail: '/projects/vicari3/thumbnail.jpg',
+  date: '2019-05-08',
 }

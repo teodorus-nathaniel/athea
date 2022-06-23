@@ -8,4 +8,5 @@ export const wanitamvOverview: ProjectOverviewData = {
   subtitle: 'MUSIC VIDEO · DIGITAL · 2021',
 
   thumbnail: '/projects/wanitamv/thumbnail.jpg',
+  date: '2021-09-24',
 }

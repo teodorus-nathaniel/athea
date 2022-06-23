@@ -8,4 +8,5 @@ export const beatthesunOverview: ProjectOverviewData = {
   subtitle: 'MANIFESTO · DIGITAL · VIDEO · 2021',
 
   thumbnail: '/projects/beatthesun/thumbnail.jpg',
+  date: '2021-06-25',
 }

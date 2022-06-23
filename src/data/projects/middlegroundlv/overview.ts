@@ -8,4 +8,5 @@ export const middlegroundlvOverview: ProjectOverviewData = {
   subtitle: 'LYRIC VIDEO · DIGITAL · VIDEO · 2020',
 
   thumbnail: '/projects/middleground(lv)/thumbnail.jpg',
+  date: '2020-10-16',
 }
