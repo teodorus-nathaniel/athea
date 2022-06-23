@@ -6,15 +6,15 @@ import { mrSunOverview } from './overview'
 export const mrSun: ProjectData = {
   ...mrSunOverview,
   images: [
-    '/projects/mr-sun/1.png',
-    '/projects/mr-sun/1.png',
-    '/projects/mr-sun/1.png',
-    '/projects/mr-sun/1.png',
+    '/projects/mr-sun/1.jpg',
+    '/projects/mr-sun/2.jpg',
+    '/projects/mr-sun/3.jpg',
+    '/projects/mr-sun/4.jpg',
   ],
-  video: 'https://www.youtube.com/watch?v=-wtWbajnxD8',
+  video: 'https://youtu.be/MgxJukpTjIg',
 
   meta: [
-    { label: 'Artist', value: "Rendy Pandugo" },
+    { label: 'Artist', value: 'Rendy Pandugo' },
     {
       label: 'Role',
       value: `Concept
@@ -26,7 +26,7 @@ export const mrSun: ProjectData = {
 
   overview: `N'pure is a local skincare and beauty brand that always use natural and local ingredients for their products. They launch a new set skincare for body and face treatment, team up with Isyana Sarasvati.`,
 
-  credits: `Production of Athea Collective
+  credits: `Production of Athea Visuals
     
     Director - Ivan Saputra Alam
     Producer - Naphtali Ivan

@@ -11,11 +11,10 @@ export const masih: ProjectData = {
     '/projects/masih/3.jpg',
     '/projects/masih/4.jpg',
   ],
-  video: 'https://www.youtube.com/watch?v=PPp-lcEXR7c',
-
+  video: 'https://youtu.be/c0PwH-NNbx8',
 
   meta: [
-    { label: 'Artist', value: "Rossa" },
+    { label: 'Artist', value: 'Rossa' },
     {
       label: 'Role',
       value: `Concept
@@ -41,4 +40,3 @@ export const masih: ProjectData = {
 
   relatedWorks: [mrSunOverview, npureOverview],
 }
-

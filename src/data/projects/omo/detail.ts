@@ -12,7 +12,7 @@ export const omo: ProjectData = {
     '/projects/omo/4.jpg',
   ],
 
-  video: '/projects/omo/omo!.mp4',
+  video: 'https://www.youtube.com/watch?v=PyQf9JNnAXQ',
 
   meta: [
     { label: 'Client', value: 'Omo Cosmestics' },

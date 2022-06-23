@@ -13,16 +13,15 @@ export const happy: ProjectData = {
   ],
   video: 'https://youtu.be/k9couTf-HPc',
 
-
   meta: [
-    { label: 'Artist', value: "Ardhito Pramono" },
+    { label: 'Artist', value: 'Ardhito Pramono' },
     {
       label: 'Role',
       value: `Concept
         Video Production`,
     },
     { label: 'Deliverables', value: 'Music Video' },
-    { label: 'Date', value: '8 April 2020' },
+    { label: 'Date', value: '5 June 2020' },
   ],
 
   overview: `Glowgene is go to collagen jelly that always use natural and local ingredients for their products. They launch a new set skincare for body and face treatment, team up with Isyana Sarasvati.`,

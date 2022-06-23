@@ -12,10 +12,10 @@ export const glowgene: ProjectData = {
     '/projects/glowgene/3.jpg',
     '/projects/glowgene/4.jpg',
   ],
-  video: 'https://www.instagram.com/p/CZjK6Y6l4_V/',
+  video: '/projects/glowgene/video.mp4',
 
   meta: [
-    { label: 'Client', value: "Glowgene" },
+    { label: 'Client', value: 'Glowgene' },
     {
       label: 'Role',
       value: `Concept
