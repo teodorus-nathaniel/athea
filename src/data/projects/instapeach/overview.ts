@@ -5,8 +5,8 @@ export const instapeachOverview: ProjectOverviewData = {
 
   title: 'SECOND DATE',
   titleDesc: 'THE TWO PETALS',
-  subtitle: 'MANIFESTO · DIGITAL · VIDEO · 2021',
+  subtitle: 'MANIFESTO · DIGITAL · VIDEO · 2020',
 
   thumbnail: '/projects/instapeach/thumbnail.jpg',
-  date: '2021-11-11',
+  date: '2020-11-11',
 }

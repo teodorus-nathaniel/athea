@@ -4,7 +4,7 @@ import HeadlineSection from '#/components/sections/HeadlineSection'
 import SectionWrapper from '#/components/sections/SectionWrapper'
 import TabLayout, { TabData } from '#/components/TabLayout'
 import { SLOW_TRANSITION } from '#/constants/transition'
-import { allProjects, projectGroups } from '#/data/projects/projects'
+import { allProjects, sortedProjectGroups } from '#/data/projects/projects'
 import { useBreakpointThreshold } from '#/helpers/hooks/useBreakpointThreshold'
 import Text from '#/ui/Text'
 import clsx from 'clsx'
@@ -13,7 +13,7 @@ import type { NextPage } from 'next'
 import { useState } from 'react'
 
 const tabs: TabData[] = []
-const groups = [...projectGroups]
+const groups = [...sortedProjectGroups]
 groups.unshift({ group: 'All Work', projects: allProjects })
 groups.forEach(({ group, projects }) => {
   tabs.push({

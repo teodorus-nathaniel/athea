@@ -5,8 +5,8 @@ export const meratusOverview: ProjectOverviewData = {
 
   title: 'MERATUS',
   titleDesc: 'COMPANY PROFILE',
-  subtitle: 'CORPORATE VIDEO · DIGITAL · 2020',
+  subtitle: 'CORPORATE VIDEO · DIGITAL · 2021',
 
   thumbnail: '/projects/meratus/thumbnail.jpg',
-  date: '2020-11-03',
+  date: '2021-11-03',
 }

@@ -7,6 +7,6 @@ export const tooandmoreOverview: ProjectOverviewData = {
   titleDesc: 'TOO AND MORE',
   subtitle: 'MUSIC VIDEO · DIGITAL · 2020',
 
-  thumbnail: '/projects/tooandmore/thumbnail.jpg',
+  thumbnail: '/projects/tooandmore/thumbnail.png',
   date: '2020-09-02',
 }

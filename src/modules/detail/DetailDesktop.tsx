@@ -33,6 +33,7 @@ export default function DetailDesktop({ data }: Props) {
     relatedWorks,
     key,
     video,
+    heroImage,
     subtitle,
     title,
     titleDesc,
@@ -45,12 +46,14 @@ export default function DetailDesktop({ data }: Props) {
           'min-h-[calc(100vh_-_theme(spacing.20))]',
           'pb-24',
           'flex items-center'
-        )}>
+        )}
+      >
         <div className='w-full'>
           <div className={clsx('w-3/4', 'pt-8')}>
             <Text
               as='h1'
-              className={clsx('text-[2.75rem]', 'leading-tight', 'mb-1')}>
+              className={clsx('text-[2.75rem]', 'leading-tight', 'mb-1')}
+            >
               <Text bold serif>
                 {title}
               </Text>{' '}
@@ -63,7 +66,8 @@ export default function DetailDesktop({ data }: Props) {
               'grid grid-cols-[4.3fr,_7.7fr] gap-x-8',
               'pt-8',
               'pb-16'
-            )}>
+            )}
+          >
             <div className={clsx('grid grid-cols-2', 'gap-6', 'self-end')}>
               {meta.map(({ label, value }) => (
                 <div className={clsx('flex flex-col')} key={label + value}>
@@ -78,17 +82,19 @@ export default function DetailDesktop({ data }: Props) {
           </div>
         </div>
       </Container>
-      <AspectRatioContainer aspectRatio='16:9' ref={ref}>
-        <ReactPlayer
-          playing={inView}
-          playsinline
-          muted
-          controls
-          url={video}
-          width='100%'
-          height='100%'
-        />
-      </AspectRatioContainer>
+      {!!video && (
+        <AspectRatioContainer aspectRatio='16:9' ref={ref}>
+          <ReactPlayer
+            playing={inView}
+            playsinline
+            controls
+            url={video}
+            width='100%'
+            height='100%'
+          />
+        </AspectRatioContainer>
+      )}
+      {!!heroImage && <ImageContainer src={heroImage} aspectRatio='16:9' />}
 
       {/* atur jarak antara overview dan foto */}
       <Container>
@@ -136,7 +142,8 @@ export default function DetailDesktop({ data }: Props) {
                 'pb-16',
                 'pt-16',
                 'text-center'
-              )}>
+              )}
+            >
               <Text serif bold>
                 Related
               </Text>
@@ -161,10 +168,12 @@ export default function DetailDesktop({ data }: Props) {
                   e.preventDefault()
                   router.back()
                 }
-              }}>
+              }}
+            >
               <Button
                 type='solid-white'
-                className={clsx('!px-10 py-3', 'uppercase')}>
+                className={clsx('!px-10 py-3', 'uppercase')}
+              >
                 Back to work list
               </Button>
             </Link>

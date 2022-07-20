@@ -29,6 +29,7 @@ export default function DetailMobile({ data }: Props) {
     title,
     titleDesc,
     video,
+    heroImage,
     subtitle,
     key,
   } = data
@@ -58,17 +59,20 @@ export default function DetailMobile({ data }: Props) {
         </div>
       </DetailSection>
 
-      <AspectRatioContainer aspectRatio='16:9' ref={ref}>
-        <ReactPlayer
-          playing={inView}
-          playsinline
-          muted
-          controls
-          url={video}
-          width='100%'
-          height='100%'
-        />
-      </AspectRatioContainer>
+      {!!video && (
+        <AspectRatioContainer aspectRatio='16:9' ref={ref}>
+          <ReactPlayer
+            playing={inView}
+            playsinline
+            controls
+            url={video}
+            width='100%'
+            height='100%'
+          />
+        </AspectRatioContainer>
+      )}
+      {!!heroImage && <ImageContainer src={heroImage} aspectRatio='16:9' />}
+
       {/* bawah ini yg ada overview */}
       {/* <DetailSection title='Overview'>
         <Text className={clsx('text-lg')}>{overview}</Text>
@@ -113,14 +117,16 @@ export default function DetailMobile({ data }: Props) {
             </Text>
             <Text>Works</Text>
           </>
-        }>
+        }
+      >
         <div
           className={clsx(
             'mt-4 mb-8',
             '-mx-6 pb-4',
             'flex items-stretch',
             'w-[100%_+_theme(spacing.6)_*_2] overflow-auto'
-          )}>
+          )}
+        >
           {relatedWorks.map((project, idx) => (
             <ProjectOverview
               className={clsx(
@@ -159,7 +165,8 @@ const DetailSection = ({
           as='h2'
           bold
           serif
-          className={clsx('text-2xl text-center uppercase', 'mb-6')}>
+          className={clsx('text-2xl text-center uppercase', 'mb-6')}
+        >
           {title}
         </Text>
       ) : (

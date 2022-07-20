@@ -31,6 +31,7 @@ export const iomi2: ProjectData = {
     Director - Ivan Saputra Alam
     Producer - Naphtali Ivan
     Talent - Naura Hakim & Judith Ayu
+    
     Director of Photography - Ivan Saputra Alam
     Editor - Ivan Saputra Alam
     Art Director & Make Up Artist - Michelle Amadea

@@ -8,5 +8,5 @@ export const takkankemanaOverview: ProjectOverviewData = {
   subtitle: 'MUSIC VIDEO · DIGITAL · 2019',
 
   thumbnail: '/projects/takkankemana/thumbnail.jpg',
-  date: '2020-03-15',
+  date: '2019-03-15',
 }

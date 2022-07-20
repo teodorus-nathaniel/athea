@@ -15,14 +15,14 @@ export const vidixindomie: ProjectData = {
   video: 'https://youtu.be/OTBpQUEWY50',
 
   meta: [
-    { label: 'Singer', value: "Vidi Aldiano" },
+    { label: 'Singer', value: 'Vidi Aldiano' },
     {
       label: 'Role',
       value: `Concept
         Video Production`,
     },
     { label: 'Deliverables', value: 'Manifesto Video' },
-    { label: 'Date', value: '8 August 2021' },
+    { label: 'Date', value: '8 August 2020' },
   ],
 
   overview: `Glowgene is go to collagen jelly that always use natural and local ingredients for their products. They launch a new set skincare for body and face treatment, team up with Isyana Sarasvati.`,

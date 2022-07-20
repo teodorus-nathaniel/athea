@@ -5,8 +5,8 @@ export const glowgeneOverview: ProjectOverviewData = {
 
   title: 'GLOWGENE',
   titleDesc: 'GLOWGENE',
-  subtitle: 'MANIFESTO · DIGITAL · VIDEO · 2021',
+  subtitle: 'MANIFESTO · DIGITAL · VIDEO · 2022',
 
   thumbnail: '/projects/glowgene/thumbnail.jpg',
-  date: '2021-02-04',
+  date: '2022-02-04',
 }

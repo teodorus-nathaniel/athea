@@ -13,17 +13,18 @@ const Home: NextPage = () => {
       meta={{ title: 'Homepage' }}
       theme='dark'
       mobileFooter
-      mobileFooterTitle>
+      mobileFooterTitle
+    >
       <div className={clsx('w-full h-screen relative mb-8')}>
         <video
           playsInline
           autoPlay
-          muted
           loop
           className={clsx(
             'absolute w-full h-full top-0 left-0',
             'object-cover'
-          )}>
+          )}
+        >
           <source src={`${videoName}.webm`} type='video/webm' />
           <source src={`${videoName}.mp4`} type='video/mp4' />
         </video>
@@ -34,7 +35,8 @@ const Home: NextPage = () => {
           className={clsx(
             'absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2',
             'w-full max-w-screen-lg px-12'
-          )}>
+          )}
+        >
           <img
             className='w-full'
             src={Headline.src}

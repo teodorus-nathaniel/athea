@@ -20,7 +20,7 @@ export const wowacc: ProjectData = {
       value: 'Video Production',
     },
     { label: 'Deliverables', value: 'Video' },
-    { label: 'Date', value: '13 May 2021' },
+    { label: 'Date', value: '21 October 2021' },
   ],
 
   overview: `Glowgene is go to collagen jelly that always use natural and local ingredients for their products. They launch a new set skincare for body and face treatment, team up with Isyana Sarasvati.`,

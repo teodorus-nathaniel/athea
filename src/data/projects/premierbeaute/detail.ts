@@ -29,15 +29,18 @@ export const premierebeaute: ProjectData = {
 
   credits: `Production of Athea Collective
     
+    Executive Producer - Christabel Fortunatus
     Director - Ivan Saputra Alam
     Producer - Naphtali Ivan
     Production Designer - Michelle Amadea
     
-    Starring - Nadya & Braxton
+    Starring - Amanda Manopo
     Director of Photography - Ivan Saputra Alam
-    Offline Editor - Joseline Clarinda
-    Online Editor, 3D Artist - Michelle Amadea
-    Colorist - Ivan Saputra Alam`,
+    Offline Editor - Ivan Saputra Alam
+    Assistant Editor - Joseline Clarinda
+    Online Editor - Michelle Amadea
+    Colorist - Ivan Saputra Alam
+    Scoring - Abel Huray`,
 
   relatedWorks: [mrSunOverview, npureOverview],
 }

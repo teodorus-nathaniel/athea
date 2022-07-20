@@ -8,5 +8,5 @@ export const homeOverview: ProjectOverviewData = {
   subtitle: 'MUSIC VIDEO · DIGITAL · 2021',
 
   thumbnail: '/projects/home/thumbnail.jpg',
-  date: '2021-10-16',
+  date: '2020-10-16',
 }

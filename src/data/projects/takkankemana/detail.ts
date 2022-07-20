@@ -13,16 +13,15 @@ export const takkankemana: ProjectData = {
   ],
   video: 'https://youtu.be/krz5jaGGj3s',
 
-
   meta: [
-    { label: 'Artist', value: "The Overtunes" },
+    { label: 'Artist', value: 'The Overtunes' },
     {
       label: 'Role',
       value: `Concept
         Video Production`,
     },
     { label: 'Deliverables', value: 'Video' },
-    { label: 'Date', value: '15 March 2020' },
+    { label: 'Date', value: '15 March 2019' },
   ],
 
   overview: `Glowgene is go to collagen jelly that always use natural and local ingredients for their products. They launch a new set skincare for body and face treatment, team up with Isyana Sarasvati.`,
@@ -39,4 +38,3 @@ export const takkankemana: ProjectData = {
 
   relatedWorks: [mrSunOverview, npureOverview],
 }
-

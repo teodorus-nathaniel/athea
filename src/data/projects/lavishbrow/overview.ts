@@ -5,8 +5,8 @@ export const lavishbrowOverview: ProjectOverviewData = {
 
   title: 'LAVISH BROW',
   titleDesc: 'A ROYAL LUNCH AND IT IS LITTLE ACCIDENT',
-  subtitle: 'MANIFESTO VIDEO · DIGITAL · 2020',
+  subtitle: 'MANIFESTO VIDEO · DIGITAL · 2019',
 
   thumbnail: '/projects/lavishbrow/thumbnail.jpg',
-  date: '2021-10-29',
+  date: '2019-08-25',
 }

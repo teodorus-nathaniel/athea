@@ -22,7 +22,7 @@ export const kopichuseyo: ProjectData = {
       Concept`,
     },
     { label: 'Deliverables', value: 'Video' },
-    { label: 'Date', value: '22 February 2019' },
+    { label: 'Date', value: '13 July 2019' },
   ],
 
   overview: `Glowgene is go to collagen jelly that always use natural and local ingredients for their products. They launch a new set skincare for body and face treatment, team up with Isyana Sarasvati.`,

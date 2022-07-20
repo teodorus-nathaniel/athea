@@ -29,7 +29,8 @@ export interface TeamMemberData {
 export interface ProjectData extends ProjectOverviewData {
   images: string[]
   meta: { label: string; value: string }[]
-  video: string
+  video?: string
+  heroImage?: string
 
   overview: string
   credits: string

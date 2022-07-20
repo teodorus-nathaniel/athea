@@ -13,9 +13,8 @@ export const tooandmore: ProjectData = {
   ],
   video: 'https://youtu.be/aGlWwPrrj-0',
 
-
   meta: [
-    { label: 'Singer', value: "Mikha Angelo" },
+    { label: 'Singer', value: 'Mikha Angelo' },
     {
       label: 'Role',
       value: `Concept
@@ -32,6 +31,7 @@ export const tooandmore: ProjectData = {
     Director - Ivan Saputra Alam
     Producer - Naphtali Ivan
     Production Designer - Michelle Amadea
+    
     Director of Photography - Ivan Saputra Alam
     Offline Editor - Ivan Saputra Alam
     Online Editor & 3D Artist - Michelle Amadea

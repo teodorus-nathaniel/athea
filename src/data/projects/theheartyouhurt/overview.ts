@@ -8,5 +8,5 @@ export const theheartyouhurtOverview: ProjectOverviewData = {
   subtitle: 'MUSIC VIDEO · DIGITAL · 2021',
 
   thumbnail: '/projects/theheartyouhurt/thumbnail.jpg',
-  date: '2020-03-31',
+  date: '2021-03-31',
 }

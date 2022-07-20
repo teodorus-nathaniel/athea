@@ -5,8 +5,8 @@ export const sigOverview: ProjectOverviewData = {
 
   title: 'SEMEN INDONESIA GROUP',
   titleDesc: 'ANNUAL REPORT',
-  subtitle: 'MOTION GRAPHIC VIDEO · DIGITAL · 2022',
+  subtitle: 'MOTION GRAPHIC VIDEO · DIGITAL · 2020',
 
   thumbnail: '/projects/sig/thumbnail.jpg',
-  date: '2019-06-17',
+  date: '2020-06-17',
 }

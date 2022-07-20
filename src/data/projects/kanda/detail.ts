@@ -32,6 +32,7 @@ export const kanda: ProjectData = {
     Producer - Naphtali Ivan
     Production Designer - Michelle Amadea
     FPV Pilot - Hafidz Irfana & Faiz Zainur
+    
     Director of Photography - Ivan Saputra Alam
     Offline Editor & Colorist - Ivan Saputra Alam
     Online Editor - Michelle Amadea`,

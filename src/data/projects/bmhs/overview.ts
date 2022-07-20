@@ -8,5 +8,5 @@ export const bmhsOverview: ProjectOverviewData = {
   subtitle: 'MANIFESTO · DIGITAL · VIDEO · 2022',
 
   thumbnail: '/projects/bmhs/thumbnail.jpg',
-  date: '2021-05-10',
+  date: '2022-05-10',
 }

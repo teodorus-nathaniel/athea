@@ -8,5 +8,5 @@ export const pedroOverview: ProjectOverviewData = {
   subtitle: 'CORPORATE VIDEO · DIGITAL · 2021',
 
   thumbnail: '/projects/pedro/thumbnail.jpg',
-  date: '2021-03-29',
+  date: '2021-01-10',
 }

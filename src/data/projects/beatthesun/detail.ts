@@ -33,11 +33,11 @@ export const beatthesun: ProjectData = {
     Production Designer - Michelle Amadea
     Starring - Chicco Kurniawan & Sabreena Dressler
     Supporting Talent - Elvina Kimberly, Maverine Hearti, Javeline Fiany & Grace Priskila
+    
     Director of Photography - Ivan Saputra Alam
     Offline Editor - Ivan Saputra Alam
     Online Editor & 3D Artist - Michelle Amadea
-    Colorist - Ivan Saputra Alam
-    Music Composer - Isyana Sarasvati`,
+    Colorist - Ivan Saputra Alam`,
 
   relatedWorks: [glowgeneOverview, mrSunOverview],
 }

@@ -5,8 +5,8 @@ export const vidixindomieOverview: ProjectOverviewData = {
 
   title: 'VIDI ALDIANO X INDOMIE',
   titleDesc: 'BERSATU DALAM MIELODI',
-  subtitle: 'MANIFESTO · DIGITAL · VIDEO · 2021',
+  subtitle: 'MANIFESTO · DIGITAL · VIDEO · 2020',
 
   thumbnail: '/projects/vidixindomie/thumbnail.jpg',
-  date: '2021-08-08',
+  date: '2020-08-08',
 }

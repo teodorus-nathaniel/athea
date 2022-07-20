@@ -13,16 +13,15 @@ export const theheartyouhurt: ProjectData = {
   ],
   video: 'https://youtu.be/kAGIwuA1Hvs',
 
-
   meta: [
-    { label: 'Artist', value: "Rossa" },
+    { label: 'Artist', value: 'Rossa' },
     {
       label: 'Role',
       value: `Concept
         Video Production`,
     },
     { label: 'Deliverables', value: 'Video' },
-    { label: 'Date', value: '31 March 2020' },
+    { label: 'Date', value: '31 March 2021' },
   ],
 
   overview: `Glowgene is go to collagen jelly that always use natural and local ingredients for their products. They launch a new set skincare for body and face treatment, team up with Isyana Sarasvati.`,
@@ -33,7 +32,7 @@ export const theheartyouhurt: ProjectData = {
     Producer - Naphtali Ivan
     Production Designer - Michelle Amadea
     
-    Starring - Lee Min Ho, Dion Wiyoko
+    Starring - Lee Dong Hae, Dion Wiyoko
     Director of Photography - Ivan Saputra Alam
     Offline Editor & Colorist - Ivan Saputra Alam
     Online Editor - Michelle Amadea
@@ -41,4 +40,3 @@ export const theheartyouhurt: ProjectData = {
 
   relatedWorks: [mrSunOverview, npureOverview],
 }
-

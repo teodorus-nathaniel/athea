@@ -32,6 +32,7 @@ export const bubasoul: ProjectData = {
     Producer - Naphtali Ivan
     Art Director - Michelle Amadea
     Talent - Puspita Sari Dewi, Fernanda Ciandra & Andririn
+   
     Director of Photography - Ivan Saputra Alam
     Offline Editor & Colorist - Ivan Saputra Alam
     Online Editor & Motion Graphics - Michelle Amadea

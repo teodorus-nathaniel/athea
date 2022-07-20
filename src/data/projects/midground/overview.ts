@@ -7,6 +7,6 @@ export const midgroundOverview: ProjectOverviewData = {
   titleDesc: 'MIDDLE GROUND',
   subtitle: 'MUSIC VIDEO · DIGITAL · 2020',
 
-  thumbnail: '/projects/midground/thumbnail.jpg',
+  thumbnail: '/projects/midground/thumbnail.png',
   date: '2020-08-23',
 }

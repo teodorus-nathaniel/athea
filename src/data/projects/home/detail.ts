@@ -32,6 +32,7 @@ export const home: ProjectData = {
     Producer - Naphtali Ivan
     Production Designer - Michelle Amadea
     Supporting Talents - Joab Nehemiah, Gus Darma, Reksy Bahrein, Arief Budiman, Austin Rifaldo Hitipeuw & Kevin Maulany  
+    
     Director of Photography - Ivan Saputra Alam
     Offline Editor & Colorist - Ivan Saputra Alam
     Online Editor - Michelle Amadea

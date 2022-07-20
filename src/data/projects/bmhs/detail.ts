@@ -11,7 +11,7 @@ export const bmhs: ProjectData = {
     '/projects/bmhs/3.jpg',
     '/projects/bmhs/4.jpg',
   ],
-  video: 'https://www.youtube.com/watch?v=-wtWbajnxD8',
+  video: 'https://youtu.be/-5R9SSc8fWM',
 
   meta: [
     { label: 'Client', value: 'Bundamedik Healthcare System' },
@@ -20,7 +20,7 @@ export const bmhs: ProjectData = {
       value: 'Video Production',
     },
     { label: 'Deliverables', value: 'Manifesto Video' },
-    { label: 'Date', value: '10 May 2021' },
+    { label: 'Date', value: '10 May 2022' },
   ],
 
   overview: `Glowgene is go to collagen jelly that always use natural and local ingredients for their products. They launch a new set skincare for body and face treatment, team up with Isyana Sarasvati.`,

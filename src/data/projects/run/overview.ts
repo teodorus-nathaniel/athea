@@ -7,6 +7,6 @@ export const runOverview: ProjectOverviewData = {
   titleDesc: 'RUN',
   subtitle: 'MUSIC VIDEO · DIGITAL · 2020',
 
-  thumbnail: '/projects/run/thumbnail.jpg',
+  thumbnail: '/projects/run/thumbnail.png',
   date: '2020-07-24',
 }

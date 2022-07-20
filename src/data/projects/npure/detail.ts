@@ -21,7 +21,7 @@ export const npure: ProjectData = {
         Video Production`,
     },
     { label: 'Deliverables', value: 'Manifesto Video' },
-    { label: 'Date', value: '13 May 2021' },
+    { label: 'Date', value: '27 November 2021' },
   ],
 
   overview: `N'pure is a local skincare and beauty brand that always use natural and local ingredients for their products. They launch a new set skincare for body and face treatment, team up with Isyana Sarasvati.`,
