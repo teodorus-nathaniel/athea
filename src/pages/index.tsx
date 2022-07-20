@@ -19,6 +19,7 @@ const Home: NextPage = () => {
         <video
           playsInline
           autoPlay
+          muted
           loop
           className={clsx(
             'absolute w-full h-full top-0 left-0',
