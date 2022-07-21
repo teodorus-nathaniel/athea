@@ -1,4 +1,6 @@
 import HeadphoneIcon from '#/assets/icon-images/headphone.png'
+import SoundOffIcon from '#/assets/icon-images/sound-off.png'
+import SoundOnIcon from '#/assets/icon-images/sound-on.png'
 import Headline from '#/assets/ui/headline.png'
 import Layout from '#/components/layouts/Layout'
 import { useBreakpointThreshold } from '#/helpers/hooks/useBreakpointThreshold'
@@ -22,6 +24,7 @@ const isVideoPlaying = (video: HTMLVideoElement | null) =>
 const Home: NextPage = () => {
   const [openOverlay, setOpenOverlay] = useState(true)
   const mdUp = useBreakpointThreshold('md')
+  const [isVideoMuted, setIsVideoMuted] = useState(false)
   const [videoName, setVideoName] = useState('')
   useEffect(() => {
     setVideoName(`/videos/teaser${mdUp ? '' : '-portrait'}`)
@@ -91,6 +94,7 @@ const Home: NextPage = () => {
             'absolute w-full h-full top-0 left-0',
             'object-cover'
           )}
+          muted={isVideoMuted}
           ref={videoRef}
         >
           <source src={`${videoName}.webm`} type='video/webm' />
@@ -110,6 +114,29 @@ const Home: NextPage = () => {
             src={Headline.src}
             alt='A collective of passionate souls'
           />
+        </div>
+        <div
+          className={clsx(
+            'absolute right-16 bottom-12',
+            'flex items-center',
+            'space-x-2 cursor-pointer',
+            'transition duration-75',
+            'hover:scale-105 focus:scale-105'
+          )}
+          onClick={() => setIsVideoMuted((prev) => !prev)}
+        >
+          <div className='w-8'>
+            <ImageContainer
+              src={isVideoMuted ? SoundOnIcon : SoundOffIcon}
+              aspectRatio='1:1'
+            />
+          </div>
+          <Text className='uppercase'>
+            Audio{' '}
+            <Text serif bold>
+              {isVideoMuted ? 'On' : 'Off'}
+            </Text>
+          </Text>
         </div>
       </div>
     </Layout>
