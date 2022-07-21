@@ -78,7 +78,8 @@ const Home: NextPage = () => {
             'text-sm uppercase',
             'px-10',
             'mt-8',
-            'hover:bg-gray-600'
+            'hover:bg-gray-600',
+            'outline-none'
           )}
         >
           <Text serif bold>
@@ -127,14 +128,14 @@ const Home: NextPage = () => {
         >
           <div className='w-8'>
             <ImageContainer
-              src={isVideoMuted ? SoundOnIcon : SoundOffIcon}
+              src={isVideoMuted ? SoundOffIcon : SoundOnIcon}
               aspectRatio='1:1'
             />
           </div>
           <Text className='uppercase'>
             Audio{' '}
             <Text serif bold>
-              {isVideoMuted ? 'On' : 'Off'}
+              {isVideoMuted ? 'Off' : 'On'}
             </Text>
           </Text>
         </div>
