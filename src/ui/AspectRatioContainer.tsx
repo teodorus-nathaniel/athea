@@ -2,6 +2,7 @@ import clsx from 'clsx'
 import React, { HTMLProps } from 'react'
 
 const aspectRatios = {
+  '1:1': clsx('pt-[100%]'),
   '16:9': clsx('pt-[56.25%]'),
   '3:4': clsx('pt-[133.33%]'),
   '4:3': clsx('pt-[80%]'),
@@ -28,7 +29,8 @@ const AspectRatioContainer = React.forwardRef<
         'w-full relative overflow-hidden',
         aspectRatios[aspectRatio],
         className
-      )}>
+      )}
+    >
       <div className={clsx('w-full h-full', 'top-0 left-0', 'absolute')}>
         {children}
       </div>
