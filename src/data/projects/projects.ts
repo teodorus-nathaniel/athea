@@ -34,6 +34,7 @@ import { larasatie } from './larasatie/detail'
 import { lavishbrow } from './lavishbrow/detail'
 import { meratus } from './meratus/detail'
 import { midground } from './midground/detail'
+import { mondial } from './mondial/detail'
 import { mrSun } from './mr-sun/detail'
 import { ninetofive } from './ninetofive/detail'
 import { npure } from './npure/detail'
@@ -137,6 +138,7 @@ export const projects: ProjectData[] = [
   instapeach,
   lafresco,
   larasatie,
+  mondial,
 ]
 
 export const projectKeys: { [key: string]: ProjectData } = projects.reduce<{
@@ -208,6 +210,7 @@ export const projectGroups: {
       beatthesun,
       azarine,
       premierebeaute,
+      mondial,
     ],
   },
   {

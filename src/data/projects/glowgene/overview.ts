@@ -4,7 +4,7 @@ export const glowgeneOverview: ProjectOverviewData = {
   key: 'glowgene',
 
   title: 'GLOWGENE',
-  titleDesc: 'GLOWGENE',
+  titleDesc: 'COLLAGEN INTERSTELLAR UNIVERSE',
   subtitle: 'MANIFESTO · DIGITAL · VIDEO · 2022',
 
   thumbnail: '/projects/glowgene/thumbnail.jpg',

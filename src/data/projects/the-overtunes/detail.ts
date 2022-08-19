@@ -14,7 +14,7 @@ export const theovertunes: ProjectData = {
   video: 'https://youtu.be/cyHWmReNdCY',
 
   meta: [
-    { label: 'Client', value: 'The Overtunes' },
+    { label: 'Artist', value: 'The Overtunes' },
     {
       label: 'Role',
       value: `Concept

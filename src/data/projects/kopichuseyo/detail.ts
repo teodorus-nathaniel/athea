@@ -21,7 +21,7 @@ export const kopichuseyo: ProjectData = {
       value: `Video Production
       Concept`,
     },
-    { label: 'Deliverables', value: 'Video' },
+    { label: 'Deliverables', value: 'Web Series' },
     { label: 'Date', value: '13 July 2019' },
   ],
 

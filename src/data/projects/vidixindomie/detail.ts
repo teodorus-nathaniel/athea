@@ -15,7 +15,7 @@ export const vidixindomie: ProjectData = {
   video: 'https://youtu.be/OTBpQUEWY50',
 
   meta: [
-    { label: 'Singer', value: 'Vidi Aldiano' },
+    { label: 'Artist', value: 'Vidi Aldiano' },
     {
       label: 'Role',
       value: `Concept

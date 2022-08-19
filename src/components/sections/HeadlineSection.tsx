@@ -31,7 +31,8 @@ export default function HeadlineSection({
         'w-full h-screen',
         themeClassNames[theme],
         'flex flex-col'
-      )}>
+      )}
+    >
       {!noBgImage && (
         <img
           src={Bg.src}
@@ -44,14 +45,12 @@ export default function HeadlineSection({
         />
       )}
       <Container className={clsx('flex-1 flex flex-col justify-center')}>
-        <BrandHeadline
-          {...headlineProps}
-          className={clsx('mx-auto w-full', 'xl:max-w-xl')}
-        />
+        <BrandHeadline {...headlineProps} className={clsx('mx-auto w-full')} />
         <div className='flex flex-col items-center'>
           <Text
             as='p'
-            className='text-center mt-16 text-base sm:text-xl xl:text-2xl'>
+            className='text-center mt-16 text-base sm:text-xl xl:text-2xl'
+          >
             {subheading}
           </Text>
           {ctaButton &&
@@ -61,7 +60,8 @@ export default function HeadlineSection({
                   largeHorizontalPadding
                   type='solid-white'
                   onClick={!ctaButton.href ? ctaButton.onClick : undefined}
-                  className={clsx('mt-6', 'uppercase')}>
+                  className={clsx('mt-6', 'uppercase')}
+                >
                   Read More
                 </Button>
               )

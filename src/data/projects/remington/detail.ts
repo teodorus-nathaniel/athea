@@ -21,7 +21,7 @@ export const remington: ProjectData = {
       value: `Video Production
       Concept`,
     },
-    { label: 'Deliverables', value: 'Video' },
+    { label: 'Deliverables', value: 'Manifesto Video' },
     { label: 'Date', value: '15 May 2019' },
   ],
 

@@ -20,7 +20,7 @@ export const bubasoul: ProjectData = {
       value: `Concept
       Video Production`,
     },
-    { label: 'Deliverables', value: 'Video' },
+    { label: 'Deliverables', value: 'Manifesto Video' },
     { label: 'Date', value: '21 February 2020' },
   ],
 

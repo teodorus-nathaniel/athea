@@ -21,7 +21,7 @@ export const vicari1: ProjectData = {
       value: `Concept
         Video Production`,
     },
-    { label: 'Deliverables', value: 'Corporate Video' },
+    { label: 'Deliverables', value: 'Manifesto Video' },
     { label: 'Date', value: '20 September 2019' },
   ],
 

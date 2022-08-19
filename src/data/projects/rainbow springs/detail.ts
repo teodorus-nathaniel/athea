@@ -19,7 +19,7 @@ export const rainbowsprings: ProjectData = {
       label: 'Role',
       value: 'Video Production',
     },
-    { label: 'Deliverables', value: 'Corporate Video' },
+    { label: 'Deliverables', value: 'Manifesto Video' },
     { label: 'Date', value: '5 December 2019' },
   ],
 

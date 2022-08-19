@@ -20,7 +20,7 @@ export const ninetofive: ProjectData = {
       value: `Concept
         Video Production`,
     },
-    { label: 'Deliverables', value: 'Video' },
+    { label: 'Deliverables', value: 'Music Video' },
     { label: 'Date', value: '9 March 2020' },
   ],
 

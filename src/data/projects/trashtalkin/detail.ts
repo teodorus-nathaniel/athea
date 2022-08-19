@@ -13,15 +13,14 @@ export const trashtalkin: ProjectData = {
   ],
   video: 'https://youtu.be/CillMuYTbJg',
 
-
   meta: [
-    { label: 'Singer', value: "Ardhito Pramono" },
+    { label: 'Artist', value: 'Ardhito Pramono' },
     {
       label: 'Role',
       value: `Concept
         Video Production`,
     },
-    { label: 'Deliverables', value: 'Video' },
+    { label: 'Deliverables', value: 'Music Video' },
     { label: 'Date', value: '28 February 2020' },
   ],
 
@@ -39,4 +38,3 @@ export const trashtalkin: ProjectData = {
 
   relatedWorks: [mrSunOverview, npureOverview],
 }
-

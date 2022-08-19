@@ -20,7 +20,7 @@ export const ganangmamikat: ProjectData = {
       value: `Concept
         Video Production`,
     },
-    { label: 'Deliverables', value: 'Video' },
+    { label: 'Deliverables', value: 'Fashion Film' },
     { label: 'Date', value: '24 June 2019' },
   ],
 

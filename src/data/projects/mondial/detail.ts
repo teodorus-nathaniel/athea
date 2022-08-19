@@ -1,26 +1,28 @@
 import { ProjectData } from '../../types'
 import { mrSunOverview } from '../mr-sun/overview'
 import { npureOverview } from '../npure/overview'
-import { somethincOverview } from './overview'
+import { mondialOverview } from './overview'
 
-export const somethinc: ProjectData = {
-  ...somethincOverview,
+export const mondial: ProjectData = {
+  ...mondialOverview,
+
   images: [
-    '/projects/somethinc/1.jpg',
-    '/projects/somethinc/2.jpg',
-    '/projects/somethinc/3.jpg',
-    '/projects/somethinc/4.jpg',
+    '/projects/mondial/1.jpg',
+    '/projects/mondial/2.jpg',
+    '/projects/mondial/3.jpg',
+    '/projects/mondial/4.jpg',
   ],
-  video: 'https://youtu.be/wn8fnqozFrg',
+  video: 'https://youtu.be/33Yn0vg6Jpo',
 
   meta: [
-    { label: 'Client', value: 'Somethinc' },
+    { label: 'Client', value: 'Mondial' },
     {
       label: 'Role',
-      value: 'Video Production',
+      value: `Concept
+        Video Production`,
     },
     { label: 'Deliverables', value: 'Manifesto Video' },
-    { label: 'Date', value: '10 May 2021' },
+    { label: 'Date', value: '27 July 2022' },
   ],
 
   overview: `Glowgene is go to collagen jelly that always use natural and local ingredients for their products. They launch a new set skincare for body and face treatment, team up with Isyana Sarasvati.`,
@@ -29,16 +31,15 @@ export const somethinc: ProjectData = {
     
     Director - Ivan Saputra Alam
     Producer - Naphtali Ivan
-    Art Director - Michelle Amadea
-    
-    Talent -  Zakky, Ibu Tina, Wiwid, Sakira
-    
-    Director of Photography - Ivan Saputra Alam
-    Offline Editor - Ivan Saputra Alam
+    Production Designer - Michelle Amadea
+
+    Starring - Widika & Jourdy Pranata
+    Director of Photography - Yoshua Gerry Sanjaya
+    Offline Editor - Gus Dharma
     Online Editor - Michelle Amadea
     Colorist - Ivan Saputra Alam
-    Music Composer - Abel Huray
-    VO Talent - Indonesia Voice Over`,
+    Sound Recordist & Designer - Cornelius Kurnia
+    Music Composer - Abel Huray`,
 
   relatedWorks: [mrSunOverview, npureOverview],
 }

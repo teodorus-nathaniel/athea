@@ -14,13 +14,13 @@ export const tooandmore: ProjectData = {
   video: 'https://youtu.be/aGlWwPrrj-0',
 
   meta: [
-    { label: 'Singer', value: 'Mikha Angelo' },
+    { label: 'Artist', value: 'Mikha Angelo' },
     {
       label: 'Role',
       value: `Concept
         Video Production`,
     },
-    { label: 'Deliverables', value: 'Video' },
+    { label: 'Deliverables', value: 'Music Video' },
     { label: 'Date', value: '2 September 2020' },
   ],
 

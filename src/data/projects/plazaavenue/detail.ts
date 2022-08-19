@@ -13,15 +13,14 @@ export const plazaavenue: ProjectData = {
   ],
   video: 'https://youtu.be/21TvQsAjkUI',
 
-
   meta: [
-    { label: 'Singer', value: "Ardhito Pramono" },
+    { label: 'Singer', value: 'Ardhito Pramono' },
     {
       label: 'Role',
       value: `Concept
         Video Production`,
     },
-    { label: 'Deliverables', value: 'Video' },
+    { label: 'Deliverables', value: 'Music Video' },
     { label: 'Date', value: '1 April 2020' },
   ],
 

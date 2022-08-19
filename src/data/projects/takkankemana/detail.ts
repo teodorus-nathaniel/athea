@@ -20,7 +20,7 @@ export const takkankemana: ProjectData = {
       value: `Concept
         Video Production`,
     },
-    { label: 'Deliverables', value: 'Video' },
+    { label: 'Deliverables', value: 'Music Video' },
     { label: 'Date', value: '15 March 2019' },
   ],
 

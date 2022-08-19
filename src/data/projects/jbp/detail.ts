@@ -21,7 +21,7 @@ export const jbp: ProjectData = {
       value: `Concept
         Video Production`,
     },
-    { label: 'Deliverables', value: 'Corporate Video' },
+    { label: 'Deliverables', value: 'Event Video' },
     { label: 'Date', value: '1 February 2020' },
   ],
 

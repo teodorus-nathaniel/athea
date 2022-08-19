@@ -13,9 +13,8 @@ export const bertahanlewatisenja: ProjectData = {
   ],
   video: 'https://youtu.be/VJtxlayl3WA',
 
-
   meta: [
-    { label: 'Artist', value: "Vidi Aldiano" },
+    { label: 'Artist', value: 'Vidi Aldiano' },
     {
       label: 'Role',
       value: `Concept

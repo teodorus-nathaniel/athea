@@ -1,4 +1,4 @@
-import ServiceHeadline from '#/assets/ui/service-tagline.jpeg'
+import ServiceHeadline from '#/assets/ui/service-tagline.gif'
 import SectionWrapper, {
   SectionWrapperProps,
 } from '#/components/sections/SectionWrapper'

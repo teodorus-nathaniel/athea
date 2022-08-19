@@ -13,15 +13,14 @@ export const wadoow: ProjectData = {
   ],
   video: 'https://youtu.be/2LnbKlBhRSU',
 
-
   meta: [
-    { label: 'Artist', value: "Nidji" },
+    { label: 'Artist', value: 'Nidji' },
     {
       label: 'Role',
       value: `Concept
         Video Production`,
     },
-    { label: 'Deliverables', value: 'Video' },
+    { label: 'Deliverables', value: 'Music Video' },
     { label: 'Date', value: '1 April 2020' },
   ],
 
@@ -38,4 +37,3 @@ export const wadoow: ProjectData = {
 
   relatedWorks: [mrSunOverview, npureOverview],
 }
-

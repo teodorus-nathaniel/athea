@@ -13,15 +13,14 @@ export const shush: ProjectData = {
   ],
   video: 'https://youtu.be/JxTxr4_YFAk',
 
-
   meta: [
-    { label: 'Singer', value: "Rahmania Astrini" },
+    { label: 'Artist', value: 'Rahmania Astrini' },
     {
       label: 'Role',
       value: `Concept
         Video Production`,
     },
-    { label: 'Deliverables', value: 'Video' },
+    { label: 'Deliverables', value: 'Music Video' },
     { label: 'Date', value: '20 January 2021' },
   ],
 

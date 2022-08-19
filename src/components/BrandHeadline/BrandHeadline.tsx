@@ -33,7 +33,10 @@ export default function BrandHeadline({
   if (!Headline) return null
 
   return (
-    <div {...divProps} className={clsx('relative max-w-lg', 'px-8', className)}>
+    <div
+      {...divProps}
+      className={clsx('relative max-w-[40rem]', 'px-8', className)}
+    >
       <Headline />
     </div>
   )
